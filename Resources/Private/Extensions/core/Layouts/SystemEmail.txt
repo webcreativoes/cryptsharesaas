@@ -1,5 +1,5 @@
-<f:spaceless><f:render section="Title" optional="true" />
-<f:render section="Main" /></f:spaceless>
+{f:render section="Title" optional="true" }
+{f:render section="Main" }
 
 This email was sent by {typo3.sitename} from URL: {normalizedParams.siteUrl}
 
