@@ -1,53 +1,44 @@
 [usergroup("*")]
     page {
         bodyTagCObject = TEXT
-        bodyTagCObject.stdWrap.dataWrap = <body class="page-{field:uid} layout-{field:backend_layout} section-{field:pid}" data-pid="{field:uid}" data-country="{TSFE:fe_user|user|static_info_country}" data-feuserid="{TSFE:fe_user|user|uid}" data-bwcustomerid="{TSFE:fe_user|user|bw_customer_id}" data-feuseremail="{TSFE:fe_user|user|email}" data-feusercrdate="{TSFE:fe_user|user|crdate}" data-feuserbusinesspartnerchangeaccepted="{TSFE:fe_user|user|business_partner_change_accepted}" data-istrial="{TSFE:fe_user|user|is_trial}" data-ispartner="{TSFE:fe_user|user|is_partner}" data-csserverhost="{TSFE:fe_user|user|cs_server_host}" data-syslanguageuid="{sitelanguage:languageId}" data-bwpublicapikey="{$bw_publicApiKey}" data-bwenvironment="{$bw_environment}" data-bwcurrency="{$bw_currency}" data-globalhint="{$globalhint}" data-individualuserlimit="{TSFE:fe_user|user|individual_userlimit}" data-paymentmethod="credit">
+        bodyTagCObject.stdWrap.dataWrap = <body class="page-{field:uid} layout-{field:backend_layout} section-{field:pid}" data-pid="{field:uid}" data-country="{TSFE:fe_user|user|static_info_country}" data-feuserid="{TSFE:fe_user|user|uid}" data-bwcustomerid="{TSFE:fe_user|user|bw_customer_id}" data-feuseremail="{TSFE:fe_user|user|email}" data-feusercrdate="{TSFE:fe_user|user|crdate}" data-feuserbusinesspartnerchangeaccepted="{TSFE:fe_user|user|business_partner_change_accepted}" data-istrial="{TSFE:fe_user|user|is_trial}" data-ispartner="{TSFE:fe_user|user|is_partner}" data-csserverhost="{TSFE:fe_user|user|cs_server_host}" data-syslanguageuid="{siteLanguage:languageId}" data-bwpublicapikey="{$bw_publicApiKey}" data-bwenvironment="{$bw_environment}" data-bwcurrency="{$bw_currency}" data-globalhint="{$globalhint}" data-individualuserlimit="{TSFE:fe_user|user|individual_userlimit}" data-paymentmethod="credit">
     }
 [else]
     page {
         bodyTagCObject = TEXT
-        bodyTagCObject.stdWrap.dataWrap = <body class="page-{field:uid} layout-{field:backend_layout} section-{field:pid}" data-pid="{field:uid}" data-syslanguageuid="{sitelanguage:languageId}" data-bwenvironment="{$bw_environment}" data-bwcurrency="{$bw_currency}" data-globalhint="{$globalhint}">
+        bodyTagCObject.stdWrap.dataWrap = <body class="page-{field:uid} layout-{field:backend_layout} section-{field:pid}" data-pid="{field:uid}" data-syslanguageuid="{siteLanguage:languageId}" data-bwenvironment="{$bw_environment}" data-bwcurrency="{$bw_currency}" data-globalhint="{$globalhint}">
     }
 [END]
 
 page {
     10 = FLUIDTEMPLATE
     10 {
-        partialRootPath = EXT:cryptsharesaas/Resources/Private/Partials
-        file {
-            cObject = CASE
-            cObject {
-                key.data = levelfield:-1, backend_layout_next_level, slide
-                key.override.field = backend_layout
-                1 = TEXT
-                1.value = EXT:cryptsharesaas/Resources/Private/Templates/50-50-nosidebar.html
-                2 = TEXT
-                2.value = EXT:cryptsharesaas/Resources/Private/Templates/50-50-withsidebar.html
-                3 = TEXT
-                3.value = EXT:cryptsharesaas/Resources/Private/Templates/33-66-withsidebar.html
-                4 = TEXT
-                4.value = EXT:cryptsharesaas/Resources/Private/Templates/66-33-withsidebar.html
-                65 = TEXT
-                65.value = EXT:cryptsharesaas/Resources/Private/Templates/home.html
-                64 = TEXT
-                64.value = EXT:cryptsharesaas/Resources/Private/Templates/iframe.html
-                66 = TEXT
-                66.value = EXT:cryptsharesaas/Resources/Private/Templates/66-33-withsidebar-nosubstitle.html
-                67 = TEXT
-                67.value = EXT:cryptsharesaas/Resources/Private/Templates/100-withsidebar.html
-            }
+        partialRootPaths {
+            10 = EXT:cryptsharesaas/Resources/Private/Partials
+        }
+        file.cObject = CASE
+        file.cObject {
+            key.data = levelfield:-1, backend_layout_next_level, slide
+            key.override.field = backend_layout
+            1 = TEXT
+            1.value = EXT:cryptsharesaas/Resources/Private/Templates/50-50-nosidebar.html
+            2 = TEXT
+            2.value = EXT:cryptsharesaas/Resources/Private/Templates/50-50-withsidebar.html
+            3 = TEXT
+            3.value = EXT:cryptsharesaas/Resources/Private/Templates/33-66-withsidebar.html
+            4 = TEXT
+            4.value = EXT:cryptsharesaas/Resources/Private/Templates/66-33-withsidebar.html
+            65 = TEXT
+            65.value = EXT:cryptsharesaas/Resources/Private/Templates/home.html
+            64 = TEXT
+            64.value = EXT:cryptsharesaas/Resources/Private/Templates/iframe.html
+            66 = TEXT
+            66.value = EXT:cryptsharesaas/Resources/Private/Templates/66-33-withsidebar-nosubstitle.html
+            67 = TEXT
+            67.value = EXT:cryptsharesaas/Resources/Private/Templates/100-withsidebar.html
         }
     }
 }
-
-#page {
-#    bodyTagCObject.stdWrap.append = TEXT
-#    bodyTagCObject.stdWrap.append.value (
-#        <!-- Google Tag Manager (noscript) -->
-#        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M32W3TQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-#        <!-- End Google Tag Manager (noscript) -->
-#    )
-#}
 
 page.inlineLanguageLabelFiles {
     someLabels = EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf
