@@ -4,7 +4,7 @@ lib.LANGUAGE {
     1.value (
         <nav>
         <div class="text-center dropdown show">
-          <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fa fa-globe"></i>
     )
     2 = TEXT
@@ -14,6 +14,7 @@ lib.LANGUAGE {
           </a>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
     )
+    
     20 = TEXT
     20 {
         value = Deutschland
@@ -21,11 +22,11 @@ lib.LANGUAGE {
             parameter.data = page:uid
             additionalParams = &L=1
             addQueryString = 1
-            addQueryString.method = GET
             addQueryString.exclude = gclid,cHash,utm_expid,utm_referrer,tx_indexedsearch
             ATagParams = hreflang="de" xml:lang="de" class="dropdown-item"
         }
     }
+
     30 = TEXT
     30 {
         value = Nederland
@@ -33,11 +34,11 @@ lib.LANGUAGE {
             parameter.data = page:uid
             additionalParams = &L=2
             addQueryString = 1
-            addQueryString.method = GET
             addQueryString.exclude = gclid,cHash,utm_expid,utm_referrer,tx_indexedsearch
             ATagParams = hreflang="nl" xml:lang="nl" class="dropdown-item"
         }
     }
+
     40 = TEXT
     40 {
         value = United Kingdom
@@ -45,13 +46,13 @@ lib.LANGUAGE {
             parameter.data = page:uid
             additionalParams = &L=5
             addQueryString = 1
-            addQueryString.method = GET
             addQueryString.exclude = gclid,cHash,utm_expid,utm_referrer,tx_indexedsearch
             ATagParams = hreflang="en-gb" xml:lang="en-gb" class="dropdown-item"
         }
     }
     50 = TEXT
     50.value = <div class="dropdown-divider"></div>
+
     60 = TEXT
     60 {
         value = Belgique
@@ -59,11 +60,11 @@ lib.LANGUAGE {
             parameter.data = page:uid
             additionalParams = &L=10
             addQueryString = 1
-            addQueryString.method = GET
             addQueryString.exclude = gclid,cHash,utm_expid,utm_referrer,tx_indexedsearch
             ATagParams = hreflang="nl-be" xml:lang="nl-be" class="dropdown-item"
         }
     }
+
     70 = TEXT
     70 {
         value = Éire
@@ -71,11 +72,11 @@ lib.LANGUAGE {
             parameter.data = page:uid
             additionalParams = &L=11
             addQueryString = 1
-            addQueryString.method = GET
             addQueryString.exclude = gclid,cHash,utm_expid,utm_referrer,tx_indexedsearch
             ATagParams = hreflang="ie" xml:lang="ie" class="dropdown-item"
         }
     }
+
     80 = TEXT
     80 {
         value = España
@@ -83,11 +84,11 @@ lib.LANGUAGE {
             parameter.data = page:uid
             additionalParams = &L=6
             addQueryString = 1
-            addQueryString.method = GET
             addQueryString.exclude = gclid,cHash,utm_expid,utm_referrer,tx_indexedsearch
             ATagParams = hreflang="es" xml:lang="es" class="dropdown-item"
         }
     }
+
     90 = TEXT
     90 {
         value = Ελλάδα
@@ -95,7 +96,6 @@ lib.LANGUAGE {
             parameter.data = page:uid
             additionalParams = &L=14
             addQueryString = 1
-            addQueryString.method = GET
             addQueryString.exclude = gclid,cHash,utm_expid,utm_referrer,tx_indexedsearch
             ATagParams = hreflang="el" xml:lang="el" class="dropdown-item"
         }
@@ -107,11 +107,11 @@ lib.LANGUAGE {
             parameter.data = page:uid
             additionalParams = &L=4
             addQueryString = 1
-            addQueryString.method = GET
             addQueryString.exclude = gclid,cHash,utm_expid,utm_referrer,tx_indexedsearch
             ATagParams = hreflang="fr" xml:lang="fr" class="dropdown-item"
         }
     }
+
     110 = TEXT
     110 {
         value = Italia
@@ -119,11 +119,11 @@ lib.LANGUAGE {
             parameter.data = page:uid
             additionalParams = &L=8
             addQueryString = 1
-            addQueryString.method = GET
             addQueryString.exclude = gclid,cHash,utm_expid,utm_referrer,tx_indexedsearch
             ATagParams = hreflang="it" xml:lang="it" class="dropdown-item"
         }
     }
+
     111 = TEXT
     111 {
         value = Lietuvis
@@ -131,11 +131,11 @@ lib.LANGUAGE {
             parameter.data = page:uid
             additionalParams = &L=16
             addQueryString = 1
-            addQueryString.method = GET
             addQueryString.exclude = gclid,cHash,utm_expid,utm_referrer,tx_indexedsearch
             ATagParams = hreflang="lt" xml:lang="lt" class="dropdown-item"
         }
     }
+
     120 = TEXT
     120 {
         value = Lëtzebuerg
@@ -143,7 +143,6 @@ lib.LANGUAGE {
             parameter.data = page:uid
             additionalParams = &L=15
             addQueryString = 1
-            addQueryString.method = GET
             addQueryString.exclude = gclid,cHash,utm_expid,utm_referrer,tx_indexedsearch
             ATagParams = hreflang="lu" xml:lang="lb-LU" class="dropdown-item"
         }
@@ -155,11 +154,11 @@ lib.LANGUAGE {
             parameter.data = page:uid
             additionalParams = &L=12
             addQueryString = 1
-            addQueryString.method = GET
             addQueryString.exclude = gclid,cHash,utm_expid,utm_referrer,tx_indexedsearch
             ATagParams = hreflang="pt" xml:lang="pt" class="dropdown-item"
         }
     }
+
     140 = TEXT
     140 {
         value = Österreich
@@ -167,11 +166,11 @@ lib.LANGUAGE {
             parameter.data = page:uid
             additionalParams = &L=13
             addQueryString = 1
-            addQueryString.method = GET
             addQueryString.exclude = gclid,cHash,utm_expid,utm_referrer,tx_indexedsearch
             ATagParams = hreflang="de-AT" xml:lang="de-AT" class="dropdown-item"
         }
     }
+
     150 = TEXT
     150 {
         value = Suomi
@@ -179,11 +178,11 @@ lib.LANGUAGE {
             parameter.data = page:uid
             additionalParams = &L=9
             addQueryString = 1
-            addQueryString.method = GET
             addQueryString.exclude = gclid,cHash,utm_expid,utm_referrer,tx_indexedsearch
             ATagParams = hreflang="fi" xml:lang="fi" class="dropdown-item"
         }
     }
+
     160 = TEXT
     160 {
         value = Schweiz
@@ -191,7 +190,6 @@ lib.LANGUAGE {
             parameter.data = page:uid
             additionalParams = &L=7
             addQueryString = 1
-            addQueryString.method = GET
             addQueryString.exclude = gclid,cHash,utm_expid,utm_referrer,tx_indexedsearch
             ATagParams = hreflang="de-CH" xml:lang="de-CH" class="dropdown-item"
         }
@@ -203,13 +201,14 @@ lib.LANGUAGE {
             parameter.data = page:uid
             additionalParams = &L=3
             addQueryString = 1
-            addQueryString.method = GET
             addQueryString.exclude = gclid,cHash,utm_expid,utm_referrer,tx_indexedsearch
             ATagParams = hreflang="en-US" xml:lang="en-US" class="dropdown-item"
         }
     }
+
     980 = TEXT
     980.value = <div class="dropdown-divider"></div>
+
     990 = TEXT
     990 {
         value = Rest of World
@@ -217,11 +216,11 @@ lib.LANGUAGE {
             parameter.data = page:uid
             additionalParams = &L=0
             addQueryString = 1
-            addQueryString.method = GET
             addQueryString.exclude = gclid,cHash,utm_expid,utm_referrer,tx_indexedsearch
             ATagParams = hreflang="en" xml:lang="en" class="dropdown-item"
         }
     }
+
     1000 = TEXT
     1000.value (
           </div>
@@ -229,6 +228,7 @@ lib.LANGUAGE {
     )
 }
 
+# Sprachumschaltung (Optimierung für TYPO3 12)
 [siteLanguage("locale") == "de_DE.UTF-8"]
     lib.LANGUAGE.2.value = Land auswählen
 [siteLanguage("locale") == "de_AT.UTF-8"]
@@ -242,11 +242,9 @@ lib.LANGUAGE {
 [siteLanguage("locale") == "fr_FR.UTF-8"]
     lib.LANGUAGE.2.value = Sélectionnez un pays
 [siteLanguage("locale") == "es_ES.UTF-8"]
-    lib.LANGUAGE.2.value = Seleccione pais
+    lib.LANGUAGE.2.value = Seleccione país
 [siteLanguage("locale") == "it_IT.UTF-8"]
     lib.LANGUAGE.2.value = Seleziona la nazione
-[siteLanguage("locale") == "fi_FI.UTF-8"]
-    lib.LANGUAGE.2.value = Valitse maa
 [siteLanguage("locale") == "fi_FI.UTF-8"]
     lib.LANGUAGE.2.value = Valitse maa
 [siteLanguage("locale") == "pt_PT.UTF-8"]
