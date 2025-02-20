@@ -1,30 +1,20 @@
 plugin.tx_felogin_login {
-
   view {
-    templateRootPaths {
-      40 =  EXT:cryptsharesaas/Resources/Private/Extensions/felogin/Templates/
-    }
-    partialRootPaths {
-    	0 = EXT:cryptsharesaas/Resources/Private/Extensions/felogin//Partials/
-    }
+    templateRootPaths.40 = EXT:cryptsharesaas/Resources/Private/Extensions/felogin/Templates/
+    partialRootPaths.0 = EXT:cryptsharesaas/Resources/Private/Extensions/felogin/Partials/
   }
+
   settings {
     email {
-    templateName = {$styles.content.loginform.email.templateName}
-      layoutRootPaths {
-        20 = {$styles.content.loginform.email.layoutRootPath}
-      }
-      templateRootPaths {
-        20 = {$styles.content.loginform.email.templateRootPath}
-      }
-	  partialRootPaths {
-		20 = {$styles.content.loginform.email.partialRootPath}
-	  }
+      templateName = {$styles.content.loginform.email.templateName}
+      layoutRootPaths.10 = {$styles.content.loginform.email.layoutRootPath}
+      templateRootPaths.10 = {$styles.content.loginform.email.templateRootPath}
+      partialRootPaths.10 = {$styles.content.loginform.email.partialRootPath}
     }
   }
 
-
   storagePid = 1394
+
   settings {
     showForgotPassword = 1
     redirectMode =
@@ -42,12 +32,9 @@ plugin.tx_felogin_login {
     replyTo = {$styles.content.loginform.replyToEmail}
     domains =
   }
-
 }
 
-plugin.tx_felogin_pi1._CSS_DEFAULT_STYLE (
-
-)
+plugin.tx_felogin_pi1._CSS_DEFAULT_STYLE =
 
 plugin.tx_felogin_login._LOCAL_LANG {
     default {
@@ -76,9 +63,6 @@ support@cryptshare.express
         welcome_header = Administrator login
         welcome_header = Business Account
         welcome_message = Only IT administrators need this account. All others click on the "Click here" button on the left to use Cryptshare.express.
-        welcome_header =
-        welcome_message = This account is only required to manage email users for your company. All users click on the "Click here" button on the left to use Cryptshare.express.
-        welcome_message =
         logout_header = Welcome back!
         forgot_reset_message_error (
 There is no Business Account under the entered email address. Please visit webapp.cryptshare.express to use the Cryptshare Web App.
@@ -102,7 +86,7 @@ Another possibility is that cookies might be disabled in your web browser.
         )
         error_header = Login failure
     }
-    de {
+de {
         forgot_header = Passwort vergessen?
         forgot_password = Passwort vergessen?
         reset_password = Passwort zurücksetzen
@@ -314,6 +298,4 @@ Een andere mogelijkheid is dat cookies in uw webbrowser zijn uitgeschakeld.
         }
 }
 
-plugin.tx_felogin_pi1._DEFAULT_PI_VARS {
-
-}
+# Entfernt: plugin.tx_felogin_pi1._DEFAULT_PI_VARS, da nicht mehr benötigt
