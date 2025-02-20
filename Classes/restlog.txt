@@ -1,0 +1,40 @@
+*   Trying 217.22.193.194:443...
+* Connected to webapp.cryptshare.express (217.22.193.194) port 443 (#0)
+* ALPN: offers h2,http/1.1
+* SSL connection using TLSv1.3 / TLS_AES_128_GCM_SHA256
+* ALPN: server did not agree on a protocol. Uses default.
+* Server certificate:
+*  subject: CN=*.cryptshare.express
+*  start date: Dec 18 14:46:28 2024 GMT
+*  expire date: Mar 18 14:46:27 2025 GMT
+*  subjectAltName: host "webapp.cryptshare.express" matched cert's "*.cryptshare.express"
+*  issuer: C=US; O=Let's Encrypt; CN=R10
+*  SSL certificate verify ok.
+* using HTTP/1.x
+> POST /service/ai?wsdl HTTP/1.1
+Host: webapp.cryptshare.express
+Content-type: text/xml;charset="utf-8"
+Accept: text/xml
+Cache-Control: no-cache
+Pragma: no-cache
+Expect: 100-continue
+user: wsdl.api
+password: VKM02_NAp01-Urt5oublbF
+SOAPAction: http://v1.cs3service.webservice.server.cryptshare.befinesolutions.com/CryptshareServer/addPolicyRuleRequest
+Content-length: 1212
+
+* old SSL session ID is stale, removing
+< HTTP/1.1 100 Continue
+* old SSL session ID is stale, removing
+* We are completely uploaded and fine
+< HTTP/1.1 200 OK
+< Date: Mon, 17 Feb 2025 11:24:51 GMT
+< Strict-Transport-Security: max-age=31536000; includeSubDomains
+< X-XSS-Protection: 1; mode=block
+< X-Content-Type-Options: nosniff
+< Referrer-Policy: same-origin
+< Content-Security-Policy: default-src: 'self', frame-ancestors: 'self'
+< Content-Type: text/xml;charset=utf-8
+< Transfer-Encoding: chunked
+< 
+* Connection #0 to host webapp.cryptshare.express left intact

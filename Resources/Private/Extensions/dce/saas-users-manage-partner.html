@@ -1,0 +1,97 @@
+
+
+<f:spaceless>
+    <input type="hidden" id="addurl" value="{f:uri.typolink(parameter:'{field.addurl}')}">
+    <input type="hidden" id="editurl" value="{f:uri.typolink(parameter:'{field.editurl}')}">
+    <input type="hidden" id="editurlcomponent" value="{f:uri.typolink(parameter:'{field.editurlcomponent}')}">
+    <input type="hidden" id="welcomeemailurl" value="{f:uri.typolink(parameter:'{field.welcomeemailurl}')}">
+    <input type="hidden" id="addcontracturl" value="{f:uri.typolink(parameter:'{field.addcontracturl}')}">
+    <input type="hidden" id="addpartnerurl" value="{f:uri.typolink(parameter:'{field.addpartnerurl}')}">
+    <div class="card w-100 invoicedata">
+        <div class="card-header">
+            <h3><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_partner.headline.invoicedata" /></h3>
+        </div>
+        <div class="card-body" id="invoicedata">
+            <div id="success-alert" class="alert alert-success" role="alert" style="opacity: 500; display: none;">
+                <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_partner.form.success" />
+            </div>
+            <div class="table-responsive">
+                <table class="table table-borderless">
+                    <tbody>
+                        <tr>
+                            <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_partner.form.firstname" /></th>
+                            <td class="invoice-plain" id="partnerFirstName"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></td>
+                            <td class="invoice-form d-none"><input id="inputPartnerFirstName" class="form-control" type="text" value="" placeholder="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_partner.form.firstname')}"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_partner.form.lastname" /></th>
+                            <td class="invoice-plain" id="partnerLastName"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></td>
+                            <td class="invoice-form d-none"><input id="inputPartnerLastName" class="form-control" type="text" value="" placeholder="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_partner.form.lastname')}"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_partner.form.company" /></th>
+                            <td class="invoice-plain" id="partnerCompany"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></td>
+                            <td class="invoice-form d-none"><input id="inputPartnerCompany" class="form-control" type="text" value="" placeholder="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_partner.form.company')}"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_partner.form.street" /></th>
+                            <td class="invoice-plain" id="partnerStreet"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></td>
+                            <td class="invoice-form d-none"><input id="inputPartnerStreet" class="form-control" type="text" value="" placeholder="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_partner.form.street')}"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_partner.form.housenumber" /></th>
+                            <td class="invoice-plain" id="partnerHouseNumber"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></td>
+                            <td class="invoice-form d-none"><input id="inputPartnerHouseNumber" class="form-control" type="text" value="" placeholder="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_partner.form.housenumber')}"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_partner.form.zip" /></th>
+                            <td class="invoice-plain" id="partnerZip"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></td>
+                            <td class="invoice-form d-none"><input id="inputPartnerZip" class="form-control" type="text" value="" placeholder="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_partner.form.zip')}"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_partner.form.city" /></th>
+                            <td class="invoice-plain" id="partnerCity"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></td>
+                            <td class="invoice-form d-none"><input id="inputPartnerCity" class="form-control" type="text" value="" placeholder="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_partner.form.city')}"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_partner.form.country" /></th>
+                            <td class="invoice-plain" id="partnerCountry"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></td>
+                            <td class="invoice-form d-none"><input id="inputPartnerCountry" class="form-control" type="text" value="" placeholder="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_partner.form.country')}"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_partner.form.phone" /></th>
+                            <td class="invoice-plain" id="partnerPhone"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></td>
+                            <td class="invoice-form d-none"><input id="inputPartnerPhone" class="form-control" type="text" value="" placeholder="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_partner.form.phone')}"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_partner.form.email" /></th>
+                            <td class="invoice-plain" id="partnerEmail"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></td>
+                            <td class="invoice-form d-none"><input id="inputPartnerEmail" class="form-control" type="text" value="" placeholder="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_partner.form.email')}"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_partner.form.vat" /></th>
+                            <td class="invoice-plain" id="partnerVat"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></td>
+                            <td class="invoice-form d-none"><input id="inputPartnerVat" class="form-control" type="text" value="" placeholder="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_partner.form.vat')}"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <button type="button" class="btn btn-secondary float-right" id="edit-invoicedata"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_partner.form.button.edit" /></button>
+            <button type="button" class="btn btn-danger float-right d-none" id="cancel-invoicedata"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_partner.form.button.cancel" /></button>
+            <button type="button" class="btn btn-success float-right d-none" id="save-invoicedata"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_partner.form.button.save" /></button>
+            <input id="inputPartnerId" type="hidden" value="">
+            <input id="loaders" type="hidden" value="2">
+        </div>
+    </div>
+
+    <div id="loader" class="lds-dual-ring overlay"></div>
+
+    <f:asset.css identifier="managePartnerdata">
+        .only-header {
+            min-height: 0 !important;
+        }
+        .btn{
+            margin-right:1%;
+        }
+    </f:asset.css>
+</f:spaceless>

@@ -1,0 +1,3 @@
+1)  attach shell to the be-se-repo01 container
+2)  run --> vi /etc/php/7.2/apache2/conf.d/custom.ini --> comment or uncomment the last lines in the file (xdebug config)
+3)  restart the container

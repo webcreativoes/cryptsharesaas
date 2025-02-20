@@ -1,0 +1,274 @@
+tt_content.container-LayoutGridWhite < lib.contentElement
+tt_content.container-LayoutGridWhite {
+    templateName = LayoutGridWhite
+    templateRootPaths {
+        10 = EXT:cryptsharesaas/Resources/Private/Templates/Container
+    }
+    dataProcessing {
+        10 = B13\Container\DataProcessing\ContainerProcessor
+    }
+}
+
+tt_content.container-LayoutGridDarkblue < lib.contentElement
+tt_content.container-LayoutGridDarkblue {
+    templateName = LayoutGridDarkblue
+    templateRootPaths {
+        10 = EXT:cryptsharesaas/Resources/Private/Templates/Container
+    }
+    dataProcessing {
+        10 = B13\Container\DataProcessing\ContainerProcessor
+    }
+}
+
+tt_content.container-LayoutGridDarkgray < lib.contentElement
+tt_content.container-LayoutGridDarkgray {
+    templateName = LayoutGridDarkgray
+    templateRootPaths {
+        10 = EXT:cryptsharesaas/Resources/Private/Templates/Container
+    }
+    dataProcessing {
+        10 = B13\Container\DataProcessing\ContainerProcessor
+    }
+}
+
+tt_content.container-ContentGrid2Cols-50-50 < lib.contentElement
+tt_content.container-ContentGrid2Cols-50-50 {
+    templateName = ContentGrid2Cols-50-50
+    templateRootPaths {
+        10 = EXT:cryptsharesaas/Resources/Private/Templates/Container
+    }
+    dataProcessing {
+        10 = B13\Container\DataProcessing\ContainerProcessor
+    }
+}
+
+tt_content.container-ContentGrid2Cols-66-33 < lib.contentElement
+tt_content.container-ContentGrid2Cols-66-33 {
+    templateName = ContentGrid2Cols-66-33
+    templateRootPaths {
+        10 = EXT:cryptsharesaas/Resources/Private/Templates/Container
+    }
+    dataProcessing {
+        10 = B13\Container\DataProcessing\ContainerProcessor
+    }
+}
+
+tt_content.container-ContentGrid2Cols-33-66 < lib.contentElement
+tt_content.container-ContentGrid2Cols-33-66 {
+    templateName = ContentGrid2Cols-33-66
+    templateRootPaths {
+        10 = EXT:cryptsharesaas/Resources/Private/Templates/Container
+    }
+    dataProcessing {
+        10 = B13\Container\DataProcessing\ContainerProcessor
+    }
+}
+
+tt_content.container-ContentGrid3Cols-33-33-33 < lib.contentElement
+tt_content.container-ContentGrid3Cols-33-33-33 {
+    templateName = ContentGrid3Cols-33-33-33
+    templateRootPaths {
+        10 = EXT:cryptsharesaas/Resources/Private/Templates/Container
+    }
+    dataProcessing {
+        10 = B13\Container\DataProcessing\ContainerProcessor
+    }
+}
+
+tt_content.container-ContentGrid3Cols-50-25-25 < lib.contentElement
+tt_content.container-ContentGrid3Cols-50-25-25 {
+    templateName = ContentGrid3Cols-50-25-25
+    templateRootPaths {
+        10 = EXT:cryptsharesaas/Resources/Private/Templates/Container
+    }
+    dataProcessing {
+        10 = B13\Container\DataProcessing\ContainerProcessor
+    }
+}
+
+tt_content.container-ContentGrid3Cols-25-25-50 < lib.contentElement
+tt_content.container-ContentGrid3Cols-25-25-50 {
+    templateName = ContentGrid3Cols-25-25-50
+    templateRootPaths {
+        10 = EXT:cryptsharesaas/Resources/Private/Templates/Container
+    }
+    dataProcessing {
+        10 = B13\Container\DataProcessing\ContainerProcessor
+    }
+}
+
+tt_content.container-ContentGrid4Cols-25-25-25-25 < lib.contentElement
+tt_content.container-ContentGrid4Cols-25-25-25-25 {
+    templateName = ContentGrid4Cols-25-25-25-25
+    templateRootPaths {
+        10 = EXT:cryptsharesaas/Resources/Private/Templates/Container
+    }
+    dataProcessing {
+        10 = B13\Container\DataProcessing\ContainerProcessor
+    }
+}
+
+tt_content.container-ContentGrid6Cols-16-16-16-16-16-16 < lib.contentElement
+tt_content.container-ContentGrid6Cols-16-16-16-16-16-16 {
+    templateName = ContentGrid6Cols-16-16-16-16-16-16
+    templateRootPaths {
+        10 = EXT:cryptsharesaas/Resources/Private/Templates/Container
+    }
+    dataProcessing {
+        10 = B13\Container\DataProcessing\ContainerProcessor
+    }
+}
+
+tt_content.container-FooterGrid < lib.contentElement
+tt_content.container-FooterGrid {
+    templateName = FooterGrid
+    templateRootPaths {
+        10 = EXT:cryptsharesaas/Resources/Private/Templates/Container
+    }
+    dataProcessing {
+        10 = B13\Container\DataProcessing\ContainerProcessor
+    }
+}
+
+tt_content.container-ContentGrid2ColsForNesting-33-66 < lib.contentElement
+tt_content.container-ContentGrid2ColsForNesting-33-66 {
+    templateName = ContentGrid2ColsForNesting-33-66
+    templateRootPaths {
+        10 = EXT:cryptsharesaas/Resources/Private/Templates/Container
+    }
+    dataProcessing {
+        10 = B13\Container\DataProcessing\ContainerProcessor
+    }
+}
+
+tt_content.container-ContentGrid2ColsForNesting-50-50 < lib.contentElement
+tt_content.container-ContentGrid2ColsForNesting-50-50 {
+    templateName = ContentGrid2ColsForNesting-50-50
+    templateRootPaths {
+        10 = EXT:cryptsharesaas/Resources/Private/Templates/Container
+    }
+    dataProcessing {
+        10 = B13\Container\DataProcessing\ContainerProcessor
+    }
+}
+
+tt_content.container-LayoutGridLightgray < lib.contentElement
+tt_content.container-LayoutGridLightgray {
+    templateName = LayoutGridLightgray
+    templateRootPaths {
+        10 = EXT:cryptsharesaas/Resources/Private/Templates/Container
+    }
+    dataProcessing {
+        10 = B13\Container\DataProcessing\ContainerProcessor
+    }
+}
+
+tt_content.container-ContentGrid2ColsStructuredContent < lib.contentElement
+tt_content.container-ContentGrid2ColsStructuredContent {
+    templateName = ContentGrid2ColsStructuredContent
+    templateRootPaths {
+        10 = EXT:cryptsharesaas/Resources/Private/Templates/Container
+    }
+    dataProcessing {
+        10 = B13\Container\DataProcessing\ContainerProcessor
+    }
+}
+
+tt_content.container-LayoutGridTurquoise < lib.contentElement
+tt_content.container-LayoutGridTurquoise {
+    templateName = LayoutGridTurquoise
+    templateRootPaths {
+        10 = EXT:cryptsharesaas/Resources/Private/Templates/Container
+    }
+    dataProcessing {
+        10 = B13\Container\DataProcessing\ContainerProcessor
+    }
+}
+
+tt_content.container-ContentGrid2ColsForNesting-66-33 < lib.contentElement
+tt_content.container-ContentGrid2ColsForNesting-66-33 {
+    templateName = ContentGrid2ColsForNesting-66-33
+    templateRootPaths {
+        10 = EXT:cryptsharesaas/Resources/Private/Templates/Container
+    }
+    dataProcessing {
+        10 = B13\Container\DataProcessing\ContainerProcessor
+    }
+}
+
+#tt_content.container-ContentGrid2ColsForNesting-66-33 < lib.contentElement
+#tt_content.container-ContentGrid2ColsForNesting-66-33 {
+#    templateName = ContentGrid2ColsForNesting-66-33
+#    templateRootPaths {
+#        10 = EXT:cryptsharesaas/Resources/Private/Templates/Container
+#    }
+#    dataProcessing {
+#        10 = B13\Container\DataProcessing\ContainerProcessor
+#    }
+#}
+
+tt_content.container-ScreenshotGrid < lib.contentElement
+tt_content.container-ScreenshotGrid {
+    templateName = ScreenshotGrid
+    templateRootPaths {
+        10 = EXT:cryptsharesaas/Resources/Private/Templates/Container
+    }
+    dataProcessing {
+        10 = B13\Container\DataProcessing\ContainerProcessor
+    }
+}
+
+tt_content.container-GDPRGridDarkgray < lib.contentElement
+tt_content.container-GDPRGridDarkgray {
+    templateName = GDPRGridDarkgray
+    templateRootPaths {
+        10 = EXT:cryptsharesaas/Resources/Private/Templates/Container
+    }
+    dataProcessing {
+        10 = B13\Container\DataProcessing\ContainerProcessor
+    }
+}
+
+tt_content.container-LayoutGridBackgroundimage < lib.contentElement
+tt_content.container-LayoutGridBackgroundimage {
+    templateName = LayoutGridBackgroundimage
+    templateRootPaths {
+        10 = EXT:cryptsharesaas/Resources/Private/Templates/Container
+    }
+    dataProcessing {
+        10 = B13\Container\DataProcessing\ContainerProcessor
+    }
+}
+
+tt_content.container-ContentGrid2ColsForNesting-10-90 < lib.contentElement
+tt_content.container-ContentGrid2ColsForNesting-10-90 {
+    templateName = ContentGrid2ColsForNesting-10-90
+    templateRootPaths {
+        10 = EXT:cryptsharesaas/Resources/Private/Templates/Container
+    }
+    dataProcessing {
+        10 = B13\Container\DataProcessing\ContainerProcessor
+    }
+}
+
+tt_content.container-ContentGrid2ColsForNestingDashboard < lib.contentElement
+tt_content.container-ContentGrid2ColsForNestingDashboard {
+    templateName = ContentGrid2ColsForNestingDashboard
+    templateRootPaths {
+        10 = EXT:cryptsharesaas/Resources/Private/Templates/Container
+    }
+    dataProcessing {
+        10 = B13\Container\DataProcessing\ContainerProcessor
+    }
+}
+
+tt_content.container-Hints < lib.contentElement
+tt_content.container-Hints {
+    templateName = Hints
+    templateRootPaths {
+        10 = EXT:cryptsharesaas/Resources/Private/Templates/Container
+    }
+    dataProcessing {
+        10 = B13\Container\DataProcessing\ContainerProcessor
+    }
+}

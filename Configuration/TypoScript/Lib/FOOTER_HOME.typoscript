@@ -1,0 +1,14 @@
+lib.FOOTER_HOME = COA
+lib.FOOTER_HOME {
+    10 = CONTENT
+    10 {
+        table = tt_content
+        select {
+            orderBy = sorting
+            where = colPos = 0
+            languageField = sys_language_uid
+            pidInList = {$PID_FooterRowHome}
+        }
+        wrap = <footer class="home-navbar d-none d-sm-block" id="footer">|</footer>
+    }
+}

@@ -1,0 +1,47 @@
+#Headline configuration
+TCEFORM.tt_content.header_layout {
+  removeItems = 0,1,5,6,7
+  #altLabels.0 = Groß
+  altLabels.2 = H2
+  altLabels.3 = H3
+  altLabels.4 = H4
+}
+
+TCEFORM.tt_content.frame_class.addItems {
+  onlyforcustomers = Only for customers
+}
+
+RTE {
+  classesAnchor {
+    externalLink {
+      altText =
+      titleText =
+    }
+    externalLinkInNewWindow {
+      altText =
+      titleText =
+    }
+    internalLink {
+      altText =
+      titleText =
+    }
+    internalLinkInNewWindow {
+      altText =
+      titleText =
+    }
+    download {
+      altText =
+      titleText =
+    }
+    mail {
+      altText =
+      titleText =
+    }
+  }
+}
+
+#Remove default prefix
+TCEMAIN.table.tt_content {
+  disablePrependAtCopy = 1
+  disableHideAtCopy = 1
+}

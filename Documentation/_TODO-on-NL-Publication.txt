@@ -1,0 +1,37 @@
+#1.  Create backup of livesystem //2019-02-22-1315
+
+#2.  Install latest version of befine_feusers extension on livesystem
+#    Make sure that all table fields/cols are available (i.e. cs_server_host)
+
+2.5 Unhide Pages in Menu SignIn and SignUp so Mobile User can use this faster
+
+#3.  Add custom field CSServer on billwerk to contracts, configure ui visibility and update existing contracts in livesystem
+#    https://sandbox.billwerk.com/#/settings/customfields
+#    https://app.billwerk.com/#/settings/customfields
+
+4.  Add custom field CSServer to products and configure ui visibility
+    https://sandbox.billwerk.com/#/settings/customfields
+    https://app.billwerk.com/#/settings/customfields
+
+4.5 Adopt DCE DCE "Content: Integrations
+	Add Fields for pictures & change in FE depends on new pictures
+	Adopt DCE SaaS: Checkout - Select Pricing Plan - Add fields for GB ??
+
+4.5.1 ADD Custom css frome fileadmin for safari fix
+
+5.  Install latest version of cryptsharesaas extension on livesystem
+    Make sure that all table fields/cols are available
+    Mare sure that all new folder are available and permissions are set correctly
+#    ../logging/contractData/
+#    ../logging/restLog/
+#    ../logging/restLog-Error/
+#    ../logging/webHooks/
+
+7.  Update all existing customers on TYPO3 and set language to "DE" if country code is DEU
+    https://sandbox.billwerk.com/#/customers
+    https://app.billwerk.com/#/customers
+
+6.  Update all existing customers on billwerk and set Locale to "German" if Germany is selected
+    https://sandbox.billwerk.com/#/customers
+    https://app.billwerk.com/#/customers
+

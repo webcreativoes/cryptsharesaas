@@ -1,0 +1,13 @@
+lib.FOOTER = COA
+lib.FOOTER {
+    10 = CONTENT
+    10 {
+        table = tt_content
+        select {
+            orderBy = sorting
+            where = colPos = 0
+            languageField = sys_language_uid
+            pidInList = {$PID_FooterRow}
+        }
+    }
+}

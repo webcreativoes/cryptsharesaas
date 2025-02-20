@@ -1,0 +1,966 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+  <file source-language="en" target-language="fi" datatype="plaintext" date="2019-04-04T13:37:00Z" product-name="checkout">
+    <header/>
+    <body>
+
+      <trans-unit id="loading">
+        <source>Loading...</source>
+        <target>Loading...</target>
+      </trans-unit>
+      <trans-unit id="back">
+        <source>Back</source>
+        <target>Back</target>
+      </trans-unit>
+      <trans-unit id="overview_sort_date_desc">
+          <source>Start date (descending)</source>
+          <target>Start date (descending)</target>
+      </trans-unit>
+      <trans-unit id="overview_sort_date_asc">
+          <source>Start date (ascending)</source>
+          <target>Start date (ascending)</target>
+      </trans-unit>
+      <trans-unit id="overview_sort_customer_desc">
+          <source>Customer (descending)</source>
+          <target>Customer (descending)</target>
+      </trans-unit>
+      <trans-unit id="overview_sort_customer_asc">
+          <source>Customer (ascending)</source>
+          <target>Customer (ascending)</target>
+      </trans-unit>
+      <trans-unit id="overview_search_placeholder">
+          <source>Search</source>
+          <target>Search</target>
+      </trans-unit>
+      <trans-unit id="overview_sort_label">
+          <source>Sorting</source>
+          <target>Sorting</target>
+      </trans-unit>
+      <trans-unit id="overview_buttontext_edit_partnerdata">
+          <source>Manage partner data</source>
+          <target>Manage partner data</target>
+      </trans-unit>
+      <trans-unit id="overview_newcontract_clickhere">
+          <source>Click here to</source>
+          <target>Click here to</target>
+      </trans-unit>
+      <trans-unit id="overview_newcontract">
+          <source>Add a new customer contract</source>
+          <target>Add a new customer contract</target>
+      </trans-unit>
+      <trans-unit id="overview_newcontract_learnmore">
+          <source></source>
+          <target></target>
+      </trans-unit>
+      <trans-unit id="overview_addbutton_clickhere">
+        <source>Click here to</source>
+        <target>Click here to</target>
+      </trans-unit>
+      <trans-unit id="overview_addbutton_addnewaccount">
+        <source>Add a new email user</source>
+        <target>Add a new email user</target>
+      </trans-unit>
+      <trans-unit id="overview_addbutton_of">
+        <source>of</source>
+        <target>of</target>
+      </trans-unit>
+      <trans-unit id="overview_addbutton_used">
+        <source>possible accounts used</source>
+        <target>possible accounts used</target>
+      </trans-unit>
+
+      <trans-unit id="overview_upsell">
+        <source>Curious?</source>
+        <target>Curious?</target>
+      </trans-unit>
+
+      <trans-unit id="overview_upsell_clickhere">
+        <source>There is a better way to use Cryptshare</source>
+        <target>There is a better way to use Cryptshare</target>
+      </trans-unit>
+      <trans-unit id="overview_upsell_learnmore">
+        <source>Talk to one of our experts</source>
+        <target>Talk to one of our experts</target>
+      </trans-unit>
+
+      <trans-unit id="usertable_name">
+        <source>Name</source>
+        <target>Name</target>
+      </trans-unit>
+      <trans-unit id="usertable_email">
+        <source>Email address</source>
+        <target>Email address</target>
+      </trans-unit>
+      <trans-unit id="usertable_status">
+        <source>Status</source>
+        <target>Status</target>
+      </trans-unit>
+      <trans-unit id="usertable_actions">
+        <source>Actions</source>
+        <target>Actions</target>
+      </trans-unit>
+
+      <trans-unit id="checkout_coupon_headline">
+        <source>Voucher / Discount</source>
+        <target>Voucher / Discount</target>
+      </trans-unit>
+      <trans-unit id="checkout_coupon_enter">
+        <source>Voucher / Discount</source>
+        <target>Voucher / Discount</target>
+      </trans-unit>
+      <trans-unit id="checkout_coupon_apply">
+        <source>Apply</source>
+        <target>Apply</target>
+      </trans-unit>
+
+      <trans-unit id="checkout_step_1">
+        <source>Select pricing plan</source>
+        <target>Select pricing plan</target>
+      </trans-unit>
+      <trans-unit id="checkout_step_2">
+        <source>Order</source>
+        <target>Order</target>
+      </trans-unit>
+      <trans-unit id="checkout_step_3">
+        <source>Payment</source>
+        <target>Payment</target>
+      </trans-unit>
+      <trans-unit id="checkout_step_4">
+        <source>Enter user data</source>
+        <target>Enter user data</target>
+      </trans-unit>
+      <trans-unit id="checkout_step_5">
+        <source>Use Cryptshare</source>
+        <target>Use Cryptshare</target>
+      </trans-unit>
+
+
+      <trans-unit id="checkout_order_now">
+        <source>Order now</source>
+        <target>Order now</target>
+      </trans-unit>
+      <trans-unit id="checkout_pay_now">
+        <source>Finish payment now</source>
+        <target>Finish payment now</target>
+      </trans-unit>
+      <trans-unit id="checkout_pay_next">
+        <source>The payment is made in the next step.</source>
+        <target>The payment is made in the next step.</target>
+      </trans-unit>
+
+      <trans-unit id="checkout_edit_data">
+        <source>Edit data</source>
+        <target>Edit data</target>
+      </trans-unit>
+
+      <trans-unit id="checkout_billing_data">
+        <source>Billing data</source>
+        <target>Billing data</target>
+      </trans-unit>
+
+      <trans-unit id="checkout_first_name">
+        <source>First name</source>
+        <target>First name</target>
+      </trans-unit>
+      <trans-unit id="checkout_last_name">
+        <source>Last name</source>
+        <target>Last name</target>
+      </trans-unit>
+      <trans-unit id="checkout_email">
+        <source>Email address</source>
+        <target>Email address</target>
+      </trans-unit>
+      <trans-unit id="checkout_company">
+        <source>Company</source>
+        <target>Company</target>
+      </trans-unit>
+      <trans-unit id="checkout_address">
+        <source>Address</source>
+        <target>Address</target>
+      </trans-unit>
+      <trans-unit id="checkout_house_number">
+        <source>House number</source>
+        <target>House number</target>
+      </trans-unit>
+      <trans-unit id="checkout_zip">
+        <source>Postal code</source>
+        <target>Postal code</target>
+      </trans-unit>
+      <trans-unit id="checkout_city">
+        <source>City</source>
+        <target>City</target>
+      </trans-unit>
+      <trans-unit id="checkout_country">
+        <source>Country</source>
+        <target>Country</target>
+      </trans-unit>
+      <trans-unit id="checkout_country_deu">
+        <source>Germany</source>
+        <target>Germany</target>
+      </trans-unit>
+      <trans-unit id="checkout_country_gbp">
+        <source>United Kingdom</source>
+        <target>United Kingdom</target>
+      </trans-unit>
+      <trans-unit id="checkout_country_nld">
+        <source>Netherlands</source>
+        <target>Netherlands</target>
+      </trans-unit>
+      <trans-unit id="checkout_country_aut">
+        <source>Austria</source>
+        <target>Austria</target>
+      </trans-unit>
+
+      <trans-unit id="checkout_vat">
+        <source>VAT</source>
+        <target>VAT</target>
+      </trans-unit>
+
+      <trans-unit id="checkout_mandatory">
+        <source>* Mandatory fields</source>
+        <target>* Mandatory fields</target>
+      </trans-unit>
+
+      <trans-unit id="checkout_read_gtac">
+        <source>Click here to read the General Terms and Conditions.</source>
+        <target>Click here to read the General Terms and Conditions.</target>
+      </trans-unit>
+      <trans-unit id="checkout_accept_gtac">
+        <source>I have read the General Terms and Conditions, understood and accept them.</source>
+        <target>I have read the General Terms and Conditions, understood and accept them.</target>
+      </trans-unit>
+
+      <trans-unit id="checkout_hint_collective_mailboxes">
+        <source><![CDATA[<p><strong id="cs_email_collective"></strong> is a collective email address:</p> <ul> <li>Cryptshare.express email users are coupled to individual email addresses.</li> <li>It does not correspond to the GDPR to use collective addresses for the handling of personal data.</li> <li>If maximum two persons use the collective address, a special regulation can be put into force.</li> </ul>]]></source>
+        <target><![CDATA[<p><strong id="cs_email_collective"></strong> is a collective email address:</p> <ul> <li>Cryptshare.express email users are coupled to individual email addresses.</li> <li>It does not correspond to the GDPR to use collective addresses for the handling of personal data.</li> <li>If maximum two persons use the collective address, a special regulation can be put into force.</li> </ul>]]></target>
+      </trans-unit>
+
+      <trans-unit id="checkout_accept_collective_mailboxes">
+        <source><![CDATA[I hereby confirm that this email address is only used by a maximum of two persons in my company.]]></source>
+        <target><![CDATA[I hereby confirm that this email address is only used by a maximum of two persons in my company.]]></target>
+      </trans-unit>
+
+      <trans-unit id="checkout_read_privacy">
+        <source>Click here to read the Privacy Policy</source>
+        <target>Click here to read the Privacy Policy</target>
+      </trans-unit>
+      <trans-unit id="checkout_accept_privacy">
+        <source>I have read the Privacy Policy, understood and accept them.</source>
+        <target>I have read the Privacy Policy, understood and accept them.</target>
+      </trans-unit>
+
+      <trans-unit id="checkout_read_tou">
+        <source>Click here to read the Terms of Use.</source>
+        <target>Click here to read the Terms of Use.</target>
+      </trans-unit>
+      <trans-unit id="checkout_accept_tou">
+        <source>I have read the Terms of Use, understood and accept them.</source>
+        <target>I have read the Terms of Use, understood and accept them.</target>
+      </trans-unit>
+
+
+      <trans-unit id="checkout_userdata_unchangeable">
+        <source>Please note: These information can not be changed afterwards.</source>
+        <target>Please note: These information can not be changed afterwards.</target>
+      </trans-unit>
+
+
+      <trans-unit id="checkout_userdata_enteruserdata">
+        <source>Data of the new email user.</source>
+        <target>Data of the new email user.</target>
+      </trans-unit>
+      <trans-unit id="checkout_userdata_save">
+        <source>Save &amp; activate user</source>
+        <target>Save &amp; activate user</target>
+      </trans-unit>
+      <trans-unit id="checkout_sendwelcomeemail">
+        <source>Send welcome email to this user</source>
+        <target>Send welcome email to this user</target>
+      </trans-unit>
+      <trans-unit id="checkout_welcomeemailpreview">
+        <source>Click here to see what the recipient will receive</source>
+        <target>Click here to see what the recipient will receive</target>
+      </trans-unit>
+      <trans-unit id="checkout_currentstatus">
+        <source>Current status</source>
+        <target>Current status</target>
+      </trans-unit>
+
+      <trans-unit id="checkout_business_proof_missing_headline">
+        <source>Business proof missing</source>
+        <target>Business proof missing</target>
+      </trans-unit>
+      <trans-unit id="checkout_business_proof_missing_p1">
+        <source>Cryptshare.express is exclusively for business customers.</source>
+        <target>Cryptshare.express is exclusively for business customers.</target>
+      </trans-unit>
+      <trans-unit id="checkout_business_proof_missing_p2">
+        <source>Since you did not enter your VAT ID number, we need a proof of your business.</source>
+        <target>Since you did not enter your VAT ID number, we need a proof of your business.</target>
+      </trans-unit>
+      <trans-unit id="checkout_business_proof_missing_p3">
+        <source>If available, please either enter your sales tax identification number under "Accounts" or send us an excerpt from your commercial register statement, your chamber's membership certificate or a comparable proof of business via https://webapp.cryptshare.express to support@cryptshare.express</source>
+        <target>If available, please either enter your sales tax identification number under "Accounts" or send us an excerpt from your commercial register statement, your chamber's membership certificate or a comparable proof of business via https://webapp.cryptshare.express to support@cryptshare.express</target>
+      </trans-unit>
+      <trans-unit id="checkout_business_proof_missing_p4">
+        <source>Please understand that we have to deactivate your account on</source>
+        <target>Please understand that we have to deactivate your account on</target>
+      </trans-unit>
+      <trans-unit id="checkout_business_proof_missing_p5">
+        <source>, if we have no proof of business.</source>
+        <target>, if we have no proof of business.</target>
+      </trans-unit>
+
+      <trans-unit id="checkout_enter_paymentdetails">
+        <source>Enter your payment details now</source>
+        <target>Enter your payment details now</target>
+      </trans-unit>
+
+      <trans-unit id="checkout_final_steps_headline">
+        <source>Final steps of order process...</source>
+        <target>Final steps of order process...</target>
+      </trans-unit>
+
+      <trans-unit id="checkout_final_steps_payment">
+        <source>Payment successfully finished</source>
+        <target>Payment successfully finished</target>
+      </trans-unit>
+      <trans-unit id="checkout_final_steps_userdata">
+        <source>Writing user data in contract</source>
+        <target>Writing user data in contract</target>
+      </trans-unit>
+      <trans-unit id="checkout_final_steps_createoncsserver">
+        <source>User successfully created on webapp.cryptshare.express</source>
+        <target>User successfully created on webapp.cryptshare.express</target>
+      </trans-unit>
+
+      <trans-unit id="checkout_summary_headline">
+        <source>Summary</source>
+        <target>Summary</target>
+      </trans-unit>
+      <trans-unit id="checkout_summary_planvariant">
+        <source>Selected plan</source>
+        <target>Selected plan</target>
+      </trans-unit>
+      <trans-unit id="checkout_summary_termofcontract">
+        <source>Term of contract</source>
+        <target>Term of contract</target>
+      </trans-unit>
+      <trans-unit id="checkout_summary_cancellationperiod">
+        <source>Cancellation period</source>
+        <target>Cancellation period</target>
+      </trans-unit>
+      <trans-unit id="checkout_summary_price_netto">
+        <source>Price</source>
+        <target>Price</target>
+      </trans-unit>
+      <trans-unit id="checkout_summary_subtotal_netto">
+        <source>Subtotal</source>
+        <target>Subtotal</target>
+      </trans-unit>
+      <trans-unit id="checkout_summary_total_netto">
+        <source>Total (netto)</source>
+        <target>Total (netto)</target>
+      </trans-unit>
+      <trans-unit id="checkout_summary_discount">
+        <source>Discount</source>
+        <target>Discount</target>
+      </trans-unit>
+      <trans-unit id="checkout_summary_vat">
+        <source>Plus VAT</source>
+        <target>Plus VAT</target>
+      </trans-unit>
+      <trans-unit id="checkout_summary_vat2">
+        <source>amount</source>
+        <target>amount</target>
+      </trans-unit>
+      <trans-unit id="checkout_summary_total">
+        <source>Invoice amount</source>
+        <target>Invoice amount</target>
+      </trans-unit>
+
+      <trans-unit id="checkout_exclvat">
+        <source>excl. VAT</source>
+        <target>excl. VAT</target>
+      </trans-unit>
+
+      <trans-unit id="signup_headline">
+        <source>Just a few seconds...</source>
+        <target>Just a few seconds...</target>
+      </trans-unit>
+      <trans-unit id="signup_p1">
+        <source>We are currently performing the final step of your sign-up process.</source>
+        <target>We are currently performing the final step of your sign-up process.</target>
+      </trans-unit>
+      <trans-unit id="signup_p2">
+        <source>You should be redirected very shortly.</source>
+        <target>You should be redirected very shortly.</target>
+      </trans-unit>
+
+      <trans-unit id="update_headline">
+        <source>Just a few seconds...</source>
+        <target>Just a few seconds...</target>
+      </trans-unit>
+      <trans-unit id="update_p1">
+        <source>We are currently updating your data.</source>
+        <target>We are currently updating your data.</target>
+      </trans-unit>
+      <trans-unit id="update_p2">
+        <source>You should be redirected very shortly.</source>
+        <target>You should be redirected very shortly.</target>
+      </trans-unit>
+
+      <trans-unit id="signin_headline">
+        <source>Just a few seconds...</source>
+        <target>Just a few seconds...</target>
+      </trans-unit>
+      <trans-unit id="signin_p1">
+        <source>Authentication in progress...</source>
+        <target>Authentication in progress...</target>
+      </trans-unit>
+      <trans-unit id="signin_p2">
+        <source>You should be redirected very shortly.</source>
+        <target>You should be redirected very shortly.</target>
+      </trans-unit>
+
+      <trans-unit id="use_section_1_headline1">
+        <source>That's it</source>
+        <target>That's it</target>
+      </trans-unit>
+
+      <trans-unit id="use_section_1_p1_1">
+        <source>The new email address</source>
+        <target>The new email address</target>
+      </trans-unit>
+      <trans-unit id="use_section_1_p1_2">
+        <source><![CDATA[can now<br>be used on <a href="https://webapp.cryptshare.express" target="_blank">webapp.cryptshare.express</a>!]]></source>
+        <target><![CDATA[can now<br>be used on <a href="https://webapp.cryptshare.express" target="_blank">webapp.cryptshare.express</a>!]]></target>
+      </trans-unit>
+
+      <trans-unit id="use_section_1_headline2">
+        <source>Is that your email address?</source>
+        <target>Is that your email address?</target>
+      </trans-unit>
+      <trans-unit id="use_section_1_p2_1">
+        <source>We recommend to visit</source>
+        <target>We recommend to visit</target>
+      </trans-unit>
+      <trans-unit id="use_section_1_p2_2">
+        <source>to authenticate your browser now.</source>
+        <target>to authenticate your browser now.</target>
+      </trans-unit>
+
+
+      <trans-unit id="home_splashscreen_headline">
+        <source>start your secure communication now!</source>
+        <target>aloita turvallinen viestintäsi nyt!</target>
+      </trans-unit>
+      <trans-unit id="home_splashscreen_button">
+        <source>Start</source>
+        <target>Start</target>
+      </trans-unit>
+      <trans-unit id="home_splashscreen_webapplicationtitle">
+        <source>Click to open the Cryptshare web application now</source>
+      </trans-unit>
+      <trans-unit id="home_splashscreen_webapplicationtitle_nl">
+        <source>Click to open the Cryptshare web application for the Netherlands now</source>
+      </trans-unit>
+
+      <trans-unit id="home_splashscreen_button_de">
+        <source>For german customers</source>
+      </trans-unit>
+      <trans-unit id="home_splashscreen_button_nl">
+        <source>For dutch customers</source>
+      </trans-unit>
+
+      <trans-unit id="home_splashscreen_redirect_1">
+        <source>Forward me automatically to the</source>
+      </trans-unit>
+      <trans-unit id="home_splashscreen_redirect_2">
+        <source>web application in the future</source>
+      </trans-unit>
+      <trans-unit id="home_splashscreen_redirecttitle">
+        <source>Click here if you want to skip this page for 30 days</source>
+      </trans-unit>
+
+      <trans-unit id="home_splashscreen_link_learnmore">
+        <source>Learn more</source>
+      </trans-unit>
+      <trans-unit id="home_splashscreen_link_signin">
+        <source>Sign in</source>
+      </trans-unit>
+      <trans-unit id="home_splashscreen_link_signup">
+        <source>Sign up</source>
+      </trans-unit>
+      <trans-unit id="home_splashscreen_link_signup_trial">
+                <source>7-days trial</source>
+                <target>7-days trial</target>
+            </trans-unit>
+            <trans-unit id="component_trial">
+                               <source>after the end of the 7-day trial period</source>
+                               <target>after the end of the 7-day trial period</target>
+                           </trans-unit>
+        <trans-unit id="summary_trial_hint">
+                    <source><![CDATA[The invoice amount is only due if you do not cancel the 7-day trial until <span id="trial-cancel-date">Loading...</span>.]]></source>
+                </trans-unit>
+                <trans-unit id="summary_trial_until">
+                    <source><![CDATA[(until <span id="trial-until">Loading...</span>)]]></source>
+                </trans-unit>
+                <trans-unit id="summary_abo_start">
+                    <source><![CDATA[(from <span id="abo-start">Loading...</span>)]]></source>
+                </trans-unit>
+
+
+
+      <trans-unit id="dashboard_manage">
+        <source>Manage</source>
+      </trans-unit>
+      <trans-unit id="dashboard_users_headline">
+        <source>Email users</source>
+      </trans-unit>
+      <trans-unit id="dashboard_users_p1">
+        <source>Email users subscribed</source>
+      </trans-unit>
+      <trans-unit id="dashboard_users_p2">
+        <source>additional email users possible</source>
+      </trans-unit>
+      <trans-unit id="dashboard_users_link">
+        <source>Manage users</source>
+      </trans-unit>
+
+      <trans-unit id="dashboard_use_headline">
+        <source>Take off with Cryptshare</source>
+      </trans-unit>
+      <trans-unit id="dashboard_use_outlook">
+        <source><![CDATA[Cryptshare for Outlook]]></source>
+      </trans-unit>
+      <trans-unit id="dashboard_use_webapplication">
+        <source>Cryptshare Web application</source>
+      </trans-unit>
+      <trans-unit id="dashboard_use_chrome">
+        <source>Cryptshare.express for Chrome</source>
+      </trans-unit>
+      <trans-unit id="dashboard_use_videos">
+        <source>Introduction videos</source>
+      </trans-unit>
+      <trans-unit id="dashboard_use_firefox">
+        <source>Cryptshare.express for Firefox</source>
+      </trans-unit>
+      <trans-unit id="dashboard_use_edge">
+        <source>Cryptshare.express for Edge</source>
+      </trans-unit>
+      <trans-unit id="dashboard_use_opera">
+        <source>Cryptshare.express for Opera</source>
+      </trans-unit>
+      <trans-unit id="dashboard_use_safari">
+        <source>Cryptshare.express for Safari</source>
+      </trans-unit>
+
+      <trans-unit id="dashboard_use_link">
+        <source>All you need</source>
+      </trans-unit>
+
+      <trans-unit id="dashboard_help_headline">
+        <source>Help</source>
+      </trans-unit>
+      <trans-unit id="dashboard_help_p1">
+        <source>Cryptshare.express is very easy to use.</source>
+      </trans-unit>
+      <trans-unit id="dashboard_help_p2">
+        <source>For the most frequently asked questions, we put together some useful information for you in our help section.</source>
+      </trans-unit>
+      <trans-unit id="dashboard_help_link">
+        <source>Learn more</source>
+      </trans-unit>
+
+      <trans-unit id="dashboard_account_headline">
+        <source>Business Account</source>
+      </trans-unit>
+      <trans-unit id="dashboard_account_p1">
+        <source>Keep the information you provided up to date and change your password.</source>
+      </trans-unit>
+      <trans-unit id="dashboard_account_link">
+        <source>Manage account</source>
+      </trans-unit>
+      <trans-unit id="copy_to_clipboard">
+        <source>Copy to clipboard</source>
+      </trans-unit>
+
+      <trans-unit id="use_section_2_headline1">
+        <source>That's it!</source>
+      </trans-unit>
+      <trans-unit id="use_section_2_headline2">
+        <source>What's next?</source>
+      </trans-unit>
+
+      <trans-unit id="use_section_2_headline_order">
+        <source>Subscribe more email users</source>
+      </trans-unit>
+      <trans-unit id="use_section_2_p_order">
+        <source>Up to 25 email users possible</source>
+      </trans-unit>
+      <trans-unit id="use_section_2_headline_sendwelcomemail">
+        <source>Inform user(s)</source>
+      </trans-unit>
+      <trans-unit id="use_section_2_p1_sendwelcomemail">
+        <source>We recommend to send this text via your own email program to</source>
+      </trans-unit>
+      <trans-unit id="use_section_2_p2_sendwelcomemail">
+        <source>, so that any queries you may have will end up directly in your inbox.</source>
+      </trans-unit>
+      <trans-unit id="use_section_2_headline_sendwelcomemail_recipient">
+        <source>Recipient</source>
+      </trans-unit>
+      <trans-unit id="use_section_2_headline_sendwelcomemail_sender">
+        <source>Sender</source>
+      </trans-unit>
+      <trans-unit id="use_section_2_headline_sendwelcomemail_subject">
+        <source>Subject</source>
+      </trans-unit>
+      <trans-unit id="use_section_2_headline_sendwelcomemail_template">
+        <source>Our suggestion</source>
+      </trans-unit>
+      <trans-unit id="use_section_2_p_sendwelcomemail">
+        <source>Send welcome email now</source>
+      </trans-unit>
+      <trans-unit id="use_section_2_headline_visitwebapp">
+        <source>Visit web application</source>
+      </trans-unit>
+      <trans-unit id="use_section_2_headline_download">
+        <source>Download integrations</source>
+      </trans-unit>
+      <trans-unit id="use_section_2_p_download">
+        <source>Download, install, use</source>
+      </trans-unit>
+
+
+      <trans-unit id="use_section_4_headline1">
+        <source>Downloads</source>
+      </trans-unit>
+
+      <trans-unit id="use_section_4_headline_webapplication">
+        <source><![CDATA[Cryptshare Web application]]></source>
+      </trans-unit>
+
+      <trans-unit id="use_section_4_p_webapplication_open">
+        <source>Open Web application now</source>
+      </trans-unit>
+
+      <trans-unit id="use_section_4_headline_outlook">
+        <source><![CDATA[Cryptshare for Outlook]]></source>
+      </trans-unit>
+      <trans-unit id="use_section_4_description_outlook">
+        <source>Benefit from all of Cryptshare's advantages in Outlook.</source>
+      </trans-unit>
+      <trans-unit id="use_section_4_description_webapplication">
+        <source>Available at anytime, for all modern browsers and devices.</source>
+      </trans-unit>
+      <trans-unit id="use_section_4_p_outlook">
+        <source>Version 2.4.0.0145</source>
+      </trans-unit>
+      <trans-unit id="use_section_4_p_outlook_download">
+        <source>Download installer</source>
+      </trans-unit>
+      <trans-unit id="use_section_4_p_outlook_manual">
+        <source>Download manual</source>
+      </trans-unit>
+
+      <trans-unit id="use_section_4_headline_manual">
+        <source>Cryptshare manual</source>
+      </trans-unit>
+      <trans-unit id="use_section_4_p_manual">
+        <source>3 MB, PDF</source>
+      </trans-unit>
+
+      <trans-unit id="use_section_4_headline_browser_general">
+        <source>Browser-integrations</source>
+      </trans-unit>
+
+      <trans-unit id="use_section_4_description_browser_general">
+        <source>With a small icon in your favorite browser, Cryptshare is always just one click away.</source>
+      </trans-unit>
+
+      <trans-unit id="use_section_4_headline_chrome">
+        <source><![CDATA[Chrome]]></source>
+      </trans-unit>
+      <trans-unit id="use_section_4_description_chrome">
+        <source>With a small icon in Google Chrome browser, Cryptshare is only one click away.</source>
+      </trans-unit>
+      <trans-unit id="use_section_4_p_chrome">
+        <source>Version 1.0.0 (Beta)</source>
+      </trans-unit>
+      <trans-unit id="use_section_4_p_chrome_download">
+        <source>Install now</source>
+      </trans-unit>
+      <trans-unit id="use_section_4_p_chrome">
+        <source>Version 1.0.0 (Beta)</source>
+      </trans-unit>
+      <trans-unit id="use_section_4_p_chrome_manual">
+        <source>Download manual</source>
+      </trans-unit>
+
+      <trans-unit id="use_section_4_headline_firefox">
+        <source><![CDATA[Firefox]]></source>
+      </trans-unit>
+      <trans-unit id="use_section_4_description_firefox">
+        <source>With a small icon in Mozilla Firefox, Cryptshare is only one click away.</source>
+      </trans-unit>
+      <trans-unit id="use_section_4_p_firefox">
+        <source>Version 1.0.0 (Beta)</source>
+      </trans-unit>
+      <trans-unit id="use_section_4_p_firefox_download">
+        <source>Install now</source>
+      </trans-unit>
+      <trans-unit id="use_section_4_p_firefox_manual">
+        <source>Download manual</source>
+      </trans-unit>
+
+      <trans-unit id="use_section_4_p_comingsoon">
+        <source>Coming soon</source>
+      </trans-unit>
+
+      <trans-unit id="use_section_4_headline_edge">
+        <source><![CDATA[Edge]]></source>
+      </trans-unit>
+      <trans-unit id="use_section_4_description_edge">
+        <source>With a small icon in Microsoft Edge browser, Cryptshare is only one click away.</source>
+      </trans-unit>
+      <trans-unit id="use_section_4_p_edge_download">
+        <source>Install now</source>
+      </trans-unit>
+      <trans-unit id="use_section_4_p_edge">
+        <source>Version 1.0.0 (Beta)</source>
+      </trans-unit>
+      <trans-unit id="use_section_4_p_edge_manual">
+        <source>Download manual</source>
+      </trans-unit>
+
+      <trans-unit id="use_section_4_headline_opera">
+        <source><![CDATA[Opera]]></source>
+      </trans-unit>
+      <trans-unit id="use_section_4_description_opera">
+        <source>With a small icon in Opera browser, Cryptshare is only one click away.</source>
+      </trans-unit>
+      <trans-unit id="use_section_4_p_opera">
+        <source>Version 1.0.0 (Beta)</source>
+      </trans-unit>
+      <trans-unit id="use_section_4_p_opera_download">
+        <source>Install now</source>
+      </trans-unit>
+      <trans-unit id="use_section_4_p_opera_manual">
+        <source>Download manual</source>
+      </trans-unit>
+
+      <trans-unit id="use_section_4_headline_safari">
+        <source><![CDATA[Safari]]></source>
+      </trans-unit>
+      <trans-unit id="use_section_4_description_safari">
+        <source>With a small icon in Apple Safari browser, Cryptshare is only one click away.</source>
+      </trans-unit>
+      <trans-unit id="use_section_4_p_safari_download">
+        <source>Install Extension now</source>
+      </trans-unit>
+      <trans-unit id="use_section_4_p_safari">
+        <source>Version 1.0.0 (Beta)</source>
+      </trans-unit>
+      <trans-unit id="use_section_4_p_safari_manual">
+        <source>Download manual</source>
+      </trans-unit>
+
+      <trans-unit id="upsell_headline">
+        <source>Congratulations</source>
+      </trans-unit>
+      <trans-unit id="upsell_subheadline">
+        <source>must have grown. :-)</source>
+      </trans-unit>
+      <trans-unit id="upsell_didyouknow">
+        <source>Did you know?</source>
+      </trans-unit>
+      <trans-unit id="upsell_p1">
+        <source>Get more out of Cryptshare.</source>
+      </trans-unit>
+      <trans-unit id="upsell_p2">
+        <source>Get non-binding advice now!</source>
+      </trans-unit>
+      <trans-unit id="upsell_submit">
+        <source>Call me</source>
+      </trans-unit>
+
+      <trans-unit id="whatyouget_headline">
+        <source>Benefit from Cryptshare.express' many advantages – right after you subscribed</source>
+      </trans-unit>
+      <trans-unit id="whatyouget_offer_headline">
+        <source>Transparent terms</source>
+      </trans-unit>
+      <trans-unit id="whatyouget_offer_p1">
+        <source>No set-up fee</source>
+      </trans-unit>
+      <trans-unit id="whatyouget_offer_p2">
+        <source>Annual subscription</source>
+      </trans-unit>
+      <trans-unit id="whatyouget_offer_p3">
+        <source>Can be cancelled up to four weeks before the subscribed period ends</source>
+      </trans-unit>
+      <trans-unit id="whatyouget_offer_p4">
+        <source>Secure and easy payment with credit card or direct debit</source>
+      </trans-unit>
+
+      <trans-unit id="whatyouget_features_headline">
+        <source>Features</source>
+      </trans-unit>
+      <trans-unit id="whatyouget_features_p1">
+        <source>Exchange of large files</source>
+      </trans-unit>
+      <trans-unit id="whatyouget_features_p2">
+        <source>Send and receive secure emails</source>
+      </trans-unit>
+      <trans-unit id="whatyouget_features_p3">
+        <source>Your communication partners don't need their own Cryptshare email user accounts</source>
+      </trans-unit>
+      <trans-unit id="whatyouget_features_p4">
+        <source>Up to 10 GB file size per transfer</source>
+      </trans-unit>
+      <trans-unit id="whatyouget_features_p5">
+        <source>10 days transfer retention period</source>
+      </trans-unit>
+      <trans-unit id="whatyouget_features_p6">
+        <source>Usable without having your own IT infrastructure</source>
+      </trans-unit>
+      <trans-unit id="whatyouget_features_p7">
+        <source>Recall emails in Outlook</source>
+      </trans-unit>
+
+      <trans-unit id="whatyouget_inclusive_headline">
+        <source>Including</source>
+      </trans-unit>
+      <trans-unit id="whatyouget_inclusive_p1">
+        <source>Cryptshare Web application</source>
+      </trans-unit>
+      <trans-unit id="whatyouget_inclusive_p2">
+        <source><![CDATA[Cryptshare for Outlook]]></source>
+      </trans-unit>
+      <trans-unit id="whatyouget_inclusive_p3">
+        <source>Cryptshare.express browser-integrations</source>
+      </trans-unit>
+      <trans-unit id="whatyouget_inclusive_p4">
+        <source>All Cryptshare software updates for the listed integrations above</source>
+      </trans-unit>
+
+
+
+      <trans-unit id="onboarding_welcomeemail_subject1">
+        <source>Welcome to Cryptshare.express,</source>
+      </trans-unit>
+      <trans-unit id="onboarding_welcomeemail_subject2">
+        <source>! - Your start</source>
+      </trans-unit>
+
+      <trans-unit id="onboarding_welcomeemail_p1">
+        <source>Hello</source>
+      </trans-unit>
+      <trans-unit id="onboarding_welcomeemail_p2">
+        <source><![CDATA[as you may have already noticed, we decided to exchange large and sensitive data via Cryptshare.express in the future.]]></source>
+      </trans-unit>
+      <trans-unit id="onboarding_welcomeemail_p3">
+        <source><![CDATA[You receive this email because I have already activated you.<br><strong>You can start right away! :-)</strong>]]></source>
+      </trans-unit>
+      <trans-unit id="onboarding_welcomeemail_p4">
+        <source><![CDATA[The best way is to take 15 minutes and visit the following website:<br><a href="https://www.cryptshare.express/de/onboarding" target="_blank">https://www.cryptshare.express/de/onboarding</a>]]></source>
+      </trans-unit>
+      <trans-unit id="onboarding_welcomeemail_p5">
+        <source><![CDATA[There you'll find everything you need to use Cryptshare.express:]]></source>
+      </trans-unit>
+      <trans-unit id="onboarding_welcomeemail_p6">
+        <source><![CDATA[<ol> <li>A short <strong>Instruction video</strong> for the Cryptshare.express web application.</li> <li>Den <a href="https://webapp.cryptshare.express/" target="_blank">Link to the Cryptshare.express web application</a>.</li> <li> The installation program for the <strong>Outlook integration</strong> - Cryptshare.express for Outlook </li> </ol>]]></source>
+      </trans-unit>
+      <trans-unit id="onboarding_welcomeemail_p7">
+        <source><![CDATA[You can even integrate the Cryptshare.Express web application <strong>directly into your browser </strong>:]]></source>
+      </trans-unit>
+      <trans-unit id="onboarding_welcomeemail_p8">
+        <source><![CDATA[<ol> <li>By opening the address <a href="https://webapp.cryptshare.express/" target="_blank">https://webapp.cryptshare.express/</a> and adding it to your favorites.</li> <li>The extension <strong>Cryptshare.express for Chrome</strong> installed in your Chrome browser.</li> <li>The add-on <strong>Cryptshare.express for Firefox</strong> installed in your Firefox browser.</li> </ol>]]></source>
+      </trans-unit>
+      <trans-unit id="onboarding_welcomeemail_p9">
+        <source><![CDATA[Further information will follow later.]]></source>
+      </trans-unit>
+      <trans-unit id="onboarding_welcomeemail_p10">
+        <source><![CDATA[I recommend that you keep this email so that you can look it up at any time.]]></source>
+      </trans-unit>
+      <trans-unit id="onboarding_welcomeemail_p11">
+        <source><![CDATA[Best regards,]]></source>
+      </trans-unit>
+
+      <trans-unit id="checkout_vathint_headline">
+        <source><![CDATA[Please note]]></source>
+      </trans-unit>
+      <trans-unit id="checkout_vathint_p1">
+        <source><![CDATA[<p>You did not enter a VAT-ID yet. Please note that without a VAT-ID we have to claim value added tax on our invoice.</p>]]></source>
+      </trans-unit>
+      <trans-unit id="checkout_vathint_link">
+        <source><![CDATA[Click here to enter your VAT-ID now (if you have any)]]></source>
+      </trans-unit>
+
+      <trans-unit id="checkout_staff_member_hint_headline">
+        <source><![CDATA[Hello]]></source>
+      </trans-unit>
+
+      <trans-unit id="checkout_staff_member_hint_p1">
+        <source><![CDATA[As an employee of our company, you can use an account with up to 25 users free of charge for the purpose of demonstrating or demonstrating our Cryptshare.express product to potential or existing customers and business partners.]]></source>
+      </trans-unit>
+
+      <trans-unit id="checkout_staff_member_hint_p2">
+        <source><![CDATA[Please note the following terms of use:]]></source>
+      </trans-unit>
+
+      <trans-unit id="checkout_staff_member_hint_p3_1">
+        <source><![CDATA[Only commercial / business users may be created, <strong>no consumers</strong>.]]></source>
+      </trans-unit>
+      <trans-unit id="checkout_staff_member_hint_p3_2">
+        <source><![CDATA[The investment of users always takes place in the interest,<br />to the advantage and for the <strong>account of befine Solutions AG</strong>.]]></source>
+      </trans-unit>
+      <trans-unit id="checkout_staff_member_hint_p3_3">
+        <source><![CDATA[The use of the account for <strong>private purposes is not permitted</strong>.]]></source>
+      </trans-unit>
+
+      <trans-unit id="checkout_staff_member_hint_p4">
+        <source><![CDATA[The premature deletion of users (before the license expires) is only possible at your request by deleting them from the policy.<br /><br />We wish you every success using Cryptshare.express.<br> befine Solutions AG]]></source>
+      </trans-unit>
+
+      <trans-unit id="checkout_staff_member_hint_p5">
+        <source><![CDATA[By placing an order, I agree to abide by the above terms of use.]]></source>
+      </trans-unit>
+
+      <trans-unit id="invoicetable_contract">
+        <source>Contract</source>
+      </trans-unit>
+      <trans-unit id="invoicetable_date">
+        <source>Date</source>
+      </trans-unit>
+      <trans-unit id="invoicetable_total">
+        <source>Total</source>
+      </trans-unit>
+      <trans-unit id="invoicetable_currency">
+        <source>Currency</source>
+      </trans-unit>
+      <trans-unit id="invoicetable_action">
+        <source>Action</source>
+      </trans-unit>
+
+      <trans-unit id="hint_maintenance">
+        <source><![CDATA[Please note: We are currently carrying out maintenance work on this system.<br>As long as this message is displayed, unexpected error messages may occur.<br>Please visit us again later. Thank you very much for your understanding!]]></source>
+      </trans-unit>
+      <trans-unit id="hint_backuprestore">
+        <source><![CDATA[Please note: We are currently restoring a Backup<br>Please visit us again later and check your last transfers. Thank you very much for your understanding!]]></source>
+      </trans-unit>
+
+      <trans-unit id="user_manage_customer.headline.link.oldcontractmanagement">
+          <source>Switch to old contract management</source>
+          <target>Switch to old contract management</target>
+      </trans-unit>
+      <trans-unit id="javaScriptPrefixBusinessConfirmation">
+                      <source>Cryptshare.express is exclusively for business customers. I hereby confirm that I am creating this account on behalf of my company.</source>
+                      <target>Cryptshare.express on tarkoitettu yksinomaan yritysasiakkaille. Vahvistan täten, että luon tämän tilin yritykseni puolesta.</target>
+                  </trans-unit>
+
+    </body>
+  </file>
+</xliff>

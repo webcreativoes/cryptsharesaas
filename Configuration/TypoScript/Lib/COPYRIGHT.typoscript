@@ -1,0 +1,9 @@
+lib.COPYRIGHT = COA
+lib.COPYRIGHT {
+    10 = TEXT
+    10 {    
+        data = date:U
+        strftime = %Y
+        noTrimWrap = |<p class="text-center">© | Equinoxe GmbH</p>|
+    }
+}

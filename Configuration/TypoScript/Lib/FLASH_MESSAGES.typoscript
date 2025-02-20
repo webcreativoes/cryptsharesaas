@@ -1,0 +1,5 @@
+lib.FLASH_MESSAGES = COA
+lib.FLASH_MESSAGES {
+    10 = TEXT
+    10.value = <div id="FlashMessages"></div>
+}

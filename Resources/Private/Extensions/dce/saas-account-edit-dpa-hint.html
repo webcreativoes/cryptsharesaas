@@ -1,0 +1,31 @@
+
+
+<f:spaceless>
+	<div class="dce">
+		<f:if condition="{TSFE.fe_user.user.dpa_accepted} == 1">
+			<f:then>
+				<div class="dpa_hint">
+					<hr class="ce-div">
+					<h3 class="text-center">{field.title}</h3>
+					<div class="text-center"><i class="fa fa-check fa-4x" aria-hidden="true"></i></div>
+					<p class="text-center">{field.done}</p>
+				</div>
+			</f:then>
+			<f:else>
+				<div class="dpa_hint">
+					<hr class="ce-div">
+					<p class="text-center"><i class="fa fa-shield fa-4x" aria-hidden="true"></i></p>
+					<h3 class="text-center">{field.title}</h3>
+					<p class="text-center">{field.hint}</p>
+					<div class="text-center">
+					<f:link.typolink parameter="{field.link}" target="_blank" title="" class="btn btn-ghostgray btn-md">
+						<i class="fa fa-download" aria-hidden="true"></i> {field.linktext}
+					</f:link.typolink>
+					</div>
+					<br>
+					<f:format.html>{field.transfer}</f:format.html>
+				</div>
+			</f:else>
+		</f:if>
+	</div>
+</f:spaceless>

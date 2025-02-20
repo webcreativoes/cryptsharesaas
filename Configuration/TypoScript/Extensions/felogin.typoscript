@@ -1,0 +1,319 @@
+plugin.tx_felogin_login {
+
+  view {
+    templateRootPaths {
+      40 =  EXT:cryptsharesaas/Resources/Private/Extensions/felogin/Templates/
+    }
+    partialRootPaths {
+    	0 = EXT:cryptsharesaas/Resources/Private/Extensions/felogin//Partials/
+    }
+  }
+  settings {
+    email {
+    templateName = {$styles.content.loginform.email.templateName}
+      layoutRootPaths {
+        20 = {$styles.content.loginform.email.layoutRootPath}
+      }
+      templateRootPaths {
+        20 = {$styles.content.loginform.email.templateRootPath}
+      }
+	  partialRootPaths {
+		20 = {$styles.content.loginform.email.partialRootPath}
+	  }
+    }
+  }
+
+
+  storagePid = 1394
+  settings {
+    showForgotPassword = 1
+    redirectMode =
+    redirectFirstMethod =
+    redirectPageLogin =
+    redirectPageLoginError =
+    redirectPageLogout = 1115
+    redirectDisable = 0
+    dateFormat = Y-m-d H:i
+    email_from = {$styles.content.loginform.emailFrom}
+    email_fromName = {$styles.content.loginform.emailFromName}
+    newPasswordMinLength = {$styles.content.loginform.newPasswordMinLength}
+    forgotLinkHashValidTime = {$styles.content.loginform.forgotLinkHashValidTime}
+    exposeNonexistentUserInForgotPasswordDialog = {$styles.content.loginform.exposeNonexistentUserInForgotPasswordDialog}
+    replyTo = {$styles.content.loginform.replyToEmail}
+    domains =
+  }
+
+}
+
+plugin.tx_felogin_pi1._CSS_DEFAULT_STYLE (
+
+)
+
+plugin.tx_felogin_login._LOCAL_LANG {
+    default {
+        forgot_header = Forgot your password?
+        forgot_password = Forgot your password?
+        reset_password = Reset password
+        password = Your password
+        password_recovery_link = Enter new password now
+        forgot_reset_message = Please enter your email address. Instructions for resetting the password will be immediately sent to you. (Please also check your spam folder)
+        forgot_validate_reset_password_html (
+Hello %s,
+This email was sent in response to your password reset request.
+Please click on the link below:
+%s
+For security reasons, this link will only be active for the next 24 hours.
+If you do not visit the link before then, you will need to repeat the password reset steps.
+With kind regards,
+Cryptshare.express
+https://www.cryptshare.express/
+support@cryptshare.express
+        )
+        permalogin = Stay logged in
+        username = Your email address
+        login = Sign in
+        ll_enter_your_data = Your email address
+        welcome_header = Administrator login
+        welcome_header = Business Account
+        welcome_message = Only IT administrators need this account. All others click on the "Click here" button on the left to use Cryptshare.express.
+        welcome_header =
+        welcome_message = This account is only required to manage email users for your company. All users click on the "Click here" button on the left to use Cryptshare.express.
+        welcome_message =
+        logout_header = Welcome back!
+        forgot_reset_message_error (
+There is no Business Account under the entered email address. Please visit webapp.cryptshare.express to use the Cryptshare Web App.
+        )
+        forgot_reset_message_emailSent = An email has been sent to the email address you provided. (Please also check your spam folder)
+        change_password_header = Change your password
+        change_password = Change password now
+        newpassword_label1 = Enter new password
+        newpassword_label2 = Repeat new password
+        change_password_message = Please enter your new password twice. The password needs a minimum length of %s characters.
+        change_password_tooshort_message = The password is too short. The password needs a minimum length of %s characters.
+        change_password_notequal_message = Your passwords do not match. Please enter your new password twice. The password needs a minimum length of %s characters.
+        change_password_done_message = Your password has been saved. You can now sign in with your new password.
+        forgot_header_backToLogin = Return to sign-in form
+        change_password_notvalid_message = The link you clicked is not valid. Please copy the entire link from the email and paste it into your browser. If this does not work, please repeat the password reset request and complete the procedure within 24 hours.
+        logout_message = You signed out successfully.
+        error_message (
+An error occurred during login.<br>Most likely you didn't enter the username or password correctly.<br>
+Be certain that you enter them precisely as they are, including upper/lower case.<br>
+Another possibility is that cookies might be disabled in your web browser.
+        )
+        error_header = Login failure
+    }
+    de {
+        forgot_header = Passwort vergessen?
+        forgot_password = Passwort vergessen?
+        reset_password = Passwort zurücksetzen
+        password = Ihr Passwort
+        password_recovery_link = Jetzt neues Passwort setzen
+        change_password_header = Ändern Sie Ihr Passwort
+        change_password = Passwort jetzt ändern
+        newpassword_label1 = Neues Passwort
+        newpassword_label2 = Neues Passwort wiederholen
+        forgot_reset_message = Bitte geben Sie Ihre E-Mail-Adresse ein. Anweisungen zum Zurücksetzen des Passwortes werden Ihnen umgehend zugesandt. (Bitte prüfen Sie auch Ihren Spam-Ordner)
+        forgot_validate_reset_password_html (
+Hallo %s,
+diese E-Mail wurde für Ihre Anfrage zum Zurücksetzen des Passworts gesendet.<br>
+Bitte klicken Sie auf den folgenden Link:
+%s
+Aus Sicherheitsgründen ist dieser Link nur für 24 Stunden aktiv.
+Wenn Sie den Link vorher nicht besuchen, müssen Sie die Schritte zum Zurücksetzen des Passworts wiederholen.
+
+Mit freundlichen Grüßen,
+Cryptshare.express
+https://www.cryptshare.express/
+support@cryptshare.express
+        )
+        permalogin = Angemeldet bleiben
+        username = Ihre E-Mail-Adresse
+        login = Anmelden
+        ll_enter_your_data = Ihre E-Mail-Adresse
+        welcome_header = Administrator login
+        welcome_header = Geschäftskonto
+        welcome_header =
+        welcome_message = Nur IT Administratoren benötigen dieses Konto. Alle anderen klicken links auf den "Hier klicken"-Button um Cryptshare.express zu nutzen.
+        welcome_message = Dieses Konto wird nur benötigt um E-Mail-Benutzer für Ihr Unternehmen zu verwalten. Alle Anwender klicken links auf den "Hier klicken"-Button um Cryptshare.express zu nutzen.
+        welcome_message =
+        logout_header = Willkommen zurück!
+        forgot_reset_message_error (
+Es existiert kein Business Account unter der eingegebenen E-Mail-Adresse. Bitte besuchen Sie webapp.cryptshare.express, wenn Sie die Cryptshare Web App verwenden möchten.
+        )
+        forgot_message_emailSent = Eine E-Mail wurde an die von Ihnen angegebene Adresse gesendet. (Bitte prüfen Sie auch Ihren Spam-Ordner)
+        change_password_message = Bitte geben Ihr neues Passwort zweimal ein. Es ist eine Mindestlänge von %s Zeichen erforderlich.
+        change_password_tooshort_message = Das Passwort ist zu kurz. Es ist eine Mindestlänge von %s Zeichen erforderlich.
+        change_password_notequal_message = Die Passwörter stimmen nicht überein. Das neue Passwort bitte zweimal eingeben. Es ist eine Mindestlänge von %s Zeichen erforderlich.
+        change_password_done_message = Das Passwort wurde gespeichert. Sie können sich nun mit dem neuen Passwort anmelden.
+        forgot_header_backToLogin = Zurück zum Anmeldeformular
+        change_password_notvalid_message = Der Link ist nicht (mehr) gültig. Bitte kopieren Sie den vollständigen Link aus der E-Mail und fügen Sie ihn in Ihren Browser ein. Falls dies nicht funktioniert, setzen Sie bitte das Passwort erneut zurück und schließen Sie den Vorgang innerhalb von 24 Stunden ab.
+        logout_message = Sie haben sich erfolgreich abgemeldet.
+        error_message (
+Während der Anmeldung ist ein Fehler aufgetreten.<br>Wahrscheinlich haben Sie Ihren Benutzernamen oder das Passwort falsch eingegeben.<br>
+Vergewissern Sie sich, dass Sie beide Angaben korrekt eingegeben haben - Groß-/Kleinschreibung wird unterschieden.<br>
+Eine andere Möglichkeit ist, dass Sie eventuell die Cookies in Ihrem Web-Browser deaktiviert haben.
+        )
+        error_header = Anmeldefehler
+    }
+    nl {
+        forgot_header = Wachtwoord vergeten?
+        forgot_password = Wachtwoord vergeten?
+        reset_password = Wachtwoord opnieuw instellen
+        password = Uw wachtwoord
+        password_recovery_link = Nieuw wachtwoord invoeren
+        change_password_header = Pas uw wachtwoord aan
+        change_password = Pas uw wachtwoord nu aan
+        newpassword_label1 = Nieuw wachtwoord invoeren
+        newpassword_label2 = Nieuw wachtwoord herhalen
+        forgot_reset_message = Vul uw e-mailadres in. U ontvangt dan instructies voor het opnieuw instellen van uw wachtwoord. (Controleer ook uw spam-map)
+        forgot_validate_reset_password_html (
+Hallo %s,
+Deze e-mail is verstuurd in reactie op uw verzoek om uw wachtwoord opnieuw in te stellen.<br>
+Klik op de onderstaande link:
+%s
+Uit veiligheidsoverwegingen is deze link slechts 24 uur actief.
+Als tijd is verstreken, moet u de aanvraag voor het opnieuw instellen van het wachtwoord herhalen.
+
+Vriendelijke groet,
+Cryptshare.express
+https://www.cryptshare.express/
+support@cryptshare.express
+        )
+        permalogin = Aangemeld blijven
+        username = Uw e-mailadres
+        login = Aanmelden
+        ll_enter_your_data = Uw e-mailadres
+        welcome_header = Login beheerder
+        welcome_header = Zakelijke account
+        welcome_header =
+        welcome_message = Alleen IT-beheerders hebben dit account nodig. Alle anderen gebruiken de knop 'Klik hier' aan de linkerkant om Cryptshare.express te gebruiken.
+        welcome_message = Dit account is alleen nodig voor het beheer van e-mailgebruikers binnen uw bedrijf.  Gebruikers klikken op de knop 'Klik hier' aan de linkerkant om Cryptshare.express te gebruiken.
+        welcome_message =
+        logout_header = Welkom terug!
+        forgot_reset_message_error (
+Er is geen Zakelijke account voor het ingevoerde e-mailadres. Ga naar nl.cryptshare.express voor het gebruik van de Cryptshare-webapplicatie.
+        )
+        forgot_reset_message_emailSent = Er is een e-mail verzonden naar het door u opgegeven e-mailadres. (Controleer ook uw spam-map)
+        change_password_message = Voer uw nieuwe wachtwoord twee keer in. Het wachtwoord moet een minimumlengte van %s tekens hebben.
+        change_password_tooshort_message = Het wachtwoord is te kort. Het wachtwoord moet een minimumlengte hebben van %s tekens.
+        change_password_notequal_message = Uw wachtwoorden komen niet overeen. Voer uw nieuwe wachtwoord tweemaal in. Het wachtwoord moet een minimumlengte hebben van %s tekens.
+        change_password_done_message = Uw wachtwoord is opgeslagen. U kunt zich nu aanmelden met uw nieuwe wachtwoord.
+        forgot_header_backToLogin = Terug naar het aanmeldingsformulier
+        change_password_notvalid_message = De link waarop u heeft geklikt is niet geldig. Kopieer de volledige link van de e-mail en plak deze in het adress van uw browser. Als dit niet werkt, herhaal dan het verzoek om het wachtwoord opnieuw in te stellen en voltooi de procedure binnen 24 uur.
+        logout_message = U heeft zich met succes afgemeld.
+        error_message (
+Er is een fout opgetreden tijdens het inloggen.<br>Waarschijnlijk heeft u de gebruikersnaam of het wachtwoord niet correct ingevoerd.<br>
+Zorg ervoor dat u deze juist invoert, inclusief hoofdletters en kleine letters.<br>
+Een andere mogelijkheid is dat cookies in uw webbrowser zijn uitgeschakeld.
+        )
+        error_header = Inloggen mislukt
+    }
+    fr {
+            forgot_header = Mot de passe oublié ?
+            forgot_password = Mot de passe oublié ?
+            reset_password = Réinitialiser le mot de passe
+            password = Votre mot de passe
+            password_recovery_link = Saisir le nouveau mot de passe
+            forgot_reset_message = Veuillez saisir votre adresse e-mail. Les instructions pour réinitialiser le mot de passe vont vous être envoyées. (Vérifiez également votre dossier spam)
+            forgot_validate_reset_password_html (
+    Bonjour %s,
+    Cet e-mail vous est envoyé suite à votre demande de réinitialisation du mot de passe.
+    Veuillez cliquer sur le lien suivant :
+    %s
+    Pour des raisons de sécurité, ce lien n’est valable que pendant 24 heures.
+    Si vous ne cliquez pas sur le lien dans ce délai, il vous faudra recommencer la demande de réinitialisation du mot de passe.
+    Bien cordialement
+    Cryptshare.express
+    https://www.cryptshare.express/
+    support@cryptshare.express
+            )
+            permalogin = Rester connecté
+            username = Votre adresse e-mail
+            login = Se connecter
+            ll_enter_your_data = Votre adresse e-mail
+            welcome_header = Connexion administrateur
+            welcome_header = Business Account
+            welcome_message = Seuls les administrateurs IT ont besoin de ce compte. Tous les autres cliquent à gauche sur le bouton « Cliquer ici » pour utiliser Cryptshare.express.
+            welcome_header =
+            welcome_message = Ce compte sert uniquement à gérer les utilisateurs e-mail de votre entreprise. Tous les utilisateurs cliquent à gauche sur le bouton « Cliquer ici » pour utiliser Cryptshare.express.
+            welcome_message =
+            logout_header = Heureux de vous revoir !
+            forgot_reset_message_error (
+    Il n’existe pas de Business Account correspondant à l’adresse e-mail saisie. Veuillez vous rendre sur webapp.cryptshare.express pour utiliser Cryptshare Web App.
+            )
+            forgot_reset_message_emailSent = Un e-mail a été envoyé à l’adresse que vous avez indiquée. (Vérifiez également votre dossier spam)
+            change_password_header = Modifiez votre mot de passe
+            change_password = Modifiez votre mot de passe maintenant
+            newpassword_label1 = Saisissez le nouveau mot de passe
+            newpassword_label2 = Répéter le nouveau mot de passe
+            change_password_message = Veuillez saisir votre nouveau mot de passe deux fois. Le mot de passe doit avoir au minimum %s caractères.
+            change_password_tooshort_message = Le mot de passe est trop court. Le mot de passe doit avoir au minimum %s caractères.
+            change_password_notequal_message = Les mots de passe ne correspondent pas. Veuillez saisir votre nouveau mot de passe deux fois. Le mot de passe doit avoir au minimum %s caractères.
+            change_password_done_message = Votre mot de passe a été enregistré. Vous pouvez maintenant vous connecter avec votre nouveau mot de passe.
+            forgot_header_backToLogin = Retour à la connexion
+            change_password_notvalid_message = Le lien que vous avez cliqué n’est pas valide. Veuillez copier le lien complet qui se trouve dans l’e-mail et le coller dans votre navigateur. Si cela ne fonctionne pas, veuillez recommencer la demande de réinitialisation du mot de passe et la finaliser dans les 24 heures.
+            logout_message = Vous êtes bien déconnecté(e).
+            error_message (
+    Une erreur s’est produite lors de la connexion.<br>Vous n’avez probablement pas saisi le nom d’utilisateur ou le mot de passe correctement.<br>
+    Veillez à les saisir en faisant bien attention à respecter les majuscules et les minuscules.<br>
+    Une autre possibilité serait que les cookies sont désactivés dans votre navigateur.
+            )
+            error_header = Échec de la connexion
+        }
+    es {
+            forgot_header = ¿Contraseña olvidada?
+            forgot_password = ¿Contraseña olvidada?
+            reset_password = Restablecer contraseña
+            password = Su contraseña
+            password_recovery_link = Introducir ahora una contraseña nueva
+            forgot_reset_message = Introduzca su dirección de correo electrónico. Le enviaremos de inmediato las instrucciones para restablecer su contraseña. (Por favor, compruebe también su carpeta de spam)
+            forgot_validate_reset_password_html (
+    Hola, %:
+    Este correo electrónico se ha enviado en respuesta a su solicitud para restablecer la contraseña.
+    Pulse en el enlace a continuación:
+    %s
+    Por razones de seguridad, este enlace solo estará activo durante las próximas 24 horas.
+    Si no visita el enlace antes de ese tiempo, tendrá que repetir los pasos para restablecer la contraseña.
+    Con nuestros cordiales saludos,
+    Cryptshare.express
+    https://www.cryptshare.express/
+    support@cryptshare.express
+            )
+            permalogin = Permanecer conectado
+            username = Su dirección de correo electrónico
+            login = Iniciar sesión
+            ll_enter_your_data = Su dirección de correo electrónico
+            welcome_header = Inicio de sesión de administrador
+            welcome_header = Cuenta de empresa
+            welcome_message = Solo los administradores informáticos necesitan esta cuenta. Todos los demás harán clic en el botón "Pulse aquí" de la izquierda para utilizar Cryptshare.express.
+            welcome_header =
+            welcome_message = Esta cuenta solo es necesaria para gestionar usuarios de correo electrónico de su empresa. Todos los usuarios harán clic en el botón "Pulse aquí" de la izquierda para utilizar Cryptshare.express.
+            welcome_message =
+            logout_header = ¡Bienvenido de nuevo!
+            forgot_reset_message_error (
+    No hay una cuenta de empresa entre las direcciones de correo electrónico introducidas. Visite webapp.cryptshare.express para utilizar la aplicación web de Cryptshare.
+            )
+            forgot_reset_message_emailSent = Se le ha enviado un correo electrónico a la dirección electrónica que nos ha proporcionado. (Revise también su carpeta spam)
+            change_password_header = Cambie su contraseña
+            change_password = Cambie su contraseña ahora
+            newpassword_label1 = Introduzca una contraseña nueva
+            newpassword_label2 = Repita la contraseña nueva
+            change_password_message = Vuelva a introducir su contraseña nueva. La contraseña debe tener una longitud mínima de %s caracteres.
+            change_password_tooshort_message = La contraseña es demasiado corta. La contraseña debe tener una longitud mínima de %s caracteres
+            change_password_notequal_message = Sus contraseñas no coinciden. Vuelva a introducir su contraseña nueva. La contraseña debe tener una longitud mínima de %s caracteres
+            change_password_done_message = Su contraseña se ha guardo. Ya puede iniciar sesión con su contraseña nueva.
+            forgot_header_backToLogin = Volver al formulario de inicio de sesión
+            change_password_notvalid_message = El enlace pulsado no es válido. Copie el enlace entero del correo electrónico y páguelo en su navegador. Si esto no funciona, repita los pasos para restablecer la contraseña y complete el procedimiento en un plazo de 24 horas.
+            logout_message = Ha cerrado sesión correctamente.
+            error_message (
+    Se ha producido un error durante el inicio de sesión.<br>Lo más probable es que no haya introducido el nombre de usuario o la contraseña correctamente.<br>
+    Asegúrese de introducirlos tal y como son, incluyendo mayúsculas y minúsculas.<br>
+    Otra posibilidad es que las cookies estén desactivadas en su navegador.
+            )
+            error_header = Fallo de inicio de sesión
+        }
+}
+
+plugin.tx_felogin_pi1._DEFAULT_PI_VARS {
+
+}

@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <title>Bestellung</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+        view-source:https://sandbox.billwerk.com/portal/signup_payment_iframe.html?xdm_e=https%3A%2F%2Fdev.cryptshare.express&xdm_c=default580&xdm_p=1#/5c6d317e4de0842a94a9bca5?language=en
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script type="text/javascript" src="http://localhost/selfservice/billwerkjs"></script>
+        <style>
+            iframe{
+                width: 99%;
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body style="padding-top: 50px;">
+        <div class="container theme-showcase" role="main">
+            <div class="row">
+                <div class="col-md-5">
+                    <h2>Bestellung</h2><br/>
+                    <h3>Ihre Rechnungsdaten</h3><hr/>
+                    <form id="form">
+                        <div class="form-group">
+                            <label for="FirstName">Vorname</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="Vorname" value="Egon">
+                        </div>
+                        <div class="form-group">
+                            <label for="FirstName">Nachname</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="Nachname" value="Olsen">
+                        </div>
+                        <div class="form-group">
+                            <label for="Email">E-Mail Adresse</label>
+                            <input type="email" class="form-control" id="email" placeholder="E-Mail Adresse" value="eo@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="Street">Strasse, Nummer</label>
+                            <input type="text" class="form-control" id="street" placeholder="Strasse" value="Waldweg"><input type="text" class="form-control" id="hnumb" placeholder="Hausnr." value="5">
+                        </div>
+                        <div class="form-group">
+                            <label for="Zip">PLZ, Ort</label>
+                            <input type="text" class="form-control" id="zip" placeholder="PLZ" value="12345"><input type="text" class="form-control" id="city" placeholder="Ort" value="Kleenstedt">
+                        </div>
+                        <div class="form-group">
+                            <label for="Payment">Zahlungsdaten</label>
+                            <div id="payment" style="width:100%; border: 1px solid #EAEAEA ;"></div>
+                        </div>
+                        <button type="button" id="buy" class="btn btn-default">Jetzt Bestellen</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script>
+        //Use these setting to test with our preconfigured Demo Account.
+        //Specifiy your own values, if testing with your own Sandbox Account.
+
+        //Sandbox Test Account
+        //var publicApiKey = "5c20b1489c9364048c7560ba"; //replace with your ids
+        //var planVariantId = "5c41d31d9c936427346611f4"; //replace with your ids
+
+        var publicApiKey = "5b56d19dba5c1e0aa07cbd16"; //replace with your ids
+        var planVariantId = "5c0f762a6cb54e158c1010fd"; //replace with your ids
+
+        var signupService = new BillwerkJS.Signup();
+
+        var style = {
+            /*
+               {backgroundColor: '#ffffff',
+               fontSize: '16px',
+               fontFamily: '"Times New Roman", Times, serif',
+               fontStyle: 'normal',
+               color: '#444444',
+               borderLeftColor: 'black',
+               borderLeftWidth: '5px'
+               }*/
+            body:{},
+            label: {}, // For the input labeling
+            input: {}, // For the input,select elements
+            inputRequired:{},
+            inputInvalid:{}
+        };
+
+        var config = {
+            paymentMethods :["Debit:FakePSP"],// ["Debit:FakePSP","CreditCard:FakePSP"],//restrict server config
+            publicApiKey:publicApiKey,
+            locale : 'en', //set desired locale (i18n)
+            providerReturnUrl:"https://sandbox.billwerk.com/portal/finalize.html" //replace with your url
+        };
+
+        var success_callbak = function(data) {
+            console.log(new Date().toISOString()+":->success_callbak.");
+            if (!data.Url) {
+                var successUrl = "https://example.com";
+                var params = window.location.search.length > 0 ? window.location.search + "&contractId=" + data.ContractId : "?contractId=" + data.ContractId;
+                top.location = successUrl + params;
+            }
+            else{
+                top.location = data.Url;
+            }
+        };
+
+        var error_callback = function(data) {
+            alert(data.errorMessage);
+        };
+
+        var iframeObj = BillwerkJS.createElement(
+            'paymentForm',
+            document.getElementById("payment"),
+            config,
+            style,
+            error_callback
+        );
+
+        $(function () {
+            var getCustomerData=function(){
+                return {
+                    FirstName: $("#firstName").val(),
+                    LastName: $("#lastName").val(),
+                    EmailAddress: $("#email").val(),
+                    "Address": {
+                        "Street": $("#street").val(),
+                        "HouseNumber": $("#hnumb").val(),
+                        "PostalCode": $("#zip").val(),
+                        "City": $("#city").val(),
+                        "Country": "DE"
+                    }
+                };
+            };
+            var sendPayerData=function(e){
+                iframeObj.payerDataChanged(getCustomerData());
+            };
+            sendPayerData();
+            $("#firstName").on( "change", sendPayerData );
+            $("#lastName").on( "change", sendPayerData );
+            $("#street").on( "change", sendPayerData );
+            $("#hnumb").on( "change", sendPayerData );
+            $("#zip").on( "change", sendPayerData );
+            $("#city").on( "change", sendPayerData );
+
+            $("#buy").click( function (ev) {
+                paymentProcessingInprogress=false;
+                // enforce HTML5 validation:
+                ev.target.checkValidity();
+                // Create BillwerkJS DTOs from user input
+                var cart = {
+                    "PlanVariantId": planVariantId ,
+                };
+                var customer = getCustomerData();
+                //This is a direct call to create the order via billwerkJS.
+                //If required you can also replace this by a request to your server and create the order via billwerk REST API
+                signupService.createOrder(cart,customer,
+                    function(order){
+                        signupService.paySignupInteractive(null, iframeObj, order, success_callbak, error_callback
+                        );
+                        //Accordingly upgrade payment and payment method change are called:
+                        //portal.upgradePayInteractive(null, iframeObj, order, success, error);
+                        //portal.paymentChange(null, iframeObj, success, error);
+                        console.log('>>>>> order created successfully');
+                    },
+                    function(){
+                        console.log('>>>>> error creating an order')
+                    }
+                );
+            });
+        });
+
+        </script>
+    </body>
+</html>

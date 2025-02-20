@@ -1,0 +1,35 @@
+
+
+<f:spaceless>
+    <h2 class="title text-"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_2_headline_sendwelcomemail" /> - <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_2_headline_sendwelcomemail_template" /></h2>
+    <p class="text-center"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_2_p1_sendwelcomemail" /> <span class="cs_first_name"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></span>&nbsp;<span class="cs_last_name"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></span>&nbsp;<f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_2_p2_sendwelcomemail" /></p>
+    <div class="row">
+        <div class="card-deck mb-3 w-100">
+            <div class="card mb-6 shadow-sm">
+                <div class="card-header">
+                    <button data-clipboard-target="#template-subject" name="signup" type="button" class="btn btn-sm btn-copy btn-primary pull-right" id="submit"><i class="fa fa-clipboard" aria-hidden="true"></i> <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:copy_to_clipboard" /></button>
+                    <h4 class="my-0"> <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_2_headline_sendwelcomemail_subject" />: </label> <span id="template-subject"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:onboarding_welcomeemail_subject1" /> <span class="cs_first_name"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></span><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:onboarding_welcomeemail_subject2" /></span></h4>
+                </div>
+                <div class="card-body">
+                    <button data-clipboard-target="#template-body" name="signup" type="button" class="btn btn-sm btn-copy btn-primary pull-right" id="submit"><i class="fa fa-clipboard" aria-hidden="true"></i> <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:copy_to_clipboard" /></button>
+                    <span id="template-body">
+                        <p><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:onboarding_welcomeemail_p1" /> <span class="cs_first_name"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></span>,</p>
+                        <p><f:format.html><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:onboarding_welcomeemail_p2" /></f:format.html></p>
+                        <p><f:format.html><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:onboarding_welcomeemail_p3" /></f:format.html></p>
+                        <p><f:format.html><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:onboarding_welcomeemail_p4" /></f:format.html></p>
+                        <p><f:format.html><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:onboarding_welcomeemail_p5" /></f:format.html></p>
+                        <f:format.html><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:onboarding_welcomeemail_p6" /></f:format.html>
+                        <p><f:format.html><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:onboarding_welcomeemail_p7" /></f:format.html></p>
+                        <f:format.html><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:onboarding_welcomeemail_p8" /></f:format.html>
+                        <p><f:format.html><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:onboarding_welcomeemail_p9" /></f:format.html></p>
+                        <p><f:format.html><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:onboarding_welcomeemail_p10" /></f:format.html></p>
+                        <p><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:onboarding_welcomeemail_p11" /><br>{TSFE.fe_user.user.first_name} {TSFE.fe_user.user.last_name}</p>
+                    </span>
+                </div>
+                <div class="card-footer">
+                  <a href="javascript:window.history.back();"class="btn btn-sm btn-default pull-left"><i class="fa fa-chevron-left" aria-hidden="true"></i> <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:back" /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</f:spaceless>

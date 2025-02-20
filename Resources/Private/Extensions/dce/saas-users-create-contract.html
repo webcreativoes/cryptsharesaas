@@ -1,0 +1,68 @@
+<f:spaceless>
+    <div class="card w-100 only-header">
+        <div class="card-header">
+            <h3><i class="fa fa-gear"></i> <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.headline.customercontract" /></h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card w-100 customerdata">
+                <div class="card-header">
+                    <h3><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.headline.customerdata" /></h3>
+                </div>
+                <div class="card-body" id="customerdata">
+                    <div id="success-alert" class="alert alert-success" role="alert" style="opacity: 500; display: none;">
+                        <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_partner.form.success" />
+                    </div>
+                    <table class="table table-borderless">
+                        <tbody>
+                        <tr>
+                            <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.company" /></th>
+                            <td class="customer-form"><input id="inputCustomerCompany" class="form-control" type="text" value="" placeholder="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.company')}"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.street" /></th>
+                            <td class="customer-form"><input id="inputCustomerStreet" class="form-control" type="text" value="" placeholder="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.street')}"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.housenumber" /></th>
+                            <td class="customer-form"><input id="inputCustomerHouseNumber" class="form-control" type="text" value="" placeholder="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.housenumber')}"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.zip" /></th>
+                            <td class="customer-form"><input id="inputCustomerZip" class="form-control" type="text" value="" placeholder="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.zip')}"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.city" /></th>
+                            <td class="customer-form"><input id="inputCustomerCity" class="form-control" type="text" value="" placeholder="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.city')}"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.country" /></th>
+                            <td class="customer-form"><input id="inputCustomerCountry" class="form-control" type="text" value="" placeholder="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.country')}"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.phone" /></th>
+                            <td class="customer-form"><input id="inputCustomerPhone" class="form-control" type="text" value="" placeholder="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.phone')}"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.vat" /></th>
+                            <td class="customer-form"><input id="inputCustomerVat" class="form-control" type="text" value="" placeholder="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.vat')}"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <button type="button" class="btn btn-success float-right" id="save-customerdata"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.button.save" /></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <f:asset.css identifier="managePartnerdata">
+        .only-header {
+        min-height: 0 !important;
+        }
+        .w-33 {
+        width: 33%!important;
+        float:left;
+        }
+    </f:asset.css>
+</f:spaceless>

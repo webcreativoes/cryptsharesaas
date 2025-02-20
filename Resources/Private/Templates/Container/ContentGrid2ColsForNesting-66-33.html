@@ -1,0 +1,27 @@
+<section id="c{data.uid}">
+    <f:if condition="{children_5}">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <f:for each="{children_5}" as="record">
+                <f:format.raw>
+                    {record.renderedContent}
+                </f:format.raw>
+            </f:for>
+        </div>
+    </f:if>
+    <div class="col-md-8 col-sm-8 col-xs-12">
+        <f:for each="{children_10}" as="record">
+            <f:format.raw>
+                {record.renderedContent}
+            </f:format.raw>
+        </f:for>
+    </div>
+    <div class="col-md-4 cold-sm-4 col-xs-12">
+        <aside>
+            <f:for each="{children_20}" as="record">
+                <f:format.raw>
+                    {record.renderedContent}
+                </f:format.raw>
+            </f:for>
+        </aside>
+    </div>
+</section>

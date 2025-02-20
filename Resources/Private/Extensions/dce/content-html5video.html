@@ -1,0 +1,64 @@
+<f:spaceless>
+    <div itemscope itemtype="http://schema.org/VideoObject" class="card card-asset w-100" id="ci{contentObject.uid}" data-categories="{f:if(condition: categoryIterator.isLast, then: '{category.uid}', else: '{category.uid},') -> f:for(each:'{contentObject.categories}', as: 'category', iteration: 'categoryIterator')}">
+
+		<div class="card-header text-center" itemprop="name">
+			<h4 class="my-0"><f:if condition="{field.name}">
+				<f:then>{field.name}</f:then>
+				<f:else>{field.titletext}</f:else>
+			</f:if>
+			</h4>
+		</div>
+
+        <div class="video-embed embed-responsive embed-responsive-16by9">
+            <video preload="none" <f:if condition="{field.posterfile}"><f:then>poster="/fileadmin{field.posterfile.0.originalFile.identifier}" </f:then></f:if> <f:if condition="{field.autostart}"> autostart </f:if> <f:if condition="{field.controls}"> controls </f:if> <f:if condition="{field.loop}"> loop </f:if> class="video-embed-item embed-responsive-item">
+                <f:if condition="{field.webmfile}">
+                    <source src="/fileadmin{field.webmfile.0.originalFile.identifier}"  type="video/webm">
+                </f:if>
+                <source src="/fileadmin{field.mp4file.0.originalFile.identifier}"  type="video/mp4">
+                <f:if condition="{field.subtile-en}">
+                    <track label="English" kind="captions" srclang="en" src="resources/myvideo-en.vtt" default>
+                </f:if>
+                <f:if condition="{field.subtile-de}">
+                    <track label="Deutsch" kind="captions" srclang="de" src="resources/myvideo-de.vtt">
+                </f:if>
+                <f:if condition="{field.subtile-nl}">
+                    <track label="Nederlands" kind="captions" srclang="nl" src="resources/myvideo-nl.vtt">
+                </f:if>
+                <p>Please use a modern browser to watch the video »<f:if condition="{field.name}"><f:then>{field.name}</f:then><f:else>{field.titletext}</f:else></f:if>«.</p>
+            </video>
+        </div>
+        <div class="card-body">
+            <f:if condition="{field.uploaddate}">
+                <f:then>
+                    <meta itemprop="uploadDate" content="{field.uploaddate}T14:52:21Z" />
+                </f:then>
+                <f:else>
+                    <meta itemprop="uploadDate" content="2020-06-15T14:52:21Z" />
+                </f:else>
+            </f:if>
+            <f:if condition="{field.duration}">
+                <f:then>
+                    <meta itemprop="duration" content="PT{field.duration}S" />
+                </f:then>
+                <f:else>
+                    <meta itemprop="duration" content="PT120S" />
+                </f:else>
+            </f:if>
+            <meta itemprop="thumbnailURL" content="<f:if condition=" {field.posterfile} "><f:then>/fileadmin{field.posterfile.0.originalFile.identifier}</f:then></f:if>" />
+            <meta itemprop="contentUrl" content="/fileadmin{field.mp4file.0.originalFile.identifier}" />
+            <f:if condition="{field.impressions}">
+                <span itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter"><span itemprop="interactionType" itemscope itemtype="http://schema.org/WatchAction"></span>
+                <meta itemprop="userInteractionCount" content="{field.impressions}" />
+                </span>
+            </f:if>
+            <f:if condition="{field.description}">
+                <p itemprop="description" class="mb-0">
+                    <f:format.nl2br>{field.description}</f:format.nl2br>
+                </p>
+                <a role="button" class="collapsed" data-toggle="collapse" href="#collapseC{contentObject.uid}" aria-expanded="false" aria-controls="collapseExample">
+                    <f:translate key="LLL:EXT:cryptsharecom/Resources/Private/Language/locallang.xlf:dce_asset_showmore" />
+                </a>
+            </f:if>
+        </div>
+    </div>
+</f:spaceless>

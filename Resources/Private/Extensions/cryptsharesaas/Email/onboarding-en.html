@@ -1,0 +1,496 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;color: #424043;background: #ececec;padding: 0;margin: 0;line-height: 1.25em;">
+
+<head>
+    <title>Cryptshare.express notification</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <style type="text/css">
+        html,
+        body,
+        table,
+        td,
+        p {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+        
+        html {
+            color: #424043;
+            background: #ececec;
+            padding: 0;
+            margin: 0;
+            line-height: 1.25em;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        /*      
+        .desktop-div {
+            display: block;
+            padding: 0;
+            margin: 0;
+        }
+    */
+        
+        .desktop-tbl {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 742px;
+        }
+        
+        .table-content {
+            font-size: 12px;
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+            border-radius: 3px;
+            background: #fff;
+        }
+        
+        .table-secondary {
+            color: #8e8c8e;
+            border: 0px solid #fff;
+        }
+        
+        .table-message {
+            background: #f4f4f4;
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+        }
+        
+        .table-button {
+            margin-top: 20px;
+        }
+        
+        #content-cell {
+            padding-bottom: 10px !important;
+        }
+        
+        .gutter-left,
+        .gutter-right {
+            width: 20px;
+        }
+        
+        .gutter-top,
+        .gutter-bottom {
+            height: 10px;
+        }
+        
+        .row {
+            border-top: 1px solid #d9d9d9;
+            /*padding-top: 20px;*/
+            padding-bottom: 0px;
+        }
+        
+        .table-separator {
+            height: 20px;
+            font-size: 0;
+        }
+        
+        .separator {
+            border-top: 1px solid #d9d9d9;
+            height: 1px;
+            display: block;
+        }
+        
+        hr {
+            background: #d9d9d9;
+            height: 1px;
+            border: none;
+            margin: 10px 0 0 0;
+        }
+        
+        .revokebutton {
+            padding-bottom: 10px;
+        }
+        
+        .btn {
+            border-radius: 3px;
+            padding: 10px 20px;
+            font-size: 16px;
+            display: block;
+            width: 160px;
+            line-height: 21px;
+            text-align: center;
+        }
+        
+        .btn-primary,
+        .btn-primary a:link,
+        .btn-primary a:visited {
+            /*margin-right: 20px;*/
+            background: #2094d2;
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .btn-download,
+        .btn-reply {
+            float: left;
+        }
+        
+        .btn-secondary {
+            border: 1px solid #d9d9d9;
+        }
+        
+        .btn a {
+            text-decoration: none;
+            font-size: 16px;
+        }
+        
+        th {
+            text-align: left;
+            background: #2094d2;
+            background: #fff;
+            padding: 20px;
+            color: #fff;
+            font-size: 28px;
+        }
+        
+        th p {
+            margin-bottom: 0;
+        }
+        
+        h1 {
+            font-size: 18px;
+            margin-top: 10px;
+            line-height: 26px;
+        }
+        
+        h2 {
+            font-size: 18px;
+            /*margin-top: 0;*/
+        }
+        
+        h3 {
+            font-size: 14px;
+            margin-top: 14px;
+            /*margin-bottom: 0;*/
+        }
+        
+        .danger {
+            color: #c80000;
+        }
+        
+        .warning {
+            color: #f29100;
+        }
+        
+        p {
+            font-size: 12px;
+            margin: 10px 0px;
+            padding: 0;
+        }
+        
+        .muted {
+            color: #b3b3b4;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        a:link td,
+        a:visited td,
+        a:active td,
+        a:link,
+        a:visited,
+        a:active {
+            color: #2094d2;
+        }
+        
+        th a:link,
+        th a:visited,
+        th a:active {
+            color: #fff;
+        }
+        
+        a:link:hover,
+        a td:hover {
+            color: #424043;
+        }
+        
+        a:hover {
+            text-decoration: none;
+        }
+        
+        a.btn.btn-primary,
+        a.btn.btn-primary:link,
+        a.btn.btn-primary:visited,
+        a.btn.btn-primary:hover,
+        a.btn-download:link td,
+        a.btn-download:visited td,
+        a.btn-download:hover td {
+            color: #fff;
+        }
+        
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 0;
+            margin-bottom: 20px;
+            /*background: #f4f4f4;*/
+        }
+        
+        ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid #d9d9d9;
+            border-bottom: 1px solid #ebebeb;
+            font-size: 12px;
+            border: 0;
+            padding: 2px 0;
+        }
+        
+        p.li {
+            /*padding: 2px 0;*/
+            margin: 5px 0;
+        }
+        
+        p.li:last-child {
+            margin-bottom: 10px;
+        }
+        
+        ul li ul {
+            padding-left: 20px;
+        }
+        /*ul li:last-child {
+            border-bottom: 0;
+        }*/
+        
+        ol li {
+            padding: 5px;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            html {
+                padding: 0;
+            }
+            .table-content {
+                margin-top: 0;
+            }
+            .table-separator.top {
+                display: none;
+            }
+            .desktop-tbl,
+            #table-content {
+                width: 742px !important;
+                width: 100% !important;
+            }
+            #content-cell {
+                padding-top: 20px !important;
+                padding-bottom: 20px !important;
+            }
+            th {
+                padding: 20px 0;
+            }
+            td.logo {
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 736px) {
+            .hidden-mobile {
+                display: none;
+            }
+            h2,
+            h3,
+            p,
+            .table-content,
+            ul li {
+                font-size: 16px;
+                line-height: 24px;
+            }
+            .sender,
+            .buttons,
+            th {
+                text-align: center;
+            }
+            .desktop-tbl,
+            #table-content {
+                width: 480px !important;
+                width: 100% !important;
+            }
+            .gutter-left,
+            .gutter-right {
+                width: 16px !important;
+            }
+            .wrd-break {
+                display: block !important;
+            }
+            .footer-spacer {
+                height: 15px !important;
+            }
+            .btn,
+            a.btn {
+                margin: 0 auto;
+                float: none;
+                font-size: 20px;
+                line-height: 28px;
+            }
+            .table-secondary {
+                border-top: 1px solid #d9d9d9;
+            }
+        }
+    </style>
+</head>
+
+<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;margin: 0;padding: 0;">
+
+    <table class="table-separator top" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;height: 20px;font-size: 0;">
+        <tbody>
+            <tr>
+                <td height="20" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="desktop-tbl" cellpadding="0" cellspacing="0" align="center" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;border-collapse: collapse;border-spacing: 0;width: 742px;">
+
+        <tbody>
+            <tr>
+                <td colspan="3" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+
+                    <table class="table-content table-primary" border="0" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 12px;border-collapse: collapse;border-spacing: 0;width: 100%;border-radius: 3px;background: #fff;">
+
+
+                        <tbody>
+                            <tr>
+                                <td colspan="3" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">&nbsp;</td>
+                            </tr>
+
+                            <tr>
+                                <td class="gutter-left" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;width: 20px;"></td>
+
+                                <td class="logo text-center" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;text-align: center;"><img alt="Logo" src="https://www.cryptshare.express/fileadmin/primary/Public/Images/Cryptshare-Express-Email-Logo.png" border="0" style="-ms-interpolation-mode:bicubic;"></td>
+
+                                <td class="right-gutter" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;"></td>
+                            </tr>
+
+
+                            <tr class="hidden-mobile">
+                                <td colspan="3" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="gutter-left" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;width: 20px;"></td>
+                                <td id="content-cell" align="left" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;padding-bottom: 10px !important;">
+
+                                    <h1 class="text-center" style="font-size:18px;margin-top:10px;line-height:26px;text-align:center;">Welcome to Cryptshare.express</h1>
+                                    <p class="text-center muted" style="color:#b3b3b4;text-align:center;">This email is for your information</p>
+
+
+                                    <table class="table-message" border="0" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;background: #f4f4f4;border-collapse: collapse;border-spacing: 0;width: 100%;">
+                                        <tbody>
+                                            <tr>
+                                                <td class="gutter-left" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;width: 20px;"></td>
+                                                <td style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                                                    <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 12px;margin: 10px 0px;padding: 0;">
+
+                                                        <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 12px;margin: 10px 0px;padding: 0;">Hello <span class="cs_first_name">###userfirstname###</span>,</p>
+                                                        <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 12px;margin: 10px 0px;padding: 0;"></p>
+                                                        <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 12px;margin: 10px 0px;padding: 0;">as you may have already noticed, we decided to exchange large and sensitive data via Cryptshare.express in the future.</p>
+                                                        <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 12px;margin: 10px 0px;padding: 0;"></p>
+                                                        <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 12px;margin: 10px 0px;padding: 0;"></p>
+                                                        <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 12px;margin: 10px 0px;padding: 0;">You receive this email because I have already activated you.<br>
+                                                            <strong>You can start right away! :-)</strong></p>
+                                                        <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 12px;margin: 10px 0px;padding: 0;"></p>
+                                                        <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 12px;margin: 10px 0px;padding: 0;"></p>
+                                                        <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 12px;margin: 10px 0px;padding: 0;">The best way is to take 15 minutes and visit the following website:<br><a href="https://www.cryptshare.express/en-gb/onboarding" target="_blank">https://www.cryptshare.express/en-gb/onboarding</a></p>
+                                                        <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 12px;margin: 10px 0px;padding: 0;"></p>
+                                                        <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 12px;margin: 10px 0px;padding: 0;"></p>
+                                                        <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 12px;margin: 10px 0px;padding: 0;">There you will find everything you need to use Cryptshare.express:</p>
+                                                        <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 12px;margin: 10px 0px;padding: 0;"></p>
+                                                        <ol>
+                                                            <li style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 12px;margin: 10px 0px;padding: 0;">A short <strong>Instruction video</strong> for the Cryptshare.express Web App.</li>
+                                                            <li style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 12px;margin: 10px 0px;padding: 0;">The <a href="###server###" target="_blank">Link to the Cryptshare.express Web App</a>.</li>
+                                                            <li style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 12px;margin: 10px 0px;padding: 0;"> The installation program for the <strong>Outlook integration</strong> - Cryptshare.express for Outlook </li>
+                                                        </ol>
+                                                        <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 12px;margin: 10px 0px;padding: 0;"></p>
+                                                        <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 12px;margin: 10px 0px;padding: 0;">You can even integrate the Cryptshare.Express Web App <strong>directly into your browser </strong>:</p>
+                                                        <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 12px;margin: 10px 0px;padding: 0;"></p>
+                                                        <ol>
+                                                            <li style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 12px;margin: 10px 0px;padding: 0;">By opening the address <a href="###server###" target="_blank">###server###</a> and adding it to your favorites.</li>
+                                                            <li style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 12px;margin: 10px 0px;padding: 0;">The extension <strong>Cryptshare.express for Chrome</strong> installed in your Chrome browser.</li>
+                                                            <li style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 12px;margin: 10px 0px;padding: 0;">The extension <strong>Cryptshare.express for Edge</strong> installed in your Edge browser.</li>
+                                                            <li style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 12px;margin: 10px 0px;padding: 0;">The add-on <strong>Cryptshare.express for Firefox</strong> installed in your Firefox browser.</li>
+                                                        </ol>
+                                                        <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 12px;margin: 10px 0px;padding: 0;"></p>
+                                                        <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 12px;margin: 10px 0px;padding: 0;">Further information will follow later.</p>
+                                                        <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 12px;margin: 10px 0px;padding: 0;"></p>
+                                                        <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 12px;margin: 10px 0px;padding: 0;"></p>
+                                                        <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 12px;margin: 10px 0px;padding: 0;">We recommend that you keep this email so that you can look it up at any time.</p>
+                                                        <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 12px;margin: 10px 0px;padding: 0;"></p>
+                                                        <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 12px;margin: 10px 0px;padding: 0;">Best regards,<br>Your Cryptshare.express Team</p>
+
+                                                    </p>
+                                                </td>
+                                                <td class="gutter-right" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;width: 20px;"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </td>
+                                <td class="gutter-right " style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;width: 20px;"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="table-separator " style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;height: 20px;font-size: 0;">
+                        <tbody>
+                            <tr>
+                                <td height="20 " style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+
+
+
+                    <table class="table-content table-secondary" border="0" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 12px;border-collapse: collapse;border-spacing: 0;width: 100%;border-radius: 3px;background: #fff;color: #8e8c8e;border: 0px solid #fff;">
+                        <tbody>
+                            <tr>
+                                <td colspan="3" class="gutter-top" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;height: 10px;"></td>
+                            </tr>
+                            <tr>
+
+                                <td class="gutter-left" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;width: 20px;"></td>
+                                <td style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+
+                                    <div class="footer">
+                                        <p class="text-center muted" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 12px;margin: 10px 0px;padding: 0;color: #b3b3b4;text-align: center;">This message has been generated automatically.</p>
+                                        <p class="text-center muted" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 12px;margin: 10px 0px;padding: 0;color: #b3b3b4;text-align: center;">Secure email and file transfer as a service: <a href="https://www.cryptshare.express/en/intro" style="color: #2094d2;">This is Cryptshare.express</a>.</p>
+                                    </div>
+
+                                </td>
+                                <td class="gutter-right" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;width: 20px;"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="gutter-bottom" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;height: 10px;"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <table class="table-separator" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;height: 20px;font-size: 0;">
+        <tbody>
+            <tr>
+                <td height="20" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;"></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+
+
+<f:spaceless>
+	<h2 class="title text-center"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:upsell_headline" />, {TSFE.fe_user.user.first_name} {TSFE.fe_user.user.last_name}!</h2>
+	<div class="text-center dashboard-icon"><i class="fa fa-rocket fa-8x" aria-hidden="true"></i></div><br>
+	<h3 class="text-center">{TSFE.fe_user.user.company} <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:upsell_subheadline" /></h3>
+	<div class="panel panel-default text-center">
+		<div class="panel-body">
+			<h2 class="title text-center"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:upsell_didyouknow" /></h2>
+			<p class="text-center"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:upsell_p1" /></p>
+			<p class="text-center"><strong><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:upsell_p2" /></strong></p>
+			<div class="mb-3">
+				<input value="{TSFE.fe_user.user.first_name} {TSFE.fe_user.user.last_name}" required="required" placeholder="<f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:usertable_name" />" id="" type="text" class="form-control" size="" maxlength="" name="FE[fe_users][name]">
+			</div>
+			<div class="mb-3">
+				<input value="{TSFE.fe_user.user.telephone}" placeholder="" id="telephone" type="tel" class="form-control" size="25" maxlength="25" name="FE[fe_users][telephone]">
+			</div>
+			<div class="mb-3">
+				<input value="{TSFE.fe_user.user.email}" placeholder="" id="telephone" type="tel" class="form-control" size="25" maxlength="25" name="FE[fe_users][telephone]">
+			</div>
+			<button class="btn btn-lg btn-primary btn-block"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:upsell_submit" /></button>
+		</div>
+	</div>
+</f:spaceless>

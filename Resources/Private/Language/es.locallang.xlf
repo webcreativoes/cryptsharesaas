@@ -1,0 +1,2388 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" target-language="es" datatype="plaintext" original="EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf" date="2021-12-20T08:58:00Z" product-name="checkout">
+        <header/>
+        <body>
+            <trans-unit id="loading">
+                <source>Loading...</source>
+				<target>Cargando...</target>
+            </trans-unit>
+            <trans-unit id="back">
+                <source>Back</source>
+				<target>Volver</target>
+            </trans-unit>
+            <trans-unit id="overview_sort_date_desc">
+                <source>Start date (descending)</source>
+                <target>Fecha de inicio (descendente)</target>
+            </trans-unit>
+            <trans-unit id="overview_sort_date_asc">
+                <source>Start date (ascending)</source>
+                <target>Fecha de inicio (ascendente)</target>
+            </trans-unit>
+            <trans-unit id="overview_sort_customer_desc">
+                <source>Customer (descending)</source>
+                <target>Cliente (descendente)</target>
+            </trans-unit>
+            <trans-unit id="overview_sort_customer_asc">
+                <source>Customer (ascending)</source>
+                <target>Cliente (ascendente)</target>
+            </trans-unit>
+            <trans-unit id="overview_search_placeholder">
+                <source>Search</source>
+                <target>Buscando</target>
+            </trans-unit>
+            <trans-unit id="overview_sort_label">
+                <source>Sorting</source>
+                <target>Clasificación</target>
+            </trans-unit>
+            <trans-unit id="overview_buttontext_edit_partnerdata">
+                <source>Manage partner data</source>
+                <target>Administrar datos de socios</target>
+            </trans-unit>
+            <trans-unit id="overview_newcontract_clickhere">
+                <source>Click here to</source>
+                <target>Pulse aquí para</target>
+            </trans-unit>
+            <trans-unit id="overview_newcontract">
+                <source>Add a new customer contract</source>
+                <target>Agregar un nuevo contrato de cliente</target>
+            </trans-unit>
+            <trans-unit id="overview_newcontract_learnmore">
+                <source></source>
+                <target></target>
+            </trans-unit>
+            <trans-unit id="overview_addbutton_clickhere">
+                <source>Click here to</source>
+				<target>Pulse aquí para</target>
+            </trans-unit>
+            <trans-unit id="overview_addbutton_addnewaccount">
+                <source>Add a new email user</source>
+				<target>Añadir nuevo usuario de correo electrónico</target>
+            </trans-unit>
+            <trans-unit id="overview_addbutton_of">
+                <source>of</source>
+				<target>de</target>
+            </trans-unit>
+            <trans-unit id="overview_addbutton_used">
+                <source>possible email users used</source>
+				<target>Posibles usuarios de correo electrónico utilizados</target>
+            </trans-unit>
+            <trans-unit id="overview_upsell">
+                <source>Curious?</source>
+				<target>¿Curioso?</target>
+            </trans-unit>
+            <trans-unit id="overview_upsell_clickhere">
+                <source>Get more out of Cryptshare</source>
+				<target>Sáquele más partido a Cryptshare</target>
+            </trans-unit>
+            <trans-unit id="overview_upsell_learnmore">
+                <source>Talk to our experts</source>
+				<target>Hable con nuestros expertos</target>
+            </trans-unit>
+	        <trans-unit id="usertable_header">
+		        <source><![CDATA[Your <span id="hint-used-email-users">Loading...</span> email user(s)]]></source>
+				<target><![CDATA[<span id="hint-used-email-users">Cargando...</span> correo electrónico de usuario(s)]]></target>
+	        </trans-unit>
+            <trans-unit id="usertable_name">
+                <source>Name</source>
+				<target>Nombre</target>
+            </trans-unit>
+            <trans-unit id="usertable_email">
+                <source>Email address</source>
+				<target>Dirección de correo electrónico</target>
+            </trans-unit>
+            <trans-unit id="usertable_status">
+                <source>Status</source>
+				<target>Estado</target>
+            </trans-unit>
+            <trans-unit id="usertable_actions">
+                <source>Actions</source>
+				<target>Acciones</target>
+            </trans-unit>
+            <trans-unit id="usertable_type">
+                <source>Type</source>
+				<target>Tipo</target>
+            </trans-unit>
+            <trans-unit id="checkout_coupon_headline">
+                <source>Voucher / Discount</source>
+				<target>Vale/Descuento</target>
+            </trans-unit>
+            <trans-unit id="checkout_coupon_enter">
+                <source>Enter code here</source>
+				<target>Introduzca el código aquí</target>
+            </trans-unit>
+            <trans-unit id="checkout_coupon_apply">
+                <source>Apply</source>
+				<target>Aplicar</target>
+            </trans-unit>
+            <trans-unit id="checkout_step_1">
+      	        <source><![CDATA[Create<br>Business Account]]></source>
+				<target><![CDATA[Crear<br>cuenta de empresa]]></target>
+            </trans-unit>
+            <trans-unit id="checkout_step_2">
+                <source><![CDATA[Add<br>email user]]></source>
+				<target><![CDATA[Añadir<br>usuario de correo electrónico]]></target>
+            </trans-unit>
+            <trans-unit id="checkout_step_3">
+                <source><![CDATA[Use<br>Cryptshare]]></source>
+				<target><![CDATA[Usar<br>Cryptshare]]></target>
+	        </trans-unit>
+	        <trans-unit id="checkout_step_loggedin">
+		        <source><![CDATA[Business Account<br>created]]></source>
+				<target><![CDATA[Cuenta de empresa<br>creada]]></target>
+	        </trans-unit>
+            <trans-unit id="checkout_order_now">
+                <source>Order now</source>
+				<target>Pedir ahora</target>
+            </trans-unit>
+            <trans-unit id="checkout_pay_now">
+                <source>Finish payment now</source>
+				<target>Enviar datos de pago ahora</target>
+            </trans-unit>
+            <trans-unit id="checkout_pay_next">
+                <source>The payment is made in the next step.</source>
+				<target>La introducción de los datos de pago se realiza en el siguiente paso.</target>
+            </trans-unit>
+            <trans-unit id="checkout_edit_data">
+                <source>Edit data</source>
+				<target>Editar datos</target>
+            </trans-unit>
+            <trans-unit id="checkout_billing_data">
+                <source>Billing data</source>
+				<target>Datos de facturación</target>
+            </trans-unit>
+            <trans-unit id="checkout_first_name">
+                <source>First name</source>
+				<target>Nombre</target>
+            </trans-unit>
+            <trans-unit id="checkout_last_name">
+                <source>Last name</source>
+				<target>Apellidos</target>
+            </trans-unit>
+            <trans-unit id="checkout_email">
+                <source>Email address</source>
+				<target>Dirección de correo electrónico</target>
+            </trans-unit>
+            <trans-unit id="checkout_company">
+                <source>Company</source>
+				<target>Empresa</target>
+            </trans-unit>
+            <trans-unit id="checkout_street">
+                <source>Street</source>
+                <target>Calle</target>
+            </trans-unit>
+            <trans-unit id="checkout_address">
+                <source>Address</source>
+				<target>Dirección</target>
+            </trans-unit>
+            <trans-unit id="checkout_house_number">
+                <source>House number</source>
+				<target>Número de casa</target>
+            </trans-unit>
+            <trans-unit id="checkout_zip">
+                <source>Postal code</source>
+				<target>Código postal</target>
+            </trans-unit>
+            <trans-unit id="checkout_city">
+                <source>City</source>
+				<target>Localidad</target>
+            </trans-unit>
+            <trans-unit id="checkout_country">
+                <source>Country</source>
+				<target>País</target>
+            </trans-unit>
+            <trans-unit id="checkout_country_deu">
+                <source>Germany</source>
+				<target>Alemania</target>
+            </trans-unit>
+            <trans-unit id="checkout_country_gbp">
+                <source>United Kingdom</source>
+				<target>Reino Unido</target>
+            </trans-unit>
+            <trans-unit id="checkout_country_nld">
+                <source>Netherlands</source>
+				<target>Países Bajos</target>
+            </trans-unit>
+            <trans-unit id="checkout_country_aut">
+                <source>Austria</source>
+				<target>Austria</target>
+            </trans-unit>
+            <trans-unit id="checkout_vat">
+                <source>VAT</source>
+				<target>IVA</target>
+            </trans-unit>
+            <trans-unit id="checkout_phone">
+                <source>Telephone</source>
+                <target>Telephone</target>
+            </trans-unit>
+            <trans-unit id="checkout_mandatory">
+                <source>* Mandatory fields</source>
+				<target>* Campos obligatorios</target>
+            </trans-unit>
+            <trans-unit id="checkout_read_gtac">
+                <source>Click here to read the General Terms and Conditions.</source>
+				<target>Pulse aquí para leer los términos y condiciones generales.</target>
+            </trans-unit>
+            <trans-unit id="checkout_accept_gtac">
+                <source>I have read the General Terms and Conditions, understood and accept them.</source>
+				<target>He leído, entendido y acepto los términos y condiciones generales.</target>
+            </trans-unit>
+            <trans-unit id="checkout_hint_collective_mailboxes">
+                <source><![CDATA[<p><strong id="cs_email_collective"></strong> is a collective email address:</p> <ul> <li>Cryptshare.express email users are coupled to individual email addresses.</li> <li>It does not correspond to the GDPR to use collective addresses for the handling of personal data.</li> <li>If maximum two persons use the collective address, a special regulation can be put into force.</li> </ul>]]></source>
+				<target><![CDATA[<p><strong id="cs_email_collective"></strong> es una dirección de correo electrónico colectiva:</p> <ul> <li>los usuarios de Cryptshare.express están vinculados a direcciones de correo electrónico individuales.</li> <li>El uso de direcciones colectivas para el manejo de datos personales no se corresponde con lo dispuesto en el RGPD.</li> <li>Se puede poner en vigor un reglamento especial para que un máximo de dos personas utilicen la dirección colectiva.</li> </ul>]]></target>
+            </trans-unit>
+            <trans-unit id="checkout_accept_collective_mailboxes">
+                <source><![CDATA[I hereby confirm that this email address is only used by a maximum of two persons in my company.]]></source>
+				<target><![CDATA[Por la presente, confirmo que esta dirección de correo electrónico solo la utiliza un máximo de dos personas en mi empresa.]]></target>
+            </trans-unit>
+            <trans-unit id="checkout_read_privacy">
+                <source>Click here to read the Privacy Policy.</source>
+				<target>Pulse aquí para leer la política de privacidad.</target>
+            </trans-unit>
+            <trans-unit id="checkout_accept_privacy">
+                <source>I have read the Privacy Policy, understood and accept them.</source>
+				<target>He leído, entendido y acepto la política de privacidad.</target>
+            </trans-unit>
+            <trans-unit id="checkout_read_tou">
+                <source>Click here to read the Terms of Use.</source>
+				<target>Pulse aquí para leer las condiciones de uso.</target>
+            </trans-unit>
+            <trans-unit id="checkout_accept_tou">
+                <source>I have read the Terms of Use, understood and accept them.</source>
+				<target>He leído, entendido y acepto las condiciones de uso.</target>
+            </trans-unit>
+            <trans-unit id="checkout_userdata_unchangeable">
+                <source>Please note: These information can not be changed afterwards.</source>
+				<target>Tenga en cuenta que esta información no podrá cambiarse después.</target>
+            </trans-unit>
+		    <trans-unit id="checkout_userdata_enteruserdata">
+			    <source>Data of the new email users</source>
+				<target>Datos de los nuevos usuarios de correo electrónico</target>
+		    </trans-unit>
+		    <trans-unit id="checkout_userdata_entercontractdata">
+                <source>Data of the new contract</source>
+                <target>Datos del nuevo contrato</target>
+            </trans-unit>
+		    <trans-unit id="checkout_userdata_hintandlimit">
+			    <source><![CDATA[<strong><span id="leftemails">Loading...</span></strong> additional email users possible.]]></source>
+				<target><![CDATA[<strong><span id="leftemails">Cargando...</span></strong>&nbsp;<span id="additionaluserhint">posibilidad</span> de añadir usuarios de correo electrónico adicionales.]]></target>
+		    </trans-unit>
+            <trans-unit id="checkout_userdata_save">
+                <source>Save &amp; activate user</source>
+				<target>Guardar &amp; usuario activado</target>
+            </trans-unit>
+            <trans-unit id="checkout_sendwelcomeemail">
+                <source>Send welcome email to this user</source>
+				<target>Enviar correo de bienvenida a este usuario</target>
+            </trans-unit>
+            <trans-unit id="checkout_welcomeemailpreview">
+                <source>Click here to see what the recipient will receive</source>
+				<target>Pulse aquí para ver lo que recibirá el destinatario</target>
+            </trans-unit>
+            <trans-unit id="checkout_currentstatus">
+                <source>Current status</source>
+				<target>Estado actual</target>
+            </trans-unit>
+            <trans-unit id="checkout_business_proof_missing_headline">
+                <source>Business proof missing</source>
+				<target>Falta prueba de empresa</target>
+            </trans-unit>
+            <trans-unit id="checkout_business_proof_missing_p1">
+                <source>Cryptshare.express is exclusively for business customers.</source>
+				<target>Cryptshare.express es exclusivamente para clientes de empresa.</target>
+            </trans-unit>
+            <trans-unit id="checkout_business_proof_missing_p2">
+                <source>Since you did not enter your VAT ID number, we need a proof of your business.</source>
+				<target>Dado que no ha indicado su CIF, tenemos que comprobar su empresa.</target>
+            </trans-unit>
+            <trans-unit id="checkout_business_proof_missing_p3">
+                <source>If available, please either enter your sales tax identification number under "Accounts" or send us an excerpt from your commercial register statement, your chamber's membership certificate or a comparable proof of business via https://webapp.cryptshare.express to support@cryptshare.express</source>
+				<target>Si está disponible, introduzca su número de identificación fiscal en "Cuentas" o envíenos un extracto de su declaración del registro mercantil, su certificado de afiliación a la cámara o una prueba de empresa comparable a través de https://webapp.cryptshare.express a support@cryptshare.express</target>
+            </trans-unit>
+            <trans-unit id="checkout_business_proof_missing_p4">
+                <source>Please understand that we have to deactivate your account on</source>
+				<target>Por favor, comprenda que tendremos que desactivar su cuenta</target>
+            </trans-unit>
+            <trans-unit id="checkout_business_proof_missing_p5">
+                <source>, if we have no proof of business.</source>
+				<target> si no podemos comprobar que es de empresa.</target>
+            </trans-unit>
+            <trans-unit id="checkout_enter_paymentdetails">
+                <source>Enter your payment details now</source>
+				<target>Introduzca ahora sus datos de pago</target>
+            </trans-unit>
+            <trans-unit id="checkout_final_steps_headline">
+                <source>Order is being finished...</source>
+				<target>Finalizando pedido...</target>
+            </trans-unit>
+            <trans-unit id="checkout_final_steps_payment">
+                <source>Payment successfully finished</source>
+				<target>Pago correctamente realizado</target>
+            </trans-unit>
+            <trans-unit id="checkout_final_steps_userdata">
+                <source>Writing userdata</source>
+				<target>Escribir datos de usuario</target>
+            </trans-unit>
+            <trans-unit id="checkout_final_steps_createoncsserver">
+                <source>User successfully created on webapp.cryptshare.express</source>
+				<target>Usuario correctamente creado en webapp.cryptshare.express</target>
+            </trans-unit>
+            <trans-unit id="checkout_summary_headline">
+                <source>Summary</source>
+				<target>Resumen</target>
+            </trans-unit>
+            <trans-unit id="checkout_summary_planvariant">
+                <source>Selected plan</source>
+				<target>Plan seleccionado</target>
+            </trans-unit>
+            <trans-unit id="checkout_summary_termofcontract">
+                <source>Term of contract</source>
+				<target>Condiciones del contrato</target>
+            </trans-unit>
+            <trans-unit id="checkout_summary_cancellationperiod">
+                <source>Cancellation period</source>
+				<target>Plazo de rescisión</target>
+            </trans-unit>
+            <trans-unit id="checkout_summary_price_netto">
+                <source>Price</source>
+				<target>Precio</target>
+            </trans-unit>
+            <trans-unit id="checkout_summary_subtotal_netto">
+                <source>Subtotal</source>
+				<target>Subtotal</target>
+            </trans-unit>
+            <trans-unit id="checkout_summary_total_netto">
+                <source>Total (netto)</source>
+				<target>Total (neto)</target>
+            </trans-unit>
+            <trans-unit id="checkout_summary_discount">
+                <source>Discount</source>
+				<target>Descuento</target>
+            </trans-unit>
+            <trans-unit id="checkout_summary_vat">
+                <source>Plus VAT</source>
+				<target>Más IVA</target>
+            </trans-unit>
+            <trans-unit id="checkout_summary_vat2">
+                <source>amount</source>
+				<target>cantidad</target>
+            </trans-unit>
+            <trans-unit id="checkout_summary_total">
+                <source>Invoice amount</source>
+				<target>Importe facturado</target>
+            </trans-unit>
+            <trans-unit id="checkout_exclvat">
+                <source>excl. VAT</source>
+				<target>sin IVA</target>
+            </trans-unit>
+            <trans-unit id="signup_headline">
+                <source>Just a few seconds...</source>
+				<target>Solo unos segundos...</target>
+            </trans-unit>
+            <trans-unit id="signup_p1">
+                <source>We are currently performing the final step of your sign-up process.</source>
+				<target>Estamos realizando el último paso de su proceso de registro.</target>
+            </trans-unit>
+            <trans-unit id="signup_p2">
+                <source>You should be redirected very shortly.</source>
+				<target>En breve se le redirigirá.</target>
+            </trans-unit>
+            <trans-unit id="update_headline">
+                <source>Just a few seconds...</source>
+				<target>Solo unos segundos...</target>
+            </trans-unit>
+            <trans-unit id="update_p1">
+                <source>We are currently updating your data.</source>
+				<target>Estamos actualizando sus datos.</target>
+            </trans-unit>
+            <trans-unit id="update_p2">
+                <source>You should be redirected very shortly.</source>
+				<target>En breve se le redirigirá.</target>
+            </trans-unit>
+            <trans-unit id="signin_headline">
+                <source>Just a few seconds.</source>
+				<target>Solo unos segundos.</target>
+            </trans-unit>
+            <trans-unit id="signin_p1">
+                <source>Authentication in progress...</source>
+				<target>Autentificación en progreso...</target>
+            </trans-unit>
+            <trans-unit id="signin_p2">
+                <source>You should be redirected very shortly.</source>
+				<target>En brebve se le redirigirá.</target>
+            </trans-unit>
+            <trans-unit id="use_section_1_headline1">
+                <source>That's it</source>
+				<target>Eso es</target>
+            </trans-unit>
+            <trans-unit id="use_section_1_p1_1">
+                <source>The new email address(es)</source>
+				<target>La(s) nueva(s) dirección(es) de correo</target>
+            </trans-unit>
+            <trans-unit id="use_section_1_p1_2">
+                <source><![CDATA[<br>can now be used on <a href="https://webapp.cryptshare.express" target="_blank">webapp.cryptshare.express</a>!]]></source>
+				<target><![CDATA[<br>ya pueden utilizarse en <a href="https://webapp.cryptshare.express" target="_blank">webapp.cryptshare.express</a>!]]></target>
+            </trans-unit>
+            <trans-unit id="use_section_1_headline2">
+                <source>Is that your email address?</source>
+				<target>¿Es esta su dirección de correo electrónico?</target>
+            </trans-unit>
+            <trans-unit id="use_section_1_p2_1">
+                <source>We recommend to visit</source>
+				<target>Le recomendamos que visite</target>
+            </trans-unit>
+            <trans-unit id="use_section_1_p2_2">
+                <source>to authenticate your browser now.</source>
+				<target>autentifique su navegador ahora.</target>
+            </trans-unit>
+            <trans-unit id="home_splashscreen_headline">
+                <source>start your secure communication now!</source>
+				<target>¡empiece ahora una comunicación segura!</target>
+            </trans-unit>
+            <trans-unit id="home_splashscreen_button">
+                <source>Start</source>
+				<target>Inicio</target>
+            </trans-unit>
+            <trans-unit id="home_splashscreen_webapplicationtitle">
+                <source>Click to open the Cryptshare Web App now</source>
+				<target>Pulse para abrir la aplicación web de Cryptshare ahora</target>
+            </trans-unit>
+            <trans-unit id="home_splashscreen_webapplicationtitle_nl">
+                <source>Click to open the Cryptshare Web App for the Netherlands now</source>
+				<target>Pulse para abrir la aplicación web de Cryptshare para los Países Bajos ahora</target>
+            </trans-unit>
+            <trans-unit id="home_splashscreen_button_de">
+                <source>For german customers</source>
+				<target>Para clientes españoles</target>
+            </trans-unit>
+            <trans-unit id="home_splashscreen_button_nl">
+                <source>For dutch customers</source>
+				<target>Para clientes holandeses</target>
+            </trans-unit>
+            <trans-unit id="home_splashscreen_redirect_1">
+                <source>Forward me automatically to the</source>
+				<target>Reenviarme automáticamente a la</target>
+            </trans-unit>
+            <trans-unit id="home_splashscreen_redirect_2">
+                <source>Web App in the future</source>
+				<target>aplicación web en el futuro</target>
+            </trans-unit>
+            <trans-unit id="home_splashscreen_redirecttitle">
+                <source>Click here if you want to skip this page for 30 days</source>
+				<target>Pulse aquí si quiere omitir esta página durante 30 días</target>
+            </trans-unit>
+            <trans-unit id="home_splashscreen_link_learnmore">
+                <source>Learn more</source>
+				<target>Más información</target>
+            </trans-unit>
+            <trans-unit id="home_splashscreen_link_signin">
+                <source>Sign in</source>
+				<target>Iniciar sesión</target>
+            </trans-unit>
+            <trans-unit id="home_splashscreen_link_signup">
+                <source>Sign up</source>
+				<target>Registrarse</target>
+            </trans-unit>
+            <trans-unit id="home_splashscreen_link_signup_trial">
+                <source>7-days trial</source>
+				<target>7 días de prueba</target>
+            </trans-unit>
+            <trans-unit id="component_trial">
+                <source>after the end of the 7-day trial period</source>
+				<target>al finalizar el periodo de 7 días de prueba</target>
+            </trans-unit>
+            <trans-unit id="summary_trial_hint">
+                <source><![CDATA[The invoice amount is only due if you do not cancel the 7-day trial until <span id="trial-cancel-date">Loading...</span>.]]></source>
+                <target><![CDATA[El monto de la factura solo vence si no cancela la prueba de 7 días hasta <span id="trial-cancel-date">Cargando...</span>.]]></target>
+            </trans-unit>
+			<trans-unit id="summary_quantity">
+				<source>Quantity:</source>
+				<target>Cantidad:</target>
+			</trans-unit>
+            <trans-unit id="summary_trial_until">
+                <source><![CDATA[(until <span id="trial-until">Loading...</span>)]]></source>
+                <target><![CDATA[(hasta <span id="trial-until">Cargando...</span>)]]></target>
+            </trans-unit>
+            <trans-unit id="summary_abo_start">
+                <source><![CDATA[(from <span id="abo-start">Loading...</span>)]]></source>
+                <target><![CDATA[(desde <span id="abo-start">Cargando...</span>)]]></target>
+            </trans-unit>
+            <trans-unit id="checkout_button_endtrial">
+                <source><![CDATA[Add to order and end trial]]></source>
+                <target><![CDATA[Agregar al pedido y finalizar la prueba]]></target>
+            </trans-unit>
+            <trans-unit id="checkout_reached_triallimit">
+                <source><![CDATA[You have reached the limit for 7-day trail email users]]></source>
+                <target><![CDATA[Ha alcanzado el límite de usuarios de correo electrónico de seguimiento de 7 días]]></target>
+            </trans-unit>
+            <trans-unit id="dashboard_manage">
+                <source>Manage</source>
+				<target>Administrar</target>
+            </trans-unit>
+            <trans-unit id="dashboard_users_headline">
+                <source>Email users</source>
+				<target>Usuarios de correo electrónico</target>
+            </trans-unit>
+            <trans-unit id="dashboard_users_p1">
+                <source>Email users subscribed</source>
+				<target>Usuarios de correo electrónico suscritos</target>
+            </trans-unit>
+            <trans-unit id="dashboard_users_p2">
+                <source>additional email users possible</source>
+				<target><![CDATA[<span id="additionaluserhint">posibilidad</span> de añadir usuarios de correo electrónico adicionales]]></target>
+            </trans-unit>
+            <trans-unit id="dashboard_users_link">
+                <source>Manage users</source>
+				<target>Administrar usuarios</target>
+            </trans-unit>
+            <trans-unit id="dashboard_use_headline">
+                <source>Take off with Cryptshare</source>
+				<target>Despegue con Cryptshare</target>
+            </trans-unit>
+            <trans-unit id="dashboard_use_outlook">
+                <source><![CDATA[Cryptshare for Outlook]]></source>
+				<target><![CDATA[Cryptshare para Outlook]]></target>
+            </trans-unit>
+            <trans-unit id="dashboard_use_webapplication">
+                <source>Cryptshare Web App</source>
+				<target>Aplicación web de Cryptshare</target>
+            </trans-unit>
+            <trans-unit id="dashboard_use_chrome">
+                <source>Cryptshare.express for Chrome</source>
+				<target>Cryptshare.express para Chrome</target>
+            </trans-unit>
+            <trans-unit id="dashboard_use_videos">
+                <source>Introduction videos</source>
+				<target>Vídeos demostrativos</target>
+            </trans-unit>
+            <trans-unit id="dashboard_use_firefox">
+                <source>Cryptshare.express for Firefox</source>
+				<target>Cryptshare.express para Firefox</target>
+            </trans-unit>
+            <trans-unit id="dashboard_use_edge">
+                <source>Cryptshare.express for Edge</source>
+				<target>Cryptshare.express para Edge</target>
+            </trans-unit>
+            <trans-unit id="dashboard_use_opera">
+                <source>Cryptshare.express for Opera</source>
+				<target>Cryptshare.express para Opera</target>
+            </trans-unit>
+            <trans-unit id="dashboard_use_safari">
+                <source>Cryptshare.express for Safari</source>
+				<target>Cryptshare.express para Safari</target>
+            </trans-unit>
+            <trans-unit id="dashboard_use_link">
+                <source>Get all you need</source>
+				<target>obtenga todo lo que necesita</target>
+            </trans-unit>
+            <trans-unit id="dashboard_help_headline">
+                <source>Help</source>
+				<target>Ayuda</target>
+            </trans-unit>
+            <trans-unit id="dashboard_help_p1">
+                <source>Cryptshare.express is very easy to use.</source>
+				<target>Cryptshare.express es muy fácil de usar.</target>
+            </trans-unit>
+            <trans-unit id="dashboard_help_p2">
+                <source>For the most frequently asked questions, we put together some useful information for you in our help section.</source>
+				<target>Para las preguntas más frecuentes, hemos recopilado información útil en nuestra sección de ayuda.</target>
+            </trans-unit>
+            <trans-unit id="dashboard_help_link">
+                <source>Learn more</source>
+				<target>Más información</target>
+            </trans-unit>
+            <trans-unit id="dashboard_account_headline">
+                <source>Business Account</source>
+				<target>Cuenta de empresa</target>
+            </trans-unit>
+            <trans-unit id="dashboard_account_p1">
+                <source>Keep the information you provided up to date and change your password.</source>
+				<target>Mantenga actualizada la información proporcionada y cambie su contraseña.</target>
+            </trans-unit>
+            <trans-unit id="dashboard_account_link">
+                <source>Manage account</source>
+				<target>Administrar cuenta</target>
+            </trans-unit>
+            <trans-unit id="copy_to_clipboard">
+                <source>Copy to clipboard</source>
+				<target>Copiar al portapapeles</target>
+            </trans-unit>
+            <trans-unit id="use_section_2_headline1">
+                <source>That's it!</source>
+				<target>¡Eso es!</target>
+            </trans-unit>
+            <trans-unit id="use_section_2_headline2">
+                <source>What's next?</source>
+				<target>¿Qué es lo siguiente?</target>
+            </trans-unit>
+            <trans-unit id="use_section_2_headline_order">
+                <source>Subscribe more email users</source>
+				<target>Suscribir más usuarios de correo electrónico</target>
+            </trans-unit>
+            <trans-unit id="use_section_2_p_order">
+                <source>Up to 25 email users possible</source>
+				<target>Posibilidad de hasta 25 usuarios de correo electrónico</target>
+            </trans-unit>
+            <trans-unit id="use_section_2_headline_sendwelcomemail">
+                <source>Inform user(s)</source>
+				<target>Informar al/los usuario(s)</target>
+            </trans-unit>
+            <trans-unit id="use_section_2_p1_sendwelcomemail">
+                <source>We recommend to send this text via your own email program to</source>
+				<target>Le recomendamos que envíe este texto a través de su propio programa de correo electrónico</target>
+            </trans-unit>
+            <trans-unit id="use_section_2_p2_sendwelcomemail">
+                <source>, so that any queries you may have will end up directly in your inbox.</source>
+				<target>, para que cualquier consulta que tenga llegue directamente a su buzón de entrada.</target>
+            </trans-unit>
+            <trans-unit id="use_section_2_headline_sendwelcomemail_recipient">
+                <source>Recipient</source>
+				<target>Destinatario</target>
+            </trans-unit>
+            <trans-unit id="use_section_2_headline_sendwelcomemail_sender">
+                <source>Sender</source>
+				<target>Emisor</target>
+            </trans-unit>
+            <trans-unit id="use_section_2_headline_sendwelcomemail_subject">
+                <source>Subject</source>
+				<target>Asunto</target>
+            </trans-unit>
+            <trans-unit id="use_section_2_headline_sendwelcomemail_template">
+                <source>Our suggestion</source>
+				<target>Nuestra sugerencia</target>
+            </trans-unit>
+            <trans-unit id="use_section_2_p_sendwelcomemail">
+                <source>Send welcome email now</source>
+				<target>Enviar correo electrónico de bienvenida ahora</target>
+            </trans-unit>
+            <trans-unit id="use_section_2_headline_visitwebapp">
+                <source>Visit Web App</source>
+				<target>Visitar la aplicación web</target>
+            </trans-unit>
+            <trans-unit id="use_section_2_headline_download">
+                <source>Download integrations</source>
+				<target>Descargar integraciones</target>
+            </trans-unit>
+            <trans-unit id="use_section_2_p_download">
+                <source>Download, install, use</source>
+				<target>Descargar, instalar, usar</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_headline1">
+                <source>Downloads</source>
+				<target>Descargas</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_headline_webapplication">
+                <source><![CDATA[Cryptshare Web App]]></source>
+				<target><![CDATA[Aplicación web de Cryptshare]]></target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_webapplication_open">
+                <source>Open Web App now</source>
+				<target>Abrir aplicación web ahora</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_headline_outlook">
+                <source><![CDATA[Cryptshare for Outlook]]></source>
+				<target><![CDATA[Cryptshare para Outlook]]></target>
+            </trans-unit>
+            <trans-unit id="use_section_4_description_outlook">
+                <source>Benefit from all of Cryptshare's advantages in Outlook.</source>
+				<target>Benefíciese de todas las ventajas de Cryptshare en Outlook.</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_description_webapplication">
+                <source>Available at anytime, for all modern browsers.</source>
+				<target>Disponible en todo momento, para todos los navegadores modernos.</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_outlook">
+                <source>Version 2.4.0.0145</source>
+				<target>Versión 2.4.0.0145</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_outlook_download">
+                <source>Download installer</source>
+				<target>Descargar instalador</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_outlook_manual">
+                <source>Download manual</source>
+				<target>Descargar manual</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_headline_manual">
+                <source>Cryptshare manual</source>
+				<target>Manual de Cryptshare</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_manual">
+                <source>3 MB, PDF</source>
+				<target>3 MB, PDF</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_headline_browser_general">
+                <source>Browser-integrations</source>
+				<target>Integraciones para el navegador</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_description_browser_general">
+                <source>With a small icon in your favorite browser, Cryptshare is always just one click away.</source>
+				<target>Con un pequeño icono en su navegador favorito, Cryptshare siempre estará a un clic de distancia.</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_headline_chrome">
+                <source><![CDATA[Chrome]]></source>
+				<target><![CDATA[Chrome]]></target>
+            </trans-unit>
+            <trans-unit id="use_section_4_description_chrome">
+                <source>With a small icon in Google Chrome browser, Cryptshare is only one click away.</source>
+				<target>Con un pequeño icono en su navegador Google Chrome, Cryptshare siempre estará a un clic de distancia.</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_chrome">
+                <source>Version 1.0.0 (Beta)</source>
+                <target>Versión 1.0.0 (Beta)</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_chrome_download">
+                <source>Install now</source>
+				<target>Instalar ahora</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_chrome">
+                <source>Version 1.0.0 (Beta)</source>
+				<target>Versión 1.0.0 (Beta)</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_chrome_manual">
+                <source>Download manual</source>
+				<target>Descargar manual</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_headline_firefox">
+                <source><![CDATA[Firefox]]></source>
+				<target><![CDATA[Firefox]]></target>
+            </trans-unit>
+            <trans-unit id="use_section_4_description_firefox">
+                <source>With a small icon in Mozilla Firefox, Cryptshare is only one click away.</source>
+				<target>Con un pequeño icono en Mozilla Firefox, Cryptshare siempre estará a un clic de distancia.</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_firefox_download">
+                <source>Install now</source>
+				<target>Instalar ahora</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_firefox">
+                <source>Version 1.0.0 (Beta)</source>
+				<target>Versión 1.0.0 (Beta)</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_firefox_manual">
+                <source>Download manual</source>
+				<target>Descargar manual</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_comingsoon">
+                <source>Coming soon</source>
+				<target>Próximamente</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_headline_edge">
+                <source><![CDATA[Edge]]></source>
+				<target><![CDATA[Edge]]></target>
+            </trans-unit>
+            <trans-unit id="use_section_4_description_edge">
+                <source>With a small icon in Microsoft Edge browser, Cryptshare is only one click away.</source>
+				<target>Con un pequeño icono en su navegador Microsoft Edge, Cryptshare solo estará a un clic de distancia.</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_edge_download">
+                <source>Install now</source>
+				<target>Instalar ahora</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_edge">
+                <source>Version 1.0.0 (Beta)</source>
+				<target>Versión 1.0.0 (Beta)</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_edge_manual">
+                <source>Download manual</source>
+				<target>Descargar manual</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_headline_opera">
+                <source><![CDATA[Opera]]></source>
+				<target><![CDATA[Opera]]></target>
+            </trans-unit>
+            <trans-unit id="use_section_4_description_opera">
+                <source>With a small icon in Opera browser, Cryptshare is only one click away.</source>
+				<target>Con un pequeño icono en el navegador Opera, Cryptshare solo estará a un clic de distancia.</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_opera">
+                <source>Version 1.0.0 (Beta)</source>
+				<target>Versión 1.0.0 (Beta)</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_opera_download">
+                <source>Install Add-on now</source>
+				<target>Instalar Add-on ahora</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_opera_manual">
+                <source>Download manual</source>
+				<target>Descargar manual</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_headline_safari">
+                <source><![CDATA[Safari]]></source>
+				<target><![CDATA[Safari]]></target>
+            </trans-unit>
+            <trans-unit id="use_section_4_description_safari">
+                <source>With a small icon in Apple Safari browser, Cryptshare is only one click away.</source>
+				<target>Con un pequeño icono en el navegador Apple Safari, Cryptshare solo estará aun clic de distancia.</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_safari_download">
+                <source>Install now</source>
+				<target>Instalar ahoraw</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_safari">
+                <source>Version 1.0.0 (Beta)</source>
+				<target>Versión 1.0.0 (Beta)</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_safari_manual">
+                <source>Download manual</source>
+				<target>Descargar manual</target>
+            </trans-unit>
+            <trans-unit id="upsell_headline">
+                <source>Congratulations</source>
+				<target>Enhorabuena</target>
+            </trans-unit>
+            <trans-unit id="upsell_subheadline">
+                <source>must have grown. :-)</source>
+				<target>ha debido crecer. :-)</target>
+            </trans-unit>
+            <trans-unit id="upsell_didyouknow">
+                <source>Did you know?</source>
+				<target>¿Lo sabía?</target>
+            </trans-unit>
+            <trans-unit id="upsell_p1">
+                <source>Get more out of Cryptshare.</source>
+				<target>Obtenga más de Cryptshare.</target>
+            </trans-unit>
+            <trans-unit id="upsell_p2">
+                <source>Get non-binding advice now!</source>
+				<target>Obtenga ahora asesoramiento sin compromiso</target>
+            </trans-unit>
+            <trans-unit id="upsell_submit">
+                <source>Call me</source>
+				<target>Llámeme</target>
+            </trans-unit>
+            <trans-unit id="whatyouget_headline">
+                <source>Benefit from Cryptshare.express' many advantages – right after you subscribed</source>
+				<target>Benefíciese de las numerosas ventajas de Cryptshare.express, directamente después de suscribirse</target>
+            </trans-unit>
+            <trans-unit id="whatyouget_offer_headline">
+                <source>Transparent terms</source>
+				<target>Condiciones transparentes</target>
+            </trans-unit>
+            <trans-unit id="whatyouget_offer_p1">
+                <source>No set-up fee</source>
+				<target>Sin gastos de instalación</target>
+            </trans-unit>
+            <trans-unit id="whatyouget_offer_p2">
+                <source>Annual subscription</source>
+				<target>Suscripción anual</target>
+            </trans-unit>
+            <trans-unit id="whatyouget_offer_p3">
+                <source>Can be cancelled up to four weeks before the subscribed period ends</source>
+				<target>Puede cancelarse hasta cuatro semanas antes de que finalice el periodo suscrito</target>
+            </trans-unit>
+            <trans-unit id="whatyouget_offer_p4">
+                <source>Secure and easy payment with credit card or direct debit</source>
+				<target>Pago seguro y fácil con tarjeta de crédito o adeudo directo</target>
+            </trans-unit>
+            <trans-unit id="whatyouget_features_headline">
+                <source>Features</source>
+				<target>Características</target>
+            </trans-unit>
+            <trans-unit id="whatyouget_features_p1">
+                <source>Exchange of large files</source>
+				<target>Intercambio de archivos grandes</target>
+            </trans-unit>
+            <trans-unit id="whatyouget_features_p2">
+                <source>Send and receive secure emails</source>
+				<target>Enviar y recibir correos electrónicos seguros</target>
+            </trans-unit>
+            <trans-unit id="whatyouget_features_p3">
+                <source>Your communication partners don't need their own Cryptshare email user accounts</source>
+				<target>Sus interlocutores no necesitan tener cuenta propia de usuario de correo electrónico en Cryptshare</target>
+            </trans-unit>
+            <trans-unit id="whatyouget_features_p4">
+                <source>Up to 10 GB file size per transfer</source>
+				<target>Archivos de hasta 10 GB por transferencia</target>
+            </trans-unit>
+            <trans-unit id="whatyouget_features_p5">
+                <source>10 days transfer retention period</source>
+				<target>Las transferencias se conservan durante 10 días</target>
+            </trans-unit>
+            <trans-unit id="whatyouget_features_p6">
+                <source>Usable without having your own IT infrastructure</source>
+				<target>Puede utilizarse sin una infraestructura informática propia</target>
+            </trans-unit>
+            <trans-unit id="whatyouget_features_p7">
+                <source>Recall transfers in Outlook and Web App</source>
+				<target>Recuperar transferencias en Outlook y la aplicación web</target>
+            </trans-unit>
+            <trans-unit id="whatyouget_inclusive_headline">
+                <source>Including</source>
+				<target>Incluye</target>
+            </trans-unit>
+            <trans-unit id="whatyouget_inclusive_p1">
+                <source>Cryptshare Web App</source>
+				<target>Aplicación web de Cryptshare</target>
+            </trans-unit>
+            <trans-unit id="whatyouget_inclusive_p2">
+                <source><![CDATA[Cryptshare for Outlook]]></source>
+				<target><![CDATA[Cryptshare para Outlook]]></target>
+            </trans-unit>
+            <trans-unit id="whatyouget_inclusive_p3">
+                <source>Cryptshare.express browser-integrations</source>
+				<target>Integraciones de navegador Cryptshare.express</target>
+            </trans-unit>
+            <trans-unit id="whatyouget_inclusive_p4">
+                <source>All Cryptshare software updates for the listed integrations above</source>
+				<target>Todas las actualizaciones del software de Cryptshare para las integraciones arriba listadas</target>
+            </trans-unit>
+            <trans-unit id="onboarding_welcomeemail_subject1">
+                <source>Welcome to Cryptshare.express,</source>
+				<target>Bienvenido a Cryptshare.express,</target>
+            </trans-unit>
+            <trans-unit id="onboarding_welcomeemail_subject2">
+                <source>! - Your start</source>
+				<target>! - Su inicio</target>
+            </trans-unit>
+            <trans-unit id="onboarding_welcomeemail_p1">
+                <source>Hello</source>
+				<target>Hola</target>
+            </trans-unit>
+            <trans-unit id="onboarding_welcomeemail_p2">
+                <source><![CDATA[as you may have already noticed, we decided to exchange large and sensitive data via Cryptshare.express in the future.]]></source>
+				<target><![CDATA[como ya habrá notado, hemos decidido intercambiar datos grandes y sensibles a través de Cryptshare.express en el futuro.]]></target>
+            </trans-unit>
+            <trans-unit id="onboarding_welcomeemail_p3">
+                <source><![CDATA[You receive this email because I have already activated you.<br><strong>You can start right away! :-)</strong>]]></source>
+				<target><![CDATA[Usted recibe este correo electrónico porque ya le he activado.<br><strong>¡Puede empezar ahora mismo! :-)</strong>]]></target>
+            </trans-unit>
+            <trans-unit id="onboarding_welcomeemail_p4">
+                <source><![CDATA[The best way is to take 15 minutes and visit the following website:<br><a href="https://www.cryptshare.express/de/onboarding" target="_blank">https://www.cryptshare.express/de/onboarding</a>]]></source>
+				<target><![CDATA[Lo mejor es tomarse 15 minutos y visitar el siguiente sitio web:<br><a href="https://www.cryptshare.express/de/onboarding" target="_blank">https://www.cryptshare.express/de/onboarding</a>]]></target>
+            </trans-unit>
+            <trans-unit id="onboarding_welcomeemail_p5">
+                <source><![CDATA[There you'll find everything you need to use Cryptshare.express:]]></source>
+				<target><![CDATA[Ahí encontrará todo lo que necesita para utilizar Cryptshare.express:]]></target>
+            </trans-unit>
+            <trans-unit id="onboarding_welcomeemail_p6">
+                <source><![CDATA[<ol> <li>A short <strong>Instruction video</strong> for the Cryptshare.express Web App.</li> <li>Den <a href="https://webapp.cryptshare.express/" target="_blank">Link to the Cryptshare.express Web App</a>.</li> <li> The installation program for the <strong>Outlook integration</strong> - Cryptshare for Outlook </li> </ol>]]></source>
+				<target><![CDATA[<ol> <li>Un breve <strong>vídeo demostrativo</strong> para la aplicación web de Cryptshare.express.</li> <li>Den <a href="https://webapp.cryptshare.express/" target="_blank">Enlace a la aplicación web de Cryptshare.express</a>.</li> <li> El programa de instalación para la <strong>integración de Outlook</strong> - Cryptshare para Outlook </li> </ol>]]></target>
+            </trans-unit>
+            <trans-unit id="onboarding_welcomeemail_p7">
+                <source><![CDATA[You can even integrate the Cryptshare.Express Web App <strong>directly into your browser </strong>:]]></source>
+				<target><![CDATA[También puede integrar la aplicación web de Cryptshare.express <strong>directamente en su navegador </strong>:]]></target>
+            </trans-unit>
+            <trans-unit id="onboarding_welcomeemail_p8">
+                <source><![CDATA[<ol> <li>By opening the address <a href="https://webapp.cryptshare.express/" target="_blank">https://webapp.cryptshare.express/</a> and adding it to your favorites.</li> <li>The extension <strong>Cryptshare.express for Chrome</strong> installed in your Chrome browser.</li> <li>The add-on <strong>Cryptshare.express for Firefox</strong> installed in your Firefox browser.</li> </ol>]]></source>
+				<target><![CDATA[<ol> <li>Abriendo la dirección <a href="https://webapp.cryptshare.express/" target="_blank">https://webapp.cryptshare.express/</a> y añadirla a sus favoritos.</li> <li>La extensión <strong>Cryptshare.express para Chrome</strong> instalada en su navegador Chrome b.</li> <li>Add-on <strong>Cryptshare.express para Firefox</strong> instalado en su navegador Firefox browser.</li> </ol>]]></target>
+            </trans-unit>
+            <trans-unit id="onboarding_welcomeemail_p9">
+                <source><![CDATA[Further information will follow later.]]></source>
+				<target><![CDATA[Más informacion más adelante.]]></target>
+            </trans-unit>
+            <trans-unit id="onboarding_welcomeemail_p10">
+                <source><![CDATA[I recommend that you keep this email so that you can look it up at any time.]]></source>
+				<target><![CDATA[Le recomiendo que guarde este correo electrónico para que pueda consultarlo en cualquier momento.]]></target>
+            </trans-unit>
+            <trans-unit id="onboarding_welcomeemail_p11">
+                <source><![CDATA[Best regards,]]></source>
+				<target><![CDATA[Saludos cordiales,]]></target>
+            </trans-unit>
+            <trans-unit id="checkout_vathint_headline">
+                <source><![CDATA[Please note]]></source>
+				<target><![CDATA[Tenga en cuenta que]]></target>
+            </trans-unit>
+            <trans-unit id="checkout_vathint_p1">
+                <source><![CDATA[<p>You did not enter a VAT-ID yet. Please note that without a VAT-ID we have to claim value added tax on our invoice.</p>]]></source>
+				<target><![CDATA[<p>aún no ha introducido su CIF. No olvide que sin él tendremos que reclamarle el IVA en su factura.</p>]]></target>
+            </trans-unit>
+            <trans-unit id="checkout_vathint_link">
+                <source><![CDATA[Click here to enter your VAT-ID now (if you have any)]]></source>
+				<target><![CDATA[Pulse aquí para introducir su CIF ahora (si lo tiene)]]></target>
+            </trans-unit>
+            <trans-unit id="checkout_staff_member_hint_headline">
+                <source><![CDATA[Hello]]></source>
+				<target><![CDATA[Hola]]></target>
+            </trans-unit>
+            <trans-unit id="checkout_staff_member_hint_p1">
+                <source><![CDATA[As an employee of our company, you can use an account with up to 25 users free of charge for the purpose of demonstrating or demonstrating our Cryptshare.express product to potential or existing customers and business partners.]]></source>
+				<target><![CDATA[Como empleado de nuestra empresa, puede utilizar gratis una cuenta de hasta 25 usuarios con el fin de demostrar o mostrar nuestro producto Cryptshare.express a clientes y socios comerciales potenciales o existentes.]]></target>
+            </trans-unit>
+            <trans-unit id="checkout_staff_member_hint_p2">
+                <source><![CDATA[Please note the following terms of use:]]></source>
+				<target><![CDATA[Tenga en cuenta las siguientes condiciones de uso:]]></target>
+            </trans-unit>
+            <trans-unit id="checkout_staff_member_hint_p3_1">
+                <source><![CDATA[Only commercial / business users may be created, <strong>no consumers</strong>.]]></source>
+				<target><![CDATA[Solo pueden crearse usuarios comerciales/de empresa, <strong>no consumidores</strong>.]]></target>
+            </trans-unit>
+            <trans-unit id="checkout_staff_member_hint_p3_2">
+                <source><![CDATA[The investment of users always takes place in the interest,<br />to the advantage and <strong>for the account of Pointsharp GmbH</strong>.]]></source>
+				<target><![CDATA[La inversión de los usuarios se realiza siempre en interés, <br />en beneficio y <strong>por cuenta de Pointsharp GmbH</strong>]]>.</target>
+            </trans-unit>
+            <trans-unit id="checkout_staff_member_hint_p3_3">
+                <source><![CDATA[The use of the account for <strong>private purposes is not permitted</strong>.]]></source>
+				<target><![CDATA[No se permite el uso de la cuenta para <strong>fines privados</strong>.]]></target>
+            </trans-unit>
+            <trans-unit id="checkout_staff_member_hint_p4">
+                <source><![CDATA[We wish you every success using Cryptshare.express.<br /> Pointsharp GmbH]]></source>
+				<target><![CDATA[Le deseamos mucho éxito al utilizar Cryptshare.express.<br /> Pointsharp GmbH]]></target>
+            </trans-unit>
+            <trans-unit id="checkout_staff_member_hint_p5">
+                <source><![CDATA[By placing an order, I agree to abide by the above terms of use.]]></source>
+				<target><![CDATA[Al realizar un pedido, acepto cumplir las condiciones de uso anteriores.]]></target>
+            </trans-unit>
+            <trans-unit id="invoicetable_contract">
+                <source>Contract</source>
+				<target>Contrato</target>
+            </trans-unit>
+            <trans-unit id="invoicetable_date">
+                <source>Date</source>
+				<target>Fecha</target>
+            </trans-unit>
+            <trans-unit id="invoicetable_total">
+                <source>Total</source>
+				<target>Total</target>
+            </trans-unit>
+            <trans-unit id="invoicetable_currency">
+                <source>Currency</source>
+				<target>Moneda</target>
+            </trans-unit>
+            <trans-unit id="invoicetable_action">
+                <source>Action</source>
+				<target>Acción</target>
+            </trans-unit>
+            <trans-unit id="hint_maintenance">
+                <source><![CDATA[Please note: We are currently carrying out maintenance work on this system.<br>As long as this message is displayed, unexpected error messages may occur.<br>Please visit us again later. Thank you very much for your understanding!]]></source>
+				<target><![CDATA[Por favor, tenga en cuenta que actualmente estamos realizando trabajos de mantenimiento en este sistema.<br>Mientras se muestre este mensaje, pueden producirse mensajes de error inesperados.<br>Vuelva a visitarnos más tarde. Muchas gracias por su comprensión]]></target>
+            </trans-unit>
+            <trans-unit id="hint_backuprestore">
+                <source><![CDATA[Please note: We are currently restoring a Backup<br>Please visit us again later and check your last transfers. Thank you very much for your understanding!]]></source>
+				<target><![CDATA[Tenga en cuenta que estamos restaurando una copia de seguridad<br>Vuelva a visitarnos más tarde y compruebe sus últimas transferencias. Muchas gracias por su comprensión]]></target>
+            </trans-unit>
+            <trans-unit id="summer_promotion_header">
+                <source>Summer promotion until the end of August</source>
+				<target>Promoción de verano hasta finales de agosto</target>
+            </trans-unit>
+            <trans-unit id="summer_promotion_content">
+                <source><![CDATA[Use the discount voucher <br><b>SUMMER2019</b> <br>to get a 50% discount on your order.]]></source>
+				<target><![CDATA[Utilice este vale de descuento <br><b>SUMMER2019</b> <br>para obtener un 50 % de descuento en su pedido.]]></target>
+            </trans-unit>
+            <trans-unit id="payment_method_credit">
+                <source><![CDATA[If you wish to pay by credit card, you have to confirm your identity using the 3-D Secure procedure. This is a two-factor authentication. This procedure is now obligatory for credit card payment on the Internet. Please contact your credit institution if you have any questions about this.]]></source>
+                <target><![CDATA[Si desea pagar con tarjeta de crédito, deberá confirmar su identidad mediante el procedimiento 3-D Secure. Se trata de una identificación de dos factores. Este procedimiento es obligatorio para realizar pagos con tarjetas de crédito en Internet. Póngase en contacto con su banco sin tiene alguna pregunta sobre este tema.]]></target>
+            </trans-unit>
+            <trans-unit id="payment_method_debit">
+                <source><![CDATA[If you wish to pay by Sepa Direct Debit Mandate, we require your International Bank Account Number (IBAN) and Business Identifier Code (BIC). You can find this information directly on your bank card or by using an IBAN calculator.]]></source>
+                <target><![CDATA[Si desea pagar por adeudo directo Sepa, necesitaremos su número internacional de cuenta bancaria (IBAN) y código de identificación de empresa (BIC). Podrá encontrar esta información en su tarjeta bancaria o utilizando el calculador de IBAN.]]></target>
+            </trans-unit>
+		    <trans-unit id="payment_method_header">
+			    <source>Your Payment Options</source>
+				<target>Sus opciones de pagos</target>
+		    </trans-unit>
+		    <trans-unit id="checkout_summary_addedusers">
+    			<source><![CDATA[Email users]]></source>
+				<target><![CDATA[Usuarios de correo electrónico]]></target>
+    		</trans-unit>
+            <trans-unit id="payment_method_creditheader">
+                <source>Credit Card</source>
+				<target>Tarjeta de crédito</target>
+            </trans-unit>
+	        <trans-unit id="payment_method_debitheader">
+		        <source>SEPA Debit</source>
+				<target>Adeudo SEPA</target>
+	        </trans-unit>
+	        <trans-unit id="payment_method_idealheader">
+		        <source>iDEAL</source>
+				<target>iDEAL</target>
+	        </trans-unit>
+	        <trans-unit id="payment_method_ideal">
+		        <source><![CDATA[Customers from the Netherlands can conveniently pay using iDEAL. After you have chosen your bank, you will be redirected to it. There you will be shown the purchase amount for confirmation. After entering your account number you will be asked to complete the two-factor authentication. Then your bank will authorize the payment transaction in real time.]]></source>
+				<target><![CDATA[Los clientes de los Países Bajos pueden pagar cómodamente utilizando iDEAL. Una vez que haya elegido su banco, será redirigido a él. Allí se le mostrará el importe de la compra para que lo confirme. Después de introducir su número de cuenta, se le pedirá que complete la autentificación de dos factores. A continuación, el banco autorizará la operación de pago en tiempo real.]]></target>
+	        </trans-unit>
+            <trans-unit id="payment_method_3dsinfoheader">
+                <source>More security thanks to 3D-Secure 2 (3DS2)</source>
+				<target>Más seguridad gracias al doble 3D-Secure (3DS2)</target>
+            </trans-unit>
+            <trans-unit id="payment_method_debitinfoheader">
+                <source>IBAN-Info</source>
+				<target>Información del IBAN</target>
+		    </trans-unit>
+		    <trans-unit id="dce_load_from_youtube">
+                <source>Watch video now (will be loaded from YouTube)</source>
+				<target>Ver el vídeo ahora (cargar desde YouTube)</target>
+            </trans-unit>
+            <trans-unit id="dce_load_from_youtube_acceptconsent_1">
+                <source>Please</source>
+				<target>Por favor,</target>
+            </trans-unit>
+            <trans-unit id="dce_load_from_youtube_acceptconsent_2">
+                <source>accept marketing-cookies</source>
+				<target>acepte las cookies de marketing</target>
+            </trans-unit>
+            <trans-unit id="dce_load_from_youtube_acceptconsent_3">
+                <source>to watch this video or </source>
+				<target>para ver este vídeo o </target>
+            </trans-unit>
+            <trans-unit id="dce_load_from_youtube_acceptconsent_4">
+                <source>watch it directly on YouTube.</source>
+				<target>visualizarlo directamente desde YouTube.</target>
+            </trans-unit>
+	        <trans-unit id="dce_toc_headline">
+                <source>Table of Contents</source>
+				<target>Índice de contenido</target>
+            </trans-unit>
+            <trans-unit id="your_component">
+                <source>Your email address</source>
+				<target>Su dirección de correo electrónico</target>
+            </trans-unit>
+            <trans-unit id="component_name">
+                <source>Name</source>
+				<target>Nombre</target>
+            </trans-unit>
+            <trans-unit id="component_email">
+                <source>email address</source>
+				<target>Correo electrónico</target>
+            </trans-unit>
+            <trans-unit id="component_start">
+                <source>Beginning</source>
+				<target>Comienzo</target>
+            </trans-unit>
+            <trans-unit id="component_edit">
+                <source>Change email address</source>
+				<target>Cambiar dirección de correo electrónico</target>
+            </trans-unit>
+            <trans-unit id="component_cancel">
+                <source>Cancel email address</source>
+				<target>Cancelar dirección de correo electrónico</target>
+            </trans-unit>
+            <trans-unit id="component_loading">
+                <source>Loading</source>
+				<target>Cargando</target>
+            </trans-unit>
+            <trans-unit id="component_cancel_no">
+                <source>No</source>
+				<target>No</target>
+            </trans-unit>
+            <trans-unit id="component_cancel_yes">
+                <source>Yes</source>
+				<target>Sí</target>
+            </trans-unit>
+            <trans-unit id="component_edit_email_text_1">
+                <source>You can change the email address once per billing period.</source>
+				<target>Puede cambiar la dirección de correo electrónico una vez por período de facturación.</target>
+            </trans-unit>
+            <trans-unit id="component_edit_email_text_2">
+                <source>Please enter the new email address and confirm the change with Save.</source>
+				<target>Introduzca la nueva dirección de correo electrónico y confirme con Guardar.</target>
+            </trans-unit>
+            <trans-unit id="component_edit_email_cancel">
+                <source>Cancel</source>
+				<target>Cancelar</target>
+            </trans-unit>
+            <trans-unit id="component_edit_email_save">
+                <source>Save</source>
+				<target>Guardar</target>
+            </trans-unit>
+            <trans-unit id="component_cancel_text">
+                <source>Are you sure you want to cancel this email address?</source>
+				<target>¿Está seguro de que desea cancelar esta dirección de correo electrónico?</target>
+            </trans-unit>
+            <trans-unit id="cancel_component">
+                <source>This email address has been marked for cancellation</source>
+				<target>Esta dirección de correo electrónico está marcada para su cancelación.</target>
+            </trans-unit>
+            <trans-unit id="edit_component">
+                <source>Changed email address</source>
+				<target>Dirección de correo electrónico cambiada</target>
+            </trans-unit>
+            <trans-unit id="change_alert">
+                <source>Please note that an email address can be changed only once per contract period.</source>
+				<target>Tenga en cuenta que una dirección de correo electrónico solo puede cambiarse una vez por período de contrato.</target>
+            </trans-unit>
+            <trans-unit id="payment_provider_head">
+                <source>Payment</source>
+				<target>Pago</target>
+            </trans-unit>
+		    <trans-unit id="payment_provider_text_p1">
+			    <source><![CDATA[<span id="contractPaymentMethod">Loading...</span>.]]></source>
+				<target><![CDATA[<span id="contractPaymentMethod">Cargando...</span>.]]></target>
+		    </trans-unit>
+		    <trans-unit id="payment_provider_linktext">
+			    <source>Click here,</source>
+				<target>Pulse aquí,</target>
+		    </trans-unit>
+		    <trans-unit id="payment_provider_text_p2">
+			    <source>if you want to change this.</source>
+				<target>si desea cambiarla.</target>
+		    </trans-unit>
+			<trans-unit id="country">
+		        <source>Default</source>
+				<target>Por defecto</target>
+		    </trans-unit>
+            <trans-unit id="fatal-error">
+                <source>Fatal error: Something went completely wrong. Sorry for that. You are welcome to contact our service on support@cryptshare.express.</source>
+				<target>Error grave: algo ha fallado. Lo sentimos. Puede ponerse en contacto con nuestro servicio en support@cryptshare.express.</target>
+			</trans-unit>
+            <trans-unit id="danger">
+                <source>Error</source>
+				<target>Error</target>
+			</trans-unit>
+            <trans-unit id="warning">
+                <source>Warning</source>
+				<target>Advertencia</target>
+			</trans-unit>
+            <trans-unit id="success">
+                <source>Success</source>
+				<target>Éxito</target>
+			</trans-unit>
+            <trans-unit id="hello-q1">
+                <source>Good morning,</source>
+				<target>Buenos días,</target>
+			</trans-unit>
+            <trans-unit id="hello-q2">
+                <source>Hello,</source>
+				<target>Hola,</target>
+			</trans-unit>
+            <trans-unit id="hello-q3">
+                <source>Good afternoon,</source>
+				<target>Buenas tardes,</target>
+			</trans-unit>
+            <trans-unit id="hello-q4">
+                <source>Good evening,</source>
+				<target>Buenas tardes,</target>
+			</trans-unit>
+            <trans-unit id="hello-q5">
+                <source>Good night,</source>
+				<target>Buenas noches,</target>
+			</trans-unit>
+            <trans-unit id="registration-link-terms-of-use">
+                <source>Terms of Use</source>
+				<target>Condiciones de uso</target>
+			</trans-unit>
+            <trans-unit id="registration-link-data-protection">
+                <source>Privacy and Cookie policy</source>
+				<target>Privacidad y política de cookies</target>
+            </trans-unit>
+            <trans-unit id="registration-business-confirmation">
+                <source>Cryptshare.express is exclusively for business customers. I hereby confirm that I am creating this account on behalf of my company.</source>
+				<target>Cryptshare.express es exclusivamente para clientes de empresa. Confirmo que estoy creando esta cuenta en nombre de mi empresa.</target>
+            </trans-unit>
+            <trans-unit id="registration-edit-emaillogin-hint">
+                <source>Please note that if you change your email address, the login on this page will change accordingly.</source>
+				<target>Tenga en cuenta que si cambia su dirección de correo electrónico, también cambiará su inicio de sesión en esta página.</target>
+            </trans-unit>
+            <trans-unit id="registration-createonbw-success">
+                <source>Customer successfully created in our systems.</source>
+				<target>Cliente correctamente creado en nuestros sistemas.</target>
+            </trans-unit>
+            <trans-unit id="login-button">
+                <source>Sign in</source>
+				<target>Iniciar sesión</target>
+            </trans-unit>
+            <trans-unit id="reset-password-button">
+                <source>Reset password</source>
+				<target>Restablecer contraseña</target>
+            </trans-unit>
+            <trans-unit id="login-access-token-success">
+                <source>Access token successfully determined.</source>
+				<target>El token de acceso se ha determinado correctamente.</target>
+            </trans-unit>
+            <trans-unit id="login-access-token-error">
+                <source>Access token could not be determined.</source>
+				<target>No se ha podido determinar el toke de acceso.</target>
+            </trans-unit>
+            <trans-unit id="registration-not-a-robot">
+                <source>I´m not a robot.</source>
+				<target>No soy un robot.</target>
+            </trans-unit>
+            <trans-unit id="registration-not-a-robot-really">
+                <source>I´m really not a robot.</source>
+				<target>De verdad que no soy un robot.</target>
+            </trans-unit>
+            <trans-unit id="registration-signup-button">
+                <source>Create Business Account</source>
+				<target>Crear cuenta de empresa</target>
+            </trans-unit>
+            <trans-unit id="registration-robo-detected">
+                <source>You are not behaving as expected. It appears as if you are not a human. Please try again and fill in the form completely.</source>
+				<target>Su comportamiento no es el esperable. No parece ser humano. Inténtelo de nuevo y cumplimente todo el formulario.</target>
+            </trans-unit>
+            <trans-unit id="label-user-data-edit">
+                <source>Data of the email user</source>
+				<target>Datos del usuario de correo electrónico</target>
+            </trans-unit>
+            <trans-unit id="label-user-data-status-initialinactive">
+                <source>We enable this email user on webapp.cryptshare.express in this moment. Give us 5 seconds.</source>
+				<target>En este momento, activamos a este usuario de correo electrónico en  webapp.cryptshare.express. Denos 5 segundos.</target>
+            </trans-unit>
+            <trans-unit id="label-user-data-status-deactivated">
+                <source>This email user is deactivated so you are not able to use it on webapp.cryptshare.express anymore.</source>
+				<target>Este usuario de correo electrónico ha sido desactivado, por lo que ya no podrá utilizarlo en webapp.cryptshare.express.</target>
+            </trans-unit>
+            <trans-unit id="label-user-data-status-active">
+                <source>This email user is enabled on webapp.cryptshare.express - Have some fun with Cryptshare!</source>
+				<target>Este usuario de correo electrónico ha sido activado en webapp.cryptshare.express. ¡Que se divierta con Cryptshare!</target>
+            </trans-unit>
+            <trans-unit id="label-user-data-status-unexpected">
+                <source>Unexpected status - We don not know if you that email address is enabled on webapp.cryptshare.express</source>
+				<target>Estado inesperado. No sabemos si ha activado esta dirección de correo electrónico en webapp.cryptshare.express</target>
+            </trans-unit>
+            <trans-unit id="label-user-data-error-fetching-csuserdata">
+                <source>An error occurred when determining the data of your email user. Please enter it again and click on save.</source>
+				<target>Se ha producido un error al determinar los datos de su usuario de correo electrónico. Introdúzcalo de nuevo y pulse en guardar.</target>
+            </trans-unit>
+            <trans-unit id="step-1">
+                <source>Select pricing plan</source>
+				<target>Seleccionar plan de pago</target>
+            </trans-unit>
+            <trans-unit id="step-2">
+                <source>Order</source>
+				<target>Pedido</target>
+            </trans-unit>
+            <trans-unit id="step-3">
+                <source>Payment</source>
+				<target>Pago</target>
+            </trans-unit>
+            <trans-unit id="step-4">
+                <source>Enter user data</source>
+				<target>Introducir datos de usuario</target>
+            </trans-unit>
+            <trans-unit id="step-5">
+                <source>Use Cryptshare</source>
+				<target>Utilizar Cryptshare</target>
+            </trans-unit>
+            <trans-unit id="checkout-pricing-plan-annual-description">
+                <source>per mailbox paid in advance</source>
+				<target>por apartado postal con facturación anticipada</target>
+            </trans-unit>
+            <trans-unit id="checkout-pricing-plan-monthly-description">
+                <source>per mailbox paid in advance</source>
+				<target>por apartado postal con facturación anticipada</target>
+            </trans-unit>
+            <trans-unit id="checkout-selected-pricing-plan">
+                <source>Selected pricing plan</source>
+				<target>Plan de precios seleccionado</target>
+            </trans-unit>
+            <trans-unit id="checkout-payment-details">
+                <source>Enter now your payment details</source>
+				<target>Introduzca sus datos de pago ahora</target>
+            </trans-unit>
+            <trans-unit id="checkout-billing-data">
+                <source>Billing data</source>
+				<target>Datos de facturación</target>
+            </trans-unit>
+            <trans-unit id="checkout-edit-billing-data">
+                <source>Edit data</source>
+				<target>Editar datos</target>
+            </trans-unit>
+            <trans-unit id="checkout-back">
+                <source>Back</source>
+				<target>Volver</target>
+            </trans-unit>
+            <trans-unit id="checkout-save">
+                <source>Save</source>
+				<target>Guardar</target>
+            </trans-unit>
+            <trans-unit id="checkout-order-now">
+                <source>Order now</source>
+				<target>Pedir ahora</target>
+            </trans-unit>
+            <trans-unit id="checkout-shoppingcart-updated">
+                <source>Shopping cart has been updated (see summary below)</source>
+				<target>La cesta se ha actualizado (véase resumen a continuación)</target>
+            </trans-unit>
+            <trans-unit id="InvalidCouponCode">
+                <source>Voucher/Couponcode is invalid</source>
+				<target>El código del vale/descuento no es válido</target>
+            </trans-unit>
+            <trans-unit id="month">
+                <source>Month</source>
+				<target>Mes</target>
+            </trans-unit>
+            <trans-unit id="year">
+                <source>Year</source>
+				<target>Año</target>
+            </trans-unit>
+            <trans-unit id="cancelationperiodsuffix">
+                <source>before the subscribed period ends</source>
+				<target>antes de la finalización del plazo de suscripción</target>
+            </trans-unit>
+            <trans-unit id="checkout-submit-order">
+                <source>Submit order</source>
+				<target>Enviar pedido</target>
+            </trans-unit>
+            <trans-unit id="checkout-submit-order2">
+                <source>The payment is made in the next step.</source>
+				<target>El pago se realizará en el siguiente paso.</target>
+            </trans-unit>
+            <trans-unit id="checkout-submit-pay">
+                <source>Pay now</source>
+				<target>Pagar ahora</target>
+            </trans-unit>
+            <trans-unit id="checkout-submit-pay2">
+                <source>A useful hint</source>
+				<target>Una indicación útil</target>
+            </trans-unit>
+            <trans-unit id="incl-vat">
+                <source>incl. VAT</source>
+				<target>incl. IVA</target>
+            </trans-unit>
+            <trans-unit id="checkout-userdata-enter">
+                <source>Data of the new email users.</source>
+				<target>Datos de los nuevos usuarios de correo electrónico.</target>
+            </trans-unit>
+            <trans-unit id="checkout-userdata-enter-again">
+                <source>Please enter the data of the new Cryptshare.express email user again.</source>
+				<target>Vuelva a introducir los datos del nuevo usuario de correo electrónico de Cryptshare.express.</target>
+            </trans-unit>
+            <trans-unit id="checkout-userdata-unchangeable">
+                <source>Please note: These information can not be changed afterwards.</source>
+				<target>Tenga en cuenta que esta información no podrá modificarse después.</target>
+            </trans-unit>
+            <trans-unit id="checkout-userdata-skip-entry">
+                <source>Skip and enter data of new email user later.</source>
+				<target>Omita e introduzca los datos del nuevo usuario de correo electrónico más tarde.</target>
+            </trans-unit>
+            <trans-unit id="checkout-accept-toc">
+                <source>I have read the Terms of Use, understood and accept them</source>
+				<target>He leído, entendido y acepto las condiciones de uso.</target>
+            </trans-unit>
+            <trans-unit id="checkout-read-toc">
+                <source>Read Terms of Use now.</source>
+				<target>Leer ahora las condiciones de uso.</target>
+            </trans-unit>
+            <trans-unit id="checkout-accept-data-protection">
+                <source>I have read the privacy policy, understood and accept them</source>
+				<target>He leído, entendido y acepto la declaración de privacidad</target>
+            </trans-unit>
+            <trans-unit id="checkout-read-data-protection">
+                <source>Read privacy policy now.</source>
+				<target>Leer la política de privacidad ahora.</target>
+            </trans-unit>
+            <trans-unit id="checkout-accept-gtac">
+                <source>I have read the General Terms and Conditions, understood and accept them</source>
+				<target>He leído, entendido y acepto los términos y condiciones generales</target>
+            </trans-unit>
+            <trans-unit id="checkout-read-gtac">
+                <source>Read General Terms and Conditions now.</source>
+				<target>Leer los términos y condiciones ahora.</target>
+            </trans-unit>
+            <trans-unit id="label-loading">
+                <source>Loading...</source>
+				<target>Cargando...</target>
+            </trans-unit>
+            <trans-unit id="label-payment-iframe-planvariantid-missing">
+                <source>Error: PlanVariantId miss.</source>
+				<target>Error: Falta ID de versión de plan.</target>
+            </trans-unit>
+            <trans-unit id="label-select-pricing-plan">
+                <source>Select pricing plan</source>
+				<target>Seleccionar plan de precios</target>
+            </trans-unit>
+            <trans-unit id="label-manage">
+                <source>Manage</source>
+				<target>Administrar</target>
+            </trans-unit>
+            <trans-unit id="label-sendwelcomeemail">
+                <source>Send welcome email to this user</source>
+				<target>Enviar correo electrónico de bienvenida a este usuarior</target>
+            </trans-unit>
+            <trans-unit id="label-sendwelcomeemail-short">
+                <source>Inform user</source>
+				<target>Informar usuario</target>
+            </trans-unit>
+            <trans-unit id="label-canceled">
+                <source>Cancelled</source>
+				<target>Cancelado</target>
+            </trans-unit>
+            <trans-unit id="label-will-end">
+                <source>and ends on</source>
+				<target>y finalizado el</target>
+            </trans-unit>
+            <trans-unit id="label-dummy-firstname">
+                <source>John</source>
+				<target>Señor</target>
+            </trans-unit>
+            <trans-unit id="label-dummy-lastname">
+                <source>Doe</source>
+				<target>XXX</target>
+            </trans-unit>
+            <trans-unit id="label-dummy-email">
+                <source>john.doe@yourdomain.com</source>
+				<target>señorxxx@sudominio.com</target>
+            </trans-unit>
+            <trans-unit id="close">
+                <source>Close</source>
+				<target>Cerrar</target>
+            </trans-unit>
+            <trans-unit id="copy">
+                <source>Copy</source>
+				<target>Copiar</target>
+            </trans-unit>
+            <trans-unit id="copy-success">
+                <source>Successfully put on clipboard</source>
+				<target>Correctamente depositado en el portapapeles</target>
+            </trans-unit>
+            <trans-unit id="copy-error">
+                <source>Error while copying</source>
+				<target>Error al copiar/target</target>
+            </trans-unit>
+            <trans-unit id="hello">
+                <source>Hello</source>
+				<target>Hola</target>
+            </trans-unit>
+            <trans-unit id="payment-bic-error">
+                <source></source>
+				<target></target>
+            </trans-unit>
+            <trans-unit id="payment-ccholder-error">
+                <source>Please fill in the correct holder name</source>
+				<target>Cumplimente el nombre correcto del titular</target>
+            </trans-unit>
+            <trans-unit id="payment-ccnumber-error">
+                <source>Please check your Credit Card Number</source>
+				<target>Compruebe el número de su tarjeta de crédito</target>
+            </trans-unit>
+            <trans-unit id="payment-cccvc-error">
+                <source>Please check your Credit Card Security Code</source>
+				<target>Compruebe el código de seguridad de su tarjeta de crédito</target>
+            </trans-unit>
+            <trans-unit id="payment-ccvalid-error">
+                <source>Pleasy check if your Credit Card is stl valid</source>
+				<target>Compruebe si su tarjeta de crédito es válida</target>
+            </trans-unit>
+            <trans-unit id="vat-error-all">
+                <source>Please check your VAT ID, it failed validation</source>
+				<target>Compruebe su CIF, no podemos validarlo</target>
+            </trans-unit>
+            <trans-unit id="vat-error-country">
+                <source>Please check your VAT ID, it failed validation for your country</source>
+				<target>Compruebe su CIF, no podemos validarlo para su país</target>
+            </trans-unit>
+            <trans-unit id="customerUpdate-error">
+                <source>Something went wrong. Data could not be safed correctly, please check again, especially the provided VAT-ID</source>
+				<target>Algo ha fallado. Los datos no se han podido guardar correctamente. Compruebe en particular el CIF introducido</target>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-germany">
+                <source>Germany</source>
+				<target>Alemania</target>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-netherland">
+                <source>the Netherlands</source>
+				<target>Países Bajos</target>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-othereuropean">
+                <source>other, european countries</source>
+				<target>otros países europeos</target>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-greatbritain">
+                <source>Great Britain</source>
+				<target>Gran Bretaña</target>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-usa">
+                <source>the United States of America</source>
+				<target>Estados Unidos de América</target>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-austria">
+                <source>Austria</source>
+				<target>Austria</target>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-france">
+                <source>France</source>
+				<target>Francia</target>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-spain">
+                <source>Spain</source>
+				<target>España</target>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-switzerland">
+                <source>Switzerland</source>
+				<target>Suiza</target>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-italy">
+                <source>Italy</source>
+				<target>Italia</target>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-finland">
+                <source>Finland</source>
+				<target>Finlandia</target>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-luxembourg">
+                <source>Luxembourg</source>
+				<target>Luxemburgo</target>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-lithuania">
+                <source>Lithuania</source>
+				<target>Lituania</target>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-ireland">
+                <source>Ireland</source>
+				<target>Irlanda</target>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-belgium">
+                <source>Belgium</source>
+				<target>Bélgica</target>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-greek">
+                <source>Greek</source>
+				<target>Grecia</target>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-portugal">
+                <source>Portugal</source>
+				<target>Portugal</target>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-p1">
+                <source>It seems that you are visiting us from</source>
+				<target>Parece que nos visita desde fuera</target>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-p2">
+                <source></source>
+				<target></target>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-p3">
+                <source>However, you are on the website for</source>
+				<target>No obstante, se encuentra en el sitio web de</target>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-p4">
+                <source>Please click here</source>
+				<target>Pulse aquí</target>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-p5">
+                <source>to access your language, currency and country-specific offers</source>
+				<target>para acceder a su idioma, moneda y ofertas específicas de cada país</target>
+            </trans-unit>
+            <trans-unit id="contract-card-header">
+                <source>Contract</source>
+				<target>Contrato</target>
+            </trans-unit>
+            <trans-unit id="email-card-header">
+                <source>Extra E-Mail</source>
+				<target>Correo electrónico extra</target>
+            </trans-unit>
+            <trans-unit id="add-email-user">
+                <source>Add email user</source>
+				<target>Añadir usuario de correo electrónico</target>
+            </trans-unit>
+            <trans-unit id="usertable-email">
+                <source>Email user</source>
+				<target>Usuario de correo electrónico</target>
+            </trans-unit>
+            <trans-unit id="usertable-name">
+                <source>Name</source>
+				<target>Nombre</target>
+            </trans-unit>
+            <trans-unit id="usertable-status">
+                <source>Status</source>
+				<target>Estado</target>
+            </trans-unit>
+            <trans-unit id="usertable-actions">
+                <source>Actions</source>
+				<target>Acciones</target>
+            </trans-unit>
+            <trans-unit id="contract-status-payment-success">
+                <source>Active</source>
+				<target>Activo</target>
+            </trans-unit>
+            <trans-unit id="contract-status-payment-intrial">
+                <source>In Trial</source>
+				<target>En prueba</target>
+            </trans-unit>
+            <trans-unit id="contract-status-payment-error">
+                <source>Error</source>
+				<target>Error</target>
+            </trans-unit>
+            <trans-unit id="contract-status-payment-warning">
+                <source>Warning</source>
+				<target>Advertencia</target>
+            </trans-unit>
+            <trans-unit id="contract-status-payment-failed">
+                <source>Payment failed. Please update now your payment data.</source>
+				<target>Fallo al pagar. Actualice ahora sus datos de pago.</target>
+            </trans-unit>
+            <trans-unit id="contract-status-creditcard-expiresoon">
+                <source>Your credit card will expire soon. Please update your payment data.</source>
+				<target>Su tarjeta de crédito caduca pronto. Actualice sus datos de pago.</target>
+            </trans-unit>
+            <trans-unit id="payment-provider-text-bankaccount">
+                <source>We will try to use the SEPA direct debit mandate for your bank account on file with the last four digits</source>
+				<target>Intentaremos utilizar el mandato de adeudo SEPA que ya ha emitido para la cuenta bancaria cuyos últimos cuatro dígitos son</target>
+            </trans-unit>
+            <trans-unit id="payment-provider-text-creditcard">
+                <source>We will try charge the credit card on file with the last four digits</source>
+				<target>Intentaremos utilizar su tarjeta de crédito ya depositada cuyos últimos cuatro dígitos son</target>
+            </trans-unit>
+            <trans-unit id="payment-provider-text-ideal">
+                <source>We will try to use your iDEAL bank account</source>
+				<target>Intentaremos utilizar su cuenta bancaria registrada en iDEAL</target>
+            </trans-unit>
+            <trans-unit id="trial-from-headline">
+                <source>7-days Trial - </source>
+				<target>7 días de prueba </target>
+            </trans-unit>
+            <trans-unit id="order-trial-subtitle">
+                <source> - 7-days Trial</source>
+				<target> - 7 días de prueba </target>
+            </trans-unit>
+            <trans-unit id="order-trial-button">
+                <source>Add to trial order</source>
+				<target>Añadir al pedido de prueba</target>
+            </trans-unit>
+            <trans-unit id="order-trial-modal-cancel-headline">
+                <source>End the 7-day trial?</source>
+				<target>¿Finalizar la prueba de 7 días?</target>
+            </trans-unit>
+            <trans-unit id="order-trial-modal-cancel-text">
+                <source><p>The 7-day trial only works with one email user! If you add more e-mail users, the 7-day trial will end and you will be transferred to a paid subscription.</p><p>Would you like to end the 7-day trial and switch to a paid subscription to add more e-mail users?</p></source>
+				<target><p>La prueba de 7 días solo funciona con un usuario de correo electrónico. Si añade más usuarios de correo electrónico, la prueba de 7 días terminará y será transferido a una suscripción de pago.</p><p>¿Quiere finalizar la prueba de 7 días y cambiar a una suscripción de pago para añadir más usuarios de correo electrónico?</p></target>
+            </trans-unit>
+            <trans-unit id="order-trial-modal-cancel-button">
+                <source>Yes</source>
+				<target>Sí</target>
+            </trans-unit>
+            <trans-unit id="order-trial-modal-cancel-close">
+                <source>No</source>
+				<target>No</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCountry" ts="country">
+                <source>Default</source>
+                <target>Spanien</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixFatalError" ts="fatal-error">
+                <source>Fatal error: Something went completely wrong. Sorry for that. You are welcome to contact our service on support@cryptshare.express.</source>
+                <target>Error grave: algo ha fallado. Lo sentimos. Póngase en contacto con nuestro servicio en support@cryptshare.express.</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixDanger" ts="danger">
+                <source>Error</source>
+                <target>Error</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixWarning" ts="warning">
+                <source>Warning</source>
+                <target>Advertencia</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixSuccess" ts="success">
+                <source>Success</source>
+                <target>Éxito</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixHelloQ1" ts="hello-q1">
+                <source>Good morning,</source>
+                <target>Buenos días:</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixHelloQ2" ts="hello-q2">
+                <source>Hello,</source>
+                <target>¡Hora de comer!</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixHelloQ3" ts="hello-q3">
+                <source>Good afternoon,</source>
+                <target>Buenos días:</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixHelloQ4" ts="hello-q4">
+                <source>Good evening,</source>
+                <target>Buenas tardes:</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixHelloQ5" ts="hello-q5">
+                <source>Good night,</source>
+                <target>Buenas noches:</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixRegistrationLinkTermsOfUse" ts="registration-link-terms-of-use">
+                <source>Terms of Use</source>
+                <target>Condiciones de uso</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixRegistrationLinkDataProtection" ts="registration-link-data-protection">
+                <source>Privacy and Cookie policy</source>
+                <target>Privacidad y protección de datos</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixRegistrationBusinessConfirmation" ts="registration-business-confirmation">
+                <source>Cryptshare.express is exclusively for business customers. I hereby confirm that I am creating this account on behalf of my company.</source>
+                <target>Cryptshare.express está dirigido exclusivamente a clientes de empresa. Confirmo que estoy creando esta cuenta en nombre de mi empresa.</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixRegistrationEditEmailloginHint" ts="registration-edit-emaillogin-hint">
+                <source>Please note that if you change your email address, the login on this page will change accordingly.</source>
+                <target>Tenga en cuenta que si cambia su dirección de correo electrónico también cambiará su inicio de sesión en esta página.</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixRegistrationCreateonbwSuccess" ts="registration-createonbw-success">
+                <source>Customer successfully created in our systems.</source>
+                <target>Sus datos se crearon correctamente en nuestro sistema.</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLoginButton" ts="login-button">
+                <source>Sign in</source>
+                <target>Iniciar sesión</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixResetPasswordButton" ts="reset-password-button">
+                <source>Reset password</source>
+                <target>Restablecer contraseña</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLoginAccessTokenSuccess" ts="login-access-token-success">
+                <source>Access token successfully determined.</source>
+                <target>El token de acceso se ha transmitido correctamente.</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLoginAccessTokenError" ts="login-access-token-error">
+                <source>Access token could not be determined.</source>
+                <target>No se ha podido transmitir el token de acceso.</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixRegistrationNotARobot" ts="registration-not-a-robot">
+                <source>I´m not a robot.</source>
+                <target>No soy un robot.</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixRegistrationNotARobotReally" ts="registration-not-a-robot-really">
+                <source>I´m really not a robot.</source>
+                <target>De verdad que no soy un robot.</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixRegistrationSignupButton" ts="registration-signup-button">
+                <source>Create Business Account</source>
+                <target>Crear cuenta de empresa</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixRegistrationRoboDetected" ts="registration-robo-detected">
+                <source>You are not behaving as expected. It appears as if you are not a human. Please try again and fill in the form completely.</source>
+                <target>Su comportamiento no es el esperable. No parece ser humano. Inténtelo de nuevo y cumplimente todo el formulario.</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelUserDataEdit" ts="label-user-data-edit">
+                <source>Data of the email user</source>
+                <target>Datos del usuario de correo electrónico</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelUserDataStatusInitialinactive" ts="label-user-data-status-initialinactive">
+                <source>We enable this email user on webapp.cryptshare.express in this moment. Give us 5 seconds.</source>
+                <target>En este momento, activamos a este usuario de correo electrónico en webapp.cryptshare.express Denos 5 segundos.</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelUserDataStatusDeactivated" ts="label-user-data-status-deactivated">
+                <source>This email user is deactivated so you are not able to use it on webapp.cryptshare.express anymore.</source>
+                <target>Este usuario de correo electrónico ha sido desactivado, por lo que ya no podrá utilizarlo en webapp.cryptshare.express.</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelUserDataStatusActive" ts="label-user-data-status-active">
+                <source>This email user is enabled on webapp.cryptshare.express - Have some fun with Cryptshare!</source>
+                <target>Este usuario de correo electrónico está activado en webapp.cryptshare.express. ¡Que se divierta con Cryptshare!</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelUserDataStatusUnexpected" ts="label-user-data-status-unexpected">
+                <source>Unexpected status - We don not know if you that email address is enabled on webapp.cryptshare.express</source>
+                <target>Estado inesperado. No sabemos si ha activado esta dirección de correo electrónico en webapp.cryptshare.express.</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelUserDataErrorFetchingCsuserdata" ts="label-user-data-error-fetching-csuserdata">
+                <source>An error occurred when determining the data of your email user. Please enter it again and click on save.</source>
+                <target>Se ha producido un error al determinar los datos de su usuario de correo electrónico. Introdúzcalo de nuevo y pulse en guardar.</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixStep1" ts="step-1">
+                <source>Select pricing plan</source>
+                <target>Seleccionar versión de pago</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixStep2" ts="step-2">
+                <source>Order</source>
+                <target>Pedido</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixStep3" ts="step-3">
+                <source>Payment</source>
+                <target>Pago</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixStep4" ts="step-4">
+                <source>Enter user data</source>
+                <target>Introducir los datos del usuario de correo electrónico</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixStep5" ts="step-5">
+                <source>Use Cryptshare</source>
+                <target>Utilizar Cryptshare</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutPricingPlanAnnualDescription" ts="checkout-pricing-plan-annual-description">
+                <source>per mailbox paid in advance</source>
+                <target>por apartado postal con facturación anticipada</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutPricingPlanMonthlyDescription" ts="checkout-pricing-plan-monthly-description">
+                <source>per mailbox paid in advance</source>
+                <target>por apartado postal con facturación anticipada</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutSelectedPricingPlan" ts="checkout-selected-pricing-plan">
+                <source>Selected pricing plan</source>
+                <target>Versión de pago seleccionada</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutPaymentDetails" ts="checkout-payment-details">
+                <source>Enter now your payment details</source>
+                <target>Introduzca sus datos de pago ahora</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutBillingData" ts="checkout-billing-data">
+                <source>Payment data</source>
+                <target>Datos de facturación</target>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.creditcardexpires">
+                <source>Your credit card will expire soon. Please update your payment data.</source>
+                <target>Su tarjeta de crédito expirará pronto. Por favor, actualice sus datos de pago.</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutEditBillingData" ts="checkout-edit-billing-data">
+                <source>Edit data</source>
+                <target>Editar datos</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutBack" ts="checkout-back">
+                <source>Back</source>
+                <target>Volver</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutSave" ts="checkout-save">
+                <source>Save</source>
+                <target>Guardar</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutOrderNow" ts="checkout-order-now">
+                <source>Order now</source>
+                <target>Comprar ahora</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutShoppingcartUpdated" ts="checkout-shoppingcart-updated">
+                <source>Shopping cart has been updated (see summary below)</source>
+                <target>La cesta se ha actualizado (véase resumen a continuación)</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixInvalidCouponCode" ts="InvalidCouponCode">
+                <source>Voucher/Couponcode is invalid</source>
+                <target>El código del vale/descuento no es válido</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixmonth" ts="month">
+                <source>Month</source>
+                <target>Mes</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixyear" ts="year">
+                <source>Year</source>
+                <target>Año</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCancelationperiodsuffix" ts="cancelationperiodsuffix">
+                <source>before the subscribed period ends</source>
+                <target>antes de la finalización del plazo</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutSubmitOrder" ts="checkout-submit-order">
+                <source>Submit order</source>
+                <target>Comprar ahora</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutSubmitOrder2" ts="checkout-submit-order2">
+                <source>You can enter payment data in the next step.</source>
+                <target>Introduzca sus datos de pago en el paso siguiente.</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutSubmitPay" ts="checkout-submit-pay">
+                <source>Pay now</source>
+                <target>Pagar ahora</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutSubmitPay2" ts="checkout-submit-pay2">
+                <source>A useful hint</source>
+                <target>Una indicación útil</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixInclVat" ts="incl-vat">
+                <source>incl. VAT</source>
+                <target>con IVA</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutUserdataEnter" ts="checkout-userdata-enter">
+                <source>Data of the new email users</source>
+                <target>Datos del nuevo usuario de correo electrónico</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutUserdataEnterAgain" ts="checkout-userdata-enter-again">
+                <source>Please enter the data of the new Cryptshare.express email user again.</source>
+                <target>Vuelva a introducir los datos del nuevo usuario de correo electrónico de Cryptshare.express.</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutUserdataUnchangeable" ts="checkout-userdata-unchangeable">
+                <source>Please note: These information can not be changed afterwards.</source>
+                <target>Tenga en cuenta que esta información no podrá modificarse después.</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutUserdataSkipEntry" ts="checkout-userdata-skip-entry">
+                <source>Skip and enter data of new email user later.</source>
+                <target>Omita e introduzca los datos del nuevo usuario de correo electrónico más tarde.</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutAcceptToc" ts="checkout-accept-toc">
+                <source>I have read the Terms of Use, understood and accept them</source>
+                <target>He leído, entendido y aceptado las condiciones generales de uso.</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutReadToc" ts="checkout-read-toc">
+                <source>Read Terms of Use now.</source>
+                <target>Leer ahora las condiciones generales de uso.</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutAcceptDataProtection" ts="checkout-accept-data-protection">
+                <source>I have read the privacy policy, understood and accept them</source>
+                <target>He leído, entendido y aceptado la declaración de privacidad.</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutReadDataProtection" ts="checkout-read-data-protection">
+                <source>Read privacy policy now.</source>
+                <target>Leer ahora la declaración de privacidad.</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutAcceptGtac" ts="checkout-accept-gtac">
+                <source>I have read the General Terms and Conditions, understood and accept them</source>
+                <target>He leído, entendido y aceptado las condiciones generales de contratación.</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutReadGtac" ts="checkout-read-gtac">
+                <source>Read General Terms and Conditions now.</source>
+                <target>Leer ahora las condiciones generales de contratación.</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelLoading" ts="label-loading">
+                <source>Loading...</source>
+                <target>Cargando...</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelPaymentIframePlanvariantidMissing" ts="label-payment-iframe-planvariantid-missing">
+                <source>Error: PlanVariantId miss.</source>
+                <target>Error: falta ID de versión de plan</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelSelectPricingPlan" ts="label-select-pricing-plan">
+                <source>Select pricing plan</source>
+                <target>Seleccionar plan de precios</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelManage" ts="label-manage">
+                <source>Manage</source>
+                <target>Administrar</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelSendwelcomeemail" ts="label-sendwelcomeemail">
+                <source>Send welcome email to this user</source>
+                <target>Enviar correo electrónico de bienvenida a este usuario</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelSendwelcomeemailShort" ts="label-sendwelcomeemail-short">
+                <source>Inform user</source>
+                <target>Informar al usuario</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelCanceled" ts="label-canceled">
+                <source>Cancelled</source>
+                <target>Rescindido</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelWillEnd" ts="label-will-end">
+                <source>and ends on</source>
+                <target>y finalizado el</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelDummyFirstname" ts="label-dummy-firstname">
+                <source>John</source>
+                <target>Señor</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelDummyLastname" ts="label-dummy-lastname">
+                <source>Doe</source>
+                <target>XXX</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelDummyEmail" ts="label-dummy-email">
+                <source>john.doe@yourdomain.com</source>
+                <target>señorxxx@sudominio.com</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixClose" ts="close">
+                <source>Close</source>
+                <target>Cerrar</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCopy" ts="copy">
+                <source>Copy</source>
+                <target>Copiar</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCopySuccess" ts="copy-success">
+                <source>Successfully put on clipboard</source>
+                <target>Correctamente depositado en el portapapeles</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCopyError" ts="copy-error">
+                <source>Error while copying</source>
+                <target>Error al copiar</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixHello" ts="hello">
+                <source>Hello</source>
+                <target>Hola</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixPaymentBicError" ts="payment-bic-error">
+                <source></source>
+                <target></target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixPaymentCcholderError" ts="payment-ccholder-error">
+                <source>Please fill in the correct holder name</source>
+                <target>Cumplimente el nombre correcto del titular</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixPaymentCcnumberError" ts="payment-ccnumber-error">
+                <source>Please check your Credit Card Number</source>
+                <target>Compruebe el número de su tarjeta de crédito</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixPaymentCccvcError" ts="payment-cccvc-error">
+                <source>Please check your Credit Card Security Code</source>
+                <target>Compruebe el código de seguridad de su tarjeta de crédito</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixPaymentCcvalidError" ts="payment-ccvalid-error">
+                <source>Pleasy check if your Credit Card is stl valid</source>
+                <target>Compruebe si su tarjeta de crédito es válida</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixVatErrorAll" ts="vat-error-all">
+                <source>Please check your VAT ID, it failed validation</source>
+                <target>Compruebe su CIF, no podemos validarlo</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixVatErrorCountry" ts="vat-error-country">
+                <source>Please check your VAT ID, it failed validation for your country</source>
+                <target>Compruebe su CIF, no podemos validarlo para su país</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCustomerUpdateError" ts="customerUpdate-error">
+                <source>Something went wrong. Data could not be safed correctly, please check again, especially the provided VAT-ID</source>
+                <target>Algo ha fallado. Los datos no se han podido guardar correctamente. Compruebe en particular el CIF introducido.</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageGermany" ts="locationident-browserlanguage-germany">
+                <source>Germany</source>
+                <target>Alemania</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageNetherland" ts="locationident-browserlanguage-netherland">
+                <source>the Netherlands</source>
+                <target>Países bajos</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageOthereuropean" ts="locationident-browserlanguage-othereuropean">
+                <source>other, european countries</source>
+                <target>otros países europeos</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageGreatbritain" ts="locationident-browserlanguage-greatbritain">
+                <source>Great Britain</source>
+                <target>Gran Bretaña</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageUsa" ts="locationident-browserlanguage-usa">
+                <source>the United States of America</source>
+                <target>Estados Unidos de Norteamérica</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageAustria" ts="locationident-browserlanguage-austria">
+                <source>Austria</source>
+                <target>Austria</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageFrance" ts="locationident-browserlanguage-france">
+                <source>France</source>
+                <target>Francia</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageSpain" ts="locationident-browserlanguage-spain">
+                <source>Spain</source>
+                <target>España</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageSwitzerland" ts="locationident-browserlanguage-switzerland">
+                <source>Switzerland</source>
+                <target>Suiza</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageItaly" ts="locationident-browserlanguage-italy">
+                <source>Italy</source>
+                <target>Italia</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageFinland" ts="locationident-browserlanguage-finland">
+                <source>Finland</source>
+                <target>Finlandia</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageLuxembourg" ts="locationident-browserlanguage-luxembourg">
+                <source>Luxembourg</source>
+                <target>Luxemburgo</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageLithuania" ts="locationident-browserlanguage-lithuania">
+                <source>Lithuania</source>
+                <target>Lituania</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageIreland" ts="locationident-browserlanguage-ireland">
+                <source>Ireland</source>
+                <target>Irlanda</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageBelgium" ts="locationident-browserlanguage-belgium">
+                <source>Belgium</source>
+                <target>Bélgica</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageGreek" ts="locationident-browserlanguage-greek">
+                <source>Greek</source>
+                <target>Grecia</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguagePortugal" ts="locationident-browserlanguage-portugal">
+                <source>Portugal</source>
+                <target>Portugal</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageP1" ts="locationident-browserlanguage-p1">
+                <source>It seems that you are visiting us from</source>
+                <target>Parece que nos</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageP2" ts="locationident-browserlanguage-p2">
+                <source></source>
+                <target> visita desde fuera</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageP3" ts="locationident-browserlanguage-p3">
+                <source>However, you are on the website for</source>
+                <target>No obstante, se encuentra en el sitio web para</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageP4" ts="locationident-browserlanguage-p4">
+                <source>Please click here</source>
+                <target>Pulse aquí</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageP5" ts="locationident-browserlanguage-p5">
+                <source>to access your language, currency and country-specific offers</source>
+                <target>para acceder a su idioma, moneda y ofertas específicas de cada país</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixContractCardHeader" ts="contract-card-header">
+                <source>Contract</source>
+                <target>Contrato</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixClientCardHeader" ts="client-card-header">
+                <source>Client</source>
+                <target>Cliente</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixEmailuserCardHeader" ts="emailuser-card-header">
+                <source>Email user</source>
+                <target>Usuario de correo electrónico</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixEmailCardHeader" ts="email-card-header">
+                <source>Extra E-Mail</source>
+                <target>Correo electrónico extra</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixAddEmailUser" ts="add-email-user">
+                <source>Add email user</source>
+                <target>Añadir usuario de correo electrónico</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixManageContract" ts="manage-contract">
+                <source>Manage</source>
+                <target>Gestionar</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixUsertableEmail" ts="usertable-email">
+                <source>Email user</source>
+                <target>Usuario de correo electrónico</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixUsertableName" ts="usertable-name">
+                <source>Name</source>
+                <target>Nombre</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixUsertableStatus" ts="usertable-status">
+                <source>Status</source>
+                <target>Estado</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixUsertableActions" ts="usertable-actions">
+                <source>Actions</source>
+                <target>Acciones</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixContractStatusPaymentSuccess" ts="contract-status-payment-success">
+                <source>Active</source>
+                <target>Activo</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixContractStatusPaymentIntrial" ts="contract-status-payment-intrial">
+                <source>In trial</source>
+                <target>En prueba</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixContractStatusPaymentError" ts="contract-status-payment-error">
+                <source>Error</source>
+                <target>Error</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixContractStatusPaymentWarning" ts="contract-status-payment-warning">
+                <source>Warning</source>
+                <target>Advertencia</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixContractStatusCanceled" ts="contract-status-canceled">
+                <source>Canceled</source>
+                <target>Terminado</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixContractStatusPaymentFailed" ts="contract-status-payment-failed">
+                <source>Payment failed. Please update now your payment data.</source>
+                <target>Fallo al pagar. Actualice ahora sus datos de pago.</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixContractStatusCreditcardExpiresoon" ts="contract-status-creditcard-expiresoon">
+                <source>Your credit card will expire soon. Please update your payment data.</source>
+                <target>Su tarjeta de crédito caduca pronto. Actualice sus datos de pago.</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixPaymentProviderTextBankaccount" ts="payment-provider-text-bankaccount">
+                <source>We will try to use the SEPA direct debit mandate for your bank account on file with the last four digits</source>
+                <target>Utilizaremos el mandato de adeudo SEPA que ya ha emitido para la cuenta bancaria cuyos últimos 4 dígitos son</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixPaymentProviderTextCreditcard" ts="payment-provider-text-creditcard">
+                <source>We will try charge the credit card on file with the last four digits</source>
+                <target>Si es posible, utilizaremos su tarjeta de crédito ya depositada cuyos últimos 4 dígitos son</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixPaymentProviderTextIdeal" ts="payment-provider-text-ideal">
+                <source>We will try to use your iDEAL bank account</source>
+                <target>Si es posible, utilizaremos la cuenta bancaria que ya tiene registrada en iDEAL</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixTrialFromHeadline" ts="trial-from-headline">
+                <source>7-days Trial - </source>
+                <target>Suscripción de prueba de 7 días</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixOrderTrialSubtitle" ts="order-trial-subtitle">
+                <source> - 7-days Trial</source>
+                <target> - Suscripción de prueba de 7 días</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixOrderTrialButton" ts="order-trial-button">
+                <source>Add to order</source>
+                <target>Añadir al pedido</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixOrderTrialModalCancelHeadline" ts="order-trial-modal-cancel-headline">
+                <source>Skip trial period?</source>
+                <target>¿Saltar el periodo de prueba?</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixOrderTrialModalCancelText" ts="order-trial-modal-cancel-text">
+                <source>Click »Yes« to upgrade to a paid subscription now and add more email users.</source>
+                <target>Pulse »Sí« para convertir ahora su suscripción en una suscripción de pago y añadir más usuarios de correo electrónico.</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixOrderTrialModalCancelButton" ts="order-trial-modal-cancel-button">
+                <source>Yes</source>
+                <target>Sí</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixOrderTrialModalCancelClose" ts="order-trial-modal-cancel-close">
+                <source>No</source>
+                <target>No</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixOrderTrialFreeHint" ts="order-trial-free-hint">
+                <source>additional free</source>
+                <target>otro(s) más gratis</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixOrderAdditional" ts="order-additional">
+                <source>additional</source>
+                <target>otro(s)</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixEmailUserButtonCancel" ts="email-user-button-cancel">
+                <source>Cancel email user</source>
+                <target>Cancelar usuario de correo electrónico</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixTextDownloadInvoice" ts="text-download-invoice">
+                <source>Download PDF</source>
+                <target>Download PDF</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelEmailUserName" ts="label-email-user-name">
+                <source>Name</source>
+                <target>Apellido</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelEmailUserEmail" ts="label-email-user-email">
+                <source>Email</source>
+                <target>Email</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelEmailUserStartdate" ts="label-email-user-startdate">
+                <source>Start date</source>
+                <target>Fecha de inicio</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelEmailUserEnddate" ts="label-email-user-enddate">
+                <source>End date</source>
+                <target>Fecha final</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelEmailUserEditemailuser" ts="label-email-user-editemailuser">
+                <source>Edit email user</source>
+                <target>Cambiar usuario de correo electrónico</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelEmailUserCancelemailuser" ts="label-email-user-cancelemailuser">
+                <source>Cancel email user</source>
+                <target>Cancelar usuario de correo electrónico</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixcredit" ts="credit">
+                <source>Credit card</source>
+                <target>Tarjeta de crédito</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixdebit" ts="debit">
+                <source>Debit card</source>
+                <target>Débito directo SEPA</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCreditCard" ts="CreditCard">
+                <source>Credit card</source>
+                <target>Tarjeta de crédito</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixBankAccount" ts="BankAccount">
+                <source>Debit card</source>
+                <target>Débito directo SEPA</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixButtonCancel" ts="button-cancel">
+                <source>Cancel</source>
+                <target>cancelar</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixButtonSave" ts="button-save">
+                <source>Save</source>
+                <target>ahorrar</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixTooltipAlreadyCanceled" ts="tooltip-already-canceled">
+                <source>Email user is already terminated.</source>
+                <target>El usuario de correo electrónico ya está terminado.</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixTooltipAlreadyChanged" ts="tooltip-already-changed">
+                <source>Please note that an email address and the name can be changed only once per contract period.</source>
+                <target>Tenga en cuenta que una dirección de correo electrónico y el nombre se pueden cambiar solo una vez por período de contrato.</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixManageContractModalCancelHeadline" ts="manage-contract-modal-cancel-headline">
+                <source>Cancel subscription</source>
+                <target>Cancelar suscripción</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixManageContractModalCancelText" ts="manage-contract-modal-cancel-text">
+                <source>Do you really want to cancel the complete subscription, with all components?</source>
+                <target>¿Realmente quieres cancelar la suscripción completa, con todos los componentes?</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixManageContractModalCancelButton" ts="manage-contract-modal-cancel-button">
+                <source>Cancel now</source>
+                <target>Cancelar ahora</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixManageContractModalCancelClose" ts="manage-contract-modal-cancel-close">
+                <source>Close</source>
+                <target>Cerrar</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixSheckoutUserdataEntercontractdata" ts="checkout-userdata-entercontractdata">
+                <source>Customer master data</source>
+                <target>Datos maestros de clientes</target>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.headline.link.oldcontractmanagement">
+                <source>Switch to old contract management</source>
+                <target>Cambiar a la antigua gestión de contratos</target>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixBusinessConfirmation">
+                <source>Cryptshare.express is exclusively for business customers. I hereby confirm that I am creating this account on behalf of my company.</source>
+                <target>Cryptshare.express se dirige exclusivamente a clientes profesionales. Por la presente confirmo que estoy creando esta cuenta en nombre de mi empresa.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

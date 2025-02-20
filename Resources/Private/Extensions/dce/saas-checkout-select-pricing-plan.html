@@ -1,0 +1,131 @@
+
+
+<f:spaceless>
+    <div class="{TSFE.fe_user.user.static_info_country} card-deck mb-3 text-center plan-variant"{f:render( section: 'countryEnvironment', arguments: '{TSFE: TSFE, field: field}' )}>
+        <div class="card mb-6 shadow-sm <f:if condition="{field.checked} ">
+        <f:then>active</f:then>
+        </f:if>">
+            <div class="card-header">
+                <h4 class="my-0 PlanVariantTitle">{field.title}</h4>
+            </div>
+            <div class="card-body">
+                <f:if condition="{field.isAteaPlan}=='1'">
+                    <f:then>
+                        <img class="img-thumbnail" src="/typo3conf/ext/cryptsharesaas/Resources/Public/Images/ATEA.png" alt="ATEA">
+                    </f:then>
+                    <f:else>
+                        <h1 class="card-title pricing-card-title"><span class="PlanVariantPrice"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></span><f:render section="countryCurrency" arguments="{TSFE: TSFE, field: field}" /> <small class="text-muted">/ <span class="PlanVariantIntervall"><f:translate key="LLL:fileadmin/primary/Private/language/locallang.xlf:loading" /></span></small></h1>
+                        <p><small><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:checkout_exclvat" /></small></p>
+                        <f:if condition="{field.showDescription}=='1'">
+                            <f:then>
+                                <ul class="list-unstyled mt-3 mb-4 PlanVariantDescription">
+                                    <li class="loading">
+                                        <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" />
+                                    </li>
+                                </ul>
+                            </f:then>
+                        </f:if>
+                        <f:if condition="{field.showAnnualPrice}=='1'">
+                            <f:then>
+                                <p><span class="PlanVariantAnnualPrice"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></span><f:render section="countryCurrency" arguments="{TSFE: TSFE, field: field}" /> <span class="PlanVariantAnnualDescription"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Language/locallang.xlf:loading" /></span></p>
+                            </f:then>
+                        </f:if>
+                    </f:else>
+                </f:if>
+            </div>
+            <div class="card-footer">
+                <div class="custom-control custom-checkbox">
+                    <f:if condition="{TSFE.fe_user.user.static_info_country} == NLD">
+                        <f:then>
+                            <input type="checkbox" class="custom-control-input pricing" id="planvariantid-{f:if(condition: '{f:cObject(typoscriptObjectPath:\'lib.BWENVIRONMENT.10.variables.bw_environment\')}=="app"', then: '{field.nLbwPlanvariantId}', else:'{field.nLbwPlanvariantIdSandbox}')}" name="planvariant" value="{f:if(condition:'{f:cObject(typoscriptObjectPath:\'lib.BWENVIRONMENT.10.variables.bw_environment\')}=="app"',then:'{field.nLbwPlanvariantId}',else:'{field.nLbwPlanvariantIdSandbox}')}"{f:if(condition: '{field.checked}',then: ' checked="checked" disabled="disabled" ')}/>
+                            <label for="planvariantid-<f:if condition="{f:cObject(typoscriptObjectPath: 'lib.BWENVIRONMENT.10.variables.bw_environment')}=='app'"><f:then>{field.nLbwPlanvariantId}</f:then><f:else>{field.nLbwPlanvariantIdSandbox}</f:else></f:if>" class="custom-control-label"></label>
+                        </f:then>
+                        <f:else if="{TSFE.fe_user.user.static_info_country} == GBR">
+                            <input type="checkbox" class="custom-control-input pricing" id="planvariantid-{f:if(condition: '{f:cObject(typoscriptObjectPath:\'lib.BWENVIRONMENT.10.variables.bw_environment\')}=="app"', then: '{field.gBbwPlanvariantId}', else:'{field.gBbwPlanvariantIdSandbox}')}" name="planvariant" value="{f:if(condition:'{f:cObject(typoscriptObjectPath:\'lib.BWENVIRONMENT.10.variables.bw_environment\')}=="app"',then:'{field.gBbwPlanvariantId}',else:'{field.gBbwPlanvariantIdSandbox}')}"{f:if(condition: '{field.checked}',then: ' checked="checked" disabled="disabled" ')}/>
+                            <label for="planvariantid-<f:if condition="{f:cObject(typoscriptObjectPath: 'lib.BWENVIRONMENT.10.variables.bw_environment')}=='app'"><f:then>{field.gBbwPlanvariantId}</f:then><f:else>{field.gBbwPlanvariantIdSandbox}</f:else></f:if>" class="custom-control-label"></label>
+                        </f:else>
+                        <f:else if="{TSFE.fe_user.user.static_info_country} == CHE">
+                            <input type="checkbox" class="custom-control-input pricing" id="planvariantid-{f:if(condition: '{f:cObject(typoscriptObjectPath:\'lib.BWENVIRONMENT.10.variables.bw_environment\')}=="app"', then: '{field.cHbwPlanvariantId}', else:'{field.cHbwPlanvariantIdSandbox}')}" name="planvariant" value="{f:if(condition:'{f:cObject(typoscriptObjectPath:\'lib.BWENVIRONMENT.10.variables.bw_environment\')}=="app"',then:'{field.cHbwPlanvariantId}',else:'{field.cHbwPlanvariantIdSandbox}')}"{f:if(condition: '{field.checked}',then: ' checked="checked" disabled="disabled" ')}/>
+                            <label for="planvariantid-<f:if condition="{f:cObject(typoscriptObjectPath: 'lib.BWENVIRONMENT.10.variables.bw_environment')}=='app'"><f:then>{field.cHbwPlanvariantId}</f:then><f:else>{field.cHbwPlanvariantIdSandbox}</f:else></f:if>" class="custom-control-label"></label>
+                        </f:else>
+                        <f:else if="{TSFE.fe_user.user.static_info_country} == USA">
+                            <input type="checkbox" class="custom-control-input pricing" id="planvariantid-{f:if(condition: '{f:cObject(typoscriptObjectPath:\'lib.BWENVIRONMENT.10.variables.bw_environment\')}=="app"', then: '{field.uSbwPlanvariantId}', else:'{field.uSbwPlanvariantIdSandbox}')}" name="planvariant" value="{f:if(condition:'{f:cObject(typoscriptObjectPath:\'lib.BWENVIRONMENT.10.variables.bw_environment\')}=="app"',then:'{field.uSbwPlanvariantId}',else:'{field.uSbwPlanvariantIdSandbox}')}"{f:if(condition: '{field.checked}',then: ' checked="checked" disabled="disabled" ')}/>
+                            <label for="planvariantid-<f:if condition="{f:cObject(typoscriptObjectPath: 'lib.BWENVIRONMENT.10.variables.bw_environment')}=='app'"><f:then>{field.uSbwPlanvariantId}</f:then><f:else>{field.uSbwPlanvariantIdSandbox}</f:else></f:if>" class="custom-control-label"></label>
+                        </f:else>
+                        <f:else if="{TSFE.fe_user.user.static_info_country} == DEU">
+                            <input type="checkbox" class="custom-control-input pricing" id="planvariantid-{f:if(condition: '{f:cObject(typoscriptObjectPath:\'lib.BWENVIRONMENT.10.variables.bw_environment\')}=="app"', then: '{field.dEbwPlanvariantId}', else:'{field.dEbwPlanvariantIdSandbox}')}" name="planvariant" value="{f:if(condition:'{f:cObject(typoscriptObjectPath:\'lib.BWENVIRONMENT.10.variables.bw_environment\')}=="app"',then:'{field.dEbwPlanvariantId}',else:'{field.dEbwPlanvariantIdSandbox}')}"{f:if(condition: '{field.checked}',then: ' checked="checked" disabled="disabled" ')}/>
+                            <label for="planvariantid-<f:if condition="{f:cObject(typoscriptObjectPath: 'lib.BWENVIRONMENT.10.variables.bw_environment')}=='app'"><f:then>{field.dEbwPlanvariantId}</f:then><f:else>{field.dEbwPlanvariantIdSandbox}</f:else></f:if>" class="custom-control-label"></label>
+                        </f:else>
+                        <f:else>
+                            <input type="checkbox" class="custom-control-input pricing" id="planvariantid-{f:if(condition: '{f:cObject(typoscriptObjectPath:\'lib.BWENVIRONMENT.10.variables.bw_environment\')}=="app"', then: '{field.bwPlanvariantId}', else:'{field.bwPlanvariantIdSandbox}')}" name="planvariant" value="{f:if(condition:'{f:cObject(typoscriptObjectPath:\'lib.BWENVIRONMENT.10.variables.bw_environment\')}=="app"',then:'{field.bwPlanvariantId}',else:'{field.bwPlanvariantIdSandbox}')}"{f:if(condition: '{field.checked}',then: ' checked="checked" disabled="disabled" ')}/>
+                            <label for="planvariantid-<f:if condition="{f:cObject(typoscriptObjectPath: 'lib.BWENVIRONMENT.10.variables.bw_environment')}=='app'"><f:then>{field.bwPlanvariantId}</f:then><f:else>{field.bwPlanvariantIdSandbox}</f:else></f:if>" class="custom-control-label"></label>
+                        </f:else>
+                    </f:if>
+                </div>
+            </div>
+        </div>
+    </div>
+</f:spaceless>
+<f:section name="countryEnvironment">
+    <f:spaceless>
+        <f:if condition="{TSFE.fe_user.user.static_info_country} == 'NLD'">
+            <f:then>
+                <f:if condition="{f:cObject(typoscriptObjectPath: 'lib.BWENVIRONMENT.10.variables.bw_environment')}=='app'">
+                    <f:then>data-plan-variant-id="{field.nLbwPlanvariantId}"</f:then>
+                    <f:else>data-plan-variant-id="{field.nLbwPlanvariantIdSandbox}"</f:else>
+                </f:if>
+            </f:then>
+            <f:else if="{TSFE.fe_user.user.static_info_country} == 'GBR'">
+                <f:if condition="{f:cObject(typoscriptObjectPath: 'lib.BWENVIRONMENT.10.variables.bw_environment')}=='app'">
+                    <f:then>data-plan-variant-id="{field.gBbwPlanvariantId}"</f:then>
+                    <f:else>data-plan-variant-id="{field.gBbwPlanvariantIdSanbox}"</f:else>
+                </f:if>
+            </f:else>
+            <f:else if="{TSFE.fe_user.user.static_info_country} == 'CHE'">
+                <f:if condition="{f:cObject(typoscriptObjectPath: 'lib.BWENVIRONMENT.10.variables.bw_environment')}=='app'">
+                    <f:then>data-plan-variant-id="{field.cHbwPlanvariantId}"</f:then>
+                    <f:else>data-plan-variant-id="{field.cHbwPlanvariantIdSandbox}"</f:else>
+                </f:if>
+            </f:else>
+            <f:else if="{TSFE.fe_user.user.static_info_country} == 'USA'">
+                <f:if condition="{f:cObject(typoscriptObjectPath: 'lib.BWENVIRONMENT.10.variables.bw_environment')}=='app'">
+                    <f:then>data-plan-variant-id="{field.uSbwPlanvariantId}"</f:then>
+                    <f:else>data-plan-variant-id="{field.uSbwPlanvariantIdSandbox}"</f:else>
+                </f:if>
+            </f:else>
+            <f:else if="{TSFE.fe_user.user.static_info_country} == 'DEU'">
+                <f:if condition="{f:cObject(typoscriptObjectPath: 'lib.BWENVIRONMENT.10.variables.bw_environment')}=='app'">
+                    <f:then>data-plan-variant-id="{field.dEbwPlanvariantId}"</f:then>
+                    <f:else>data-plan-variant-id="{field.dEbwPlanvariantIdSandbox}"</f:else>
+                </f:if>
+            </f:else>
+            <f:else>
+                <f:if condition="{f:cObject(typoscriptObjectPath: 'lib.BWENVIRONMENT.10.variables.bw_environment')}=='app'">
+                    <f:then>data-plan-variant-id="{field.bwPlanvariantId}"</f:then>
+                    <f:else>data-plan-variant-id="{field.bwPlanvariantIdSandbox}"</f:else>
+                </f:if>
+            </f:else>
+        </f:if>
+
+    </f:spaceless>
+</f:section>
+
+<f:section name="countryCurrency">
+    <f:spaceless>
+        <f:if condition="{TSFE.fe_user.user.static_info_country} == 'GBR'">
+            <f:then>
+                GBP
+            </f:then>
+            <f:else if="{TSFE.fe_user.user.static_info_country} == 'USA'">
+                USD
+            </f:else>
+            <f:else if="{TSFE.fe_user.user.static_info_country} == 'CHE'">
+                CHF
+            </f:else>
+            <f:else>
+                EUR
+            </f:else>
+        </f:if>
+
+    </f:spaceless>
+</f:section>

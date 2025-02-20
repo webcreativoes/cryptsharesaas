@@ -1,0 +1,2030 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" date="2021-10-01T13:37:00Z" product-name="checkout">
+        <header/>
+        <body>
+            <trans-unit id="loading">
+                <source>Loading...</source>
+            </trans-unit>
+            <trans-unit id="back">
+                <source>Back</source>
+            </trans-unit>
+            <trans-unit id="overview_addbutton_clickhere">
+                <source>Click here to</source>
+            </trans-unit>
+            <trans-unit id="overview_sort_date_desc">
+                <source>Start date (descending)</source>
+            </trans-unit>
+            <trans-unit id="overview_sort_date_asc">
+                <source>Start date (ascending)</source>
+            </trans-unit>
+            <trans-unit id="overview_sort_customer_desc">
+                <source>Customer (descending)</source>
+            </trans-unit>
+            <trans-unit id="overview_sort_customer_asc">
+                <source>Customer (ascending)</source>
+            </trans-unit>
+            <trans-unit id="overview_search_placeholder">
+                <source>Search</source>
+            </trans-unit>
+            <trans-unit id="overview_sort_label">
+                <source>Sorting</source>
+            </trans-unit>
+            <trans-unit id="overview_buttontext_edit_partnerdata">
+                <source>Manage partner data</source>
+            </trans-unit>
+            <trans-unit id="overview_newcontract_clickhere">
+                <source>Click here to</source>
+            </trans-unit>
+            <trans-unit id="overview_newcontract">
+                <source>Add a new customer contract</source>
+            </trans-unit>
+            <trans-unit id="overview_newcontract_learnmore">
+                <source></source>
+            </trans-unit>
+            <trans-unit id="overview_addbutton_addnewaccount">
+                <source>Add a new email user</source>
+            </trans-unit>
+            <trans-unit id="overview_addbutton_of">
+                <source>of</source>
+            </trans-unit>
+            <trans-unit id="overview_addbutton_used">
+                <source>possible email users used</source>
+            </trans-unit>
+            <trans-unit id="overview_upsell">
+                <source>Curious?</source>
+            </trans-unit>
+            <trans-unit id="overview_upsell_clickhere">
+                <source>Get more out of Cryptshare</source>
+            </trans-unit>
+            <trans-unit id="overview_upsell_learnmore">
+                <source>Talk to our experts</source>
+            </trans-unit>
+	        <trans-unit id="usertable_header">
+		        <source><![CDATA[Your <span id="hint-used-email-users">Loading...</span> email user(s)]]></source>
+	        </trans-unit>
+            <trans-unit id="usertable_name">
+                <source>Name</source>
+            </trans-unit>
+            <trans-unit id="usertable_email">
+                <source>Email address</source>
+            </trans-unit>
+            <trans-unit id="usertable_status">
+                <source>Status</source>
+            </trans-unit>
+            <trans-unit id="usertable_actions">
+                <source>Actions</source>
+            </trans-unit>
+            <trans-unit id="usertable_type">
+                <source>Type</source>
+            </trans-unit>
+            <trans-unit id="checkout_coupon_headline">
+                <source>Voucher / Discount</source>
+            </trans-unit>
+            <trans-unit id="checkout_coupon_enter">
+                <source>Enter code here</source>
+            </trans-unit>
+            <trans-unit id="checkout_coupon_apply">
+                <source>Apply</source>
+            </trans-unit>
+            <trans-unit id="checkout_step_1">
+      	        <source><![CDATA[Create<br>Business Account]]></source>
+            </trans-unit>
+            <trans-unit id="checkout_step_2">
+                <source><![CDATA[Add<br>email user]]></source>
+            </trans-unit>
+            <trans-unit id="checkout_step_3">
+                <source><![CDATA[Use<br>Cryptshare]]></source>
+	        </trans-unit>
+	        <trans-unit id="checkout_step_loggedin">
+		        <source><![CDATA[Business Account<br>created]]></source>
+	        </trans-unit>
+            <trans-unit id="checkout_order_now">
+                <source>Order now</source>
+            </trans-unit>
+            <trans-unit id="checkout_pay_now">
+                <source>Send payment data now</source>
+            </trans-unit>
+            <trans-unit id="checkout_pay_next">
+                <source>You can enter payment data in the next step.</source>
+            </trans-unit>
+            <trans-unit id="checkout_edit_data">
+                <source>Edit data</source>
+            </trans-unit>
+            <trans-unit id="checkout_billing_data">
+                <source>Billing data</source>
+            </trans-unit>
+            <trans-unit id="checkout_first_name">
+                <source>First name</source>
+            </trans-unit>
+            <trans-unit id="checkout_last_name">
+                <source>Last name</source>
+            </trans-unit>
+            <trans-unit id="checkout_email">
+                <source>Email address</source>
+            </trans-unit>
+            <trans-unit id="checkout_company">
+                <source>Company</source>
+            </trans-unit>
+            <trans-unit id="checkout_address">
+                <source>Address</source>
+            </trans-unit>
+            <trans-unit id="checkout_street">
+                <source>Address</source>
+            </trans-unit>
+            <trans-unit id="checkout_house_number">
+                <source>House number</source>
+            </trans-unit>
+            <trans-unit id="checkout_zip">
+                <source>Postal code</source>
+            </trans-unit>
+            <trans-unit id="checkout_city">
+                <source>City</source>
+            </trans-unit>
+            <trans-unit id="checkout_country">
+                <source>Country</source>
+            </trans-unit>
+            <trans-unit id="checkout_country_deu">
+                <source>Germany</source>
+            </trans-unit>
+            <trans-unit id="checkout_country_gbp">
+                <source>United Kingdom</source>
+            </trans-unit>
+            <trans-unit id="checkout_country_nld">
+                <source>Netherlands</source>
+            </trans-unit>
+            <trans-unit id="checkout_country_aut">
+                <source>Austria</source>
+            </trans-unit>
+            <trans-unit id="checkout_phone">
+                <source>Telephone</source>
+            </trans-unit>
+            <trans-unit id="checkout_vat">
+                <source>VAT</source>
+            </trans-unit>
+            <trans-unit id="checkout_mandatory">
+                <source>* Mandatory fields</source>
+            </trans-unit>
+            <trans-unit id="checkout_read_gtac">
+                <source>Click here to read the General Terms and Conditions.</source>
+            </trans-unit>
+            <trans-unit id="checkout_accept_gtac">
+                <source>I have read the General Terms and Conditions, understood and accept them.</source>
+            </trans-unit>
+            <trans-unit id="checkout_hint_collective_mailboxes">
+                <source><![CDATA[<p><strong id="cs_email_collective"></strong> is a collective email address:</p> <ul> <li>Cryptshare.express email users are coupled to individual email addresses.</li> <li>It does not correspond to the GDPR to use collective addresses for the handling of personal data.</li> <li>If maximum two persons use the collective address, a special regulation can be put into force.</li> </ul>]]></source>
+            </trans-unit>
+            <trans-unit id="checkout_accept_collective_mailboxes">
+                <source><![CDATA[I hereby confirm that this email address is only used by a maximum of two persons in my company.]]></source>
+            </trans-unit>
+            <trans-unit id="checkout_read_privacy">
+                <source>Click here to read the Privacy Policy.</source>
+            </trans-unit>
+            <trans-unit id="checkout_accept_privacy">
+                <source>I have read the Privacy Policy, understood and accept them.</source>
+            </trans-unit>
+            <trans-unit id="checkout_read_tou">
+                <source>Click here to read the Terms of Use.</source>
+            </trans-unit>
+            <trans-unit id="checkout_accept_tou">
+                <source>I have read the Terms of Use, understood and accept them.</source>
+            </trans-unit>
+            <trans-unit id="checkout_userdata_unchangeable">
+                <source>Please note: These information can not be changed afterwards.</source>
+            </trans-unit>
+		    <trans-unit id="checkout_userdata_enteruserdata">
+			    <source>Data of the new email users</source>
+		    </trans-unit>
+		    <trans-unit id="checkout_userdata_entercontractdata">
+                <source>Customer master data</source>
+            </trans-unit>
+		    <trans-unit id="checkout_userdata_hintandlimit">
+				<source><![CDATA[<strong><span id="leftemails">Loading...</span></strong>&nbsp;<span id="additionaluserhint">additional</span> email users possible.]]></source>
+		    </trans-unit>
+            <trans-unit id="checkout_userdata_save">
+                <source>Save &amp; activate user</source>
+            </trans-unit>
+            <trans-unit id="checkout_sendwelcomeemail">
+                <source>Send welcome email to this user</source>
+            </trans-unit>
+            <trans-unit id="checkout_welcomeemailpreview">
+                <source>Click here to see what the recipient will receive</source>
+            </trans-unit>
+            <trans-unit id="checkout_currentstatus">
+                <source>Current status</source>
+            </trans-unit>
+            <trans-unit id="checkout_business_proof_missing_headline">
+                <source>Business proof missing</source>
+            </trans-unit>
+            <trans-unit id="checkout_business_proof_missing_p1">
+                <source>Cryptshare.express is exclusively for business customers.</source>
+            </trans-unit>
+            <trans-unit id="checkout_business_proof_missing_p2">
+                <source>Since you did not enter your VAT ID number, we need a proof of your business.</source>
+            </trans-unit>
+            <trans-unit id="checkout_business_proof_missing_p3">
+                <source>If available, please either enter your sales tax identification number under "Accounts" or send us an excerpt from your commercial register statement, your chamber's membership certificate or a comparable proof of business via https://webapp.cryptshare.express to support@cryptshare.express</source>
+            </trans-unit>
+            <trans-unit id="checkout_business_proof_missing_p4">
+                <source>Please understand that we have to deactivate your account on</source>
+            </trans-unit>
+            <trans-unit id="checkout_business_proof_missing_p5">
+                <source>, if we have no proof of business.</source>
+            </trans-unit>
+            <trans-unit id="checkout_enter_paymentdetails">
+                <source>Enter your payment details now</source>
+            </trans-unit>
+            <trans-unit id="checkout_final_steps_headline">
+                <source>Order is being finished...</source>
+            </trans-unit>
+            <trans-unit id="checkout_final_steps_payment">
+                <source>Payment successfully finished</source>
+            </trans-unit>
+            <trans-unit id="checkout_final_steps_userdata">
+                <source>Writing userdata</source>
+            </trans-unit>
+            <trans-unit id="checkout_final_steps_createoncsserver">
+                <source>User successfully created on webapp.cryptshare.express</source>
+            </trans-unit>
+            <trans-unit id="checkout_summary_headline">
+                <source>Summary</source>
+            </trans-unit>
+            <trans-unit id="checkout_summary_planvariant">
+                <source>Selected plan</source>
+            </trans-unit>
+            <trans-unit id="checkout_summary_termofcontract">
+                <source>Term of contract</source>
+            </trans-unit>
+            <trans-unit id="checkout_summary_cancellationperiod">
+                <source>Cancellation period</source>
+            </trans-unit>
+            <trans-unit id="checkout_summary_price_netto">
+                <source>Price</source>
+            </trans-unit>
+            <trans-unit id="checkout_summary_subtotal_netto">
+                <source>Subtotal</source>
+            </trans-unit>
+            <trans-unit id="checkout_summary_total_netto">
+                <source>Total (netto)</source>
+            </trans-unit>
+            <trans-unit id="checkout_summary_discount">
+                <source>Discount</source>
+            </trans-unit>
+            <trans-unit id="checkout_summary_vat">
+                <source>Plus VAT</source>
+            </trans-unit>
+            <trans-unit id="checkout_summary_vat2">
+                <source>amount</source>
+            </trans-unit>
+            <trans-unit id="checkout_summary_total">
+                <source>Invoice amount</source>
+            </trans-unit>
+            <trans-unit id="checkout_exclvat">
+                <source>excl. VAT</source>
+            </trans-unit>
+            <trans-unit id="signup_headline">
+                <source>Just a few seconds...</source>
+            </trans-unit>
+            <trans-unit id="signup_p1">
+                <source>We are currently performing the final step of your sign-up process.</source>
+            </trans-unit>
+            <trans-unit id="signup_p2">
+                <source>You should be redirected very shortly.</source>
+            </trans-unit>
+            <trans-unit id="update_headline">
+                <source>Just a few seconds...</source>
+            </trans-unit>
+            <trans-unit id="update_p1">
+                <source>We are currently updating your data.</source>
+            </trans-unit>
+            <trans-unit id="update_p2">
+                <source>You should be redirected very shortly.</source>
+            </trans-unit>
+            <trans-unit id="signin_headline">
+                <source>Just a few seconds.</source>
+            </trans-unit>
+            <trans-unit id="signin_p1">
+                <source>Authentication in progress...</source>
+            </trans-unit>
+            <trans-unit id="signin_p2">
+                <source>You should be redirected very shortly.</source>
+            </trans-unit>
+            <trans-unit id="use_section_1_headline1">
+                <source>That's it</source>
+            </trans-unit>
+            <trans-unit id="use_section_1_p1_1">
+                <source>The new email address(es)</source>
+            </trans-unit>
+            <trans-unit id="use_section_1_p1_2">
+                <source><![CDATA[<br>can now be used on <a href="https://webapp.cryptshare.express" target="_blank">webapp.cryptshare.express</a>!]]></source>
+            </trans-unit>
+            <trans-unit id="use_section_1_headline2">
+                <source>Is that your email address?</source>
+            </trans-unit>
+            <trans-unit id="use_section_1_p2_1">
+                <source>We recommend to visit</source>
+            </trans-unit>
+            <trans-unit id="use_section_1_p2_2">
+                <source>to authenticate your browser now.</source>
+            </trans-unit>
+            <trans-unit id="home_splashscreen_headline">
+                <source>start your secure communication now!</source>
+            </trans-unit>
+            <trans-unit id="home_splashscreen_button">
+                <source>Start</source>
+            </trans-unit>
+            <trans-unit id="home_splashscreen_webapplicationtitle">
+                <source>Click to open the Cryptshare Web App now</source>
+            </trans-unit>
+            <trans-unit id="home_splashscreen_webapplicationtitle_nl">
+                <source>Click to open the Cryptshare Web App for the Netherlands now</source>
+            </trans-unit>
+            <trans-unit id="home_splashscreen_button_de">
+                <source>For german customers</source>
+            </trans-unit>
+            <trans-unit id="home_splashscreen_button_nl">
+                <source>For dutch customers</source>
+            </trans-unit>
+            <trans-unit id="home_splashscreen_redirect_1">
+                <source>Forward me automatically to the</source>
+            </trans-unit>
+            <trans-unit id="home_splashscreen_redirect_2">
+                <source>Web App in the future</source>
+            </trans-unit>
+            <trans-unit id="home_splashscreen_redirecttitle">
+                <source>Click here if you want to skip this page for 30 days</source>
+            </trans-unit>
+            <trans-unit id="home_splashscreen_link_learnmore">
+                <source>Learn more</source>
+            </trans-unit>
+            <trans-unit id="home_splashscreen_link_signin">
+                <source>Sign in</source>
+            </trans-unit>
+            <trans-unit id="home_splashscreen_link_signup">
+                <source>Sign up</source>
+            </trans-unit>
+            <trans-unit id="home_splashscreen_link_signup_trial">
+                <source>7-days trial</source>
+            </trans-unit>
+            <trans-unit id="component_trial">
+                <source>after the end of the 7-day trial period</source>
+            </trans-unit>
+            <trans-unit id="dashboard_manage">
+                <source>Manage</source>
+            </trans-unit>
+            <trans-unit id="dashboard_users_headline">
+                <source>Email users</source>
+            </trans-unit>
+            <trans-unit id="dashboard_users_p1">
+                <source>Email users subscribed</source>
+            </trans-unit>
+            <trans-unit id="dashboard_users_p2">
+				<source><![CDATA[<span id="additionaluserhint">additional</span> email users possible]]></source>
+            </trans-unit>
+            <trans-unit id="dashboard_users_link">
+                <source>Manage users</source>
+            </trans-unit>
+            <trans-unit id="dashboard_use_headline">
+                <source>Take off with Cryptshare</source>
+            </trans-unit>
+            <trans-unit id="dashboard_use_outlook">
+                <source><![CDATA[Cryptshare for Outlook]]></source>
+            </trans-unit>
+            <trans-unit id="dashboard_use_webapplication">
+                <source>Cryptshare Web App</source>
+            </trans-unit>
+            <trans-unit id="dashboard_use_chrome">
+                <source>Cryptshare.express for Chrome</source>
+            </trans-unit>
+            <trans-unit id="dashboard_use_videos">
+                <source>Introduction videos</source>
+            </trans-unit>
+            <trans-unit id="dashboard_use_firefox">
+                <source>Cryptshare.express for Firefox</source>
+            </trans-unit>
+            <trans-unit id="dashboard_use_edge">
+                <source>Cryptshare.express for Edge</source>
+            </trans-unit>
+            <trans-unit id="dashboard_use_opera">
+                <source>Cryptshare.express for Opera</source>
+            </trans-unit>
+            <trans-unit id="dashboard_use_safari">
+                <source>Cryptshare.express for Safari</source>
+            </trans-unit>
+            <trans-unit id="dashboard_use_link">
+                <source>Get all you need</source>
+            </trans-unit>
+            <trans-unit id="dashboard_help_headline">
+                <source>Help</source>
+            </trans-unit>
+            <trans-unit id="dashboard_help_p1">
+                <source>Cryptshare.express is very easy to use.</source>
+            </trans-unit>
+            <trans-unit id="dashboard_help_p2">
+                <source>For the most frequently asked questions, we put together some useful information for you in our help section.</source>
+            </trans-unit>
+            <trans-unit id="dashboard_help_link">
+                <source>Learn more</source>
+            </trans-unit>
+            <trans-unit id="dashboard_account_headline">
+                <source>Business Account</source>
+            </trans-unit>
+            <trans-unit id="dashboard_account_p1">
+                <source>Keep the information you provided up to date and change your password.</source>
+            </trans-unit>
+            <trans-unit id="dashboard_account_link">
+                <source>Manage account</source>
+            </trans-unit>
+            <trans-unit id="copy_to_clipboard">
+                <source>Copy to clipboard</source>
+            </trans-unit>
+            <trans-unit id="use_section_2_headline1">
+                <source>That's it!</source>
+            </trans-unit>
+            <trans-unit id="use_section_2_headline2">
+                <source>What's next?</source>
+            </trans-unit>
+            <trans-unit id="use_section_2_headline_order">
+                <source>Subscribe more email users</source>
+            </trans-unit>
+            <trans-unit id="use_section_2_p_order">
+                <source>Up to 25 email users possible</source>
+            </trans-unit>
+            <trans-unit id="use_section_2_headline_sendwelcomemail">
+                <source>Inform user(s)</source>
+            </trans-unit>
+            <trans-unit id="use_section_2_p1_sendwelcomemail">
+                <source>We recommend to send this text via your own email program to</source>
+            </trans-unit>
+            <trans-unit id="use_section_2_p2_sendwelcomemail">
+                <source>, so that any queries you may have will end up directly in your inbox.</source>
+            </trans-unit>
+            <trans-unit id="use_section_2_headline_sendwelcomemail_recipient">
+                <source>Recipient</source>
+            </trans-unit>
+            <trans-unit id="use_section_2_headline_sendwelcomemail_sender">
+                <source>Sender</source>
+            </trans-unit>
+            <trans-unit id="use_section_2_headline_sendwelcomemail_subject">
+                <source>Subject</source>
+            </trans-unit>
+            <trans-unit id="use_section_2_headline_sendwelcomemail_template">
+                <source>Our suggestion</source>
+            </trans-unit>
+            <trans-unit id="use_section_2_p_sendwelcomemail">
+                <source>Send welcome email now</source>
+            </trans-unit>
+            <trans-unit id="use_section_2_headline_visitwebapp">
+                <source>Visit Web App</source>
+            </trans-unit>
+            <trans-unit id="use_section_2_headline_download">
+                <source>Download integrations</source>
+            </trans-unit>
+            <trans-unit id="use_section_2_p_download">
+                <source>Download, install, use</source>
+            </trans-unit>
+            <trans-unit id="use_section_4_headline1">
+                <source>Downloads</source>
+            </trans-unit>
+            <trans-unit id="use_section_4_headline_webapplication">
+                <source><![CDATA[Cryptshare Web App]]></source>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_webapplication_open">
+                <source>Open Web App now</source>
+            </trans-unit>
+            <trans-unit id="use_section_4_headline_outlook">
+                <source><![CDATA[Cryptshare for Outlook]]></source>
+            </trans-unit>
+            <trans-unit id="use_section_4_description_outlook">
+                <source>Benefit from all of Cryptshare's advantages in Outlook.</source>
+            </trans-unit>
+            <trans-unit id="use_section_4_description_webapplication">
+                <source>Available at anytime, for all modern browsers.</source>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_outlook">
+                <source>Version 2.4.0.0145</source>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_outlook_download">
+                <source>Download installer</source>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_outlook_manual">
+                <source>Download manual</source>
+            </trans-unit>
+            <trans-unit id="use_section_4_headline_manual">
+                <source>Cryptshare manual</source>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_manual">
+                <source>3 MB, PDF</source>
+            </trans-unit>
+            <trans-unit id="use_section_4_headline_browser_general">
+                <source>Browser-integrations</source>
+            </trans-unit>
+            <trans-unit id="use_section_4_description_browser_general">
+                <source>With a small icon in your favorite browser, Cryptshare is always just one click away.</source>
+            </trans-unit>
+            <trans-unit id="use_section_4_headline_chrome">
+                <source><![CDATA[Chrome]]></source>
+            </trans-unit>
+            <trans-unit id="use_section_4_description_chrome">
+                <source>With a small icon in Google Chrome browser, Cryptshare is only one click away.</source>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_chrome_download">
+                <source>Install now</source>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_chrome">
+                <source>Version 1.0.0 (Beta)</source>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_chrome_manual">
+                <source>Download manual</source>
+            </trans-unit>
+            <trans-unit id="use_section_4_headline_firefox">
+                <source><![CDATA[Firefox]]></source>
+            </trans-unit>
+            <trans-unit id="use_section_4_description_firefox">
+                <source>With a small icon in Mozilla Firefox, Cryptshare is only one click away.</source>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_firefox_download">
+                <source>Install now</source>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_firefox">
+                <source>Version 1.0.0 (Beta)</source>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_firefox_manual">
+                <source>Download manual</source>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_comingsoon">
+                <source>Coming soon</source>
+            </trans-unit>
+            <trans-unit id="use_section_4_headline_edge">
+                <source><![CDATA[Edge]]></source>
+            </trans-unit>
+            <trans-unit id="use_section_4_description_edge">
+                <source>With a small icon in Microsoft Edge browser, Cryptshare is only one click away.</source>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_edge_download">
+                <source>Install now</source>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_edge">
+                <source>Version 1.0.0 (Beta)</source>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_edge_manual">
+                <source>Download manual</source>
+            </trans-unit>
+            <trans-unit id="use_section_4_headline_opera">
+                <source><![CDATA[Opera]]></source>
+            </trans-unit>
+            <trans-unit id="use_section_4_description_opera">
+                <source>With a small icon in Opera browser, Cryptshare is only one click away.</source>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_opera">
+                <source>Version 1.0.0 (Beta)</source>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_opera_download">
+                <source>Install Add-on now</source>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_opera_manual">
+                <source>Download manual</source>
+            </trans-unit>
+            <trans-unit id="use_section_4_headline_safari">
+                <source><![CDATA[Safari]]></source>
+            </trans-unit>
+            <trans-unit id="use_section_4_description_safari">
+                <source>With a small icon in Apple Safari browser, Cryptshare is only one click away.</source>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_safari_download">
+                <source>Install now</source>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_safari">
+                <source>Version 1.0.0 (Beta)</source>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_safari_manual">
+                <source>Download manual</source>
+            </trans-unit>
+            <trans-unit id="upsell_headline">
+                <source>Congratulations</source>
+            </trans-unit>
+            <trans-unit id="upsell_subheadline">
+                <source>must have grown. :-)</source>
+            </trans-unit>
+            <trans-unit id="upsell_didyouknow">
+                <source>Did you know?</source>
+            </trans-unit>
+            <trans-unit id="upsell_p1">
+                <source>Get more out of Cryptshare.</source>
+            </trans-unit>
+            <trans-unit id="upsell_p2">
+                <source>Get non-binding advice now!</source>
+            </trans-unit>
+            <trans-unit id="upsell_submit">
+                <source>Call me</source>
+            </trans-unit>
+            <trans-unit id="whatyouget_headline">
+                <source>Benefit from Cryptshare.express' many advantages – right after you subscribed</source>
+            </trans-unit>
+            <trans-unit id="whatyouget_offer_headline">
+                <source>Transparent terms</source>
+            </trans-unit>
+            <trans-unit id="whatyouget_offer_p1">
+                <source>No set-up fee</source>
+            </trans-unit>
+            <trans-unit id="whatyouget_offer_p2">
+                <source>Annual subscription</source>
+            </trans-unit>
+            <trans-unit id="whatyouget_offer_p3">
+                <source>Can be cancelled up to four weeks before the subscribed period ends</source>
+            </trans-unit>
+            <trans-unit id="whatyouget_offer_p4">
+                <source>Secure and easy payment with credit card or direct debit</source>
+            </trans-unit>
+            <trans-unit id="whatyouget_features_headline">
+                <source>Features</source>
+            </trans-unit>
+            <trans-unit id="whatyouget_features_p1">
+                <source>Exchange of large files</source>
+            </trans-unit>
+            <trans-unit id="whatyouget_features_p2">
+                <source>Send and receive secure emails</source>
+            </trans-unit>
+            <trans-unit id="whatyouget_features_p3">
+                <source>Your communication partners don't need their own Cryptshare email user accounts</source>
+            </trans-unit>
+            <trans-unit id="whatyouget_features_p4">
+                <source>Up to 10 GB file size per transfer</source>
+            </trans-unit>
+            <trans-unit id="whatyouget_features_p5">
+                <source>10 days transfer retention period</source>
+            </trans-unit>
+            <trans-unit id="whatyouget_features_p6">
+                <source>Usable without having your own IT infrastructure</source>
+            </trans-unit>
+            <trans-unit id="whatyouget_features_p7">
+                <source>Recall transfers in Outlook and Web App</source>
+            </trans-unit>
+            <trans-unit id="whatyouget_inclusive_headline">
+                <source>Including</source>
+            </trans-unit>
+            <trans-unit id="whatyouget_inclusive_p1">
+                <source>Cryptshare Web App</source>
+            </trans-unit>
+            <trans-unit id="whatyouget_inclusive_p2">
+                <source><![CDATA[Cryptshare for Outlook]]></source>
+            </trans-unit>
+            <trans-unit id="whatyouget_inclusive_p3">
+                <source>Cryptshare.express browser-integrations</source>
+            </trans-unit>
+            <trans-unit id="whatyouget_inclusive_p4">
+                <source>All Cryptshare software updates for the listed integrations above</source>
+            </trans-unit>
+            <trans-unit id="onboarding_welcomeemail_subject1">
+                <source>Welcome to Cryptshare.express,</source>
+            </trans-unit>
+            <trans-unit id="onboarding_welcomeemail_subject2">
+                <source>! - Your start</source>
+            </trans-unit>
+            <trans-unit id="onboarding_welcomeemail_p1">
+                <source>Hello</source>
+            </trans-unit>
+            <trans-unit id="onboarding_welcomeemail_p2">
+                <source><![CDATA[as you may have already noticed, we decided to exchange large and sensitive data via Cryptshare.express in the future.]]></source>
+            </trans-unit>
+            <trans-unit id="onboarding_welcomeemail_p3">
+                <source><![CDATA[You receive this email because I have already activated you.<br><strong>You can start right away! :-)</strong>]]></source>
+            </trans-unit>
+            <trans-unit id="onboarding_welcomeemail_p4">
+                <source><![CDATA[The best way is to take 15 minutes and visit the following website:<br><a href="https://www.cryptshare.express/de/onboarding" target="_blank">https://www.cryptshare.express/de/onboarding</a>]]></source>
+            </trans-unit>
+            <trans-unit id="onboarding_welcomeemail_p5">
+                <source><![CDATA[There you'll find everything you need to use Cryptshare.express:]]></source>
+            </trans-unit>
+            <trans-unit id="onboarding_welcomeemail_p6">
+                <source><![CDATA[<ol> <li>A short <strong>Instruction video</strong> for the Cryptshare.express Web App.</li> <li>Den <a href="https://webapp.cryptshare.express/" target="_blank">Link to the Cryptshare.express Web App</a>.</li> <li> The installation program for the <strong>Outlook integration</strong> - Cryptshare for Outlook </li> </ol>]]></source>
+            </trans-unit>
+            <trans-unit id="onboarding_welcomeemail_p7">
+                <source><![CDATA[You can even integrate the Cryptshare.Express Web App <strong>directly into your browser </strong>:]]></source>
+            </trans-unit>
+            <trans-unit id="onboarding_welcomeemail_p8">
+                <source><![CDATA[<ol> <li>By opening the address <a href="https://webapp.cryptshare.express/" target="_blank">https://webapp.cryptshare.express/</a> and adding it to your favorites.</li> <li>The extension <strong>Cryptshare.express for Chrome</strong> installed in your Chrome browser.</li> <li>The add-on <strong>Cryptshare.express for Firefox</strong> installed in your Firefox browser.</li> </ol>]]></source>
+            </trans-unit>
+            <trans-unit id="onboarding_welcomeemail_p9">
+                <source><![CDATA[Further information will follow later.]]></source>
+            </trans-unit>
+            <trans-unit id="onboarding_welcomeemail_p10">
+                <source><![CDATA[I recommend that you keep this email so that you can look it up at any time.]]></source>
+            </trans-unit>
+            <trans-unit id="onboarding_welcomeemail_p11">
+                <source><![CDATA[Best regards,]]></source>
+            </trans-unit>
+            <trans-unit id="checkout_vathint_headline">
+                <source><![CDATA[Please note]]></source>
+            </trans-unit>
+            <trans-unit id="checkout_vathint_p1">
+                <source><![CDATA[<p>You did not enter a VAT-ID yet. Please note that without a VAT-ID we have to claim value added tax on our invoice.</p>]]></source>
+            </trans-unit>
+            <trans-unit id="checkout_vathint_link">
+                <source><![CDATA[Click here to enter your VAT-ID now (if you have any)]]></source>
+            </trans-unit>
+            <trans-unit id="checkout_staff_member_hint_headline">
+                <source><![CDATA[Hello]]></source>
+            </trans-unit>
+            <trans-unit id="checkout_staff_member_hint_p1">
+                <source><![CDATA[As an employee of our company, you can use an account with up to 25 users free of charge for the purpose of demonstrating or demonstrating our Cryptshare.express product to potential or existing customers and business partners.]]></source>
+            </trans-unit>
+            <trans-unit id="checkout_staff_member_hint_p2">
+                <source><![CDATA[Please note the following terms of use:]]></source>
+            </trans-unit>
+            <trans-unit id="checkout_staff_member_hint_p3_1">
+                <source><![CDATA[Only commercial / business users may be created, <strong>no consumers</strong>.]]></source>
+            </trans-unit>
+            <trans-unit id="checkout_staff_member_hint_p3_2">
+                <source><![CDATA[The investment of users always takes place in the interest,<br />to the advantage and <strong>for the account of Pointsharp GmbH</strong>.]]></source>
+            </trans-unit>
+            <trans-unit id="checkout_staff_member_hint_p3_3">
+                <source><![CDATA[The use of the account for <strong>private purposes is not permitted</strong>.]]></source>
+            </trans-unit>
+            <trans-unit id="checkout_staff_member_hint_p4">
+                <source><![CDATA[We wish you every success using Cryptshare.express.<br /> Pointsharp GmbH]]></source>
+            </trans-unit>
+            <trans-unit id="checkout_staff_member_hint_p5">
+                <source><![CDATA[By placing an order, I agree to abide by the above terms of use.]]></source>
+            </trans-unit>
+            <trans-unit id="checkout_add_contract">
+                <source>Create contract</source>
+            </trans-unit>
+            <trans-unit id="checkout_add_email">
+                <source>Add to order</source>
+            </trans-unit>
+            <trans-unit id="checkout_reached_userlimit">
+                <source>You have reached the order limit</source>
+            </trans-unit>
+            <trans-unit id="invoicetable_contract">
+                <source>Contract</source>
+            </trans-unit>
+            <trans-unit id="invoicetable_date">
+                <source>Date</source>
+            </trans-unit>
+            <trans-unit id="invoicetable_total">
+                <source>Total</source>
+            </trans-unit>
+            <trans-unit id="invoicetable_currency">
+                <source>Currency</source>
+            </trans-unit>
+            <trans-unit id="invoicetable_action">
+                <source>Action</source>
+            </trans-unit>
+            <trans-unit id="hint_maintenance">
+                <source><![CDATA[Please note: We are currently carrying out maintenance work on this system.<br>As long as this message is displayed, unexpected error messages may occur.<br>Please visit us again later. Thank you very much for your understanding!]]></source>
+            </trans-unit>
+            <trans-unit id="hint_backuprestore">
+                <source><![CDATA[Please note: We are currently restoring a Backup<br>Please visit us again later and check your last transfers. Thank you very much for your understanding!]]></source>
+            </trans-unit>
+            <trans-unit id="summer_promotion_header">
+                <source>Summer promotion until the end of August</source>
+            </trans-unit>
+            <trans-unit id="summer_promotion_content">
+                <source><![CDATA[Use the discount voucher <br><b>SUMMER2019</b> <br>to get a 50% discount on your order.]]></source>
+            </trans-unit>
+		    <trans-unit id="payment_method_header">
+			    <source>Your Payment Options</source>
+		    </trans-unit>
+		    <trans-unit id="checkout_summary_addedusers">
+    			<source><![CDATA[Email users]]></source>
+    		</trans-unit>
+		    <trans-unit id="summary_trial_hint">
+				<source><![CDATA[To avoid being charged for a full subscription, cancel by <span id="trial-cancel-date">Loading...</span>. You can cancel your subscription at any time via user administration.]]></source>
+            </trans-unit>
+			<trans-unit id="summary_quantity">
+				<source>Quantity:</source>
+			</trans-unit>
+            <trans-unit id="summary_trial_until">
+                <source><![CDATA[<span class="pull-left">Due now:</span>]]></source>
+            </trans-unit>
+            <trans-unit id="summary_abo_start">
+                <source><![CDATA[Due on <span id="abo-start">Loading...</span>:]]></source>
+            </trans-unit>
+            <trans-unit id="checkout_button_endtrial">
+                <source><![CDATA[Add to order<span>Skip trial period</span>]]></source>
+            </trans-unit>
+            <trans-unit id="checkout_reached_triallimit">
+                <source><![CDATA[The free trial subscription is limited to a single email user. Add more email users to skip this.]]></source>
+            </trans-unit>
+            <trans-unit id="payment_method_credit">
+                <source><![CDATA[If you wish to pay by credit card, you have to confirm your identity using the 3-D Secure procedure. This is a two-factor authentication. This procedure is now obligatory for credit card payment on the Internet. Please contact your credit institution if you have any questions about this.]]></source>
+            </trans-unit>
+            <trans-unit id="payment_method_debit">
+                <source><![CDATA[If you wish to pay by Sepa Direct Debit Mandate, we require your International Bank Account Number (IBAN) and Business Identifier Code (BIC). You can find this information directly on your bank card or by using an IBAN calculator.]]></source>
+            </trans-unit>
+            <trans-unit id="payment_method_creditheader">
+                <source>Credit Card</source>
+            </trans-unit>
+	        <trans-unit id="payment_method_debitheader">
+		        <source>SEPA Debit</source>
+	        </trans-unit>
+	        <trans-unit id="payment_method_idealheader">
+		        <source>iDEAL</source>
+	        </trans-unit>
+	        <trans-unit id="payment_method_ideal">
+		        <source><![CDATA[Customers from the Netherlands can conveniently pay using iDEAL. After you have chosen your bank, you will be redirected to it. There you will be shown the purchase amount for confirmation. After entering your account number you will be asked to complete the two-factor authentication. Then your bank will authorize the payment transaction in real time.]]></source>
+	        </trans-unit>
+            <trans-unit id="payment_method_3dsinfoheader">
+                <source>More security thanks to 3D-Secure 2 (3DS2)</source>
+            </trans-unit>
+            <trans-unit id="payment_method_debitinfoheader">
+                <source>IBAN-Info</source>
+		    </trans-unit>
+		    <trans-unit id="payment_method_idealinfoheader">
+			    <source>iDEAL-Info</source>
+		    </trans-unit>
+		    <trans-unit id="dce_load_from_youtube">
+                <source>Watch video now (will be loaded from YouTube)</source>
+            </trans-unit>
+            <trans-unit id="dce_load_from_youtube_acceptconsent_1">
+                <source>Please</source>
+            </trans-unit>
+            <trans-unit id="dce_load_from_youtube_acceptconsent_2">
+                <source>accept marketing-cookies</source>
+            </trans-unit>
+            <trans-unit id="dce_load_from_youtube_acceptconsent_3">
+                <source>to watch this video or </source>
+            </trans-unit>
+            <trans-unit id="dce_load_from_youtube_acceptconsent_4">
+                <source>watch it directly on YouTube.</source>
+            </trans-unit>
+	        <trans-unit id="dce_toc_headline">
+                <source>Table of Contents</source>
+            </trans-unit>
+            <trans-unit id="checkout_pay_next_order">
+                <source>Next payment</source>
+            </trans-unit>
+            <trans-unit id="your_component">
+                <source>Your email address</source>
+            </trans-unit>
+            <trans-unit id="component_name">
+                <source>Name</source>
+            </trans-unit>
+            <trans-unit id="component_email">
+                <source>email address</source>
+            </trans-unit>
+            <trans-unit id="component_start">
+                <source>Beginning</source>
+            </trans-unit>
+            <trans-unit id="component_edit">
+                <source>Change email address</source>
+            </trans-unit>
+            <trans-unit id="component_cancel">
+                <source>Cancel email address</source>
+            </trans-unit>
+            <trans-unit id="component_loading">
+                <source>Loading</source>
+            </trans-unit>
+            <trans-unit id="component_cancel_no">
+                <source>No</source>
+            </trans-unit>
+            <trans-unit id="component_cancel_yes">
+                <source>Yes</source>
+            </trans-unit>
+            <trans-unit id="component_edit_email_text_1">
+                <source>You can change the email address once per billing period.</source>
+            </trans-unit>
+            <trans-unit id="component_edit_email_text_2">
+                <source>Please enter the new email address and confirm the change with Save.</source>
+            </trans-unit>
+            <trans-unit id="component_edit_email_cancel">
+                <source>Cancel</source>
+            </trans-unit>
+            <trans-unit id="component_edit_email_save">
+                <source>Save</source>
+            </trans-unit>
+            <trans-unit id="component_cancel_text">
+                <source>Are you sure you want to cancel this email address?</source>
+            </trans-unit>
+            <trans-unit id="cancel_component">
+                <source>This email address has been marked for cancellation</source>
+            </trans-unit>
+            <trans-unit id="edit_component">
+                <source>Changed email address</source>
+            </trans-unit>
+            <trans-unit id="change_alert">
+                <source>Please note that an email address can be changed only once per contract period.</source>
+            </trans-unit>
+            <trans-unit id="payment_provider_head">
+                <source>Payment</source>
+            </trans-unit>
+		    <trans-unit id="payment_provider_text_p1">
+			    <source><![CDATA[<span id="contractPaymentMethod">Loading...</span>.]]></source>
+		    </trans-unit>
+		    <trans-unit id="payment_provider_linktext">
+			    <source>Click here,</source>
+		    </trans-unit>
+		    <trans-unit id="payment_provider_text_p2">
+			    <source>if you want to change this.</source>
+		    </trans-unit>
+		    <trans-unit id="country">
+		        <source>Default</source>
+		    </trans-unit>
+            <trans-unit id="fatal-error">
+                <source>Fatal error: Something went completely wrong. Sorry for that. You are welcome to contact our service on support@cryptshare.express.</source></trans-unit>
+            <trans-unit id="danger">
+                <source>Error</source></trans-unit>
+            <trans-unit id="warning">
+                <source>Warning</source></trans-unit>
+            <trans-unit id="success">
+                <source>Success</source></trans-unit>
+            <trans-unit id="hello-q1">
+                <source>Good morning,</source></trans-unit>
+            <trans-unit id="hello-q2">
+                <source>Hello,</source></trans-unit>
+            <trans-unit id="hello-q3">
+                <source>Good afternoon,</source></trans-unit>
+            <trans-unit id="hello-q4">
+                <source>Good evening,</source></trans-unit>
+            <trans-unit id="hello-q5">
+                <source>Good night,</source></trans-unit>
+            <trans-unit id="registration-link-terms-of-use">
+                <source>Terms of Use</source></trans-unit>
+            <trans-unit id="registration-link-data-protection">
+                <source>Privacy and Cookie policy</source>
+            </trans-unit>
+            <trans-unit id="registration-business-confirmation">
+                <source>Cryptshare.express is exclusively for business customers. I hereby confirm that I am creating this account on behalf of my company.</source>
+            </trans-unit>
+            <trans-unit id="registration-edit-emaillogin-hint">
+                <source>Please note that if you change your email address, the login on this page will change accordingly.</source>
+            </trans-unit>
+            <trans-unit id="registration-createonbw-success">
+                <source>Customer successfully created in our systems.</source>
+            </trans-unit>
+            <trans-unit id="login-button">
+                <source>Sign in</source>
+            </trans-unit>
+            <trans-unit id="reset-password-button">
+                <source>Reset password</source>
+            </trans-unit>
+            <trans-unit id="login-access-token-success">
+                <source>Access token successfully determined.</source>
+            </trans-unit>
+            <trans-unit id="login-access-token-error">
+                <source>Access token could not be determined.</source>
+            </trans-unit>
+            <trans-unit id="registration-not-a-robot">
+                <source>I´m not a robot.</source>
+            </trans-unit>
+            <trans-unit id="registration-not-a-robot-really">
+                <source>I´m really not a robot.</source>
+            </trans-unit>
+            <trans-unit id="registration-signup-button">
+                <source>Create Business Account</source>
+            </trans-unit>
+            <trans-unit id="registration-robo-detected">
+                <source>You are not behaving as expected. It appears as if you are not a human. Please try again and fill in the form completely.</source>
+            </trans-unit>
+            <trans-unit id="label-user-data-edit">
+                <source>Data of the email user</source>
+            </trans-unit>
+            <trans-unit id="label-user-data-status-initialinactive">
+                <source>We enable this email user on webapp.cryptshare.express in this moment. Give us 5 seconds.</source>
+            </trans-unit>
+            <trans-unit id="label-user-data-status-deactivated">
+                <source>This email user is deactivated so you are not able to use it on webapp.cryptshare.express anymore.</source>
+            </trans-unit>
+            <trans-unit id="label-user-data-status-active">
+                <source>This email user is enabled on webapp.cryptshare.express - Have some fun with Cryptshare!</source>
+            </trans-unit>
+            <trans-unit id="label-user-data-status-unexpected">
+                <source>Unexpected status - We don not know if you that email address is enabled on webapp.cryptshare.express</source>
+            </trans-unit>
+            <trans-unit id="label-user-data-error-fetching-csuserdata">
+                <source>An error occurred when determining the data of your email user. Please enter it again and click on save.</source>
+            </trans-unit>
+            <trans-unit id="step-1">
+                <source>Select pricing plan</source>
+            </trans-unit>
+            <trans-unit id="step-2">
+                <source>Order</source>
+            </trans-unit>
+            <trans-unit id="step-3">
+                <source>Payment</source>
+            </trans-unit>
+            <trans-unit id="step-4">
+                <source>Enter user data</source>
+            </trans-unit>
+            <trans-unit id="step-5">
+                <source>Use Cryptshare</source>
+            </trans-unit>
+            <trans-unit id="checkout-pricing-plan-annual-description">
+                <source>per mailbox paid in advance</source>
+            </trans-unit>
+            <trans-unit id="checkout-pricing-plan-monthly-description">
+                <source>per mailbox paid in advance</source>
+            </trans-unit>
+            <trans-unit id="checkout-selected-pricing-plan">
+                <source>Selected pricing plan</source>
+            </trans-unit>
+            <trans-unit id="checkout-payment-details">
+                <source>Enter now your payment details</source>
+            </trans-unit>
+            <trans-unit id="checkout-billing-data">
+                <source>Billing data</source>
+            </trans-unit>
+            <trans-unit id="checkout-edit-billing-data">
+                <source>Edit data</source>
+            </trans-unit>
+            <trans-unit id="checkout-back">
+                <source>Back</source>
+            </trans-unit>
+            <trans-unit id="checkout-save">
+                <source>Save</source>
+            </trans-unit>
+            <trans-unit id="checkout-order-now">
+                <source>Order now</source>
+            </trans-unit>
+            <trans-unit id="checkout-shoppingcart-updated">
+                <source>Shopping cart has been updated (see summary below)</source>
+            </trans-unit>
+            <trans-unit id="InvalidCouponCode">
+                <source>Voucher/Couponcode is invalid</source>
+            </trans-unit>
+            <trans-unit id="month">
+                <source>Month</source>
+            </trans-unit>
+            <trans-unit id="year">
+                <source>Year</source>
+            </trans-unit>
+            <trans-unit id="cancelationperiodsuffix">
+                <source>before the subscribed period ends</source>
+            </trans-unit>
+            <trans-unit id="checkout-submit-order">
+                <source>Submit order</source>
+            </trans-unit>
+            <trans-unit id="checkout-submit-order2">
+                <source>The payment is made in the next step.</source>
+            </trans-unit>
+            <trans-unit id="checkout-submit-pay">
+                <source>Pay now</source>
+            </trans-unit>
+            <trans-unit id="checkout-submit-pay2">
+                <source>A useful hint</source>
+            </trans-unit>
+            <trans-unit id="incl-vat">
+                <source>incl. VAT</source>
+            </trans-unit>
+            <trans-unit id="checkout-userdata-enter">
+                <source>Data of the new email users.</source>
+            </trans-unit>
+            <trans-unit id="checkout-userdata-enter-again">
+                <source>Please enter the data of the new Cryptshare.express email user again.</source>
+            </trans-unit>
+            <trans-unit id="checkout-userdata-unchangeable">
+                <source>Please note: These information can not be changed afterwards.</source>
+            </trans-unit>
+            <trans-unit id="checkout-userdata-skip-entry">
+                <source>Skip and enter data of new email user later.</source>
+            </trans-unit>
+            <trans-unit id="checkout-accept-toc">
+                <source>I have read the Terms of Use, understood and accept them</source>
+            </trans-unit>
+            <trans-unit id="checkout-read-toc">
+                <source>Read Terms of Use now.</source>
+            </trans-unit>
+            <trans-unit id="checkout-accept-data-protection">
+                <source>I have read the privacy policy, understood and accept them</source>
+            </trans-unit>
+            <trans-unit id="checkout-read-data-protection">
+                <source>Read privacy policy now.</source>
+            </trans-unit>
+            <trans-unit id="checkout-accept-gtac">
+                <source>I have read the General Terms and Conditions, understood and accept them</source>
+            </trans-unit>
+            <trans-unit id="checkout-read-gtac">
+                <source>Read General Terms and Conditions now.</source>
+            </trans-unit>
+            <trans-unit id="label-loading">
+                <source>Loading...</source>
+            </trans-unit>
+            <trans-unit id="label-payment-iframe-planvariantid-missing">
+                <source>Error: PlanVariantId miss.</source>
+            </trans-unit>
+            <trans-unit id="label-select-pricing-plan">
+                <source>Select pricing plan</source>
+            </trans-unit>
+            <trans-unit id="label-manage">
+                <source>Manage</source>
+            </trans-unit>
+            <trans-unit id="label-sendwelcomeemail">
+                <source>Send welcome email to this user</source>
+            </trans-unit>
+            <trans-unit id="label-sendwelcomeemail-short">
+                <source>Inform user</source>
+            </trans-unit>
+            <trans-unit id="label-canceled">
+                <source>Cancelled</source>
+            </trans-unit>
+            <trans-unit id="label-will-end">
+                <source>and ends on</source>
+            </trans-unit>
+            <trans-unit id="label-dummy-firstname">
+                <source>John</source>
+            </trans-unit>
+            <trans-unit id="label-dummy-lastname">
+                <source>Doe</source>
+            </trans-unit>
+            <trans-unit id="label-dummy-email">
+                <source>john.doe@yourdomain.com</source>
+            </trans-unit>
+            <trans-unit id="close">
+                <source>Close</source>
+            </trans-unit>
+            <trans-unit id="copy">
+                <source>Copy</source>
+            </trans-unit>
+            <trans-unit id="copy-success">
+                <source>Successfully put on clipboard</source>
+            </trans-unit>
+            <trans-unit id="copy-error">
+                <source>Error while copying</source>
+            </trans-unit>
+            <trans-unit id="hello">
+                <source>Hello</source>
+            </trans-unit>
+            <trans-unit id="payment-bic-error">
+                <source></source>
+            </trans-unit>
+            <trans-unit id="payment-ccholder-error">
+                <source>Please fill in the correct holder name</source>
+            </trans-unit>
+            <trans-unit id="payment-ccnumber-error">
+                <source>Please check your Credit Card Number</source>
+            </trans-unit>
+            <trans-unit id="payment-cccvc-error">
+                <source>Please check your Credit Card Security Code</source>
+            </trans-unit>
+            <trans-unit id="payment-ccvalid-error">
+                <source>Pleasy check if your Credit Card is stl valid</source>
+            </trans-unit>
+            <trans-unit id="vat-error-all">
+                <source>Please check your VAT ID, it failed validation</source>
+            </trans-unit>
+            <trans-unit id="vat-error-country">
+                <source>Please check your VAT ID, it failed validation for your country</source>
+            </trans-unit>
+            <trans-unit id="customerUpdate-error">
+                <source>Something went wrong. Data could not be safed correctly, please check again, especially the provided VAT-ID</source>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-germany">
+                <source>Germany</source>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-netherland">
+                <source>the Netherlands</source>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-othereuropean">
+                <source>other, european countries</source>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-greatbritain">
+                <source>Great Britain</source>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-usa">
+                <source>the United States of America</source>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-austria">
+                <source>Austria</source>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-france">
+                <source>France</source>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-spain">
+                <source>Spain</source>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-switzerland">
+                <source>Switzerland</source>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-italy">
+                <source>Italy</source>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-finland">
+                <source>Finland</source>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-luxembourg">
+                <source>Luxembourg</source>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-lithuania">
+                <source>Lithuania</source>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-ireland">
+                <source>Ireland</source>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-belgium">
+                <source>Belgium</source>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-greek">
+                <source>Greek</source>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-portugal">
+                <source>Portugal</source>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-p1">
+                <source>It seems that you are visiting us from</source>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-p2">
+                <source></source>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-p3">
+                <source>However, you are on the website for</source>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-p4">
+                <source>Please click here</source>
+            </trans-unit>
+            <trans-unit id="locationident-browserlanguage-p5">
+                <source>to access your language, currency and country-specific offers</source>
+            </trans-unit>
+            <trans-unit id="contract-card-header">
+                <source>Contract</source>
+            </trans-unit>
+            <trans-unit id="email-card-header">
+                <source>Extra E-Mail</source>
+            </trans-unit>
+            <trans-unit id="add-email-user">
+                <source>Add email user</source>
+            </trans-unit>
+            <trans-unit id="usertable-email">
+                <source>Email user</source>
+            </trans-unit>
+            <trans-unit id="usertable-name">
+                <source>Name</source>
+            </trans-unit>
+            <trans-unit id="usertable-status">
+                <source>Status</source>
+            </trans-unit>
+            <trans-unit id="usertable-actions">
+                <source>Actions</source>
+            </trans-unit>
+            <trans-unit id="contract-status-payment-success">
+                <source>Active</source>
+            </trans-unit>
+            <trans-unit id="contract-status-payment-intrial">
+                <source>In Trial</source>
+            </trans-unit>
+            <trans-unit id="contract-status-payment-error">
+                <source>Error</source>
+            </trans-unit>
+            <trans-unit id="contract-status-payment-warning">
+                <source>Warning</source>
+            </trans-unit>
+            <trans-unit id="contract-status-payment-failed">
+                <source>Payment failed. Please update now your payment data.</source>
+            </trans-unit>
+            <trans-unit id="contract-status-creditcard-expiresoon">
+                <source>Your credit card will expire soon. Please update your payment data.</source>
+            </trans-unit>
+            <trans-unit id="payment-provider-text-bankaccount">
+                <source>We will try to use the SEPA direct debit mandate for your bank account on file with the last four digits</source>
+            </trans-unit>
+            <trans-unit id="payment-provider-text-creditcard">
+                <source>We will try charge the credit card on file with the last four digits</source>
+            </trans-unit>
+            <trans-unit id="payment-provider-text-ideal">
+                <source>We will try to use your iDEAL bank account</source>
+            </trans-unit>
+            <trans-unit id="trial-from-headline">
+                <source>7-days Trial - </source>
+            </trans-unit>
+            <trans-unit id="order-trial-subtitle">
+                <source> - 7-days Trial</source>
+            </trans-unit>
+            <trans-unit id="order-trial-button">
+                <source>Add to trial order</source>
+            </trans-unit>
+            <trans-unit id="order-trial-modal-cancel-headline">
+                <source>End the 7-day trial?</source>
+            </trans-unit>
+            <trans-unit id="order-trial-modal-cancel-text">
+                <source><p>The 7-day trial only works with one email user! If you add more e-mail users, the 7-day trial will end and you will be transferred to a paid subscription.</p><p>Would you like to end the 7-day trial and switch to a paid subscription to add more e-mail users?</p></source>
+            </trans-unit>
+            <trans-unit id="order-trial-modal-cancel-button">
+                <source>Yes</source>
+            </trans-unit>
+            <trans-unit id="order-trial-modal-cancel-close">
+                <source>No</source>
+            </trans-unit>
+            <trans-unit id="user_manage_partner.headline.partnerdata">
+                <source>Partner data</source>
+            </trans-unit>
+            <trans-unit id="user_manage_partner.headline.invoicedata">
+                <source>Your billing information</source>
+            </trans-unit>
+            <trans-unit id="user_manage_partner.form.name">
+                <source>Name</source>
+            </trans-unit>
+            <trans-unit id="user_manage_partner.form.company">
+                <source>Company</source>
+            </trans-unit>
+            <trans-unit id="user_manage_partner.form.address">
+                <source>Street / Housenumber</source>
+            </trans-unit>
+            <trans-unit id="user_manage_partner.form.zipcity">
+                <source>Zip / City</source>
+            </trans-unit>
+            <trans-unit id="user_manage_partner.form.country">
+                <source>Country</source>
+            </trans-unit>
+            <trans-unit id="user_manage_partner.form.phone">
+                <source>Telephone</source>
+            </trans-unit>
+            <trans-unit id="user_manage_partner.form.email">
+                <source>Email</source>
+            </trans-unit>
+            <trans-unit id="user_manage_partner.form.vat">
+                <source>VAT</source>
+            </trans-unit>
+            <trans-unit id="user_manage_partner.form.button.edit">
+                <source>Edit</source>
+            </trans-unit>
+            <trans-unit id="user_manage_partner.form.button.save">
+                <source>Save</source>
+            </trans-unit>
+            <trans-unit id="user_manage_partner.form.button.cancel">
+                <source>Cancel</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.headline.customercontract">
+                <source>Customer contract</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.headline.customerdata">
+                <source>Customer data</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.contract">
+                <source>Contract</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.firstname">
+                <source>First name</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.lastname">
+                <source>Last name</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.company">
+                <source>Company</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.street">
+                <source>Street</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.housenumber">
+                <source>Housenumber</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.zip">
+                <source>Postal Code</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.city">
+                <source>City</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.country">
+                <source>Country</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.phone">
+                <source>Telephone</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.email">
+                <source>Email</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.vat">
+                <source>VAT</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.button.edit">
+                <source>Edit</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.button.cancel">
+                <source>Cancel</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.button.save">
+                <source>Save</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.headline.subscriptiondata">
+                <source>Subscription data</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.package">
+                <source>Plan</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.packagevariant">
+                <source>Plan variant</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.packagestart">
+                <source>Plan start</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.packagenextbill">
+                <source>Next billing</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.packageend">
+                <source>Plan end</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.button.cancelsubscription">
+                <source>Cancel entire subscription</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.headline.billingdata">
+                <source>Payment data</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.creditcardexpires">
+                <source>Your credit card will expire soon. Please update your payment data.</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.paymentmethod">
+                <source>Payment method</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.accountowner">
+                <source>Account owner</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.iban">
+                <source>IBAN</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.cardholder">
+                <source>Card holder</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.cardtype">
+                <source>Card type</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.cardnumber">
+                <source>Card number</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.cardvaliduntil">
+                <source>Valid until</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.cardvaliduntil.month">
+                <source>Month (07)</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.cardvaliduntil.year">
+                <source>Year (2023)</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.cardcvc">
+                <source>CVC</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.headline.customercomponents">
+                <source>Email user</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.headline.link.backtouseroverview">
+                <source>Back to User Management</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.headline.link.oldcontractmanagement">
+                <source>Switch to old contract management</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.onechangeperperiod">
+                <source>Please note that an email address and the name can be changed only once per contract period.</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.headline.changepayment">
+                <source>Change payment data</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.name">
+                <source>Name</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.startdate">
+                <source>Start</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.enddate">
+                <source>End</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.button.editemailuser">
+                <source>Edit Email user</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.button.cancelemailuser">
+                <source>Cancel email user</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.headline.customerinvoices">
+                <source>Your invoices</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.invoicenumber">
+                <source>Invoice number</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.invoicedate">
+                <source>Invoice date</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.invoicetotalamount">
+                <source>Total amount</source>
+            </trans-unit>
+            <trans-unit id="user_manage_customer.form.pdfdownload">
+                <source>Download PDF</source>
+            </trans-unit>
+            <trans-unit id="user_manage_partner.form.firstname">
+                <source>First name</source>
+            </trans-unit>
+            <trans-unit id="user_manage_partner.form.lastname">
+                <source>Last name</source>
+            </trans-unit>
+            <trans-unit id="user_manage_partner.form.street">
+                <source>Street</source>
+            </trans-unit>
+            <trans-unit id="user_manage_partner.form.housenumber">
+                <source>Housenumber</source>
+            </trans-unit>
+            <trans-unit id="user_manage_partner.form.zip">
+                <source>Postal code</source>
+            </trans-unit>
+            <trans-unit id="user_manage_partner.form.city">
+                <source>City</source>
+            </trans-unit>
+            <trans-unit id="user_manage_partner.form.success">
+                <source>Your changed data have been saved successfully!</source>
+            </trans-unit>
+            <trans-unit id="checkout_please_choose_country">
+                <source>Please choose country</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixTestlabel">
+                <source>This is a test for JavaScript locallang.xlf</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelWillEnd">
+                <source>and ends on</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelCanceled">
+                <source>Cancelled</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixFatalError" ts="fatal-error">
+                <source>error: Something went completely wrong. Sorry for that. You are welcome to contact our service on support@cryptshare.express.</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCustomerUpdateError" ts="customerUpdate-error">
+                <source>Something went wrong. Data could not be safed correctly, please check again, especially the provided VAT-ID</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelDummyFirstname" ts="label-dummy-firstname">
+                <source>Max</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixManageContract" ts="manage-contract">
+                <source>Manage</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixAddEmailUser" ts="add-email-user">
+                <source>Add email user</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCountry" ts="country">
+                <source>Default</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixFatalError" ts="fatal-error">
+                <source>Fatal error: Something went completely wrong. Sorry for that. You are welcome to contact our service on support@cryptshare.express.</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixDanger" ts="danger">
+                <source>Error</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixWarning" ts="warning">
+                <source>Warning</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixSuccess" ts="success">
+                <source>Success</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixHelloQ1" ts="hello-q1">
+                <source>Good morning,</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixHelloQ2" ts="hello-q2">
+                <source>Hello,</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixHelloQ3" ts="hello-q3">
+                <source>Good afternoon,</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixHelloQ4" ts="hello-q4">
+                <source>Good evening,</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixHelloQ5" ts="hello-q5">
+                <source>Good night,</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixRegistrationLinkTermsOfUse" ts="registration-link-terms-of-use">
+                <source>Terms of Use</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixRegistrationLinkDataProtection" ts="registration-link-data-protection">
+                <source>Privacy and Cookie policy</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixRegistrationBusinessConfirmation" ts="registration-business-confirmation">
+                <source>Cryptshare.express is exclusively for business customers. I hereby confirm that I am creating this account on behalf of my company.</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixRegistrationEditEmailloginHint" ts="registration-edit-emaillogin-hint">
+                <source>Please note that if you change your email address, the login on this page will change accordingly.</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixRegistrationCreateonbwSuccess" ts="registration-createonbw-success">
+                <source>Customer successfully created in our systems.</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLoginButton" ts="login-button">
+                <source>Sign in</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixResetPasswordButton" ts="reset-password-button">
+                <source>Reset password</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLoginAccessTokenSuccess" ts="login-access-token-success">
+                <source>Access token successfully determined.</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLoginAccessTokenError" ts="login-access-token-error">
+                <source>Access token could not be determined.</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixRegistrationNotARobot" ts="registration-not-a-robot">
+                <source>I´m not a robot.</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixRegistrationNotARobotReally" ts="registration-not-a-robot-really">
+                <source>I´m really not a robot.</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixRegistrationSignupButton" ts="registration-signup-button">
+                <source>Create Business Account</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixRegistrationRoboDetected" ts="registration-robo-detected">
+                <source>You are not behaving as expected. It appears as if you are not a human. Please try again and fill in the form completely.</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelUserDataEdit" ts="label-user-data-edit">
+                <source>Data of the email user</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelUserDataStatusInitialinactive" ts="label-user-data-status-initialinactive">
+                <source>We enable this email user on webapp.cryptshare.express in this moment. Give us 5 seconds.</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelUserDataStatusDeactivated" ts="label-user-data-status-deactivated">
+                <source>This email user is deactivated so you are not able to use it on webapp.cryptshare.express anymore.</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelUserDataStatusActive" ts="label-user-data-status-active">
+                <source>This email user is enabled on webapp.cryptshare.express - Have some fun with Cryptshare!</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelUserDataStatusUnexpected" ts="label-user-data-status-unexpected">
+                <source>Unexpected status - We don not know if you that email address is enabled on webapp.cryptshare.express</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelUserDataErrorFetchingCsuserdata" ts="label-user-data-error-fetching-csuserdata">
+                <source>An error occurred when determining the data of your email user. Please enter it again and click on save.</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixStep1" ts="step-1">
+                <source>Select pricing plan</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixStep2" ts="step-2">
+                <source>Order</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixStep3" ts="step-3">
+                <source>Payment</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixStep4" ts="step-4">
+                <source>Enter user data</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixStep5" ts="step-5">
+                <source>Use Cryptshare</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutPricingPlanAnnualDescription" ts="checkout-pricing-plan-annual-description">
+                <source>per mailbox paid in advance</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutPricingPlanMonthlyDescription" ts="checkout-pricing-plan-monthly-description">
+                <source>per mailbox paid in advance</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutSelectedPricingPlan" ts="checkout-selected-pricing-plan">
+                <source>Selected pricing plan</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutPaymentDetails" ts="checkout-payment-details">
+                <source>Enter now your payment details</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutBillingData" ts="checkout-billing-data">
+                <source>Billing data</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutEditBillingData" ts="checkout-edit-billing-data">
+                <source>Edit data</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutBack" ts="checkout-back">
+                <source>Back</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutSave" ts="checkout-save">
+                <source>Save</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutOrderNow" ts="checkout-order-now">
+                <source>Order now</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutShoppingcartUpdated" ts="checkout-shoppingcart-updated">
+                <source>Shopping cart has been updated (see summary below)</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixInvalidCouponCode" ts="InvalidCouponCode">
+                <source>Voucher/Couponcode is invalid</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixmonth" ts="month">
+                <source>Month</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixyear" ts="year">
+                <source>Year</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCancelationperiodsuffix" ts="cancelationperiodsuffix">
+                <source>before the subscribed period ends</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutSubmitOrder" ts="checkout-submit-order">
+                <source>Submit order</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutSubmitOrder2" ts="checkout-submit-order2">
+                <source>You can enter payment data in the next step.</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutSubmitPay" ts="checkout-submit-pay">
+                <source>Pay now</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutSubmitPay2" ts="checkout-submit-pay2">
+                <source>A useful hint</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixInclVat" ts="incl-vat">
+                <source>incl. VAT</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutUserdataEnter" ts="checkout-userdata-enter">
+                <source>Data of the new email users</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutUserdataEnterAgain" ts="checkout-userdata-enter-again">
+                <source>Please enter the data of the new Cryptshare.express email user again.</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutUserdataUnchangeable" ts="checkout-userdata-unchangeable">
+                <source>Please note: These information can not be changed afterwards.</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutUserdataSkipEntry" ts="checkout-userdata-skip-entry">
+                <source>Skip and enter data of new email user later.</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutAcceptToc" ts="checkout-accept-toc">
+                <source>I have read the Terms of Use, understood and accept them</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutReadToc" ts="checkout-read-toc">
+                <source>Read Terms of Use now.</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutAcceptDataProtection" ts="checkout-accept-data-protection">
+                <source>I have read the privacy policy, understood and accept them</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutReadDataProtection" ts="checkout-read-data-protection">
+                <source>Read privacy policy now.</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutAcceptGtac" ts="checkout-accept-gtac">
+                <source>I have read the General Terms and Conditions, understood and accept them</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCheckoutReadGtac" ts="checkout-read-gtac">
+                <source>Read General Terms and Conditions now.</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelLoading" ts="label-loading">
+                <source>Loading...</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelPaymentIframePlanvariantidMissing" ts="label-payment-iframe-planvariantid-missing">
+                <source>Error: PlanVariantId miss.</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelSelectPricingPlan" ts="label-select-pricing-plan">
+                <source>Select pricing plan</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelManage" ts="label-manage">
+                <source>Manage</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelSendwelcomeemail" ts="label-sendwelcomeemail">
+                <source>Send welcome email to this user</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelSendwelcomeemailShort" ts="label-sendwelcomeemail-short">
+                <source>Inform user</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelCanceled" ts="label-canceled">
+                <source>Cancelled</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelWillEnd" ts="label-will-end">
+                <source>and ends on</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelDummyFirstname" ts="label-dummy-firstname">
+                <source>John</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelDummyLastname" ts="label-dummy-lastname">
+                <source>Doe</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelDummyEmail" ts="label-dummy-email">
+                <source>john.doe@yourdomain.com</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixClose" ts="close">
+                <source>Close</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCopy" ts="copy">
+                <source>Copy</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCopySuccess" ts="copy-success">
+                <source>Successfully put on clipboard</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCopyError" ts="copy-error">
+                <source>Error while copying</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixHello" ts="hello">
+                <source>Hello</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixPaymentBicError" ts="payment-bic-error">
+                <source></source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixPaymentCcholderError" ts="payment-ccholder-error">
+                <source>Please fill in the correct holder name</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixPaymentCcnumberError" ts="payment-ccnumber-error">
+                <source>Please check your Credit Card Number</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixPaymentCccvcError" ts="payment-cccvc-error">
+                <source>Please check your Credit Card Security Code</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixPaymentCcvalidError" ts="payment-ccvalid-error">
+                <source>Pleasy check if your Credit Card is stl valid</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixVatErrorAll" ts="vat-error-all">
+                <source>Please check your VAT ID, it failed validation</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixVatErrorCountry" ts="vat-error-country">
+                <source>Please check your VAT ID, it failed validation for your country</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCustomerUpdateError" ts="customerUpdate-error">
+                <source>Something went wrong. Data could not be safed correctly, please check again, especially the provided VAT-ID</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageGermany" ts="locationident-browserlanguage-germany">
+                <source>Germany</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageNetherland" ts="locationident-browserlanguage-netherland">
+                <source>the Netherlands</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageOthereuropean" ts="locationident-browserlanguage-othereuropean">
+                <source>other, european countries</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageGreatbritain" ts="locationident-browserlanguage-greatbritain">
+                <source>Great Britain</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageUsa" ts="locationident-browserlanguage-usa">
+                <source>the United States of America</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageAustria" ts="locationident-browserlanguage-austria">
+                <source>Austria</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageFrance" ts="locationident-browserlanguage-france">
+                <source>France</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageSpain" ts="locationident-browserlanguage-spain">
+                <source>Spain</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageSwitzerland" ts="locationident-browserlanguage-switzerland">
+                <source>Switzerland</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageItaly" ts="locationident-browserlanguage-italy">
+                <source>Italy</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageFinland" ts="locationident-browserlanguage-finland">
+                <source>Finland</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageLuxembourg" ts="locationident-browserlanguage-luxembourg">
+                <source>Luxembourg</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageLithuania" ts="locationident-browserlanguage-lithuania">
+                <source>Lithuania</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageIreland" ts="locationident-browserlanguage-ireland">
+                <source>Ireland</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageBelgium" ts="locationident-browserlanguage-belgium">
+                <source>Belgium</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageGreek" ts="locationident-browserlanguage-greek">
+                <source>Greek</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguagePortugal" ts="locationident-browserlanguage-portugal">
+                <source>Portugal</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageP1" ts="locationident-browserlanguage-p1">
+                <source>It seems that you are visiting us from</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageP2" ts="locationident-browserlanguage-p2">
+                <source></source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageP3" ts="locationident-browserlanguage-p3">
+                <source>However, you are on the website for</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageP4" ts="locationident-browserlanguage-p4">
+                <source>Please click here</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLocationidentBrowserlanguageP5" ts="locationident-browserlanguage-p5">
+                <source>to access your language, currency and country-specific offers</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixContractCardHeader" ts="contract-card-header">
+                <source>Contract</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixClientCardHeader" ts="client-card-header">
+                <source>Client</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixEmailuserCardHeader" ts="emailuser-card-header">
+                <source>Email user</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixEmailCardHeader" ts="email-card-header">
+                <source>Extra E-Mail</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixAddEmailUser" ts="add-email-user">
+                <source>Add email user</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixManageContract" ts="manage-contract">
+                <source>Manage</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixUsertableEmail" ts="usertable-email">
+                <source>Email user</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixUsertableName" ts="usertable-name">
+                <source>Name</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixUsertableStatus" ts="usertable-status">
+                <source>Status</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixUsertableActions" ts="usertable-actions">
+                <source>Actions</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixContractStatusPaymentSuccess" ts="contract-status-payment-success">
+                <source>Active</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixContractStatusPaymentIntrial" ts="contract-status-payment-intrial">
+                <source>In trial</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixContractStatusPaymentError" ts="contract-status-payment-error">
+                <source>Error</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixContractStatusPaymentWarning" ts="contract-status-payment-warning">
+                <source>Warning</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixContractStatusCanceled" ts="contract-status-canceled">
+                <source>Canceled</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixContractStatusPaymentFailed" ts="contract-status-payment-failed">
+                <source>Payment failed. Please update now your payment data.</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixContractStatusCreditcardExpiresoon" ts="contract-status-creditcard-expiresoon">
+                <source>Your credit card will expire soon. Please update your payment data.</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixPaymentProviderTextBankaccount" ts="payment-provider-text-bankaccount">
+                <source>We will try to use the SEPA direct debit mandate for your bank account on file with the last four digits</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixPaymentProviderTextCreditcard" ts="payment-provider-text-creditcard">
+                <source>We will try charge the credit card on file with the last four digits</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixPaymentProviderTextIdeal" ts="payment-provider-text-ideal">
+                <source>We will try to use your iDEAL bank account</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixTrialFromHeadline" ts="trial-from-headline">
+                <source>7-days Trial - </source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixOrderTrialSubtitle" ts="order-trial-subtitle">
+                <source> - 7-days Trial</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixOrderTrialButton" ts="order-trial-button">
+                <source>Add to order</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixOrderTrialModalCancelHeadline" ts="order-trial-modal-cancel-headline">
+                <source>Skip trial period?</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixOrderTrialModalCancelText" ts="order-trial-modal-cancel-text">
+                <source>Click »Yes« to upgrade to a paid subscription now and add more email users.</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixOrderTrialModalCancelButton" ts="order-trial-modal-cancel-button">
+                <source>Yes</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixOrderTrialModalCancelClose" ts="order-trial-modal-cancel-close">
+                <source>No</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixOrderTrialFreeHint" ts="order-trial-free-hint">
+                <source>additional free</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixOrderAdditional" ts="order-additional">
+                <source>additional</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixEmailUserButtonCancel" ts="email-user-button-cancel">
+                <source>Cancel email user</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixTextDownloadInvoice" ts="text-download-invoice">
+                <source>Download PDF</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelEmailUserName" ts="label-email-user-name">
+                <source>Name</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelEmailUserEmail" ts="label-email-user-email">
+                <source>Email</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelEmailUserStartdate" ts="label-email-user-startdate">
+                <source>Start date</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelEmailUserEnddate" ts="label-email-user-enddate">
+                <source>End date</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelEmailUserEditemailuser" ts="label-email-user-editemailuser">
+                <source>Edit email user</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixLabelEmailUserCancelemailuser" ts="label-email-user-cancelemailuser">
+                <source>Cancel email user</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixcredit" ts="credit">
+                <source>Credit card</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixdebit" ts="debit">
+                <source>Debit card</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixCreditCard" ts="CreditCard">
+                <source>Credit card</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixBankAccount" ts="BankAccount">
+                <source>Debit card</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixButtonCancel" ts="button-cancel">
+                <source>Cancel</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixButtonSave" ts="button-save">
+                <source>Save</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixTooltipAlreadyCanceled" ts="tooltip-already-canceled">
+                <source>Email user is already terminated.</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixTooltipAlreadyChanged" ts="tooltip-already-changed">
+                <source>Please note that an email address and the name can be changed only once per contract period.</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixManageContractModalCancelHeadline" ts="manage-contract-modal-cancel-headline">
+                <source>Cancel subscription</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixManageContractModalCancelText" ts="manage-contract-modal-cancel-text">
+                <source>Do you really want to cancel the complete subscription, with all components?</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixManageContractModalCancelButton" ts="manage-contract-modal-cancel-button">
+                <source>Cancel now</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixManageContractModalCancelClose" ts="manage-contract-modal-cancel-close">
+                <source>Close</source>
+            </trans-unit>
+            <trans-unit id="javaScriptPrefixSheckoutUserdataEntercontractdata" ts="checkout-userdata-entercontractdata">
+                <source>Customer master data</source>
+            </trans-unit>
+
+            <trans-unit id="javaScriptPrefixBusinessConfirmation">
+                <source>Cryptshare.express is exclusively for business customers. I hereby confirm that I am creating this account on behalf of my company.</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

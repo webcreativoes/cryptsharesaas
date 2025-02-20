@@ -1,0 +1,77 @@
+lib.MOBILE_NAVI = COA
+lib.MOBILE_NAVI {
+    0 = TEXT
+    0 {
+        value (
+            <!--nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+               <a class="navbar-brand" href="#"></a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footer" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+               </button>
+            </nav-->
+        )
+    }
+    5 = TEXT
+    5 {
+        value (
+            <nav class="navbar navbar-expand-md navbar-light bg-light static-top d-flex d-md-none">
+        )
+    }
+    10 = TEXT
+    10 {
+        value (
+            <a class="navbar-brand" href="/"><img id="mobilesidebarlogo" src="/typo3conf/ext/cryptsharesaas/Resources/Public/Images/Cryptshare-Express-Logo_lok.svg"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarsExample03">
+            <ul class="navbar-nav mr-auto">
+        )
+    }
+    20 = HMENU
+    20 {
+        1 = TMENU
+        1 {
+            NO = 1
+            NO {
+                ATagParams = class="nav-link"
+                wrapItemAndSub = <li class="nav-item"> | </li>
+            }
+            ACT = 1
+            ACT {
+                ATagParams = class="nav-link"
+                wrapItemAndSub = <li class="nav-item active"> | </li>
+            }
+        }
+    }
+    100 = TEXT
+    100 {
+        value (
+            </ul>
+            </div>
+            </nav>
+        )
+    }
+}
+
+[usergroup('*')]
+    lib.MOBILE_NAVI.30 = COA_INT
+    lib.MOBILE_NAVI.30 {
+        10 = TEXT
+        10 {
+            value = Sign out
+            insertData = 1
+            typolink {
+                parameter = 1115
+                additionalParams = &logintype=logout
+                ATagParams = class="nav-link" id="btn-logout"
+            }
+            wrap = <li class="nav-item active"> | </li>
+            innerWrap = <i class="fa fa-sign-out"></i><span>|</span>
+        }
+    }
+[global]
+
+[siteLanguage("locale") == "de_DE.UTF-8" && usergroup('*')]
+    lib.MOBILE_NAVI.30.10.value = Abmelden
+[global]

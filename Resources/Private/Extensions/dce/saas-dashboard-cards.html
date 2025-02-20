@@ -1,0 +1,89 @@
+
+
+<f:spaceless>
+    <f:if condition="{field.section}=='section_1'">
+        <f:then>
+            <div class="card w-100" id="dashboard-email-user">
+                <div class="card-body">
+                    <f:link.page pageUid="1400"><i class="fa fa-users fa-4x pull-right" aria-hidden="true"></i></f:link.page>
+                    <h5 class="card-title">
+                        <f:link.page pageUid="1400"><span><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:dashboard_users_headline" /></span></f:link.page>
+                    </h5>
+                    <ul>
+                        <li><span id="hint-used-email-users"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></span> <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:dashboard_users_p1" /></li>
+                        <li><span id="hint-available-email-users"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></span>&nbsp;<f:format.htmlentitiesDecode><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:dashboard_users_p2" /></f:format.htmlentitiesDecode></li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <f:link.page pageUid="1400" class="btn btn-sm pull-right">
+                        <i class="fa fa-users" aria-hidden="true"></i> <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:dashboard_users_link" />
+                    </f:link.page>
+                </div>
+            </div>
+        </f:then>
+    </f:if>
+    <f:if condition="{field.section}=='section_2'">
+        <f:then>
+            <div class="card w-100">
+                <div class="card-body">
+                    <f:link.page pageUid="1416"><i class="fa fa-rocket fa-4x pull-right" aria-hidden="true"></i></f:link.page>
+                    <h5 class="card-title">
+                        <f:link.page pageUid="1416"><span><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:dashboard_use_headline" /></span></f:link.page>
+                    </h5>
+                    <ul>
+                        <li><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:dashboard_use_videos" /></li>
+                        <li><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:dashboard_use_webapplication" /></li>
+                        <li><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:dashboard_use_outlook" /></li>
+                        <li><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:dashboard_use_chrome" /></li>
+                        <li><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:dashboard_use_firefox" /></li>
+                        <li><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:dashboard_use_opera" /></li>
+                        <li class="d-none"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:dashboard_use_edge" /></li>
+                        <li class="d-none"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:dashboard_use_safari" /></li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <f:link.page pageUid="1416" class="btn btn-sm pull-right">
+                        <i class="fa fa-download" aria-hidden="true"></i> <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:dashboard_use_link" />
+                    </f:link.page>
+                </div>
+            </div>
+        </f:then>
+    </f:if>
+    <f:if condition="{field.section}=='section_3'">
+        <f:then>
+            <div class="card w-100">
+                <div class="card-body">
+                    <f:link.page pageUid="1406"><i class="fa fa-question-circle fa-4x pull-right" aria-hidden="true"></i></f:link.page>
+                    <h5 class="card-title">
+                        <f:link.page pageUid="1406"><span><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:dashboard_help_headline" /></span></f:link.page>
+                    </h5>
+                    <p><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:dashboard_help_p1" /> <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:dashboard_help_p2" /></p>
+                </div>
+                <div class="card-footer">
+                    <f:link.page pageUid="1406" class="btn btn-sm pull-right">
+                        <i class="fa fa-question-circle" aria-hidden="true"></i> <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:dashboard_help_link" />
+                    </f:link.page>
+                </div>
+            </div>
+        </f:then>
+    </f:if>
+    <f:if condition="{field.section}=='section_4'">
+        <f:then>
+            <div class="card w-100">
+                <div class="card-body">
+                    <f:link.page pageUid="1398"><i class="fa fa-edit fa-4x pull-right" aria-hidden="true"></i></f:link.page>
+                    <h5 class="card-title">
+                        <f:link.page pageUid="1398"><span><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:dashboard_account_headline" /></span></f:link.page>
+                    </h5>
+                    <p><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:dashboard_account_p1" /></p>
+                </div>
+                <div class="card-footer">
+                    <f:link.page pageUid="1398" class="btn btn-sm pull-right">
+                        <i class="fa fa-edit" aria-hidden="true"></i> <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:dashboard_account_link" />
+                    </f:link.page>
+                </div>
+            </div>
+        </f:then>
+    </f:if>
+    <br style="clear:both;">
+</f:spaceless>

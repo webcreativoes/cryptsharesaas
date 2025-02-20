@@ -1,0 +1,103 @@
+page {
+   headerData {
+      1 = TEXT
+      1.value (
+            <!-- Google Tag Manager -->
+          <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-M32W3TQ');</script>
+          <!-- End Google Tag Manager -->
+
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("consent", "default", {
+				ad_storage: "denied",
+				analytics_storage: "denied",
+				wait_for_update: 500,
+			});
+			gtag("set", "ads_data_redaction", true);
+		</script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=DC-10619489"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'DC-10619489');
+		</script>
+      )
+      2 = TEXT
+      2.value = <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="referrer" content="no-referrer-when-downgrade">
+      3 = TEXT
+      3.value (
+         <meta name="sitelock-site-verification" content="6485" />
+         <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+         <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+         <link rel="apple-touch-icon" sizes="57x57" href="/typo3conf/ext/cryptsharesaas/Resources/Public/Images/Homescreen-57.png">
+         <link rel="apple-touch-icon" sizes="60x60" href="/typo3conf/ext/cryptsharesaas/Resources/Public/Images/Homescreen-60.png">
+         <link rel="apple-touch-icon" sizes="72x72" href="/typo3conf/ext/cryptsharesaas/Resources/Public/Images/Homescreen-72.png">
+         <link rel="apple-touch-icon" sizes="76x76" href="/typo3conf/ext/cryptsharesaas/Resources/Public/Images/Homescreen-76.png">
+         <link rel="apple-touch-icon" sizes="114x114" href="/typo3conf/ext/cryptsharesaas/Resources/Public/Images/Homescreen-114.png">
+         <link rel="apple-touch-icon" sizes="120x120" href="/typo3conf/ext/cryptsharesaas/Resources/Public/Images/Homescreen-120.png">
+         <link rel="apple-touch-icon" sizes="144x144" href="/typo3conf/ext/cryptsharesaas/Resources/Public/Images/Homescreen-144.png">
+         <link rel="apple-touch-icon" sizes="152x152" href="/typo3conf/ext/cryptsharesaas/Resources/Public/Images/Homescreen-152.png">
+         <link rel="apple-touch-icon" sizes="180x180" href="/typo3conf/ext/cryptsharesaas/Resources/Public/Images/Homescreen-180.png">
+      )
+   }
+   includeCSS {
+      10 = EXT:cryptsharesaas/Resources/Public/Css/bootstrap.min.css
+      10 {
+         forceOnTop = 1
+         excludeFromConcatenation = 1
+         disableCompression = 1
+      }
+      20 = EXT:cryptsharesaas/Resources/Public/Css/font-awesome.min.css
+      20 {
+         excludeFromConcatenation = 0
+         disableCompression = 1
+      }
+      30 = EXT:cryptsharesaas/Resources/Public/Css/cookieconsent.min.css
+      30 {
+         excludeFromConcatenation = 0
+         disableCompression = 1
+      }
+      40 = EXT:cryptsharesaas/Resources/Public/Css/base.css
+      40 {
+         excludeFromConcatenation = 0
+         disableCompression = 1
+      }
+      50 = EXT:cryptsharesaas/Resources/Public/Css/gallery.css
+      50 {
+         excludeFromConcatenation = 0
+         disableCompression = 1
+      }
+      100 = fileadmin/primary/Public/Templates/Css/custom.css
+      100 {
+         excludeFromConcatenation = 0
+         disableCompression = 1
+      }
+   }
+   includeJS {
+      10 = EXT:cryptsharesaas/Resources/Public/JavaScript/jquery.min.js
+      10 {
+         forceOnTop = 0
+         excludeFromConcatenation = 1
+         disableCompression = 1
+      }
+   }
+}
+
+[getTSFE().id == "1427"]
+   page {
+      includeJS {
+         20 = https://{$bw_environment}.billwerk.com/selfservice/billwerkjs?v=1
+         20 {
+            forceOnTop = 0
+            excludeFromConcatenation = 1
+            disableCompression = 1
+            external = 1
+         }
+      }
+   }
+[global]

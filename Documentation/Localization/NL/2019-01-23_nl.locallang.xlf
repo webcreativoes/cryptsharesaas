@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+  <file source-language="en" target-language="nl" datatype="plaintext" date="2019-01-23T09:02:00Z" product-name="checkout">
+    <header/>
+    <body>
+
+      <trans-unit id="checkout_staff_member_hint_headline">
+        <source><![CDATA[Dear]]></source>
+        <target><![CDATA[Hallo]]></target>
+      </trans-unit>
+
+      <trans-unit id="checkout_staff_member_hint_p1">
+        <source><![CDATA[As an employee of our company, an account with up to 25 users is available to you free of charge for the purpose of demonstrating Cryptshare.express to potential or existing customers and business partners.]]></source>
+        <target><![CDATA[Als Mitarbeiter unseres Unternehmens, steht Dir zum Zwecke der Demonstration oder Vorführung unseres Produkts Cryptshare.express bei möglichen oder bestehenden Kunden sowie Geschäftspartnern ein Account mit bis zu 25 Nutzern kostenfrei zur Verfügung.]]></target>
+      </trans-unit>
+
+      <trans-unit id="checkout_staff_member_hint_p2">
+        <source><![CDATA[Please note the following terms of use:]]></source>
+        <target><![CDATA[Bitte beachte folgende Nutzungsbedingungen:]]></target>
+      </trans-unit>
+
+      <trans-unit id="checkout_staff_member_hint_p3_1">
+        <source><![CDATA[Only commercial/business users may be created, <strong>no consumers</strong>.]]></source>
+        <target><![CDATA[Es dürfen ausschließlich gewerbliche / geschäftliche Nutzer angelegt werden, <strong>keine Verbraucher</strong>.]]></target>
+      </trans-unit>
+      <trans-unit id="checkout_staff_member_hint_p3_2">
+        <source><![CDATA[Creating users must always be in the <strong>interest of befine Solutions AG, to its advantage, and on its cost.</strong>.]]></source>
+        <target><![CDATA[Die Anlage von Nutzern erfolgt stets im Interesse, zum Vorteil und <strong>auf Rechnung der befine Solutions AG</strong>.]]></target>
+      </trans-unit>
+      <trans-unit id="checkout_staff_member_hint_p3_3">
+        <source><![CDATA[It is <strong>not permitted to use the account for private purposes</strong>.]]></source>
+        <target><![CDATA[Die Nutzung des Accounts für <strong>private Zwecke ist nicht gestattet</strong>.]]></target>
+      </trans-unit>
+
+      <trans-unit id="checkout_staff_member_hint_p4">
+        <source><![CDATA[Early deletion of users (before the license period expires) is possible. This would have to be done by you deleting the respective user from within the policy settings.<br /><br />We wish you much success in using Cryptshare.express.<br /> befine Solutions AG]]></source>
+        <target><![CDATA[Die vorzeitige Löschung von Nutzern (vor Regelablauf der Lizenz) ist nur auf Deine Veranlassung hin durch Löschung aus der Policy möglich.<br /><br />Wir wünschen viel Erfolg bei der Verwendung von Cryptshare.express.<br /> befine Solutions AG]]></target>
+      </trans-unit>
+
+      <trans-unit id="checkout_staff_member_hint_p5">
+        <source><![CDATA[By placing the order, I declare to abide by the terms of use as stated above.]]></source>
+        <target><![CDATA[Durch Durchführen einer Bestellung bestätige ich, mich an die oben genannten Nutzungsbedingungen zu halten.]]></target>
+      </trans-unit>
+
+    </body>
+  </file>
+</xliff>   

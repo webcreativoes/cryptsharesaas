@@ -1,0 +1,298 @@
+
+
+<f:spaceless>
+	<h2 class="title text-" id="Downloads">{field.title}</h2>
+	<div class="card-deck mb-3 w-100 text-center">
+		<div class="card mb-6 shadow-sm">
+			<div class="card-header">
+				<h4 class="my-0"><f:format.html parseFuncTSPath=""><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_headline_webapplication" /></f:format.html></h4>
+			</div>
+			<div class="card-body">
+				<f:if condition="{field.pic1}">
+					<f:then>
+						<f:for each="{dce:fal(field:'pic1', contentObject:contentObject)}" as="fileReference">
+							<f:if condition="{fileReference.link}">
+								<f:then>
+									<f:link.typolink parameter="{fileReference.link}" target="_self"  title="">
+										<img src="{f:uri.image(src: '{fileReference.uid}', treatIdAsReference: 1, maxWidth: 1600)}" class="img-fluid" alt="">
+									</f:link.typolink>
+								</f:then>
+								<f:else>
+									<a href="{f:uri.image(src: '{fileReference.uid}', treatIdAsReference: 1, maxWidth: 1600)}" class="galleryitem" title="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_headline_webapplication')}">
+										<img src="{f:uri.image(src: '{fileReference.uid}', treatIdAsReference: 1, maxWidth: 1600)}" class="img-fluid" alt="">
+									</a>
+								</f:else>
+							</f:if>
+						</f:for>
+					</f:then>
+					<f:else>
+						<a href="/fileadmin/primary/Public/Downloads/Browser-Integrations/Web-Application.jpg" class="galleryitem" title="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_headline_webapplication')}">
+						<img src="/fileadmin/primary/Public/Downloads/Browser-Integrations/Web-Application.jpg" class="img-fluid" alt="">
+						</a>
+					</f:else>
+				</f:if>
+				<p><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_description_webapplication" /></p>
+			</div>
+			<f:if condition="{field.activateDownloadslinks}">
+				<f:then>
+					<div class="card-footer">
+						<f:link.typolink parameter="https://webapp.cryptshare.express/" target="_blank" class=""><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_p_webapplication_open" /></f:link.typolink>
+					</div>
+				</f:then>
+			</f:if>
+		</div>
+		<div class="card mb-6 shadow-sm">
+			<div class="card-header">
+				<h4 class="my-0"><f:format.html parseFuncTSPath=""><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_headline_outlook" /></f:format.html></h4>
+			</div>
+			<div class="card-body">
+				<f:if condition="{field.pic2}">
+					<f:then>
+						<f:for each="{dce:fal(field:'pic2', contentObject:contentObject)}" as="fileReference">
+							<f:if condition="{fileReference.link}">
+								<f:then>
+									<f:link.typolink parameter="{fileReference.link}" target="_self"  title="">
+										<img src="{f:uri.image(src: '{fileReference.uid}', treatIdAsReference: 1, maxWidth: 1600)}" class="img-fluid" alt="">
+									</f:link.typolink>
+								</f:then>
+								<f:else>
+									<a href="{f:uri.image(src: '{fileReference.uid}', treatIdAsReference: 1, maxWidth: 1600)}" class="galleryitem" title="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_headline_outlook')}">
+									<img src="{f:uri.image(src: '{fileReference.uid}', treatIdAsReference: 1, maxWidth: 1600)}" class="img-fluid" alt="">
+									</a>
+								</f:else>
+							</f:if>
+						</f:for>
+					</f:then>
+					<f:else>
+						<a href="/fileadmin/primary/Public/Downloads/Browser-Integrations/email-encryption-office-365-outlook.png" class="galleryitem" title="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_headline_outlook')}">
+						<img src="/fileadmin/primary/Public/Downloads/Browser-Integrations/email-encryption-office-365-outlook.png" class="img-fluid" alt="">
+						</a>
+					</f:else>
+				</f:if>
+				<p><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_description_outlook" /></p>
+			</div>
+			<f:if condition="{field.activateDownloadslinks}">
+				<f:then>
+					<div class="card-footer">
+						<f:link.typolink parameter="t3://file?uid=42291" class=""><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_p_outlook_download" /></f:link.typolink>
+					</div>
+				</f:then>
+			</f:if>
+		</div>
+	</div>
+	<h2 class="title" id="Browser-Integrations"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_headline_browser_general" /></h2>
+	<p class="text-center"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_description_browser_general" /></p>
+	<div class="card-deck mb-3 w-100 text-center">
+		<div class="card mb-6 shadow-sm">
+			<div class="card-header">
+				<h4 class="my-0"><f:format.html parseFuncTSPath=""><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_headline_chrome" /></f:format.html></h4>
+			</div>
+			<div class="card-body">
+				<f:if condition="{field.pic3}">
+					<f:then>
+						<f:for each="{dce:fal(field:'pic3', contentObject:contentObject)}" as="fileReference">
+							<f:if condition="{fileReference.link}">
+								<f:then>
+									<f:link.typolink parameter="{fileReference.link}" target="_self"  title="">
+									<img src="{f:uri.image(src: '{fileReference.uid}', treatIdAsReference: 1, maxWidth: 1600)}" class="img-fluid" alt="">
+									</f:link.typolink>
+
+								</f:then>
+								<f:else>
+									<a href="{f:uri.image(src: '{fileReference.uid}', treatIdAsReference: 1, maxWidth: 1600)}" class="galleryitem" title="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_headline_chrome')}">
+									<img src="{f:uri.image(src: '{fileReference.uid}', treatIdAsReference: 1, maxWidth: 1600)}" class="img-fluid" alt="">
+									</a>
+								</f:else>
+							</f:if>
+						</f:for>
+					</f:then>
+					<f:else>
+						<a href="/fileadmin/primary/Public/Downloads/Browser-Integrations/cryptshare-express-for-chrome.png?v=1" class="galleryitem" title="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_headline_chrome')}">
+						<img src="/fileadmin/primary/Public/Downloads/Browser-Integrations/cryptshare-express-for-chrome.png?v=1" class="img-fluid" alt="">
+						</a>
+					</f:else>
+				</f:if>
+				<f:if condition="{field.activateDescriptions}">
+					<f:then>
+						<p><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_description_chrome" /></p>
+					</f:then>
+				</f:if>
+			</div>
+			<f:if condition="{field.activateDownloadslinks}">
+				<f:then>
+					<div class="card-footer">
+						<f:link.typolink parameter="https://chrome.google.com/webstore/detail/cryptshareexpress/njckdeldgoicjfeacnhmcddkikffmkdi" target="_blank" class=""><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_p_chrome_download" /></f:link.typolink>
+					</div>
+				</f:then>
+			</f:if>
+		</div>
+		<div class="card mb-6 shadow-sm">
+			<div class="card-header">
+				<h4 class="my-0"><f:format.html parseFuncTSPath=""><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_headline_firefox" /></f:format.html></h4>
+			</div>
+			<div class="card-body">
+				<f:if condition="{field.pic4}">
+					<f:then>
+						<f:for each="{dce:fal(field:'pic4', contentObject:contentObject)}" as="fileReference">
+							<f:if condition="{fileReference.link}">
+								<f:then>
+									<f:link.typolink parameter="{fileReference.link}" target="_self"  title="">
+										<img src="{f:uri.image(src: '{fileReference.uid}', treatIdAsReference: 1, maxWidth: 1600)}" class="img-fluid" alt="">
+									</f:link.typolink>
+								</f:then>
+								<f:else>
+									<a href="{f:uri.image(src: '{fileReference.uid}', treatIdAsReference: 1, maxWidth: 1600)}" class="galleryitem" title="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_headline_firefox')}">
+									<img src="{f:uri.image(src: '{fileReference.uid}', treatIdAsReference: 1, maxWidth: 1600)}" class="img-fluid" alt="">
+									</a>
+								</f:else>
+							</f:if>
+						</f:for>
+					</f:then>
+					<f:else>
+						<a href="/fileadmin/primary/Public/Downloads/Browser-Integrations/cryptshare-express-for-firefox.png?v=1" class="galleryitem" title="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_headline_firefox')}">
+						<img src="/fileadmin/primary/Public/Downloads/Browser-Integrations/cryptshare-express-for-firefox.png?v1" class="img-fluid" alt="">
+						</a>
+					</f:else>
+				</f:if>
+				<f:if condition="{field.activateDescriptions}">
+					<f:then>
+						<p><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_description_firefox" /></p>
+					</f:then>
+				</f:if>
+			</div>
+			<f:if condition="{field.activateDownloadslinks}">
+				<f:then>
+					<div class="card-footer">
+						<f:link.typolink parameter="https://addons.mozilla.org/de/firefox/addon/cryptshare-express/" target="_blank" class=""><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_p_firefox_download" /></f:link.typolink>
+					</div>
+				</f:then>
+			</f:if>
+		</div>
+		<div class="card mb-6 shadow-sm">
+			<div class="card-header">
+				<h4 class="my-0"><f:format.html parseFuncTSPath=""><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_headline_edge" /></f:format.html></h4>
+			</div>
+			<div class="card-body">
+				<f:if condition="{field.pic6}">
+					<f:then>
+						<f:for each="{dce:fal(field:'pic6', contentObject:contentObject)}" as="fileReference">
+							<f:if condition="{fileReference.link}">
+								<f:then>
+									<f:link.typolink parameter="{fileReference.link}" target="_self"  title="">
+										<img src="{f:uri.image(src: '{fileReference.uid}', treatIdAsReference: 1, maxWidth: 1600)}" class="img-fluid" alt="">
+									</f:link.typolink>
+								</f:then>
+								<f:else>
+									<a href="{f:uri.image(src: '{fileReference.uid}', treatIdAsReference: 1, maxWidth: 1600)}" class="galleryitem" title="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_headline_edge')}">
+									<img src="{f:uri.image(src: '{fileReference.uid}', treatIdAsReference: 1, maxWidth: 1600)}" class="img-fluid" alt="">
+									</a>
+								</f:else>
+							</f:if>
+						</f:for>
+					</f:then>
+					<f:else>
+						<f:link.typolink parameter="1416#27505" target="_self"  title="">
+							<img src="/fileadmin/primary/Public/Downloads/Browser-Integrations/cryptshare-express-for-edge.png" class="img-fluid" alt="">
+						</f:link.typolink>
+					</f:else>
+				</f:if>
+				<f:if condition="{field.activateDescriptions}">
+					<f:then>
+						<p><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_description_edge" /></p>
+					</f:then>
+				</f:if>
+			</div>
+			<f:if condition="{field.activateDownloadslinks}">
+				<f:then>
+					<div class="card-footer">
+						<f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_p_comingsoon" />
+					</div>
+				</f:then>
+			</f:if>
+		</div>
+		<div class="card mb-6 shadow-sm">
+			<div class="card-header">
+				<h4 class="my-0"><f:format.html parseFuncTSPath=""><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_headline_opera" /></f:format.html></h4>
+			</div>
+			<div class="card-body">
+				<f:if condition="{field.pic5}">
+					<f:then>
+						<f:for each="{dce:fal(field:'pic5', contentObject:contentObject)}" as="fileReference">
+							<f:if condition="{fileReference.link}">
+								<f:then>
+									<f:link.typolink parameter="{fileReference.link}" target="_self"  title="">
+										<img src="{f:uri.image(src: '{fileReference.uid}', treatIdAsReference: 1, maxWidth: 1600)}" class="img-fluid" alt="">
+									</f:link.typolink>
+								</f:then>
+								<f:else>
+									<a href="{f:uri.image(src: '{fileReference.uid}', treatIdAsReference: 1, maxWidth: 1600)}" class="galleryitem" title="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_headline_firefox')}">
+									<img src="{f:uri.image(src: '{fileReference.uid}', treatIdAsReference: 1, maxWidth: 1600)}" class="img-fluid" alt="">
+									</a>
+								</f:else>
+							</f:if>
+						</f:for>
+					</f:then>
+					<f:else>
+						<a href="/fileadmin/primary/Public/Downloads/Browser-Integrations/cryptshare-express-for-opera.png?v=1" class="galleryitem" title="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_headline_opera')}">
+						<img src="/fileadmin/primary/Public/Downloads/Browser-Integrations/cryptshare-express-for-opera.png?v=1" class="img-fluid" alt="">
+						</a>
+					</f:else>
+				</f:if>
+				<f:if condition="{field.activateDescriptions}">
+					<f:then>
+						<p><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_description_opera" /></p>
+					</f:then>
+				</f:if>
+			</div>
+			<f:if condition="{field.activateDownloadslinks}">
+				<f:then>
+					<div class="card-footer">
+						<f:link.typolink parameter="https://chrome.google.com/webstore/detail/cryptshareexpress/njckdeldgoicjfeacnhmcddkikffmkdi" target="_blank" class=""><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_p_firefox_download" /></f:link.typolink>
+					</div>
+				</f:then>
+			</f:if>
+		</div>
+		<div class="card mb-6 shadow-sm d-none">
+			<div class="card-header">
+				<h4 class="my-0"><f:format.html parseFuncTSPath=""><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_headline_safari" /></f:format.html></h4>
+			</div>
+			<div class="card-body">
+				<f:if condition="{field.pic7}">
+					<f:then>
+						<f:for each="{dce:fal(field:'pic7', contentObject:contentObject)}" as="fileReference">
+							<f:if condition="{fileReference.link}">
+								<f:then>
+									<f:link.typolink parameter="{fileReference.link}" target="_self"  title="">
+										<img src="{f:uri.image(src: '{fileReference.uid}', treatIdAsReference: 1, maxWidth: 1600)}" class="img-fluid" alt="">
+									</f:link.typolink>
+								</f:then>
+								<f:else>
+									<a href="{f:uri.image(src: '{fileReference.uid}', treatIdAsReference: 1, maxWidth: 1600)}" class="galleryitem" title="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_headline_safari')}">
+									<img src="{f:uri.image(src: '{fileReference.uid}', treatIdAsReference: 1, maxWidth: 1600)}" class="img-fluid" alt="">
+									</a>
+								</f:else>
+							</f:if>
+						</f:for>
+					</f:then>
+					<f:else>
+						<a href="/fileadmin/primary/Public/Downloads/Browser-Integrations/coming-soon.png" class="galleryitem" title="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_headline_safari')}">
+						<img src="/fileadmin/primary/Public/Downloads/Browser-Integrations/coming-soon.png" class="img-fluid" alt="">
+						</a>
+					</f:else>
+				</f:if>
+				<f:if condition="{field.activateDescriptions}">
+					<f:then>
+						<p><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_description_safari" /></p>
+					</f:then>
+				</f:if>
+			</div>
+			<f:if condition="{field.activateDownloadslinks}">
+				<f:then>
+					<div class="card-footer">
+						<f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_p_comingsoon" />
+					</div>
+				</f:then>
+			</f:if>
+		</div>
+	</div>
+</f:spaceless>

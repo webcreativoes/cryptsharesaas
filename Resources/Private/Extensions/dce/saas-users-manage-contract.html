@@ -1,0 +1,348 @@
+
+{namespace s=SJBR\StaticInfoTables\ViewHelpers}
+
+<f:spaceless>
+    <div class="card w-100 only-header">
+        <div class="card-header">
+            <f:link.typolink parameter="{fields.overviewurl}" class=""><i class="fa fa-chevron-left"></i>&nbsp;<f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.headline.link.backtouseroverview" /></f:link.typolink>
+            <f:link.typolink parameter="{fields.cmold}" class="cmold pull-right"><i class="fa fa-gear"></i>&nbsp;<f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.headline.link.oldcontractmanagement" /></f:link.typolink>
+        </div>
+    </div>
+    <div class="container w-100" style="display:inline;">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card w-100 customerdata">
+                    <div class="card-header">
+                        <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.headline.customerdata" />
+                    </div>
+                    <div class="card-body" id="customerdata">
+                        <div id="success-alert" class="alert alert-success" role="alert" style="opacity: 500; display: none;">
+                            <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_partner.form.success" />
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-borderless">
+                                <tbody>
+                                <tr>
+                                    <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.contract" /></th>
+                                    <td class="" id="customerContract"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.firstname" /></th>
+                                    <td class="customer-plain" id="customerFirstName"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></td>
+                                    <td class="customer-form d-none">
+                                        <div class="input-group">
+                                            <input id="inputCustomerFirstName" class="form-control py-2 border-right-0 border" type="text" value="" placeholder="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.firstname')}">
+                                            <span class="input-group-append changed-tooltip d-none">
+                                                <button class="btn btn-link border-left-0 border" type="button" data-toggle="tooltip" data-placement="top" title="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.onechangeperperiod')}">
+                                                    <i class="fa fa-exclamation-circle"></i>
+                                                </button>
+                                            </span>
+                                        </div>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.lastname" /></th>
+                                    <td class="customer-plain" id="customerLastName"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></td>
+                                    <td class="customer-form d-none">
+                                        <div class="input-group">
+                                            <input id="inputCustomerLastName" class="form-control" type="text" value="" placeholder="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.lastname')}">
+                                            <span class="input-group-append changed-tooltip d-none">
+                                                <button class="btn btn-link border-left-0 border" type="button" data-toggle="tooltip" data-placement="top" title="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.onechangeperperiod')}">
+                                                    <i class="fa fa-exclamation-circle"></i>
+                                                </button>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="noPartnerRow">
+                                    <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.company" /></th>
+                                    <td class="customer-plain" id="customerCompany"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></td>
+                                    <td class="customer-form d-none"><input id="inputCustomerCompany" class="form-control" type="text" value="" placeholder="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.company')}"></td>
+                                </tr>
+                                <tr class="noPartnerRow">
+                                    <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.street" /></th>
+                                    <td class="customer-plain" id="customerStreet"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></td>
+                                    <td class="customer-form d-none"><input id="inputCustomerStreet" class="form-control" type="text" value="" placeholder="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.street')}"></td>
+                                </tr>
+                                <tr class="noPartnerRow">
+                                    <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.housenumber" /></th>
+                                    <td class="customer-plain" id="customerHouseNumber"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></td>
+                                    <td class="customer-form d-none"><input id="inputCustomerHouseNumber" class="form-control" type="text" value="" placeholder="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.housenumber')}"></td>
+                                </tr>
+                                <tr class="noPartnerRow">
+                                    <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.zip" /></th>
+                                    <td class="customer-plain" id="customerZip"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></td>
+                                    <td class="customer-form d-none"><input id="inputCustomerZip" class="form-control" type="text" value="" placeholder="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.zip')}"></td>
+                                </tr>
+                                <tr class="noPartnerRow">
+                                    <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.city" /></th>
+                                    <td class="customer-plain" id="customerCity"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></td>
+                                    <td class="customer-form d-none"><input id="inputCustomerCity" class="form-control" type="text" value="" placeholder="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.city')}"></td>
+                                </tr>
+                                <tr class="noPartnerRow">
+                                    <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.country" /></th>
+                                    <td class="customer-plain" id="customerCountry"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></td>
+                                    <td class="customer-form d-none"><s:form.select class="form-control" id="inputCustomerCountry" staticInfoTable="country" options="{}" optionLabelField="shortNameLocal" optionValueField="isoCodeA3" defaultOptionLabel="{f:translate(key:'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:checkout_please_choose_country')}" defaultOptionValue="0"/></td>
+                                </tr>
+                                <tr class="noPartnerRow">
+                                    <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.phone" /></th>
+                                    <td class="customer-plain" id="customerPhone"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></td>
+                                    <td class="customer-form d-none"><input id="inputCustomerPhone" class="form-control" type="text" value="" placeholder="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.phone')}"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.email" /></th>
+                                    <td class="customer-plain" id="customerEmail"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></td>
+                                    <td class="customer-form d-none">
+                                        <div class="input-group">
+                                            <input id="inputCustomerEmail" class="form-control" type="text" value="" placeholder="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.email')}">
+                                            <span class="input-group-append changed-tooltip d-none">
+                                                <button class="btn btn-link border-left-0 border" type="button" data-toggle="tooltip" data-placement="top" title="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.onechangeperperiod')}">
+                                                    <i class="fa fa-exclamation-circle"></i>
+                                                </button>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="noPartnerRow">
+                                    <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.vat" /></th>
+                                    <td class="customer-plain" id="customerVat"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></td>
+                                    <td class="customer-form d-none"><input id="inputCustomerVat" class="form-control" type="text" value="" placeholder="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.vat')}"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <button type="button" class="btn btn-secondary float-right" id="edit-customerdata"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.button.edit" /></button>
+                        <button type="button" class="btn btn-danger float-right d-none" id="cancel-customerdata"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.button.cancel" /></button>
+                        <button type="button" class="btn btn-success float-right d-none" id="save-customerdata"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.button.save" /></button>
+                        <input id="inputContractId" type="hidden" value="">
+                        <input id="inputChangedName" type="hidden" value="">
+                        <input id="inputChangedEmail" type="hidden" value="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card w-100 billingdata">
+                    <div class="card-header">
+                        <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.headline.billingdata" />
+                    </div>
+                    <div class="card-body" id="billingdata">
+                        <div class="alert alert-warning d-none" id="billingCreditCardExpired">
+                            <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.creditcardexpires" />
+                        </div>
+                        <form id="paymentForm">
+                            <div class="table-responsive">
+                                <table class="table table-borderless">
+                                    <tbody>
+                                    <tr id="tableBillingPaymentMethod">
+                                        <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.paymentmethod" /></th>
+                                        <td class="billing-plain" id="billingPaymentMethod"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></td>
+                                        <td class="billing-form d-none" colspan="2"><select id="inputBillingPaymentMethod" class="form-control"></select></td>
+                                    </tr>
+                                    <tr id="tableBillingAccountOwner">
+                                        <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.accountowner" /></th>
+                                        <td class="billing-plain" id="billingAccountOwner"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></td>
+                                        <td class="billing-form d-none" colspan="2"><input id="inputBillingAccountOwner" class="form-control" type="text" value="" placeholder="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.accountowner')}"></td>
+                                    </tr>
+                                    <tr id="tableBillingIban">
+                                        <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.iban" /></th>
+                                        <td class="billing-plain" id="billingIban"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></td>
+                                        <td class="billing-form d-none" colspan="2"><input id="inputBillingIban" class="form-control" type="text" value="" placeholder="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.iban')}"></td>
+                                    </tr>
+                                    <tr id="tableBillingCardHolder">
+                                        <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.cardholder" /></th>
+                                        <td class="billing-plain" id="billingCardHolder"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></td>
+                                        <td class="billing-form d-none" colspan="2"><input id="inputBillingCardHolder" class="form-control" type="text" value="" placeholder="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.cardholder')}"></td>
+                                    </tr>
+                                    <tr id="tableBillingCardType">
+                                        <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.cardtype" /></th>
+                                        <td class="billing-plain" id="billingCardType"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></td>
+                                        <td class="billing-form d-none" colspan="2"></td>
+                                    </tr>
+                                    <tr id="tableBillingCardNumber">
+                                        <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.cardnumber" /></th>
+                                        <td class="billing-plain" id="billingCardNumber"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></td>
+                                        <td class="billing-form d-none" colspan="2"><input id="inputBillingCardNumber" class="form-control" type="text" value="" placeholder="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.cardnumber')}"></td>
+                                    </tr>
+                                    <tr id="tableBillingCardValidUntil">
+                                        <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.cardvaliduntil" /></th>
+                                        <td class="billing-plain" id="billingCardValidUntil"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></td>
+                                        <td class="billing-form d-none"><input id="inputBillingCardValidUntilMonth" class="form-control" type="text" value="" placeholder="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.cardvaliduntil.month')}"></td>
+                                        <td class="billing-form d-none"><input id="inputBillingCardValidUntilYear" class="form-control" type="text" value="" placeholder="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.cardvaliduntil.year')}"></td>
+                                    </tr>
+                                    <tr id="tableBillingCardCvc">
+                                        <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.cardcvc" /></th>
+                                        <td class="billing-plain" id="billingCardCvc"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></td>
+                                        <td class="billing-form d-none" colspan="2"><input id="inputBillingCardCvc" class="form-control" type="text" value="" placeholder="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.cardcvc')}"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <button type="button" class="btn btn-secondary float-right" id="edit-billingdata"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.button.edit" /></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card w-100 subscriptiondata">
+                    <div class="card-header">
+                        <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.headline.subscriptiondata" />
+                    </div>
+                    <div class="card-body" id="subscriptiondata">
+                        <div class="table-responsive">
+                            <table class="table table-borderless">
+                                <tbody>
+                                <tr>
+                                    <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.package" /></th>
+                                    <td class="subscription-plain" id="subscriptionPackage"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.packagevariant" /></th>
+                                    <td class="subscription-plain" id="subscriptionPackageVariant"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.packagestart" /></th>
+                                    <td class="subscription-plain" id="subscriptionPackageStart"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></td>
+                                </tr>
+                                <tr id="tableSubscriptionPackageNextBill">
+                                    <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.packagenextbill" /></th>
+                                    <td class="subscription-plain" id="subscriptionPackageNextBill"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></td>
+                                </tr>
+                                <tr id="tableSubscriptionPackageEnd">
+                                    <th scope="row"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.packageend" /></th>
+                                    <td class="subscription-plain" id="subscriptionPackageEnd"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <button type="button" class="btn btn-danger float-right" id="cancel-Subscription"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.button.cancelsubscription" /></button>
+                    </div>
+                </div>
+                <input id="inputSubscriptionPackageStart" type="hidden" value="">
+                <input id="inputComponentId" type="hidden" value="">
+                <input id="inputComponentEndDate" type="hidden" value="">
+            </div>
+        </div>
+    </div>
+    <div class="card w-100" id="component-card">
+        <div class="card-header">
+            <i class="fa fa-gear"></i> <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.headline.customercomponents" />
+        </div>
+        <div class="card-body" id="componentdata">
+            <div class="table-responsive">
+                <table class="table table-borderless">
+                    <thead>
+                        <tr id="email-user-row">
+                            <th><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.name" /></th>
+                            <th><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.email" /></th>
+                            <th><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.startdate" /></th>
+                            <th><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.enddate" /></th>
+                            <th colspan="2"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.actions" /></th>
+                        </tr>
+                    </thead>
+                    <tbody id="email-user">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="card w-100" id="invoices-card">
+        <div class="card-header">
+            <i class="fa fa-gear"></i> <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.headline.customerinvoices" />
+        </div>
+        <div class="card-body" id="invoicedata">
+            <div class="table-responsive">
+                <table class="table table-borderless">
+                    <thead>
+                    <tr>
+                        <th><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.invoicenumber" /></th>
+                        <th><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.invoicedate" /></th>
+                        <th colspan="2"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.invoicetotalamount" /></th>
+                    </tr>
+                    </thead>
+                    <tbody id="invoices">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="card w-100 only-header">
+        <div class="card-header">
+            <f:link.typolink parameter="{fields.overviewurl}" class=""><i class="fa fa-chevron-left"></i>&nbsp;<f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.headline.link.backtouseroverview" /></f:link.typolink>
+            <f:link.typolink parameter="{fields.cmold}" class="cmold pull-right"><i class="fa fa-gear"></i>&nbsp;<f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.headline.link.oldcontractmanagement" /></f:link.typolink>
+        </div>
+    </div>
+
+    <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="paymentModalLabel"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.headline.changepayment" /></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="inputBillingPaymentMethod2">Bitte wählen Sie die neue Zahlungsmethode</label>
+                        <select id="inputBillingPaymentMethod2" class="form-control"></select>
+                    </div>
+                    <div id="payment" class="d-none" style="width:100%; border: 1px solid #EAEAEA ;"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" id="cancel-billingdata" data-dismiss="modal"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.button.cancel" /></button>
+                    <button type="button" class="btn btn-success" id="save-billingdata"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:user_manage_customer.form.button.save" /></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="cancelModal" tabindex="-1" aria-labelledby="cancelModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cancelModalLabel"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:component_cancel" /></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:component_cancel_text" />
+                    <span id="cancel-data"></span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:component_cancel_no" /></button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" id="cancelComponent" data-memo="" data-name="" data-email="" data-id=""><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:component_cancel_yes" /></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="loader" class="lds-dual-ring overlay"></div>
+
+    <div id="idDynModal" class="col-md-12"></div>
+
+    <f:asset.css identifier="managePartnerdata">
+        .only-header {
+        min-height: 0 !important;
+        }
+        .w-33 {
+        width: 33%!important;
+        float:left;
+        }
+        .btn{
+        margin-right:1%;
+        }
+    </f:asset.css>
+    <f:if condition="{fields.sandbox}">
+        <f:then>
+            <f:asset.script identifier="subscriptionJS" priority="true" src="https://selfservice.sandbox.billwerk.com/subscription.js" />
+        </f:then>
+        <f:else>
+            <f:asset.script identifier="subscriptionJS" priority="true" src="https://selfservice.billwerk.com/subscription.js" />
+        </f:else>
+    </f:if>
+
+</f:spaceless>

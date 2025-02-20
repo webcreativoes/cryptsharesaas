@@ -1,0 +1,47 @@
+config {
+    debug = 0
+    contentObjectExceptionHandler = 0
+    admPanel = 0
+    sendCacheHeaders = 1
+    no_cache = 1
+    stat = 0
+    stat_mysql = 0
+    meaningfulTempFilePrefix = 50
+    concatenateJs = 1
+    concatenateCss = 1
+    compressJs = 1
+    compressCss = 1
+    disablePrefixComment = 1
+    inlineStyle2TempFile = 1
+    simulateStaticDocuments = 0
+    prefixLocalAnchors = all
+    absRefPrefix = auto
+    noScaleUp = 1
+    headerComment (
+        Hey welcome - Smart developers always view source! :-D
+        This TYPO3 CMS website was realized by Pointsharp GmbH
+        Visit our website on www.cryptshare.com or write us on support@cryptshare.express
+    )
+}
+
+
+page {
+    stdWrap.parseFunc.short {
+        CustomersNumber = 1.400
+        SatisfiedUsersNumberShort = 3.0
+        CustomersInCountriesNumber = 30
+    }
+}
+
+[siteLanguage("languageId") == 1]
+    page {
+        stdWrap.parseFunc.short {
+            SatisfiedUsersNumber = 3.000.000
+            SatisfiedUsersNumberShort = 3,0
+        }
+    }
+[global]
+
+@import 'EXT:cryptsharesaas/Configuration/TypoScript/Lib/*.typoscript'
+@import 'EXT:cryptsharesaas/Configuration/TypoScript/Extensions/*.typoscript'
+@import 'EXT:cryptsharesaas/Configuration/TypoScript/Page/*.typoscript'

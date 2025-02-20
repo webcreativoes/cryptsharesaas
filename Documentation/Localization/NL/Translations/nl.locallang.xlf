@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0">
+  <file date="2019-01-23T09:02:00Z" source-language="en" datatype="plaintext" product-name="checkout" target-language="nl">
+    <header/>
+    <body>
+
+      <trans-unit id="checkout_staff_member_hint_headline">
+        <source>Dear</source><seg-source><mrk mtype="seg" mid="1">Dear</mrk></seg-source><seg-source><mrk mtype="seg" mid="1">Dear</mrk></seg-source>
+        <target state="translated"><mrk mtype="seg" mid="1">Hallo</mrk></target>
+      </trans-unit>
+
+      <trans-unit id="checkout_staff_member_hint_p1">
+        <source>As an employee of our company, an account with up to 25 users is available to you free of charge for the purpose of demonstrating Cryptshare.express to potential or existing customers and business partners.</source><seg-source><mrk mtype="seg" mid="2">As an employee of our company, an account with up to 25 users is available to you free of charge for the purpose of demonstrating Cryptshare.express to potential or existing customers and business partners.</mrk></seg-source><seg-source><mrk mtype="seg" mid="2">As an employee of our company, an account with up to 25 users is available to you free of charge for the purpose of demonstrating Cryptshare.express to potential or existing customers and business partners.</mrk></seg-source>
+        <target state="translated"><mrk mtype="seg" mid="2">Als medewerker van ons bedrijf kunt u gratis gebruik maken van een account met maximaal 25 gebruikers om ons product Cryptshare.express aan potentiële of bestaande klanten en zakenpartners te demonstreren of te promoten.</mrk></target>
+      </trans-unit>
+
+      <trans-unit id="checkout_staff_member_hint_p2">
+        <source>Please note the following terms of use:</source><seg-source><mrk mtype="seg" mid="3">Please note the following terms of use:</mrk></seg-source><seg-source><mrk mtype="seg" mid="3">Please note the following terms of use:</mrk></seg-source>
+        <target state="translated"><mrk mtype="seg" mid="3">Neem de volgende gebruiksvoorwaarden in acht:</mrk></target>
+      </trans-unit>
+
+      <trans-unit id="checkout_staff_member_hint_p3_1">
+        <source>Only commercial/business users may be created, &lt;strong&gt;no consumers&lt;/strong&gt;.</source><seg-source><mrk mtype="seg" mid="4">Only commercial/business users may be created, &lt;strong&gt;no consumers&lt;/strong&gt;.</mrk></seg-source><seg-source><mrk mtype="seg" mid="4">Only commercial/business users may be created, &lt;strong&gt;no consumers&lt;/strong&gt;.</mrk></seg-source>
+        <target state="translated"><mrk mtype="seg" mid="4">Alleen commerciële/zakelijke gebruikers mogen worden aangemaakt, &lt;strong&gt;geen consumenten&lt;/strong&gt;.</mrk></target>
+      </trans-unit>
+      <trans-unit id="checkout_staff_member_hint_p3_2">
+        <source>Creating users must always be in the &lt;strong&gt;interest of befine Solutions AG, to its advantage, and on its cost.&lt;/strong&gt;.</source><seg-source><mrk mtype="seg" mid="5">Creating users must always be in the &lt;strong&gt;interest of befine Solutions AG, to its advantage, and on its cost.&lt;/strong&gt;.</mrk></seg-source><seg-source><mrk mtype="seg" mid="5">Creating users must always be in the &lt;strong&gt;interest of befine Solutions AG, to its advantage, and on its cost.&lt;/strong&gt;.</mrk></seg-source>
+        <target state="translated"><mrk mtype="seg" mid="5">Gebruikers aanmaken moet altijd in het belang, in het voordeel en &lt;strong&gt;op rekening van befine Solutions AG zijn&lt;/strong&gt;.</mrk></target>
+      </trans-unit>
+      <trans-unit id="checkout_staff_member_hint_p3_3">
+        <source>It is &lt;strong&gt;not permitted to use the account for private purposes&lt;/strong&gt;.</source><seg-source><mrk mtype="seg" mid="6">It is &lt;strong&gt;not permitted to use the account for private purposes&lt;/strong&gt;.</mrk></seg-source><seg-source><mrk mtype="seg" mid="6">It is &lt;strong&gt;not permitted to use the account for private purposes&lt;/strong&gt;.</mrk></seg-source>
+        <target state="translated"><mrk mtype="seg" mid="6">Het gebruik van het account voor &lt;strong&gt;privé-doeleinden is niet toegestaan&lt;/strong&gt;.</mrk></target>
+      </trans-unit>
+
+      <trans-unit id="checkout_staff_member_hint_p4">
+        <source>Early deletion of users (before the license period expires) is possible. This would have to be done by you deleting the respective user from within the policy settings.&lt;br /&gt;&lt;br /&gt;We wish you much success in using Cryptshare.express.&lt;br /&gt; befine Solutions AG</source><seg-source><mrk mtype="seg" mid="7">Early deletion of users (before the license period expires) is possible. This would have to be done by you deleting the respective user from within the policy settings.&lt;br /&gt;&lt;br /&gt;We wish you much success in using Cryptshare.express.&lt;br /&gt; befine Solutions AG</mrk></seg-source><seg-source><mrk mtype="seg" mid="7">Early deletion of users (before the license period expires) is possible. This would have to be done by you deleting the respective user from within the policy settings.&lt;br /&gt;&lt;br /&gt;We wish you much success in using Cryptshare.express.&lt;br /&gt; befine Solutions AG</mrk></seg-source>
+        <target state="needs-translation"><mrk mtype="seg" mid="7">Het vroegtijdige verwijderen van gebruikers (voordat de licentie verloopt) is alleen mogelijk op uw verzoek door ze te verwijderen uit de beleidsinstellingen.&lt;br /&gt;&lt;br /&gt;We wensen u veel succes bij het gebruik van Cryptshare.express.&lt;br /&gt; befine Solutions AG</mrk></target>
+      </trans-unit>
+
+      <trans-unit id="checkout_staff_member_hint_p5">
+        <source>By placing the order, I declare to abide by the terms of use as stated above.</source><seg-source><mrk mtype="seg" mid="8">By placing the order, I declare to abide by the terms of use as stated above.</mrk></seg-source><seg-source><mrk mtype="seg" mid="8">By placing the order, I declare to abide by the terms of use as stated above.</mrk></seg-source>
+        <target state="translated"><mrk mtype="seg" mid="8">Door het plaatsen van een bestelling verklaar ik mij akkoord met de bovenstaande gebruiksvoorwaarden.</mrk></target>
+      </trans-unit>
+
+    </body>
+  </file>
+</xliff>

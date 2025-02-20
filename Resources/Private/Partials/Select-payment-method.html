@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<head>
+	<title>Select payment method</title>
+</head>
+	<div class="row">
+		<div class="col-sm-3" id="selector-credit">
+			<div class="card-deck mb-3 text-center" >
+				<div class="card payment-method credit">
+					<div class="card-header">
+						<h4 class="PaymentMethodHeader">Credit Card</h4>
+					</div>
+					<div class="card-body">
+						<h1 class="PaymentMethod">
+							<img class="img-thumbnail" src="/fileadmin/primary/Public/Icons/Payment/payment_combined_foreign.png" alt="payment method">
+						</h1>
+					</div>
+					<div class="card-footer">
+						<label class="btn btn-default active">
+							<input type="radio" name="PaymentMethod" class="form-radio"/>
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-3" id="selector-debit">
+			<div class="card-deck mb-3 text-center" >
+				<div class="card payment-method debit">
+					<div class="card-header">
+						<h4 class="PaymentMethodHeader">Debit</h4>
+					</div>
+					<div class="card-body">
+						<h1 class="PaymentMethod">
+							<img class="img-thumbnail" src="/fileadmin/primary/Public/Icons/Payment/sepa-debit_international.png" alt="payment method">
+						</h1>
+					</div>
+					<div class="card-footer">
+						<label class="btn btn-default active">
+							<input type="radio" name="PaymentMethod" class="form-radio"/>
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col 6">
+			<div class="card payment-method credit-smart-text d-none">
+                <div class="card-header">
+                    3D-Secure Info
+                </div>
+				<div class="card-body">
+                        <f:format.html><f:translate extensionName="cryptsharesaas" key="payment_method_credit"/></f:format.html>
+				</div>
+			</div>
+
+			<div class="card payment-method debit-smart-text d-none">
+                <div class="card-header">
+                    IBAN Info
+                </div>
+				<div class="card-body">
+                        <f:format.html><f:translate extensionName="cryptsharesaas" key="payment_method_debit"/></f:format.html>
+				</div>
+			</div>
+		 </div>
+	</div>
+</html>

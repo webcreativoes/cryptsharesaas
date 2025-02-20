@@ -1,0 +1,321 @@
+base: 'https://cryptshare.express-11.ddev.site'
+#baseVariants:
+#  -
+#    base: 'https://www.cryptshare.express'
+#    condition: 'applicationContext == "Production"'
+#  -
+#    base: 'https://cryptshare.express-11.ddev.site'
+#    condition: 'applicationContext == "Development"'
+#  -
+#    base: 'https://cryptshare.express-11.ddev.site'
+#    condition: 'applicationContext == "Development/Local"'
+#  -
+#    base: 'https://cs-x-dev.equinoxe.de'
+#    condition: 'applicationContext == "Development/V10"'
+errorHandling:
+  -
+    errorCode: '404'
+    errorHandler: Fluid
+    errorFluidTemplate: 'EXT:cryptsharesaas/Resources/Private/Templates/404.html'
+    errorFluidTemplatesRootPath: ''
+    errorFluidLayoutsRootPath: ''
+    errorFluidPartialsRootPath: ''
+  -
+    errorCode: '403'
+    errorHandler: Fluid
+    errorFluidTemplate: 'EXT:cryptsharesaas/Resources/Private/Templates/403.html'
+    errorFluidTemplatesRootPath: ''
+    errorFluidLayoutsRootPath: ''
+    errorFluidPartialsRootPath: ''
+  -
+    errorCode: '500'
+    errorHandler: Fluid
+    errorFluidTemplate: 'EXT:cryptsharesaas/Resources/Private/Templates/500.html'
+    errorFluidTemplatesRootPath: ''
+    errorFluidLayoutsRootPath: ''
+    errorFluidPartialsRootPath: ''
+  -
+    errorCode: '503'
+    errorHandler: Fluid
+    errorFluidTemplate: 'EXT:cryptsharesaas/Resources/Private/Templates/503.html'
+    errorFluidTemplatesRootPath: ''
+    errorFluidLayoutsRootPath: ''
+    errorFluidPartialsRootPath: ''
+  -
+    errorCode: '401'
+    errorHandler: Fluid
+    errorFluidTemplate: 'EXT:cryptsharesaas/Resources/Private/Templates/401.html'
+    errorFluidTemplatesRootPath: ''
+    errorFluidLayoutsRootPath: ''
+    errorFluidPartialsRootPath: ''
+languages:
+  -
+    title: English
+    enabled: true
+    languageId: '0'
+    base: /en/
+    typo3Language: default
+    locale: en.UTF-8
+    iso-639-1: en
+    navigationTitle: English
+    hreflang: en
+    direction: ltr
+    flag: gb
+  -
+    title: Deutsch
+    enabled: true
+    languageId: '1'
+    base: /de/
+    typo3Language: de
+    locale: de_DE.UTF-8
+    iso-639-1: de
+    navigationTitle: Deutsch
+    hreflang: de-DE
+    direction: ltr
+    fallbackType: strict
+    flag: de
+  -
+    title: Dutch
+    enabled: true
+    languageId: '2'
+    base: /nl/
+    typo3Language: nl
+    locale: nl_NL.UTF-8
+    iso-639-1: nl
+    navigationTitle: Dutch
+    hreflang: nl-NL
+    direction: ltr
+    fallbackType: fallback
+    fallbacks: '0'
+    flag: nl
+  -
+    title: 'English US'
+    enabled: true
+    languageId: '3'
+    base: /en-us/
+    typo3Language: default
+    locale: en_US.UTF-8
+    iso-639-1: en
+    navigationTitle: Dutch
+    hreflang: en-US
+    direction: ltr
+    fallbackType: fallback
+    fallbacks: '0'
+    flag: us
+  -
+    title: French
+    enabled: true
+    languageId: '4'
+    base: /fr/
+    typo3Language: fr
+    locale: fr_FR.UTF-8
+    iso-639-1: fr
+    navigationTitle: French
+    hreflang: fr-FR
+    direction: ltr
+    fallbackType: fallback
+    fallbacks: '0'
+    flag: fr
+  -
+    title: 'English GB'
+    enabled: true
+    languageId: '5'
+    base: /en-gb/
+    typo3Language: default
+    locale: en_GB.UTF-8
+    iso-639-1: en-GB
+    navigationTitle: Dutch
+    hreflang: en-GB
+    direction: ltr
+    fallbackType: fallback
+    fallbacks: '0'
+    flag: gb
+  -
+    title: Spanish
+    enabled: true
+    languageId: '6'
+    base: /es/
+    typo3Language: es
+    locale: es_ES.UTF-8
+    iso-639-1: es
+    navigationTitle: Spanish
+    hreflang: es-ES
+    direction: ltr
+    fallbackType: fallback
+    fallbacks: '0'
+    flag: es
+  -
+    title: 'Deutsch CH'
+    enabled: true
+    languageId: '7'
+    base: /de-ch/
+    typo3Language: de
+    locale: de_CH.UTF-8
+    iso-639-1: de-CH
+    navigationTitle: Deutsch
+    hreflang: de-CH
+    direction: ltr
+    fallbackType: fallback
+    fallbacks: '1'
+    flag: ch
+  -
+    title: Italienisch
+    enabled: true
+    languageId: '8'
+    base: /it/
+    typo3Language: it
+    locale: it_IT.UTF-8
+    iso-639-1: it-IT
+    navigationTitle: Deutsch
+    hreflang: it-IT
+    direction: ltr
+    fallbackType: fallback
+    fallbacks: '0'
+    flag: it
+  -
+    title: Finnisch
+    enabled: true
+    languageId: '9'
+    base: /fi/
+    typo3Language: fi
+    locale: fi_FI.UTF-8
+    iso-639-1: fi
+    navigationTitle: Finnisch
+    hreflang: fi-FI
+    direction: ltr
+    fallbackType: fallback
+    fallbacks: '0'
+    flag: fi
+  -
+    title: 'Dutch BE'
+    enabled: true
+    languageId: '10'
+    base: /nl-be/
+    typo3Language: nl
+    locale: be_NL.UTF-8
+    iso-639-1: nl-be
+    navigationTitle: Belgisch
+    hreflang: nl-BE
+    direction: ltr
+    fallbackType: fallback
+    fallbacks: '2'
+    flag: be
+  -
+    title: Irisch
+    enabled: true
+    languageId: '11'
+    base: /ga/
+    typo3Language: ga
+    locale: ga_GA.UTF-8
+    iso-639-1: ie
+    navigationTitle: Irisch
+    hreflang: ga-GA
+    direction: ltr
+    fallbackType: fallback
+    fallbacks: '0'
+    flag: ie
+  -
+    title: Portugiesisch
+    enabled: true
+    languageId: '12'
+    base: /pt/
+    typo3Language: pt
+    locale: pt_PT.UTF-8
+    iso-639-1: pt
+    navigationTitle: Portugiesisch
+    hreflang: pt-PT
+    direction: ltr
+    fallbackType: fallback
+    fallbacks: '0'
+    flag: pt
+  -
+    title: 'Deutsch AT'
+    enabled: true
+    languageId: '13'
+    base: /de-at/
+    typo3Language: de
+    locale: de_AT.UTF-8
+    iso-639-1: de-at
+    navigationTitle: Deutsch
+    hreflang: de-AT
+    direction: ltr
+    fallbackType: fallback
+    fallbacks: '1'
+    flag: at
+  -
+    title: Griechisch
+    enabled: true
+    languageId: '14'
+    base: /el/
+    typo3Language: el
+    locale: el_EL.UTF-8
+    iso-639-1: el
+    navigationTitle: Griechisch
+    hreflang: el-EL
+    direction: ltr
+    fallbackType: fallback
+    fallbacks: '0'
+    flag: gr
+  -
+    title: Luxemburgisch
+    enabled: true
+    languageId: '15'
+    base: /lb/
+    typo3Language: de
+    locale: lb_LB.UTF-8
+    iso-639-1: lb
+    navigationTitle: Luxemburgisch
+    hreflang: lb
+    direction: ltr
+    fallbackType: fallback
+    fallbacks: '1'
+    flag: lb
+  -
+    title: Litauisch
+    enabled: true
+    base: /lt/
+    typo3Language: default
+    locale: lt_LT.UTF-8
+    iso-639-1: lt
+    navigationTitle: Lietuvis
+    hreflang: lt-LT
+    direction: ltr
+    fallbackType: fallback
+    fallbacks: '0'
+    flag: lt
+    languageId: '16'
+rootPageId: 1
+routeEnhancers:
+  PageTypeSuffix:
+    type: PageType
+    map:
+      sitemap.xml: 1533906435
+  ForgotPassword:
+    type: Plugin
+    limitToPages: [ 1425 ]
+    namespace: 'tx_felogin_pi1'
+    routePath: '/forgot/password/{forgot}'
+    defaults:
+      forgot: '1'
+    requirements:
+      forgot: '1'
+  ResetPassword:
+    type: Plugin
+    limitToPages: [ 1425 ]
+    namespace: 'tx_felogin_pi1'
+    routePath: '/reset/password/{user}/{forgothash}'
+    requirements:
+      forgothash: '\d+\|[0-9a-fA-F]{32}'
+      user: '[0-9]{1,3}'
+  TrialForm:
+    type: Simple
+    limitToPages: [1396]
+    routePath: '/trial/{trial_state}'
+    defaults:
+      tag: ''
+    requirements:
+      category_id: '[0-9]{1,3}'
+      tag: '[a-zA-Z0-9].*'
+    _arguments:
+      trial_state: 'trial'
+routes: {  }

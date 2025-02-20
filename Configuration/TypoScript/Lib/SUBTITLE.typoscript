@@ -1,0 +1,26 @@
+[getTSFE().id == 1403]
+    lib.SUBTITLE = COA_INT
+    lib.SUBTITLE {
+        10 = TEXT
+        10 {
+            insertData = 1
+            value = {TSFE:fe_user|user|first_name}
+            wrap = <h1 class="subtitle"><span data-localize="hello">Hello</span>&nbsp;|
+        }
+        20 = TEXT
+        20.value = &nbsp;
+        30 = TEXT
+        30 {
+            insertData = 1
+            value = {TSFE:fe_user|user|last_name}
+            wrap = |</h1>
+        }
+    }
+[else]
+    lib.SUBTITLE = TEXT
+    lib.SUBTITLE {
+        value = {page:subtitle//page:title}
+        insertData = 1
+        wrap = <h1 class="subtitle d-none d-sm-block">|</h1>
+    }
+[global]

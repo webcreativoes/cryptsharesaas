@@ -1,0 +1,18 @@
+
+<f:layout name="None" />
+
+<f:section name="main">
+	<f:spaceless>
+		<f:if condition="{field.size}">
+			<f:then>
+				<{field.size} class="title text-{field.align}">{field.header}</{field.size}>
+			</f:then>
+			<f:else>
+				<h2 class="title text-{field.align}">{field.header}</h2>
+			</f:else>
+		</f:if>
+		<f:if condition="{field.slogan}">
+			<p class="tagline"><f:format.nl2br>{field.slogan}</f:format.nl2br></p>
+		</f:if>
+	</f:spaceless>
+</f:section>

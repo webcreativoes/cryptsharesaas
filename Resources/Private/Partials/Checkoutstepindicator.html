@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<head>
+	<title>Checkout step indicator</title>
+</head>
+	<f:section name="loggedin">
+		<f:security.ifHasRole role="14">
+			<ol class="progress-bar">
+				<li class="progress-bar__steps current">
+						<span class="progress-bar__steps--text"><i class="fa fa-check" aria-hidden="true" style="color: #00cc00;-webkit-text-stroke-width: 0.5px; -webkit-text-stroke-color: white;"></i><f:format.html><f:translate extensionName="cryptsharesaas" key="checkout_step_loggedin" /></f:format.html></span>
+				</li>
+				<li class="progress-bar__steps current">
+					<f:link.typolink parameter="1427">
+						<span class="progress-bar__steps--text"><div class="blink_me"><i class="fa fa-plus" aria-hidden="true"></i><br><f:format.html><f:translate extensionName="cryptsharesaas" key="checkout_step_2" /></f:format.html></div></span>
+					</f:link.typolink>
+				</li>
+				<li class="progress-bar__steps not-current">
+					<f:link.typolink parameter="1416">
+						<span class="progress-bar__steps--text"><i class="fa fa-rocket" aria-hidden="true"></i><br><f:format.html><f:translate extensionName="cryptsharesaas" key="checkout_step_3" /></f:format.html></span>
+					</f:link.typolink>
+				</li>
+			</ol>
+		</f:security.ifHasRole>
+	</f:section>
+	<f:section name="register">
+		<ol class="progress-bar">
+			<li class="progress-bar__steps current">
+				<f:link.typolink parameter="1396">
+					<span class="progress-bar__steps--text"><div class="blink_me"><i class="fa fa-user" aria-hidden="true"></i><br><f:format.html><f:translate extensionName="cryptsharesaas" key="checkout_step_1" /></div></f:format.html></span>
+				</f:link.typolink>
+			</li>
+			<li class="progress-bar__steps not-current">
+				<f:link.typolink parameter="1427">
+					<span class="progress-bar__steps--text"><i class="fa fa-plus" aria-hidden="true"></i><br><f:format.html><f:translate extensionName="cryptsharesaas" key="checkout_step_2" /></f:format.html></span>
+				</f:link.typolink>
+			</li>
+			<li class="progress-bar__steps not-current">
+				<f:link.typolink parameter="1416">
+					<span class="progress-bar__steps--text"><i class="fa fa-rocket" aria-hidden="true"></i><br><f:format.html><f:translate extensionName="cryptsharesaas" key="checkout_step_3" /></f:format.html></span>
+				</f:link.typolink>
+			</li>
+		</ol>
+	</f:section>
+</html>

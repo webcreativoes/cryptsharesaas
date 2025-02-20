@@ -1,0 +1,14 @@
+services:
+
+  BefineSolutionsAG\Cryptsharesaas\Command\MaintainanceContractDataCommand:
+    tags:
+      - name: 'console.command'
+        command: 'cryptsharesaas:maintainancecontractdata'
+        description: 'An example description for a command'
+        # not required, defaults to false
+        hidden: false
+      - name: 'console.command'
+        command: 'cryptsharesaas:maintainancerestlog'
+        description: 'An example description for a command'
+        # not required, defaults to false
+        hidden: false

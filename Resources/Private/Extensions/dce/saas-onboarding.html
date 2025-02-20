@@ -1,0 +1,126 @@
+
+
+<f:spaceless>
+    <div id="accountowner" data-email-accountowner="{TSFE.fe_user.user.email}"></div>
+    <f:if condition="{field.section}=='section_1_backup'">
+        <f:then>
+            <f:if condition="{f:cObject(typoscriptObjectPath: 'lib.GPVAR', data: 'contractId')}'">
+                <f:then>
+                    <p class="d-none" id="SuccessMessage"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_1_p1_1" /> <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_1_p1_2" /></p>
+                </f:then>
+            </f:if>
+            <div class="new-account-self d-none" data-email-accountowner="{TSFE.fe_user.user.email}">
+                <h1>Du hast Dir einen eigenen E-Mail-Benutzer angelegt und willst bestimmt direkt Deinen ersten Transfer durchführen!</h1>
+            </div>
+        </f:then>
+    </f:if>
+    <f:if condition="{field.section}=='section_2'">
+        <f:then>
+            <f:if condition="{f:cObject(typoscriptObjectPath: 'lib.GPVAR', data: 'contractId')}'">
+                <f:then>
+                    <div class="new-account-employee">
+                        <h2 class="title foreign-email"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_2_headline1" /></h2>
+                        <p class="foreign-email text-center"><f:format.html parseFuncTSPath=""><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_1_p1_1" /> <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_1_p1_2" /></f:format.html></p>
+                        <h2 class="title foreign-email"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_2_headline2" /></h2>
+                        <h2 class="title own-email d-none"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_2_headline1" /></h2>
+                        <p class="own-email text-center d-none"><f:format.html parseFuncTSPath=""><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_1_p1_1" /> <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_1_p1_2" /></f:format.html></p>
+                        <div class="row">
+                            <div class="card-deck mb-3 w-100 text-center">
+                                <div class="card own-email mb-6 shadow-sm d-none">
+                                    <div class="card-header">
+                                        <h4 class="my-0"><f:format.html parseFuncTSPath=""><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_headline_webapplication" /></f:format.html></h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="https://webapp.cryptshare.express" target="_blank" rel="noopener noreferrer" title="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_p_webapplication_open')}">
+                                            <img src="/fileadmin/primary/Public/Downloads/Browser-Integrations/Web-Application.jpg" class="img-fluid" alt="Web Application">
+                                        </a>
+                                    </div>
+                                    <div class="card-footer">
+                                        <f:link.typolink parameter="https://webapp.cryptshare.express/" target="_blank" class=""><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_p_webapplication_open" /></f:link.typolink>
+                                    </div>
+                                </div>
+                                <div class="card mb-6 foreign-email shadow-sm">
+                                    <div class="card-header">
+                                        <h4 class="my-0"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_2_headline_order" /></h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <f:link.typolink parameter="1427" class=""><i class="fa fa-users fa-8x" aria-hidden="true"></i></f:link.typolink>
+                                    </div>
+                                    <div class="card-footer">
+                                        <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_2_p_order" />
+                                    </div>
+                                </div>
+                                <div class="card foreign-email mb-6 shadow-sm">
+                                    <div class="card-header">
+                                        <h4 class="my-0"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_2_headline_download" /></h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <f:link.typolink parameter="#downloads"class=""><i class="fa fa-download fa-8x" aria-hidden="true"></i></f:link.typolink>
+                                    </div>
+                                    <div class="card-footer">
+                                        <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_2_p_download" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </f:then>
+            </f:if>
+        </f:then>
+    </f:if>
+    <f:if condition="{field.section}=='section_4'">
+        <f:then>
+            <h2 class="title text-"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_headline1" /></h2>
+            <div class="row">
+                <div class="card-deck mb-3 w-100 text-center">
+                    <div class="card mb-6 shadow-sm">
+                        <div class="card-header">
+                            <h4 class="my-0"><f:format.html parseFuncTSPath=""><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_headline_outlook" /></f:format.html></h4>
+                        </div>
+                        <div class="card-body">
+                            <f:link.typolink parameter="t3://file?uid=41870" class=""><img src="/fileadmin/primary/Public/Downloads/microsoftoutlook_blue.svg" class="svgicon" alt="Microsoft Outlook"></f:link.typolink>
+                        </div>
+                        <div class="card-footer d-none">
+                            <f:link.typolink parameter="t3://file?uid=41871" class=""><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_p_outlook_download" /></f:link.typolink>
+                            <span class="d-none"><br><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_p_outlook" /></span>
+                        </div>
+                        <div class="card-footer">
+                            <f:link.typolink parameter="t3://file?uid=41871" class=""><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_p_outlook_download" /></f:link.typolink>
+                            <span class="d-none"><br><f:link.typolink parameter="t3://file?uid=41871" class=""><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_p_outlook_manual" /></f:link.typolink></span>
+                        </div>
+                    </div>
+                    <div class="card mb-6 shadow-sm">
+                        <div class="card-header">
+                            <h4 class="my-0"><f:format.html parseFuncTSPath=""><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_headline_chrome" /></f:format.html></h4>
+                        </div>
+                        <div class="card-body">
+                            <f:link.typolink parameter="https://chrome.google.com/webstore/detail/cryptshareexpress/njckdeldgoicjfeacnhmcddkikffmkdi" target="_blank" class=""><i class="fa fa-chrome fa-8x" aria-hidden="true"></i></f:link.typolink>
+                        </div>
+                        <div class="card-footer">
+                            <f:link.typolink parameter="https://chrome.google.com/webstore/detail/cryptshareexpress/njckdeldgoicjfeacnhmcddkikffmkdi" target="_blank" class=""><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_p_chrome_download" /></f:link.typolink>
+                            <span class="d-none"><br><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_p_chrome" /></span>
+                        </div>
+                        <div class="card-footer d-none">
+                            <f:link.typolink parameter="t3://file?uid=41871" class=""><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_p_chrome_manual" /></f:link.typolink>
+                        </div>
+                    </div>
+                    <div class="card mb-6 shadow-sm">
+                        <div class="card-header">
+                            <h4 class="my-0"><f:format.html parseFuncTSPath=""><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_headline_firefox" /></f:format.html></h4>
+                        </div>
+                        <div class="card-body">
+                            <f:link.typolink parameter="https://addons.mozilla.org/de/firefox/addon/cryptshare-express/" target="_blank" class=""><i class="fa fa-firefox fa-8x" aria-hidden="true"></i></f:link.typolink>
+                        </div>
+                        <div class="card-footer">
+                            <f:link.typolink parameter="https://addons.mozilla.org/de/firefox/addon/cryptshare-express/" class=""><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_p_firefox_download" /></f:link.typolink>
+                            <span class="d-none"><br><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_p_firefox" /></span>
+                        </div>
+                        <div class="card-footer d-none">
+                            <f:link.typolink parameter="https://addons.mozilla.org/de/firefox/addon/cryptshare-express/" class=""><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:use_section_4_p_firefox_manual" /></f:link.typolink>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </f:then>
+    </f:if>
+</f:spaceless>

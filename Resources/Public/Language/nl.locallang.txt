@@ -1,0 +1,1168 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="nl" datatype="plaintext" date="2021-10-01T13:37:00Z" product-name="checkout">
+        <header/>
+        <body>
+            <trans-unit id="loading">
+                <source>Loading...</source>
+                <target>Aan het laden...</target>
+            </trans-unit>
+            <trans-unit id="back">
+                <source>Back</source>
+                <target>Terug</target>
+            </trans-unit>
+            <trans-unit id="overview_addbutton_clickhere">
+                <source>Click here to</source>
+                <target>Klik hier en</target>
+            </trans-unit>
+            <trans-unit id="overview_addbutton_addnewaccount">
+                <source>Add a new email user</source>
+                <target>E-mail gebruiker toevoegen</target>
+            </trans-unit>
+            <trans-unit id="overview_addbutton_of">
+                <source>of</source>
+                <target>van</target>
+            </trans-unit>
+            <trans-unit id="overview_addbutton_used">
+                <source>possible accounts used</source>
+                <target>mogelijke accounts in gebruik</target>
+            </trans-unit>
+            <trans-unit id="overview_upsell">
+                <source>Curious?</source>
+                <target>Nieuwsgierig geworden?</target>
+            </trans-unit>
+            <trans-unit id="overview_upsell_clickhere">
+                <source>There is a better way to use Cryptshare</source>
+                <target>Er is een betere manier om Cryptshare te gebruiken</target>
+            </trans-unit>
+            <trans-unit id="overview_upsell_learnmore">
+                <source>Talk to one of our experts</source>
+                <target>Spreek met een van onze specialisten</target>
+            </trans-unit>
+            <trans-unit id="usertable_header">
+                <source><![CDATA[Your <span id="hint-used-email-users">Loading...</span> email user(s)]]></source>
+                <target><![CDATA[Uw <span id="hint-used-email-users">Loading...</span> E-Mail gebruikers]]></target>
+            </trans-unit>
+            <trans-unit id="usertable_name">
+                <source>Name</source>
+                <target>Naam</target>
+            </trans-unit>
+            <trans-unit id="usertable_email">
+                <source>Email address</source>
+                <target>E-mailadres</target>
+            </trans-unit>
+            <trans-unit id="usertable_status">
+                <source>Status</source>
+                <target>Status</target>
+            </trans-unit>
+            <trans-unit id="usertable_actions">
+                <source>Actions</source>
+                <target>Acties</target>
+            </trans-unit>
+            <trans-unit id="checkout_coupon_headline">
+                <source>Voucher / Discount</source>
+                <target>Voucher / Korting</target>
+            </trans-unit>
+            <trans-unit id="checkout_coupon_enter">
+                <source>Enter code here</source>
+                <target>Code hier invoeren</target>
+            </trans-unit>
+            <trans-unit id="checkout_coupon_apply">
+                <source>Apply</source>
+                <target>Inwisselen</target>
+            </trans-unit>
+            <trans-unit id="checkout_step_1">
+                <source><![CDATA[Create<br>Business Account]]></source>
+                <target><![CDATA[Zakelijke Account<br>aanmaken]]></target>
+            </trans-unit>
+            <trans-unit id="checkout_step_2">
+                <source><![CDATA[Add<br>email user]]></source>
+                <target><![CDATA[E-Mail<br>gebruiker toevoegen]]></target>
+            </trans-unit>
+            <trans-unit id="checkout_step_3">
+                <source><![CDATA[Use<br>Cryptshare]]></source>
+                <target><![CDATA[Cryptshare<br>gebruiken]]></target>
+            </trans-unit>
+            <trans-unit id="checkout_step_loggedin">
+                <source><![CDATA[Business Account<br>created]]></source>
+                <target><![CDATA[Zakelijk account<br>aangemaakt]]></target>
+            </trans-unit>
+            <trans-unit id="checkout_order_now">
+                <source>Order now</source>
+                <target>Bestellen en betalen</target>
+            </trans-unit>
+            <trans-unit id="checkout_pay_now">
+                <source>Send payment data now</source>
+                <target>Stuur nu betalingsgegevens</target>
+            </trans-unit>
+            <trans-unit id="checkout_pay_next">
+                <source>You can enter payment data in the next step.</source>
+                <target>De betalingsgegevens worden in de volgende stap ingevoerd.</target>
+            </trans-unit>
+            <trans-unit id="checkout_edit_data">
+                <source>Edit data</source>
+                <target>Gegevens bewerken</target>
+            </trans-unit>
+            <trans-unit id="checkout_billing_data">
+                <source>Billing data</source>
+                <target>Factuur gegevens</target>
+            </trans-unit>
+            <trans-unit id="checkout_first_name">
+                <source>First name</source>
+                <target>Voornaam</target>
+            </trans-unit>
+            <trans-unit id="checkout_last_name">
+                <source>Last name</source>
+                <target>Achternaam</target>
+            </trans-unit>
+            <trans-unit id="checkout_email">
+                <source>Email address</source>
+                <target>E-mail</target>
+            </trans-unit>
+            <trans-unit id="checkout_company">
+                <source>Company</source>
+                <target>Bedrijf</target>
+            </trans-unit>
+            <trans-unit id="checkout_address">
+                <source>Address</source>
+                <target>Straat</target>
+            </trans-unit>
+            <trans-unit id="checkout_house_number">
+                <source>House number</source>
+                <target>Huisnummer</target>
+            </trans-unit>
+            <trans-unit id="checkout_zip">
+                <source>Postal code</source>
+                <target>Postcode</target>
+            </trans-unit>
+            <trans-unit id="checkout_city">
+                <source>City</source>
+                <target>Plaats</target>
+            </trans-unit>
+            <trans-unit id="checkout_country">
+                <source>Country</source>
+                <target>Land</target>
+            </trans-unit>
+            <trans-unit id="checkout_country_deu">
+                <source>Germany</source>
+                <target>Duitsland</target>
+            </trans-unit>
+            <trans-unit id="checkout_country_gbp">
+                <source>United Kingdom</source>
+                <target>Verenigd Koninkrijk</target>
+            </trans-unit>
+            <trans-unit id="checkout_country_nld">
+                <source>Netherlands</source>
+                <target>Nederland</target>
+            </trans-unit>
+            <trans-unit id="checkout_country_aut">
+                <source>Austria</source>
+                <target>Oostenrijk</target>
+            </trans-unit>
+            <trans-unit id="checkout_vat">
+                <source>VAT</source>
+                <target>Btw-nr.</target>
+            </trans-unit>
+            <trans-unit id="checkout_mandatory">
+                <source>* Mandatory fields</source>
+                <target>* Verplichte velden</target>
+            </trans-unit>
+            <trans-unit id="checkout_read_gtac">
+                <source>Click here to read the General Terms and Conditions.</source>
+                <target>Klik hier om de algemene voorwaarden te lezen.</target>
+            </trans-unit>
+            <trans-unit id="checkout_accept_gtac">
+                <source>I have read the General Terms and Conditions, understood and accept them.</source>
+                <target>Ik heb de algemene voorwaarden gelezen en begrepen en accepteer deze.</target>
+            </trans-unit>
+            <trans-unit id="checkout_hint_collective_mailboxes">
+                <source><![CDATA[<p><strong id="cs_email_collective"></strong> is a collective email address:</p> <ul> <li>Cryptshare.express email users are coupled to individual email addresses.</li> <li>It does not correspond to the GDPR to use collective addresses for the handling of personal data.</li> <li>If maximum two persons use the collective address, a special regulation can be put into force.</li> </ul>]]></source>
+                <target><![CDATA[<p><strong id="cs_email_collective"></strong> is a collective e-mail address:</p> <ul> <li>Cryptshare.express email users are coupled to individual e-mail addresses.</li> <li>It does not correspond to the GDPR to use collective addresses for the handling of personal data.</li> <li>If maximum two persons use the collective address, a special regulation can be put into force.</li> </ul>]]></target>
+            </trans-unit>
+            <trans-unit id="checkout_accept_collective_mailboxes">
+                <source><![CDATA[I hereby confirm that this email address is only used by a maximum of two persons in my company.]]></source>
+                <target><![CDATA[I hereby confirm that this e-mail address is only used by a maximum of two persons in my company.]]></target>
+            </trans-unit>
+            <trans-unit id="checkout_read_privacy">
+                <source>Click here to read the Privacy Policy.</source>
+                <target>Klik hier om het privacybeleid te lezen.</target>
+            </trans-unit>
+            <trans-unit id="checkout_accept_privacy">
+                <source>I have read the Privacy Policy, understood and accept them.</source>
+                <target>Ik heb het privacybeleid gelezen en begrepen en accepteer deze.</target>
+            </trans-unit>
+            <trans-unit id="checkout_read_tou">
+                <source>Click here to read the Terms of Use.</source>
+                <target>Klik hier om de gebruiksvoorwaarde te lezen.</target>
+            </trans-unit>
+            <trans-unit id="checkout_accept_tou">
+                <source>I have read the Terms of Use, understood and accept them.</source>
+                <target>Ik heb de gebruiksvoorwaarden gelezen en begrepen en accepteed deze.</target>
+            </trans-unit>
+            <trans-unit id="checkout_userdata_unchangeable">
+                <source>Please note: These information can not be changed afterwards.</source>
+                <target>Let op: deze informatie kan achteraf niet meer worden gewijzigd.</target>
+            </trans-unit>
+            <trans-unit id="checkout_userdata_enteruserdata">
+                <source>Data of the new email users</source>
+                <target>Gegevens van de nieuwe gebruikers</target>
+            </trans-unit>
+            <trans-unit id="checkout_userdata_hintandlimit">
+				<source><![CDATA[<strong><span id="leftemails">Loading...</span></strong>&nbsp;<span id="additionaluserhint">additional</span> email users possible.]]></source>
+                <target><![CDATA[<strong><span id="leftemails">Laden...</span></strong>&nbsp;<span id="additionaluserhint">meer</span> e-mail gebruikers is mogelijk.]]></target>
+            </trans-unit>
+            <trans-unit id="checkout_userdata_save">
+                <source>Save &amp; activate user</source>
+                <target>Opslaan en gebruiker activeren</target>
+            </trans-unit>
+            <trans-unit id="checkout_sendwelcomeemail">
+                <source>Send welcome email to this user</source>
+                <target>Stuur welkomsmail naar deze gebruiker</target>
+            </trans-unit>
+            <trans-unit id="checkout_welcomeemailpreview">
+                <source>Click here to see what the recipient will receive</source>
+                <target>Klik hier om te zien wat er aan de ontvanger zal worden opgestuurd</target>
+            </trans-unit>
+            <trans-unit id="checkout_currentstatus">
+                <source>Current status</source>
+                <target>Actuele status</target>
+            </trans-unit>
+            <trans-unit id="checkout_business_proof_missing_headline">
+                <source>Business proof missing</source>
+                <target>Bewijs van zakelijk gebruik vereist</target>
+            </trans-unit>
+            <trans-unit id="checkout_business_proof_missing_p1">
+                <source>Cryptshare.express is exclusively for business customers.</source>
+                <target>Cryptshare.express is uitsluitend bedoeld voor zakelijk gebruik.</target>
+            </trans-unit>
+            <trans-unit id="checkout_business_proof_missing_p2">
+                <source>Since you did not enter your VAT ID number, we need a proof of your business.</source>
+                <target>Aangezien u geen btw-nummer heeft ingevoerd, hebben wij bewijs nodig waaruit blijkt dat een bedrijf bent.</target>
+            </trans-unit>
+            <trans-unit id="checkout_business_proof_missing_p3">
+                <source>If available, please either enter your sales tax identification number under "Accounts" or send us an excerpt from your commercial register statement, your chamber's membership certificate or a comparable proof of business via https://webapp.cryptshare.express to info@cryptshare.express</source>
+                <target>Als alternatief kunt u ons ook een bewijs van inschrijving KvK sturen via https://nl.cryptshare.express t.a.v. info@cryptshare.express.</target>
+            </trans-unit>
+            <trans-unit id="checkout_business_proof_missing_p4">
+                <source>Please understand that we have to deactivate your account on</source>
+                <target>Hopelijk begrijpt dat wij uw account zullen deactiveren per</target>
+            </trans-unit>
+            <trans-unit id="checkout_business_proof_missing_p5">
+                <source>, if we have no proof of business.</source>
+                <target>, als wij geen bewijs hebben dat u een zakelijk gebruiker bent.</target>
+            </trans-unit>
+            <trans-unit id="checkout_enter_paymentdetails">
+                <source>Enter your payment details now</source>
+                <target>Selecteer uw betalingsvoorkeur</target>
+            </trans-unit>
+            <trans-unit id="checkout_final_steps_headline">
+                <source>Final steps of order process...</source>
+                <target>De laatste stappen van het orderproces...</target>
+            </trans-unit>
+            <trans-unit id="checkout_final_steps_payment">
+                <source>Payment successfully finished</source>
+                <target>Betaling succesvol afgerond</target>
+            </trans-unit>
+            <trans-unit id="checkout_final_steps_userdata">
+                <source>Writing user data in contract</source>
+                <target>Voer accountgegevens in het contract in</target>
+            </trans-unit>
+            <trans-unit id="checkout_final_steps_createoncsserver">
+                <source>User successfully created on webapp.cryptshare.express</source>
+                <target>Gebruiker is aangemaakt op nl.cryptshare.express</target>
+            </trans-unit>
+            <trans-unit id="checkout_summary_headline">
+                <source>Summary</source>
+                <target>Samenvatting</target>
+            </trans-unit>
+            <trans-unit id="checkout_summary_planvariant">
+                <source>Selected plan</source>
+                <target>Gekozen optie</target>
+            </trans-unit>
+            <trans-unit id="checkout_summary_termofcontract">
+                <source>Term of contract</source>
+                <target>Duur van het contract</target>
+            </trans-unit>
+            <trans-unit id="checkout_summary_cancellationperiod">
+                <source>Cancellation period</source>
+                <target>Opzegtermijn</target>
+            </trans-unit>
+            <trans-unit id="checkout_summary_price_netto">
+                <source>Price</source>
+                <target>Prijs</target>
+            </trans-unit>
+            <trans-unit id="checkout_summary_subtotal_netto">
+                <source>Subtotal</source>
+                <target>Subtotaal</target>
+            </trans-unit>
+            <trans-unit id="checkout_summary_total_netto">
+                <source>Total (netto)</source>
+                <target>Totaal (netto)</target>
+            </trans-unit>
+            <trans-unit id="checkout_summary_discount">
+                <source>Discount</source>
+                <target>Korting</target>
+            </trans-unit>
+            <trans-unit id="checkout_summary_vat">
+                <source>Plus VAT</source>
+                <target>plus</target>
+            </trans-unit>
+            <trans-unit id="checkout_summary_vat2">
+                <source>amount</source>
+                <target>btw-bedrag</target>
+            </trans-unit>
+            <trans-unit id="checkout_summary_total">
+                <source>Invoice amount</source>
+                <target>Gefactureerd bedrag</target>
+            </trans-unit>
+            <trans-unit id="checkout_exclvat">
+                <source>excl. VAT</source>
+                <target>excl. BTW</target>
+            </trans-unit>
+            <trans-unit id="signup_headline">
+                <source>Just a few seconds...</source>
+                <target>Nog even...</target>
+            </trans-unit>
+            <trans-unit id="signup_p1">
+                <source>We are currently performing the final step of your sign-up process.</source>
+                <target>Wij voeren nu de laatste stap van uw registratie uit.</target>
+            </trans-unit>
+            <trans-unit id="signup_p2">
+                <source>You should be redirected very shortly.</source>
+                <target>U wordt binnen enkele seconden doorverwezen.</target>
+            </trans-unit>
+            <trans-unit id="update_headline">
+                <source>Just a few seconds...</source>
+                <target>Nog even...</target>
+            </trans-unit>
+            <trans-unit id="update_p1">
+                <source>We are currently updating your data.</source>
+                <target>Momenteel werken wij uw gegevens bij.</target>
+            </trans-unit>
+            <trans-unit id="update_p2">
+                <source>You should be redirected very shortly.</source>
+                <target>U wordt binnen enkele seconden doorvewezen.</target>
+            </trans-unit>
+            <trans-unit id="signin_headline">
+                <source>Just a few seconds...</source>
+                <target>Nog even...</target>
+            </trans-unit>
+            <trans-unit id="signin_p1">
+                <source>Authentication in progress...</source>
+                <target>Authenticatie loopt...</target>
+            </trans-unit>
+            <trans-unit id="signin_p2">
+                <source>You should be redirected very shortly.</source>
+                <target>U wordt binnen enkele seconden doorverwezen.</target>
+            </trans-unit>
+            <trans-unit id="use_section_1_headline1">
+                <source>That's it</source>
+                <target>Dat was het.</target>
+            </trans-unit>
+            <trans-unit id="use_section_1_p1_1">
+                <source>The new email address</source>
+                <target>Het nieuwe e-mailadres</target>
+            </trans-unit>
+            <trans-unit id="use_section_1_p1_2">
+                <source><![CDATA[can now<br>be used on <a href="https://webapp.cryptshare.express" target="_blank">webapp.cryptshare.express</a>!]]></source>
+                <target><![CDATA[kan nu<br>gebruikt worden op <a href="https://nl.cryptshare.express" target="_blank">nl.cryptshare.express</a>!]]></target>
+            </trans-unit>
+            <trans-unit id="use_section_1_headline2">
+                <source>Is that your email address?</source>
+                <target>Is dat uw e-mailadres?</target>
+            </trans-unit>
+            <trans-unit id="use_section_1_p2_1">
+                <source>We recommend to visit</source>
+                <target>Wij adviseren u te bezoeken</target>
+            </trans-unit>
+            <trans-unit id="use_section_1_p2_2">
+                <source>to authenticate your browser now.</source>
+                <target>om daar uw browser te authenticeren.</target>
+            </trans-unit>
+            <trans-unit id="home_splashscreen_headline">
+                <source>start your secure communication now!</source>
+                <target>Start nu met uw beveiligde communicatie!</target>
+            </trans-unit>
+            <trans-unit id="home_splashscreen_button">
+                <source>Start</source>
+                <target>Starten</target>
+            </trans-unit>
+            <trans-unit id="home_splashscreen_button_de">
+                <source>For german customers</source>
+                <target>Voor Duitse klanten</target>
+            </trans-unit>
+            <trans-unit id="home_splashscreen_button_nl">
+                <source>For dutch customers</source>
+                <target>Voor Nederlandse klanten</target>
+            </trans-unit>
+            <trans-unit id="home_splashscreen_webapplicationtitle">
+                <source>Click to open the Cryptshare Web App now</source>
+                <target>Klik hier om de Cryptshare webapplicatie te openen</target>
+            </trans-unit>
+            <trans-unit id="home_splashscreen_webapplicationtitle_nl">
+                <source>Click to open the Cryptshare Web App for the Netherlands now</source>
+                <target>Klik hier om de Cryptshare webapplicatie voor Nederland te openen</target>
+            </trans-unit>
+            <trans-unit id="home_splashscreen_redirect_1">
+                <source>Forward me automatically to the</source>
+                <target>Stuur mij in het vervolg automatisch naar de</target>
+            </trans-unit>
+            <trans-unit id="home_splashscreen_redirect_2">
+                <source>web application in the future</source>
+                <target>webapplicatie door.</target>
+            </trans-unit>
+            <trans-unit id="home_splashscreen_redirecttitle">
+                <source>Click here if you want to skip this page for 30 days</source>
+                <target>Klik hier als u deze pagina de volgende 30 dagen wilt overslaan</target>
+            </trans-unit>
+            <trans-unit id="home_splashscreen_link_learnmore">
+                <source>Learn more</source>
+                <target>Meer informatie</target>
+            </trans-unit>
+            <trans-unit id="home_splashscreen_link_signin">
+                <source>Sign in</source>
+                <target>Aanmelden</target>
+            </trans-unit>
+            <trans-unit id="home_splashscreen_link_signup">
+                <source>Sign up</source>
+                <target>Inschrijven</target>
+            </trans-unit>
+            <trans-unit id="home_splashscreen_link_signup_trial">
+                <source>7-days trial</source>
+                <target>7 dagen op proef</target>
+            </trans-unit>
+            <trans-unit id="component_trial">
+                <source>after the end of the 7-day trial period</source>
+                <target>na het einde van de proefperiode van 7 dagen</target>
+            </trans-unit>
+            <trans-unit id="summary_trial_hint">
+				<source><![CDATA[To avoid being charged for a full subscription, cancel by <span id="trial-cancel-date">Loading...</span>. You can cancel your subscription at any time via user administration.]]></source>
+                <target><![CDATA[Annuleer vóór <span id="trial-cancel-date">laden...</span>, zodat u geen kosten hoeft te betalen. U kunt uw abonnement op elk moment zelf opzeggen via uw gebruikersadministratie.]]></target>
+            </trans-unit>
+            <trans-unit id="summary_trial_until">
+                <source><![CDATA[<span class="pull-left">Due now:</span>]]></source>
+                <target><![CDATA[<span class="pull-left">Nog te betalen bedrag:</span>]]></target>
+            </trans-unit>
+            <trans-unit id="summary_abo_start">
+                <source><![CDATA[Due on <span id="abo-start">Loading...</span>:]]></source>
+                <target><![CDATA[Bedrag te betalen op <span id="abo-start">laden...</span>:]]></target>
+            </trans-unit>
+            <trans-unit id="checkout_button_endtrial">
+                <source><![CDATA[Add to order<span>Skip trial period</span>]]></source>
+                <target><![CDATA[Toevoegen aan bestelling<span>Proefperiode overslaan</span>]]></target>
+            </trans-unit>
+            <trans-unit id="checkout_reached_triallimit">
+                <source><![CDATA[The free trial subscription is limited to a single email user. Add more email users to skip this.]]></source>
+                <target><![CDATA[Het gratis proefabonnement is beperkt tot één e-mailgebruiker. Voeg meer e-mail gebruikers toe om het over te slaan.]]></target>
+            </trans-unit>
+            <trans-unit id="dashboard_manage">
+                <source>Manage</source>
+                <target>Beheren</target>
+            </trans-unit>
+            <trans-unit id="dashboard_users_headline">
+                <source>Email users</source>
+                <target>E-mail gebruikers</target>
+            </trans-unit>
+            <trans-unit id="dashboard_users_p1">
+                <source>Email users subscribed</source>
+                <target>ingeschreven e-mail gebruikers</target>
+            </trans-unit>
+            <trans-unit id="dashboard_users_p2">
+				<source><![CDATA[<span id="additionaluserhint">additional</span> email users possible]]></source>
+                <target><![CDATA[<span id="additionaluserhint">meer</span> e-mail gebruikers is mogelijk]]></target>
+            </trans-unit>
+            <trans-unit id="dashboard_users_link">
+                <source>Manage users</source>
+                <target>Gebruikers beheren</target>
+            </trans-unit>
+            <trans-unit id="dashboard_use_headline">
+                <source>Take off with Cryptshare</source>
+                <target>Aan de slag met Cryptshare</target>
+            </trans-unit>
+            <trans-unit id="dashboard_use_outlook">
+                <source><![CDATA[Cryptshare for Outlook]]></source>
+                <target><![CDATA[Cryptshare for Outlook]]></target>
+            </trans-unit>
+            <trans-unit id="dashboard_use_webapplication">
+                <source>Cryptshare Web App</source>
+                <target>Cryptshare Webapplicatie</target>
+            </trans-unit>
+            <trans-unit id="dashboard_use_chrome">
+                <source>Cryptshare.express for Chrome</source>
+                <target>Cryptshare.express for Chrome</target>
+            </trans-unit>
+            <trans-unit id="dashboard_use_videos">
+                <source>Introduction videos</source>
+                <target>Introductie filmpjes</target>
+            </trans-unit>
+            <trans-unit id="dashboard_use_firefox">
+                <source>Cryptshare.express for Firefox</source>
+                <target>Cryptshare.express for Firefox</target>
+            </trans-unit>
+            <trans-unit id="dashboard_use_edge">
+                <source>Cryptshare.express for Edge</source>
+                <target>Cryptshare.express for Edge</target>
+            </trans-unit>
+            <trans-unit id="dashboard_use_opera">
+                <source>Cryptshare.express for Opera</source>
+                <target>Cryptshare.express for Opera</target>
+            </trans-unit>
+            <trans-unit id="dashboard_use_safari">
+                <source>Cryptshare.express for Safari</source>
+                <target>Cryptshare.express for Safari</target>
+            </trans-unit>
+            <trans-unit id="dashboard_use_link">
+                <source>All you need</source>
+                <target>Alles wat u nodig heeft</target>
+            </trans-unit>
+            <trans-unit id="dashboard_help_headline">
+                <source>Help</source>
+                <target>Help</target>
+            </trans-unit>
+            <trans-unit id="dashboard_help_p1">
+                <source>Cryptshare.express is very easy to use.</source>
+                <target>Cryptshare.express is zeer eenvoudig te gebruiken.</target>
+            </trans-unit>
+            <trans-unit id="dashboard_help_p2">
+                <source>For the most frequently asked questions, we put together some useful information for you in our help section.</source>
+                <target>Voor de meest gestelde vragen hebben wij bij de helpfunctie wat nuttige informatie voor u samengebracht.</target>
+            </trans-unit>
+            <trans-unit id="dashboard_help_link">
+                <source>Learn more</source>
+                <target>Meer informatie</target>
+            </trans-unit>
+            <trans-unit id="dashboard_account_headline">
+                <source>Business Account</source>
+                <target>Zakelijke account</target>
+            </trans-unit>
+            <trans-unit id="dashboard_account_p1">
+                <source>Keep the information you provided up to date and change your password.</source>
+                <target>Houd uw gegevens actueel en pas uw wachtwoord aan.</target>
+            </trans-unit>
+            <trans-unit id="dashboard_account_link">
+                <source>Manage account</source>
+                <target>Account beheren</target>
+            </trans-unit>
+            <trans-unit id="copy_to_clipboard">
+                <source>Copy to clipboard</source>
+                <target>Naar het klembord kopiëren</target>
+            </trans-unit>
+            <trans-unit id="use_section_2_headline1">
+                <source>That's it!</source>
+                <target>Dat is het dan!</target>
+            </trans-unit>
+            <trans-unit id="use_section_2_headline2">
+                <source>What's next?</source>
+                <target>Wat volgt?</target>
+            </trans-unit>
+            <trans-unit id="use_section_2_headline_order">
+                <source>Subscribe more email users</source>
+                <target>Meld meer e-mail gebruikers aan</target>
+            </trans-unit>
+            <trans-unit id="use_section_2_p_order">
+                <source>Up to 25 email users possible</source>
+                <target>Maximaal tot 25 e-mail gebruikers mogelijk</target>
+            </trans-unit>
+            <trans-unit id="use_section_2_headline_sendwelcomemail">
+                <source>Inform user(s)</source>
+                <target>Gebruikers informeren</target>
+            </trans-unit>
+            <trans-unit id="use_section_2_p1_sendwelcomemail">
+                <source>We recommend to send this text via your own email program to</source>
+                <target>Wij raden u aan deze tekst via uw eigen e-mailprogramma aan</target>
+            </trans-unit>
+            <trans-unit id="use_section_2_p2_sendwelcomemail">
+                <source>, so that any queries you may have will end up directly in your inbox.</source>
+                <target>te versturen, zodat eventuele vragen direct in uw inbox terechtkomen.</target>
+            </trans-unit>
+            <trans-unit id="use_section_2_headline_sendwelcomemail_recipient">
+                <source>Recipient</source>
+                <target>Ontvanger</target>
+            </trans-unit>
+            <trans-unit id="use_section_2_headline_sendwelcomemail_sender">
+                <source>Sender</source>
+                <target>Verzender</target>
+            </trans-unit>
+            <trans-unit id="use_section_2_headline_sendwelcomemail_subject">
+                <source>Subject</source>
+                <target>Onderwerp</target>
+            </trans-unit>
+            <trans-unit id="use_section_2_headline_sendwelcomemail_template">
+                <source>Our suggestion</source>
+                <target>Ons voorstel</target>
+            </trans-unit>
+            <trans-unit id="use_section_2_p_sendwelcomemail">
+                <source>Send welcome email now</source>
+                <target>Stuur nu een welkomstmail</target>
+            </trans-unit>
+            <trans-unit id="use_section_2_headline_visitwebapp">
+                <source>Visit Web App</source>
+                <target>Webapplicatie bezoeken</target>
+            </trans-unit>
+            <trans-unit id="use_section_2_headline_download">
+                <source>Download integrations</source>
+                <target>Integraties downloaden</target>
+            </trans-unit>
+            <trans-unit id="use_section_2_p_download">
+                <source>Download, install, use</source>
+                <target>Downloaden, installeren, gebruiken</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_headline1">
+                <source>Downloads</source>
+                <target>Downloads</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_headline_webapplication">
+                <source><![CDATA[Cryptshare Web App]]></source>
+                <target><![CDATA[Cryptshare webapplicatie]]></target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_webapplication_open">
+                <source>Open Web App now</source>
+                <target>Webapplicatie nu openen</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_headline_outlook">
+                <source><![CDATA[Cryptshare for Outlook]]></source>
+                <target><![CDATA[Cryptshare for Outlook]]></target>
+            </trans-unit>
+            <trans-unit id="use_section_4_description_outlook">
+                <source>Benefit from all of Cryptshare's advantages in Outlook.</source>
+                <target>Maak gebruik van alle voordelen van Cryptshare in Outlook.</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_description_webapplication">
+                <source>Available at anytime, for all modern browsers and devices.</source>
+                <target>Altijd beschikbaar, voor alle moderne browsers en apparaten.</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_outlook">
+                <source>Version 2.4.0.0145</source>
+                <target>Version 2.4.0.0145</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_outlook_download">
+                <source>Download installer</source>
+                <target>Installatieprogramma downloaden</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_outlook_manual">
+                <source>Download manual</source>
+                <target>Handleiding downloaden</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_headline_manual">
+                <source>Cryptshare manual</source>
+                <target>Cryptshare handleiding</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_manual">
+                <source>3 MB, PDF</source>
+                <target>3 MB, PDF</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_headline_browser_general">
+                <source>Browser-integrations</source>
+                <target>Browserintegraties</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_description_browser_general">
+                <source>With a small icon in your favorite browser, Cryptshare is always just one click away.</source>
+                <target>Met een knop in uw favoriete browser is Cryptshare altijd maar één klik verwijderd.</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_headline_chrome">
+                <source><![CDATA[Chrome]]></source>
+                <target><![CDATA[Chrome]]></target>
+            </trans-unit>
+            <trans-unit id="use_section_4_description_chrome">
+                <source>With a small icon in Google Chrome browser, Cryptshare is only one click away.</source>
+                <target>Met een knop in Google Chrome is Cryptshare maar één klik verwijderd.</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_chrome">
+                <source>Version 1.0.0 (Beta)</source>
+                <target>Version 1.0.0 (Beta)</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_chrome_download">
+                <source>Install now</source>
+                <target>Nu installeren</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_chrome">
+                <source>Version 1.0.0 (Beta)</source>
+                <target>Version 1.0.0 (Beta)</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_chrome_manual">
+                <source>Download manual</source>
+                <target>Handleiding downloaden</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_headline_firefox">
+                <source><![CDATA[Firefox]]></source>
+                <target><![CDATA[Firefox]]></target>
+            </trans-unit>
+            <trans-unit id="use_section_4_description_firefox">
+                <source>With a small icon in Mozilla Firefox, Cryptshare is only one click away.</source>
+                <target>Met een knop in Mozilla Firefox is Cryptshare maar één klik verwijderd.</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_firefox">
+                <source>Version 1.0.0 (Beta)</source>
+                <target>Version 1.0.0 (Beta)</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_firefox_download">
+                <source>Install now</source>
+                <target>Nu installeren</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_firefox_manual">
+                <source>Download manual</source>
+                <target>Handleiding downloaden</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_comingsoon">
+                <source>Coming soon</source>
+                <target>Binnenkort beschikbaar</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_headline_edge">
+                <source><![CDATA[Edge]]></source>
+                <target><![CDATA[Edge]]></target>
+            </trans-unit>
+            <trans-unit id="use_section_4_description_edge">
+                <source>With a small icon in Microsoft Edge browser, Cryptshare is only one click away.</source>
+                <target>Met een knop in Microsoft Edge is Cryptshare altijd maar één klik verwijderd.</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_edge_download">
+                <source>Install now</source>
+                <target>Nu installeren</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_edge">
+                <source>Version 1.0.0 (Beta)</source>
+                <target>Version 1.0.0 (Beta)</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_edge_manual">
+                <source>Download manual</source>
+                <target>Handleiding downloaden</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_headline_opera">
+                <source><![CDATA[Opera]]></source>
+                <target><![CDATA[Opera]]></target>
+            </trans-unit>
+            <trans-unit id="use_section_4_description_opera">
+                <source>With a small icon in Opera browser, Cryptshare is only one click away.</source>
+                <target>Met een knop in de Opera-browser is Cryptshare altijd maar één klik verwijderd.</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_opera">
+                <source>Version 1.0.0 (Beta)</source>
+                <target>Version 1.0.0 (Beta)</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_opera_download">
+                <source>Install now</source>
+                <target>Nu installeren</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_opera_manual">
+                <source>Download manual</source>
+                <target>Handleiding downloaden</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_headline_safari">
+                <source><![CDATA[Safari]]></source>
+                <target><![CDATA[Safari]]></target>
+            </trans-unit>
+            <trans-unit id="use_section_4_description_safari">
+                <source>With a small icon in Apple Safari browser, Cryptshare is only one click away.</source>
+                <target>Met een knop in de Apple Safari-browser is Cryptshare maar één klik verwijderd.</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_safari_download">
+                <source>Install Extension now</source>
+                <target>Extensie nu installeren</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_safari">
+                <source>Version 1.0.0 (Beta)</source>
+                <target>Version 1.0.0 (Beta)</target>
+            </trans-unit>
+            <trans-unit id="use_section_4_p_safari_manual">
+                <source>Download manual</source>
+                <target>Handleiding downloaden</target>
+            </trans-unit>
+            <trans-unit id="upsell_headline">
+                <source>Congratulations</source>
+                <target>Gefeliciteerd</target>
+            </trans-unit>
+            <trans-unit id="upsell_subheadline">
+                <source>must have grown. :-)</source>
+                <target>moet gegroeid zijn. :-)</target>
+            </trans-unit>
+            <trans-unit id="upsell_didyouknow">
+                <source>Did you know?</source>
+                <target>Wist u dat?</target>
+            </trans-unit>
+            <trans-unit id="upsell_p1">
+                <source>Get more out of Cryptshare.</source>
+                <target>Maak meer van uw Cryptshare gebruik.</target>
+            </trans-unit>
+            <trans-unit id="upsell_p2">
+                <source>Get non-binding advice now!</source>
+                <target>Vraag nu vrijblijvend advies!</target>
+            </trans-unit>
+            <trans-unit id="upsell_submit">
+                <source>Call me</source>
+                <target>Bel mij</target>
+            </trans-unit>
+            <trans-unit id="whatyouget_headline">
+                <source>Benefit from Cryptshare.express' many advantages – right after you subscribed</source>
+                <target>Maak gebruik van de vele voordelen van Cryptshare.express - direct na inschrijving</target>
+            </trans-unit>
+            <trans-unit id="whatyouget_offer_headline">
+                <source>Transparent terms</source>
+                <target>Eerlijk aanbod</target>
+            </trans-unit>
+            <trans-unit id="whatyouget_offer_p1">
+                <source>No set-up fee</source>
+                <target>Geen installatiekosten</target>
+            </trans-unit>
+            <trans-unit id="whatyouget_offer_p2">
+                <source>Annual subscription</source>
+                <target>Jaarabonnement</target>
+            </trans-unit>
+            <trans-unit id="whatyouget_offer_p3">
+                <source>Can be cancelled up to four weeks before the subscribed period ends</source>
+                <target>Kan tot vier weken voor het einde van de abonnementsduur worden beëindigd</target>
+            </trans-unit>
+            <trans-unit id="whatyouget_offer_p4">
+                <source>Secure and easy payment with credit card or direct debit</source>
+                <target>Veilige en eenvoudig betalen  met creditcard</target>
+            </trans-unit>
+            <trans-unit id="whatyouget_features_headline">
+                <source>Features</source>
+                <target>Functies</target>
+            </trans-unit>
+            <trans-unit id="whatyouget_features_p1">
+                <source>Exchange of large files</source>
+                <target>Grote bestanden uitwisselen</target>
+            </trans-unit>
+            <trans-unit id="whatyouget_features_p2">
+                <source>Send and receive secure emails</source>
+                <target><![CDATA[Veilige e-mails verzenden en ontvangen]]></target>
+            </trans-unit>
+            <trans-unit id="whatyouget_features_p3">
+                <source>Your communication partners don't need their own Cryptshare email user accounts</source>
+                <target>Uw communicatiepartners hebben geen Cryptshare e-mail gebruikersaccounts nodig</target>
+            </trans-unit>
+            <trans-unit id="whatyouget_features_p4">
+                <source>Up to 10 GB file size per transfer</source>
+                <target>Tot 10 GB bestandsgrootte per transactie</target>
+            </trans-unit>
+            <trans-unit id="whatyouget_features_p5">
+                <source>10 days transfer retention period</source>
+                <target>Tot 10 dagen bewaartermijn per transactie</target>
+            </trans-unit>
+            <trans-unit id="whatyouget_features_p6">
+                <source>Usable without having your own IT infrastructure</source>
+                <target>Bruikbaar zonder eigen IT-infrastructuur</target>
+            </trans-unit>
+            <trans-unit id="whatyouget_features_p7">
+                <source>Recall transfers in Outlook and Web Appk</source>
+                <target>Overdrachten in Outlook en Web App intrekken </target>
+            </trans-unit>
+            <trans-unit id="whatyouget_inclusive_headline">
+                <source>Including</source>
+                <target>Inclusief</target>
+            </trans-unit>
+            <trans-unit id="whatyouget_inclusive_p1">
+                <source>Cryptshare Web App</source>
+                <target>Cryptshare webapplicatie</target>
+            </trans-unit>
+            <trans-unit id="whatyouget_inclusive_p2">
+                <source><![CDATA[Cryptshare for Outlook]]></source>
+                <target><![CDATA[Cryptshare for Outlook]]></target>
+            </trans-unit>
+            <trans-unit id="whatyouget_inclusive_p3">
+                <source>Cryptshare.express browser-integrations</source>
+                <target>Cryptshare.express browser-integraties</target>
+            </trans-unit>
+            <trans-unit id="whatyouget_inclusive_p4">
+                <source>All Cryptshare software updates for the listed integrations above</source>
+                <target>Alle Cryptshare software-updates van de hierboven vermelde integraties</target>
+            </trans-unit>
+            <trans-unit id="onboarding_welcomeemail_subject1">
+                <source>Welcome to Cryptshare.express,</source>
+                <target>Welkom bij Cryptshare.express,</target>
+            </trans-unit>
+            <trans-unit id="onboarding_welcomeemail_subject2">
+                <source>! - Your start</source>
+                <target>! - Uw start</target>
+            </trans-unit>
+            <trans-unit id="onboarding_welcomeemail_p1">
+                <source>Hello</source>
+                <target>Hallo</target>
+            </trans-unit>
+            <trans-unit id="onboarding_welcomeemail_p2">
+                <source><![CDATA[as you may have already noticed, we decided to exchange large and sensitive data via Cryptshare.express in the future.]]></source>
+                <target><![CDATA[Zoals u misschien al gemerkt heeft, hebben we besloten<br>om in de toekomst grote en gevoelige gegevens uit te wisselen via Cryptshare.express.]]></target>
+            </trans-unit>
+            <trans-unit id="onboarding_welcomeemail_p3">
+                <source><![CDATA[You receive this email because I have already activated you.<br><strong>You can start right away! :-)</strong>]]></source>
+                <target><![CDATA[U ontvangt deze e-mail omdat ik uw accont al heb geactiveerd.<br><strong>U kunt meteen beginnen! :-)</strong>]]></target>
+            </trans-unit>
+            <trans-unit id="onboarding_welcomeemail_p4">
+                <source><![CDATA[The best way is to take 15 minutes and visit the following website:<br><a href="https://www.cryptshare.express/de/onboarding" target="_blank">https://www.cryptshare.express/de/onboarding</a>]]></source>
+                <target><![CDATA[De beste manier is om 15 minuten uit te trekken en de volgende website te bezoeken: <br><a href="https://www.cryptshare.express/nl/onboarding" target="_blank">https://www.cryptshare.express/nl/onboarding</a>.]]></target>
+            </trans-unit>
+            <trans-unit id="onboarding_welcomeemail_p5">
+                <source><![CDATA[There you'll find everything you need to use Cryptshare.express:]]></source>
+                <target><![CDATA[Hier vindt u alles wat u nodig heeft om Cryptshare.express te gebruiken:]]></target>
+            </trans-unit>
+            <trans-unit id="onboarding_welcomeemail_p6">
+                <source><![CDATA[<ol> <li>A short <strong>Instruction video</strong> for the Cryptshare.express Web App.</li> <li>Den <a href="https://webapp.cryptshare.express/" target="_blank">Link to the Cryptshare.express Web App</a>.</li> <li> The installation program for the <strong>Outlook integration</strong> - Cryptshare.express for Outlook </li> </ol>]]></source>
+                <target><![CDATA[<ol> <li>Een kort <strong>instructiefilmpje</strong> voor de Cryptshare.express webapplicatie.</li> <li>De <a href="https://nl.cryptshare.express/" target="_blank">link naar de Cryptshare.express webapplicatie</a>.</li> <li>Het installatieprogramma voor de <strong>Outlook-integratie</strong> - Cryptshare.express for Outlook </li></ol>]]></target>
+            </trans-unit>
+            <trans-unit id="onboarding_welcomeemail_p7">
+                <source><![CDATA[You can even integrate the Cryptshare.Express Web App <strong>directly into your browser </strong>:]]></source>
+                <target><![CDATA[U kunt de Cryptshare.Express webapplicatie zelfs<strong>direct in uw browser integreren</strong>:]]></target>
+            </trans-unit>
+            <trans-unit id="onboarding_welcomeemail_p8">
+                <source><![CDATA[<ol> <li>By opening the address <a href="https://webapp.cryptshare.express/" target="_blank">https://webapp.cryptshare.express/</a> and adding it to your favorites.</li> <li>The extension <strong>Cryptshare.express for Chrome</strong> installed in your Chrome browser.</li> <li>The add-on <strong>Cryptshare.express for Firefox</strong> installed in your Firefox browser.</li> </ol>]]></source>
+                <target><![CDATA[<ol> <li>Door het adres <a href="https://nl.cryptshare.express/" target="_blank">https://nl.cryptshare.express/</a>te openen en aan uw favorieten toe te voegen.</li> <li>De extensie <strong>Cryptshare.express for Chrome</strong> in uw Chrome-browser te installeren.</li> <li>De add-on <strong>Cryptshare.express for Firefox</strong> in uw Firefox-browser te installeren.</li> </ol>..]]></target>
+            </trans-unit>
+            <trans-unit id="onboarding_welcomeemail_p9">
+                <source><![CDATA[Further information will follow later.]]></source>
+                <target><![CDATA[Meer informatie hierover volgt later.]]></target>
+            </trans-unit>
+            <trans-unit id="onboarding_welcomeemail_p10">
+                <source><![CDATA[I recommend that you keep this email so that you can look it up at any time.]]></source>
+                <target><![CDATA[Ik raad u aan deze e-mail te bewaren, zodat u deze informatie altijd terug kan vinden.]]></target>
+            </trans-unit>
+            <trans-unit id="onboarding_welcomeemail_p11">
+                <source><![CDATA[Best regards,]]></source>
+                <target><![CDATA[Vriendelijke groet,]]></target>
+            </trans-unit>
+            <trans-unit id="checkout_vathint_headline">
+                <source><![CDATA[Please note]]></source>
+                <target><![CDATA[Let op]]></target>
+            </trans-unit>
+            <trans-unit id="checkout_vathint_p1">
+                <source><![CDATA[<p>You did not enter a VAT-ID yet. Please note that without a VAT-ID we have to claim value added tax on our invoice.</p>]]></source>
+                <target><![CDATA[<p>U heeft nog geen BTW-ID ingevoerd. Houd er rekening mee dat wij zonder BTW-ID op onze factuur belasting over de toegevoegde waarde moeten declareren.</p>]]></target>
+            </trans-unit>
+            <trans-unit id="checkout_vathint_link">
+                <source><![CDATA[Click here to enter your VAT-ID now (if you have any)]]></source>
+                <target><![CDATA[Klik hier om nu uw BTW-ID in te voeren (indien van toepassing).]]></target>
+            </trans-unit>
+            <trans-unit id="checkout_staff_member_hint_headline">
+                <source><![CDATA[Dear]]></source>
+                <target><![CDATA[Hallo]]></target>
+            </trans-unit>
+            <trans-unit id="checkout_staff_member_hint_p1">
+                <source><![CDATA[As an employee of our company, an account with up to 25 users is available to you free of charge for the purpose of demonstrating Cryptshare.express to potential or existing customers and business partners.]]></source>
+                <target><![CDATA[Als medewerker van ons bedrijf kunt u gratis gebruik maken van een account met maximaal 25 gebruikers om ons product Cryptshare.express aan potentiële of bestaande klanten en zakenpartners te demonstreren of te promoten.]]></target>
+            </trans-unit>
+            <trans-unit id="checkout_staff_member_hint_p2">
+                <source><![CDATA[Please note the following terms of use:]]></source>
+                <target><![CDATA[Neem de volgende gebruiksvoorwaarden in acht:]]></target>
+            </trans-unit>
+            <trans-unit id="checkout_staff_member_hint_p3_1">
+                <source><![CDATA[Only commercial/business users may be created, <strong>no consumers</strong>.]]></source>
+                <target><![CDATA[Alleen commerciële/zakelijke gebruikers mogen worden aangemaakt, <strong>geen consumenten</strong>.]]></target>
+            </trans-unit>
+            <trans-unit id="checkout_staff_member_hint_p3_2">
+                <source><![CDATA[Creating users must always be in the <strong>interest of Pointsharp GmbH, to its advantage, and on its cost.</strong>.]]></source>
+                <target><![CDATA[Gebruikers aanmaken moet altijd in het belang, in het voordeel en <strong>op rekening van Pointsharp GmbH zijn</strong>.]]></target>
+            </trans-unit>
+            <trans-unit id="checkout_staff_member_hint_p3_3">
+                <source><![CDATA[It is <strong>not permitted to use the account for private purposes</strong>.]]></source>
+                <target><![CDATA[Het gebruik van het account voor <strong>privé-doeleinden is niet toegestaan</strong>.]]></target>
+            </trans-unit>
+            <trans-unit id="checkout_staff_member_hint_p4">
+                <source><![CDATA[We wish you much success in using Cryptshare.express.<br /> Pointsharp GmbH]]></source>
+                <target><![CDATA[We wensen u veel succes bij het gebruik van Cryptshare.express.<br /> Pointsharp GmbH]]></target>
+            </trans-unit>
+            <trans-unit id="checkout_staff_member_hint_p5">
+                <source><![CDATA[By placing the order, I declare to abide by the terms of use as stated above.]]></source>
+                <target><![CDATA[Door het plaatsen van een bestelling verklaar ik mij akkoord met de bovenstaande gebruiksvoorwaarden.]]></target>
+            </trans-unit>
+            <trans-unit id="invoicetable_contract">
+                <source>Contract</source>
+                <target>Contract</target>
+            </trans-unit>
+            <trans-unit id="invoicetable_date">
+                <source>Date</source>
+                <target>Date</target>
+            </trans-unit>
+            <trans-unit id="invoicetable_total">
+                <source>Total</source>
+                <target>Total</target>
+            </trans-unit>
+            <trans-unit id="invoicetable_currency">
+                <source>Currency</source>
+                <target>Currency</target>
+            </trans-unit>
+            <trans-unit id="invoicetable_action">
+                <source>Action</source>
+                <target>Acties</target>
+            </trans-unit>
+            <trans-unit id="hint_maintenance">
+                <source><![CDATA[Please note: We are currently carrying out maintenance work on this system.<br>As long as this message is displayed, unexpected error messages may occur.<br>Please visit us again later. Thank you very much for your understanding!]]></source>
+                <target><![CDATA[Please note: We are currently carrying out maintenance work on this system.<br>As long as this message is displayed, unexpected error messages may occur.<br>Please visit us again later. Thank you very much for your understanding!]]></target>
+            </trans-unit>
+            <trans-unit id="hint_backuprestore">
+                <source><![CDATA[Please note: We are currently restoring a Backup<br>Please visit us again later and check your last transfers. Thank you very much for your understanding!]]></source>
+                <target><![CDATA[Please note: We are currently restoring a Backup<br>Please visit us again later and check your last transfers. Thank you very much for your understanding!]]></target>
+            </trans-unit>
+            <trans-unit id="summer_promotion_header">
+                <source>Summer promotion until the end of August</source>
+                <target>Zomerpromotie tot eind augustus</target>
+            </trans-unit>
+            <trans-unit id="summer_promotion_content">
+                <source><![CDATA[Use the discount voucher <br>SUMMER2019 <br>to get a 50% discount on your order.]]></source>
+                <target><![CDATA[Gebruik de kortingsbon <br><b>ZOMER2019</b> <br>om 50% korting te krijgen op uw bestelling.]]></target>
+            </trans-unit>
+            <trans-unit id="checkout_add_email">
+                <source>Add to order</source>
+                <target>Toevoegen aan bestelling</target>
+            </trans-unit>
+            <trans-unit id="payment_provider_head">
+                <source>Payment</source>
+                <target>Betaling</target>
+            </trans-unit>
+            <trans-unit id="payment_method_header">
+                <source>Your Payment Options</source>
+                <target>Uw betalingsmogelijkheden</target>
+            </trans-unit>
+            <trans-unit id="checkout_summary_addedusers">
+                <source><![CDATA[Email users]]></source>
+                <target><![CDATA[E-mailgebruiker]]></target>
+            </trans-unit>
+            <trans-unit id="payment_method_credit">
+                <source><![CDATA[If you wish to pay by credit card, you have to confirm your identity using the 3-D Secure procedure. This is a two-factor authentication. This procedure is now obligatory for credit card payment on the Internet. Please contact your credit institution if you have any questions about this.]]></source>
+                <target><![CDATA[Voorkeur om met creditcard  te betalen? Dat kan. Bevestig je identiteit middels de tweefactor authenticatie. Deze procedure is verplicht voor creditcardbetalingen op het internet. Voor vragen hierover neem contact op met je creditcard aanbieder.]]></target>
+            </trans-unit>
+            <trans-unit id="payment_method_debit">
+                <source><![CDATA[If you wish to pay by Sepa Direct Debit Mandate, we require your International Bank Account Number (IBAN) and Business Identifier Code (BIC). You can find this information directly on your bank card or by using an IBAN calculator.]]></source>
+                <target><![CDATA[Als u wenst te betalen via een Sepa Domiciliëringsmandaat, hebben we <a href="https://www.betaalvereniging.nl/betaalproducten-en-diensten/iban/" target="_blank">International Bank Account Number(IBAN) <i class="fa fa-external-link"></i></a> en de Business Identifier Code (BIC) nodig. U vindt deze gegevens direct op uw bankkaart of kunt ze met behulp van een IBAN-calculator bepalen.<br><img class="img-thumbnail" style="width:100%; margin-top:1rem" src="/fileadmin/primary/Public/Images/IBAN-Info-NL.png">]]></target>
+            </trans-unit>
+            <trans-unit id="payment_method_creditheader">
+                <source>Credit Card</source>
+                <target>Kredietkaart</target>
+            </trans-unit>
+            <trans-unit id="payment_method_debitheader">
+                <source>Debit</source>
+                <target>SEPA debitering</target>
+            </trans-unit>
+            <trans-unit id="payment_method_idealheader">
+                <source>iDEAL</source>
+                <target>iDEAL</target>
+            </trans-unit>
+            <trans-unit id="payment_method_ideal">
+                <source><![CDATA[Customers from the Netherlands can conveniently pay using iDEAL. After you have chosen your bank, you will be redirected to it. There you will be shown the purchase amount for confirmation. After entering your account number you will be asked to complete the two-factor authentication. Then your bank will authorize the payment transaction in real time.]]></source>
+                <target><![CDATA[Klanten uit Nederland kunnen gemakkelijk betalen met iDEAL. Nadat u uw bank hebt gekozen, wordt u doorgestuurd naar de bank. Daar krijgt u het aankoopbedrag ter bevestiging te zien. Nadat u uw rekeningnummer hebt ingevoerd, wordt u gevraagd om de twee-factor authenticatie te voltooien. Uw bank zal dan de betalingstransactie in real time goedkeuren.]]></target>
+            </trans-unit>
+            <trans-unit id="payment_method_3dsinfoheader">
+                <source>More security thanks to 3D-Secure 2 (3DS2)</source>
+                <target>Meer veiligheid dankzij 3D-Secure 2 (3DS2)</target>
+            </trans-unit>
+            <trans-unit id="payment_method_debitinfoheader">
+                <source>IBAN-Info</source>
+                <target>SEPA-Lastschrift</target>
+            </trans-unit>
+			<trans-unit id="checkout-submit-order">
+				<source>Submit order</source>
+				<target>Nu kopen</target>
+			</trans-unit>
+			<trans-unit id="checkout-submit-order2">
+				<source>The payment is made in the next step.</source>
+				<target>De betalingsgegevens worden in de volgende stap ingevoerd.</target>
+			</trans-unit>
+            <trans-unit id="dce_load_from_youtube">
+                <source>Watch video now (will be loaded from YouTube)</source>
+                <target>Bekijk nu de video (wordt geladen vanaf YouTube)</target>
+            </trans-unit>
+            <trans-unit id="dce_load_from_youtube_acceptconsent_1">
+                <source>Please</source>
+                <target>Gelieve</target>
+            </trans-unit>
+            <trans-unit id="dce_load_from_youtube_acceptconsent_2">
+                <source>accept marketing-cookies</source>
+                <target>accepteer marketing cookies</target>
+            </trans-unit>
+            <trans-unit id="dce_load_from_youtube_acceptconsent_3">
+                <source>to watch this video or</source>
+                <target>om deze video te bekijken of</target>
+            </trans-unit>
+            <trans-unit id="dce_load_from_youtube_acceptconsent_4">
+                <source>watch it directly on YouTube.</source>
+                <target>bekijk het direct op Youtube.</target>
+            </trans-unit>
+            <trans-unit id="dce_toc_headline">
+                <source>Table of Contents</source>
+                <target>inhoudsopgave</target>
+            </trans-unit>
+            <trans-unit id="checkout_pay_next_order">
+                <source>Next payment</source>
+                <target>Volgende betaling</target>
+            </trans-unit>
+            <trans-unit id="your_component">
+                <source>Your email address</source>
+                <target>Uw e-mail adres</target>
+            </trans-unit>
+            <trans-unit id="component_name">
+                <source>Name</source>
+                <target>Naam</target>
+            </trans-unit>
+            <trans-unit id="component_email">
+                <source>email address</source>
+                <target>E-mail adres</target>
+            </trans-unit>
+            <trans-unit id="component_start">
+                <source>Beginning</source>
+                <target>Begin</target>
+            </trans-unit>
+            <trans-unit id="component_edit">
+                <source>Change email address</source>
+                <target>Verander e-mail adres</target>
+            </trans-unit>
+            <trans-unit id="component_cancel">
+                <source>Cancel email address</source>
+                <target>Annuleer e-mail adres</target>
+            </trans-unit>
+            <trans-unit id="component_loading">
+                <source>Loading</source>
+                <target>Loading</target>
+            </trans-unit>
+            <trans-unit id="component_cancel_no">
+                <source>No</source>
+                <target>No</target>
+            </trans-unit>
+            <trans-unit id="component_cancel_yes">
+                <source>Yes</source>
+                <target>Ja</target>
+            </trans-unit>
+            <trans-unit id="component_edit_email_text_1">
+                <source>You can change the email address once per billing period.</source>
+                <target>U kunt het e-mailadres eenmaal per factureringsperiode wijzigen</target>
+            </trans-unit>
+            <trans-unit id="component_edit_email_text_2">
+                <source>Please enter the new email address and confirm the change with Save.</source>
+                <target>Voer het nieuwe e-mailadres in en bevestig de wijziging met Save.</target>
+            </trans-unit>
+            <trans-unit id="component_edit_email_cancel">
+                <source>Cancel</source>
+                <target>Annuleren</target>
+            </trans-unit>
+            <trans-unit id="component_edit_email_save">
+                <source>Save</source>
+                <target>Save</target>
+            </trans-unit>
+            <trans-unit id="component_cancel_text">
+                <source>Are you sure you want to cancel this email address?</source>
+                <target>Weet u zeker dat u dit e-mailadres wilt annuleren?</target>
+            </trans-unit>
+            <trans-unit id="cancel_component">
+                <source>This email address has been marked for cancellation</source>
+                <target>Dit e-mail adres is gemarkeerd voor annulering</target>
+            </trans-unit>
+            <trans-unit id="edit_component">
+                <source>Changed email address</source>
+                <target>Veranderd e-mail adres</target>
+            </trans-unit>
+            <trans-unit id="change_alert">
+                <source>Please note that an email address can be changed only once per contract period.</source>
+                <target>Een e-mailadres kan slechts eenmaal per contractperiode worden gewijzigd.</target>
+            </trans-unit>
+            <trans-unit id="payment_provider_text_p1">
+                <source><![CDATA[<span id="contractPaymentMethod">Loading...</span>.]]></source>
+                <target><![CDATA[<span id="contractPaymentMethod">Loading...</span>.]]></target>
+            </trans-unit>
+            <trans-unit id="payment_provider_linktext">
+                <source>Click here,</source>
+                <target>Klik hier,</target>
+            </trans-unit>
+            <trans-unit id="payment_provider_text_p2">
+                <source>if you want to change this.</source>
+                <target>als u dit wilt veranderen.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

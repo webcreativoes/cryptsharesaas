@@ -1,0 +1,30 @@
+
+
+<f:spaceless>
+	<f:if condition="{TSFE.fe_user.user.vat} == '' && {TSFE.fe_user.user.business_registration_received} != 1">
+		<f:then>
+			<div class="card business-proof-missing bg-warning text-white" style="width:inherit;float:inherit">
+				<div class="card-body">
+					<div class="row">
+						<div class="col-md-1 col-sm-2 col-xs-3">
+							<div class="text-left">
+								<i class="fa fa-warning fa-4x" aria-hidden="true"></i>
+							</div>
+						</div>
+						<div class="col-md-11 cold-sm-10 col-xs-9">
+							<h2 class="text-white"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:checkout_business_proof_missing_headline" /></h2>
+							<p><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:checkout_business_proof_missing_p1" /></p>
+							<p><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:checkout_business_proof_missing_p2" /></p>
+							<p><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:checkout_business_proof_missing_p3" /></p>
+							<p><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:checkout_business_proof_missing_p4" />
+								<strong><f:format.date base="{TSFE.fe_user.user.crdate}" format="d.m.Y">+4 days</f:format.date></strong>
+								<f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:checkout_business_proof_missing_p5" />
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+		</f:then>
+	</f:if>
+</f:spaceless>

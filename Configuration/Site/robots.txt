@@ -1,0 +1,26 @@
+# Hey buddy, make yourself at home!
+User-agent: *
+Allow: /
+
+# Oh dude, don´t waste your time with the boring TYPO3 stuff
+Disallow: /typo3/
+Disallow: /typo3conf/
+
+# You just can´t get enough? Look at this:
+Sitemap: https://www.cryptshare.express/en/sitemap.xml
+Sitemap: https://www.cryptshare.express/en-gb/sitemap.xml
+Sitemap: https://www.cryptshare.express/en-us/sitemap.xml
+Sitemap: https://www.cryptshare.express/de/sitemap.xml
+Sitemap: https://www.cryptshare.express/nl/sitemap.xml
+Sitemap: https://www.cryptshare.express/fr/sitemap.xml
+Sitemap: https://www.cryptshare.express/es/sitemap.xml
+Sitemap: https://www.cryptshare.express/it/sitemap.xml
+Sitemap: https://www.cryptshare.express/lb/sitemap.xml
+Sitemap: https://www.cryptshare.express/pt/sitemap.xml
+Sitemap: https://www.cryptshare.express/en-gb/sitemap.xml
+Sitemap: https://www.cryptshare.express/fi/sitemap.xml
+Sitemap: https://www.cryptshare.express/el/sitemap.xml
+Sitemap: https://www.cryptshare.express/ga/sitemap.xml
+Sitemap: https://www.cryptshare.express/de-at/sitemap.xml
+Sitemap: https://www.cryptshare.express/nl-be/sitemap.xml
+Sitemap: https://www.cryptshare.express/de-ch/sitemap.xml

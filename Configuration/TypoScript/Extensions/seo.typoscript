@@ -1,0 +1,48 @@
+seo_sitemap = PAGE
+seo_sitemap {
+    typeNum = 1533906435
+    config {
+        cache_period = 900
+        disableAllHeaderCode = 1
+        admPanel = 0
+        removeDefaultJS = 1
+        removeDefaultCss = 1
+        removePageCss = 1
+        absRefPrefix = auto
+        additionalHeaders.10 {
+          header = Content-Type:application/xml;charset=utf-8
+        }
+    }
+    10 = USER
+    10.userFunc = TYPO3\CMS\Seo\XmlSitemap\XmlSitemapRenderer->render
+}
+
+plugin.tx_seo {
+    view {
+        templateRootPaths {
+            0 = EXT:seo/Resources/Private/Templates/XmlSitemap
+            10 = EXT:seo/Resources/Private/Templates/
+        }
+        partialRootPaths {
+            0 = EXT:seo/Resources/Private/Partials/XmlSitemap
+            10 = EXT:seo/Resources/Private/Partials/
+        }
+        layoutRootPaths {
+            0 = EXT:seo/Resources/Private/Layouts/XmlSitemap
+            10 = EXT:seo/Resources/Private/Layouts/
+        }
+    }
+    config {
+        xmlSitemap {
+            sitemaps {
+                pages {
+                    provider = TYPO3\CMS\Seo\XmlSitemap\PagesXmlSitemapDataProvider
+                    config {
+                        excludedDoktypes = 3, 4, 6, 7, 199, 137, 138, 254, 255
+                        additionalWhere = AND no_index = 0
+                    }
+                }
+            }
+        }
+    }
+}

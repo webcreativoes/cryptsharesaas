@@ -1,0 +1,18 @@
+Hardcoded Extensions-Hacks
+
+Added the following 
+
+Constant:
+plugin.tx_srfeuserregister_pi1.SelectCssClass = form-control
+
+Setup
+plugin.tx_srfeuserregister_pi1.SelectCssClass = {$plugin.tx_srfeuserregister_pi1.SelectCssClass}
+
+PHP
+sr_feuser_register/Classes/View/Marker.php
+
+Line 839
+Changed '', to $this->conf['SelectCssClass'], 
+
+Line 857
+Changed '', to $this->conf['SelectCssClass'],

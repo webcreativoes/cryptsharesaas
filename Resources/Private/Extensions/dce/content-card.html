@@ -1,0 +1,25 @@
+
+
+<f:spaceless>
+    <div class="card {field.width}">
+        <f:if condition="{field.cardheader}">
+            <f:then>
+                <div class="card-header"><h4>{field.cardheader}</h4></div>
+            </f:then>
+        </f:if>
+        <div class="card-body">
+            <f:link.typolink parameter="{field.link}" class=""><i class="fa fa-{field.icon} fa-4x pull-right" aria-hidden="true"></i></f:link.typolink>
+            <h5 class="card-title">
+                <f:link.typolink parameter="{field.link}" class=""><span>{field.title}</span></f:link.typolink>
+            </h5>
+            <f:format.html>{field.text}</f:format.html>
+        </div>
+        <f:if condition="{field.link}">
+            <f:then>
+                <div class="card-footer">
+                    <f:link.typolink parameter="{field.link}" class="btn btn-sm pull-right"><i class="fa fa-{field.icon}" aria-hidden="true"></i> {field.linktext}</f:link.typolink>
+                </div>
+            </f:then>
+        </f:if>
+    </div>
+</f:spaceless>

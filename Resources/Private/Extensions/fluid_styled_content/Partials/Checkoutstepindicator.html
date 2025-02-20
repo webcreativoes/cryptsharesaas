@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<head>
+	<title>Ceckout step indicator</title>
+</head>
+	<f:section name=’loggedin‘>
+		<f:security.ifHasRole role="14">
+			<ol class="progress-bar">
+				<li class="progress-bar__steps current">
+					<f:link.typolink parameter="1396">
+						<span class="progress-bar__steps--text"><i class="fa fa-user" aria-hidden="true"></i><br><f:format.html><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:checkout_step_1" /></f:format.html></span>
+					</f:link.typolink>
+				</li>
+				<li class="progress-bar__steps current">
+					<f:link.typolink parameter="1427">
+						<span class="progress-bar__steps--text"><i class="fa fa-plus" aria-hidden="true"></i><br><f:format.html><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:checkout_step_2" /></f:format.html></span>
+					</f:link.typolink>
+				</li>
+				<li class="progress-bar__steps not-current">
+					<f:link.typolink parameter="1416">
+						<span class="progress-bar__steps--text"><i class="fa fa-lock" aria-hidden="true"></i><br><f:format.html><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:checkout_step_3" /></f:format.html></span>
+					</f:link.typolink>
+				</li>
+			</ol>
+			<f:link.typolink parameter="1427" class="btn btn-primary btn-md">
+				<div class="col text-center">
+					<i class="fa fa-plus" aria-hidden="true"></i><f:format.html><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:checkout_step_c2a" /></f:format.html></span>
+				</div>
+			</f:link.typolink>
+		</f:security.ifHasRole>
+	</f:section>
+	<f:section name=’register‘>
+		<ol class="progress-bar">
+			<li class="progress-bar__steps current">
+				<f:link.typolink parameter="1396">
+					<span class="progress-bar__steps--text"><i class="fa fa-user" aria-hidden="true"></i><br><f:format.html><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:checkout_step_1" /></f:format.html></span>
+				</f:link.typolink>
+			</li>
+			<li class="progress-bar__steps not-current">
+				<f:link.typolink parameter="1427">
+					<span class="progress-bar__steps--text"><i class="fa fa-plus" aria-hidden="true"></i><br><f:format.html><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:checkout_step_2" /></f:format.html></span>
+				</f:link.typolink>
+			</li>
+			<li class="progress-bar__steps not-current">
+				<f:link.typolink parameter="1416">
+					<span class="progress-bar__steps--text"><i class="fa fa-lock" aria-hidden="true"></i><br><f:format.html><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:checkout_step_3" /></f:format.html></span>
+				</f:link.typolink>
+			</li>
+		</ol>
+		<f:link.typolink parameter="1427" class="btn btn-primary btn-md">
+			<div class="col text-center">
+				<i class="fa fa-plus" aria-hidden="true"></i><f:format.html><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:checkout_step_c2a" /></f:format.html></span>
+			</div>
+		</f:link.typolink>
+	</f:section>
+</html>

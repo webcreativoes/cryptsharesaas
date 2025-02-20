@@ -1,0 +1,12 @@
+lib.BWENVIRONMENT = COA
+lib.BWENVIRONMENT {
+    10 = FLUIDTEMPLATE
+    10 {
+        variables {
+            bw_environment = TEXT
+            bw_environment.value =  {$bw_environment}
+            bw_publicApiKey = TEXT
+            bw_publicApiKey.value =  {$bw_publicApiKey}
+        }
+    }
+}

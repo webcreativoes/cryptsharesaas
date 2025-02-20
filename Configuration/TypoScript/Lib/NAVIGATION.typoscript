@@ -1,0 +1,15 @@
+lib.NAVIGATION = HMENU
+lib.NAVIGATION {
+    1 = TMENU
+    1 {
+        NO = 1
+        NO {
+            allWrap = <li class="list-group-item">|</li>
+        }
+        ACT = 1
+        ACT {
+            allWrap = <li class="list-group-item active">|</li>
+        }
+        wrap = <div class="list-group panel" id="sidebar"><ul class="nav flex-column">|
+    }
+}

@@ -1,0 +1,15 @@
+<?php
+require_once('webhook-Contract.php');
+require_once('webhook-ContractPhases.php');
+require_once('webhook-ContractCustomFields.php');
+require_once('webhook-ContractPaymentBearer.php');
+require_once('webhook-ContractCurrentDunning.php');
+require_once('webhook-ContractExternalSubscription.php');
+require_once('webhook-ContractOnAccountDueAfter.php');
+require_once('webhook-ContractWriteOff.php');
+require_once('webhook-ContractComponent.php');
+require_once('webhook-Customer.php');
+require_once('webhook-CustomerEmailAddresses.php');
+require_once('webhook-CustomerCustomFields.php');
+require_once('webhook-CustomerAddresses.php');
+require_once('webhook-DB.php');

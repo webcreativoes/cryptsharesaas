@@ -1,0 +1,10 @@
+lib.GPVAR = COA
+lib.GPVAR {
+    stdWrap.htmlSpecialChars = 1
+    10 = TEXT
+    10 {
+        dataWrap = GP:{current}
+        insertData = 1
+        wrap3 = {|}
+    }
+}
