@@ -1,51 +1,6 @@
-page.assets.css.tx_srfeuserregister >
 plugin.tx_srfeuserregister_pi1 = USER_INT
 plugin.tx_srfeuserregister_pi1 {
-    where.static_countries = cn_iso_2 IN ('AT','BE','CH','DE','ES','FI','FR','GB','GR','IE','IT','LU','NL','PT')
-    where.static_countries = cn_iso_2 IN ('AT','BE','BG','CH','CY','CZ','DE','DK','EE','HU','ES','FI','FR','GB','GR','HR','IE','IT','LT','LU','LV','MT','NL','PT','PL','SK','SI','SE','RO')
-    where.static_languages = lg_collate_locale IN ('de_DE','nl_NL','en_GB')
-    where.static_languages = lg_collate_locale IN ('de_DE','nl_NL','en_GB','fr_FR','es_ES','it_IT','fi_FI','ga_GA','el_EL','pt_PT')
-    userFunc = SJBR\SrFeuserRegister\Controller\RegisterPluginController->main
-    table.name = fe_users
-    templateFile = EXT:cryptsharesaas/Resources/Private/Extensions/sr_feuser_register/master.html
-    icon_delete = EXT:sr_feuser_register/Resources/Public/Images/icon_delete.png
-    SelectCssClass = form-control
-    fe_userOwnSelf = 1
-    fe_userEditSelf = 1
-    delete = 1
-    pid = 1394
-    pidTitleOverride =
-    userGroupsPidList = 1396
-    registerPID = 1396
-    editPID = 1398
-    confirmPID =
-    confirmInvitationPID =
-    confirmType = 0
-    loginPID = 1397
-    linkToPID =
-    linkToPIDAddButton = 0
-    module_sys_dmail_category_PIDLIST =
-    defaultCODE =
-    useShortUrls = 1
-    shortUrlLife = 30
-    useLocalization = 1
-    useLocalCountry = 1
-    useLocalLanguage = 1
-    onChangeCountryAttribute =
-    allowMultipleUserGroupSelection = 0
-    salutation = formal
-    addAttachment =  {$plugin.tx_srfeuserregister_pi1.enableEmailAttachment}
-    addAttachment.cmd = setfixed
-    addAttachment.sFK = APPROVE
-    addAttachment.file = {$plugin.tx_srfeuserregister_pi1.file.attachmentFile}
-    terms.file = EXT:sr_feuser_register/Resources/Public/TextFiles/terms.txt
-    terms.url = https://www.cryptshare.express/legal
-    displayRequired = TEXT
-    displayRequired {
-      value = *
-      wrap = |
-    }
-    create = 1
+	create = 1
     create {
         preview = 1
         fields = username, password, first_name, last_name, email, telephone, address, house_no, city, static_info_country,language, zip, company, vat, terms_acknowledged, is_trial, disable, module_sys_dmail_html, module_sys_dmail_newsletter
@@ -99,7 +54,67 @@ plugin.tx_srfeuserregister_pi1 {
             captcha_response =
         }
     }
-    select {
+    create = 1
+    create {
+        preview = 1
+        fields = username, password, first_name, last_name, email, telephone, address, house_no, city, static_info_country, language, zip, company, vat, terms_acknowledged, is_trial, disable, module_sys_dmail_html, module_sys_dmail_newsletter
+        required = username, password, first_name, last_name, email, telephone, address, house_no, city, static_info_country, zip, company, language, terms_acknowledged
+        useEmailAsUsername = 1
+        generateUsername = 0
+        doNotEnforceUsername = 0
+        allowUserGroupSelection = 0
+        allowedUserGroups = ALL
+        allowedSubgroups =
+        deniedUserGroups =
+
+        defaultValues {
+            module_sys_dmail_html = 0
+            usergroup = 14
+            disable = 1
+            by_invitation = 0
+            language = EN_GB
+            static_info_country = GBR
+        }
+
+        overrideValues {
+            usergroup = 14
+            disable = 0
+            by_invitation = 0
+        }
+
+        evalErrors {
+            evalRuleName_vat = errorMessageForEvalRule
+        }
+
+        evalValues {
+            password = twice, atLeast[8], atMost[40]
+            username = uniqueLocal, atLeast[6], atMost[100]
+            email = email, atMost[255], uniqueLocal
+            name = atMost[64]
+            first_name = atMost[64]
+            middle_name = atMost[64]
+            last_name = atMost[64]
+            date_of_birth = date
+            company = atMost[255]
+            city = atMost[40]
+            zip = atMost[12]
+            house_no = atMost[12]
+            telephone = atMost[25]
+            fax = atMost[25]
+            image = upload[0]
+            title =
+            address =
+            www = wwwURL
+            comments =
+            status =
+            module_sys_dmail_category =
+            module_sys_dmail_html =
+            module_sys_dmail_newsletter =
+            by_invitation =
+            captcha_response =
+        }
+    }
+	select {
         email {
             module_sys_dmail_category.wrap = | <br/>
         }
@@ -108,10 +123,13 @@ plugin.tx_srfeuserregister_pi1 {
     enableAutoLoginOnConfirmation = 0
     enableAutoLoginOnCreate = 14
     enableAdminReview = 0
-    autoLoginRedirect_url = /en/sign-up/createcustomeronbwandgetcustomerid
+    autoLoginRedirectUrl = /en/sign-up/createcustomeronbwandgetcustomerid
     unsubscribeAllowedFields = module_sys_dmail_newsletter
-    authcodeFields.codeLength = 12
-    invite < .create
+
+    authcodeFields {
+        codeLength = 12
+    }
+    invite < plugin.tx_srfeuserregister_pi1.create
     invite {
         defaultValues {
             by_invitation = 1
@@ -146,7 +164,7 @@ plugin.tx_srfeuserregister_pi1 {
         evalValues {
             password := addToList(unsetEmpty)
             username = uniqueLocal, atLeast[6], atMost[100]
-            email = email,atMost[255]
+            email = email, atMost[255]
             name = atMost[64]
             first_name = atMost[64]
             middle_name = atMost[64]
@@ -173,7 +191,7 @@ plugin.tx_srfeuserregister_pi1 {
             captcha_response =
         }
     }
-    password < .edit
+	password < .edit
     password {
         preview = 0
         fields = password
@@ -185,9 +203,9 @@ plugin.tx_srfeuserregister_pi1 {
             password < plugin.tx_srfeuserregister_pi1.edit.evalValues.password
         }
     }
-    forceFileDelete = 1
+	forceFileDelete = 1
     parseValues {
-        username = nospace,trim
+        username = nospace, trim
         email = trim
         password = trim
         gender = int
@@ -222,36 +240,42 @@ plugin.tx_srfeuserregister_pi1 {
         date_of_birth = date
         image = deleteUnreferencedFiles
     }
-    email.from = support@cryptshare.express
-    email.fromName = Cryptshare.express
-    email.admin = support@cryptshare.express
-    email.replyToAdmin = support@cryptshare.express
-    email.field = email
-    email.replyTo = user
-    email.HTMLMail = 0
-    email.HTMLMailCSS = EXT:sr_feuser_register/Resources/Public/StyleSheets/htmlmail.css
-    email.CREATE_SAVED = 0
-    #############Im Livebetrieb: email.EDIT_SAVED = 1#############
-    email.EDIT_SAVED = 0
-    email.DELETE_SAVED = 1
-    email.SETFIXED_APPROVE = 0
-    email.SETFIXED_APPROVE_REVIEW = 0
-    email.SETFIXED_DELETE = 0
-    email.SETFIXED_ACCEPT = 1
-    email.SETFIXED_REFUSE = 0
-    email.SETFIXED_UNSUBSCRIBE = 0
-    notify.CREATE_SAVED = 0
-    notify.EDIT_SAVED = 0
-    notify.DELETE_SAVED = 1
-    notify.SETFIXED_CREATE = 0
-    notify.SETFIXED_CREATE_REVIEW = 0
-    notify.SETFIXED_INVITE = 0
-    notify.SETFIXED_APPROVE = 0
-    notify.SETFIXED_APPROVE_REVIEW = 0
-    notify.SETFIXED_DELETE = 0
-    notify.SETFIXED_ENTER = 0
-    notify.SETFIXED_ACCEPT = 0
-    notify.SETFIXED_REFUSE = 0
+	email {
+        from = support@cryptshare.express
+        fromName = Cryptshare.express
+        admin = support@cryptshare.express
+        replyToAdmin = support@cryptshare.express
+        field = email
+        replyTo = user
+        HTMLMail = 0
+        HTMLMailCSS = EXT:sr_feuser_register/Resources/Public/StyleSheets/htmlmail.css
+        CREATE_SAVED = 0
+        # Im Livebetrieb: EDIT_SAVED = 1
+        EDIT_SAVED = 0
+        DELETE_SAVED = 1
+        SETFIXED_APPROVE = 0
+        SETFIXED_APPROVE_REVIEW = 0
+        SETFIXED_DELETE = 0
+        SETFIXED_ACCEPT = 1
+        SETFIXED_REFUSE = 0
+        SETFIXED_UNSUBSCRIBE = 0
+    }
+
+    notify {
+        CREATE_SAVED = 0
+        EDIT_SAVED = 0
+        DELETE_SAVED = 1
+        SETFIXED_CREATE = 0
+        SETFIXED_CREATE_REVIEW = 0
+        SETFIXED_INVITE = 0
+        SETFIXED_APPROVE = 0
+        SETFIXED_APPROVE_REVIEW = 0
+        SETFIXED_DELETE = 0
+        SETFIXED_ENTER = 0
+        SETFIXED_ACCEPT = 0
+        SETFIXED_REFUSE = 0
+    }
+
     _DEFAULT_PI_VARS {
     }
 }
@@ -260,10 +284,9 @@ plugin.tx_srfeuserregister.settings {
     salutation = formal
 }
 
-plugin.tx_srfeuserregister.sr_feuser_register_pi1 = < plugin.tx_srfeuserregister_pi1
+plugin.tx_srfeuserregister.sr_feuser_register_pi1 < plugin.tx_srfeuserregister_pi1
 
 plugin.tx_srfeuserregister_pi1._CSS_DEFAULT_STYLE (
-
 )
 
 plugin.tx_srfeuserregister._LOCAL_LANG.default {
@@ -273,7 +296,7 @@ plugin.tx_srfeuserregister._LOCAL_LANG.default {
     fe_users.address = Street
     enter_account_info = Create Business Account
     terms_acknowledged = I have read the Terms of Use and the Privacy Policy, understood the content and accept the use of my data.
-    click_here_to_see_terms =  Terms of Use & Privacy Policy
+    click_here_to_see_terms = Terms of Use & Privacy Policy
     v_verify_before_create = Please check your data before you create the new business account.
     v_edit_your_account = Keep your Business Account up to date
     v_registration_updated_subject = Thank you for keeping your Business Account up to date.
@@ -282,8 +305,8 @@ plugin.tx_srfeuserregister._LOCAL_LANG.default {
     kind_regards_cre = With kind regards,
     fe_users.vat = VAT.
     missing_vat = Please enter your VAT
-    v_registration_created_subject  = Welcome to Cryptshare.express
-    v_registration_created_message1 = Now you can order email user for you and your colleagues.
+    v_registration_created_subject = Welcome to Cryptshare.express
+    v_registration_created_message1 = Now you can order email users for you and your colleagues.
     v_registration_created_message2 = Your e-mail address "%4$s" is also your username
     evalErrors_uniqueLocal_email = A Business Account already exists under this e-mail address.
     missing_email = A valid e-mail address is required.
@@ -294,7 +317,7 @@ plugin.tx_srfeuserregister._LOCAL_LANG.default {
     v_dear_male = Hello %3$s,
     v_dear_female = Hello %3$s,
     password_again = Repeat password
-    v_really_wish_to_delete = Do you really wish to delete your Business Account &lt;b&gt;%2$s&lt;/b&gt;?
+    v_really_wish_to_delete = Do you really wish to delete your Business Account <b>%2$s</b>?
 }
 
 plugin.tx_srfeuserregister._LOCAL_LANG.de {
@@ -306,7 +329,7 @@ plugin.tx_srfeuserregister._LOCAL_LANG.de {
     fe_users.city = Ort
     enter_account_info = Business Account anlegen
     terms_acknowledged = Ich habe die Nutzungsbedingungen sowie den Datenschutzbericht gelesen, den Inhalt verstanden und willige in die Datennutzung ein.
-    click_here_to_see_terms =  Nutzungsbedingungen & Datenschutzbestimmungen
+    click_here_to_see_terms = Nutzungsbedingungen & Datenschutzbestimmungen
     new_password = Neues Passwort, falls gewünscht
     v_verify_before_create = Bitte prüfen Sie Ihre Angaben, bevor Sie den neuen Business Account erstellen.
     v_edit_your_account = Halten Sie Ihren Business Account aktuell
@@ -316,7 +339,7 @@ plugin.tx_srfeuserregister._LOCAL_LANG.de {
     kind_regards_cre = Mit freundlichen Grüßen,
     fe_users.vat = USt-IdNr.
     missing_vat = Bitte geben Sie Ihre USt-IdNr. an
-    v_registration_created_subject  = Willkommen bei Cryptshare.express
+    v_registration_created_subject = Willkommen bei Cryptshare.express
     v_registration_created_message1 = Jetzt können Sie E-Mail-Benutzer für sich und Ihre Kollegen bestellen.
     v_registration_created_message2 = Ihre E-Mail-Adresse "%4$s" ist auch gleichzeitig Ihr Benutzername.
     evalErrors_uniqueLocal_email = Es existiert bereits ein Business Account unter der eingegebenen E-Mail-Adresse.
@@ -328,7 +351,7 @@ plugin.tx_srfeuserregister._LOCAL_LANG.de {
     v_dear_male = Hallo %3$s,
     v_dear_female = Hallo %3$s,
     password_again = Passwort wiederholen
-    v_really_wish_to_delete = Sie sind gerade dabei Ihren Business Account &lt;b&gt;%2$s&lt;/b&gt; zu löschen. Dies hat zur Folge, dass Sie sich ab sofort nicht mehr einloggen können. Bitte beachten Sie, dass etwaige vertragliche Cryptshare.express E-Mail-Benutzer davon nicht betroffen sind und E-Mail-Benutzer gesondert (vor der Löschung dieses Business Accounts) gekündigt werden müssen.
+    v_really_wish_to_delete = Sie sind gerade dabei, Ihren Business Account <b>%2$s</b> zu löschen. Dies hat zur Folge, dass Sie sich ab sofort nicht mehr einloggen können. Bitte beachten Sie, dass etwaige vertragliche Cryptshare.express E-Mail-Benutzer davon nicht betroffen sind und E-Mail-Benutzer gesondert (vor der Löschung dieses Business Accounts) gekündigt werden müssen.
 }
 
 plugin.tx_srfeuserregister._LOCAL_LANG.nl {
@@ -346,7 +369,7 @@ plugin.tx_srfeuserregister._LOCAL_LANG.nl {
     fe_users.email = E-mailadres
     enter_account_info = Zakelijke account aanmaken
     terms_acknowledged = Ik heb de gebruiksvoorwaarden en het privacybeleid gelezen, de inhoud begrepen, en ik aanvaard het gebruik van mijn gegevens.
-    click_here_to_see_terms =  Gebruiksvoorwaarden en privacybeleid
+    click_here_to_see_terms = Gebruiksvoorwaarden en privacybeleid
     new_password = Nieuw wachtwoord, indien gewenst
     v_verify_before_create = Controleer uw gegevens voordat u een nieuwe zakelijke account aanmaakt.
     v_edit_your_account = Houd uw zakelijke account up to date
@@ -356,7 +379,7 @@ plugin.tx_srfeuserregister._LOCAL_LANG.nl {
     kind_regards_cre = Met vriendelijke groet,
     fe_users.vat = BTW.
     missing_vat = Vul hier uw btw in
-    v_registration_created_subject  = Welkom bij Cryptshare.express
+    v_registration_created_subject = Welkom bij Cryptshare.express
     v_registration_created_message1 = U kunt nu een e-mail account voor u en uw collega's bestellen.
     v_registration_created_message2 = Uw e-mailadres "%4$s" is ook uw gebruikersnaam
     evalErrors_uniqueLocal_email = Er bestaat al een account op dit e-mailadres.
@@ -369,7 +392,7 @@ plugin.tx_srfeuserregister._LOCAL_LANG.nl {
     v_dear_female = Hallo %3$s,
     password = Wachtwoord
     password_again = Wachtwoord herhalen
-    v_really_wish_to_delete = Wilt u echt uw Zakelijke account &lt;b&gt;%2$s&lt;/b&gt; verwijderen? Dies hat zur Folge, dass Sie sich ab sofort nicht mehr einloggen können. Bitte beachten Sie, dass etwaige vertragliche Cryptshare.express E-Mail-Benutzer davon nicht betroffen sind und E-Mail-Benutzer gesondert (vor der Löschung dieses Business Accounts) gekündigt werden müssen.
+    v_really_wish_to_delete = Wilt u echt uw Zakelijke account <b>%2$s</b> verwijderen? Dit betekent dat u zich vanaf nu niet meer kunt aanmelden. Houd er rekening mee dat eventuele contractuele Cryptshare.express e-mailgebruikers niet worden beïnvloed en afzonderlijk moeten worden opgezegd (vóór het verwijderen van dit Zakelijke account).
 }
 
 plugin.tx_srfeuserregister._LOCAL_LANG.fr {
@@ -388,7 +411,7 @@ plugin.tx_srfeuserregister._LOCAL_LANG.fr {
     fe_users.house_no = Numéro
     enter_account_info = Créer un Business Account
     terms_acknowledged = J'ai lu les conditions d'utilisation ainsi que le rapport sur la protection des données, compris leurs contenus et j'accepte l'utilisation des données.
-    click_here_to_see_terms =  Conditions d'utilisation et politique de confidentialité
+    click_here_to_see_terms = Conditions d'utilisation et politique de confidentialité
     new_password = Nouveau mot de passe, si désiré
     v_verify_before_create = Veuillez vérifier vos informations avant de créer un nouveau Business Account.
     v_edit_your_account = Tenir à jour votre Business Account
@@ -397,12 +420,12 @@ plugin.tx_srfeuserregister._LOCAL_LANG.fr {
     kind_regards_upd = Sincères amitiés,
     kind_regards_cre = Sincères amitiés,
     fe_users.vat = No TVA intracommunautaire
-    missing_vat = Veuillez saisir votre numéro de TVA intracommunautaire. au
-    v_registration_created_subject  = Bienvenue sur Cryptshare.express
+    missing_vat = Veuillez saisir votre numéro de TVA intracommunautaire.
+    v_registration_created_subject = Bienvenue sur Cryptshare.express
     v_registration_created_message1 = Vous pouvez désormais commander des utilisateurs de messagerie pour vous et vos collègues.
     v_registration_created_message2 = Votre adresse e-mail "%4$s" est également votre nom d'utilisateur.
     evalErrors_uniqueLocal_email = Un compte professionnel existe déjà à l'adresse e-mail que vous avez saisie.
-    missing_email = Une adresse email valide est exigée.
+    missing_email = Une adresse e-mail valide est exigée.
     evalErrors_twice_password = Le mot de passe ne correspond pas. Veuillez saisir le mot de passe deux fois.
     evalErrors_atLeast_password = Le mot de passe est trop court. Une longueur minimale de %s caractères est requise.
     button_confirm_register = Créer le Business Account !
@@ -410,137 +433,167 @@ plugin.tx_srfeuserregister._LOCAL_LANG.fr {
     v_dear_male = Salut %3$s,
     v_dear_female = Salut %3$s,
     password_again = Répéter le mot de passe
-    v_really_wish_to_delete = Vous êtes sur le point de supprimer votre compte professionnel "2$". Par conséquent, vous ne pourrez plus vous connecter à partir de maintenant. Veuillez noter que les utilisateurs de messagerie Cryptshare.express contractuels ne sont pas affectés et que les utilisateurs de messagerie doivent être résiliés séparément (avant de supprimer ce compte professionnel).
+    v_really_wish_to_delete = Vous êtes sur le point de supprimer votre compte professionnel <b>%2$s</b>. Par conséquent, vous ne pourrez plus vous connecter à partir de maintenant. Veuillez noter que les utilisateurs de messagerie Cryptshare.express contractuels ne sont pas affectés et que les utilisateurs de messagerie doivent être résiliés séparément (avant de supprimer ce compte professionnel).
     button_back_to_form = Retour au formulaire
 }
 
 plugin.tx_srfeuserregister._LOCAL_LANG.es {
     button_update = Guardar cambios
-    fe_users.gender.I.0 = Mr
-    fe_users.gender.I.1 = Ms
+    fe_users.gender.I.0 = Señor
+    fe_users.gender.I.1 = Señora
     fe_users.first_name = Nombre
     fe_users.last_name = Apellidos
     fe_users.company = Empresa
     fe_users.zip = Código postal
     fe_users.city = Localidad
     fe_users.telephone = Teléfono
-    fe_users.email = Correo-e
+    fe_users.email = Correo electrónico
     fe_users.password = Contraseña
     fe_users.address = Calle
     fe_users.house_no = Número de casa
     fe_users.vat = CIF
-    enter_account_info = crear cuenta de empresa
-    terms_acknowledged = He leído las condiciones de uso así como el informe de privacidad, he comprendido su contenido y doy mi consentimiento para el uso de los datos.
-    click_here_to_see_terms =  Condiciones de uso y política de privacidad
+    enter_account_info = Crear cuenta de empresa
+    terms_acknowledged = He leído las condiciones de uso así como la política de privacidad, he comprendido su contenido y doy mi consentimiento para el uso de los datos.
+    click_here_to_see_terms = Condiciones de uso y política de privacidad
     v_verify_before_create = Compruebe sus datos antes de crear una nueva cuenta de empresa.
     v_edit_your_account = Mantenga su cuenta de empresa al día
-    v_registration_updated_subject = Merci de garder votre compte professionnel à jour.
-    v_registration_updated_message1 = Si vous n'avez pas effectué cette modification, veuillez contacter notre service client.
-    kind_regards_upd = Cordialement,
-    kind_regards_cre = Cordialement,
-    missing_vat = Veuillez saisir votre TVA
-    v_registration_created_subject  = Bienvenue sur Cryptshare.express
-    v_registration_created_message1 = Vous pouvez maintenant commander un utilisateur de messagerie pour vous et vos collègues.
-    v_registration_created_message2 = Votre adresse e-mail "%4$s" est également votre nom d'utilisateur
-    evalErrors_uniqueLocal_email = Un compte professionnel existe déjà sous cette adresse e-mail.
-    missing_email = Une adresse email valide est exigée.
-    evalErrors_twice_password = Vos mots de passe ne correspondent pas. Veuillez entrer votre mot de passe deux fois.
-    evalErrors_atLeast_password = Le mot de passe est trop court. Le mot de passe nécessite une longueur minimale de %s caractères.
-    button_confirm_register = Crear ahora cuenta de empresa
-    v_dear = Cher %3$s,
-    v_dear_male = Bonjour %3$s,
-    v_dear_female = Bonjour %3$s,
+    v_registration_updated_subject = Gracias por mantener su cuenta de empresa actualizada.
+    v_registration_updated_message1 = Si este cambio no fue realizado por usted, póngase en contacto con nuestro servicio de atención al cliente.
+    kind_regards_upd = Atentamente,
+    kind_regards_cre = Atentamente,
+    missing_vat = Introduzca su número CIF
+    v_registration_created_subject = Bienvenido a Cryptshare.express
+    v_registration_created_message1 = Ahora puede solicitar usuarios de correo electrónico para usted y sus colegas.
+    v_registration_created_message2 = Su dirección de correo electrónico "%4$s" también es su nombre de usuario.
+    evalErrors_uniqueLocal_email = Ya existe una cuenta de empresa con esta dirección de correo electrónico.
+    missing_email = Se requiere una dirección de correo electrónico válida.
+    evalErrors_twice_password = Sus contraseñas no coinciden. Introduzca la contraseña dos veces.
+    evalErrors_atLeast_password = La contraseña es demasiado corta. La contraseña debe tener una longitud mínima de %s caracteres.
+    button_confirm_register = Crear cuenta de empresa ahora
+    v_dear = Estimado/a %3$s,
+    v_dear_male = Hola %3$s,
+    v_dear_female = Hola %3$s,
     password_again = Repetir contraseña
-    v_really_wish_to_delete = Souhaitez-vous vraiment supprimer votre compte professionnel &lt;b&gt;%2$s&lt;/b&gt; ?
+    v_really_wish_to_delete = ¿Realmente desea eliminar su cuenta de empresa <b>%2$s</b>? Esto significará que ya no podrá iniciar sesión. Tenga en cuenta que los usuarios de correo electrónico de Cryptshare.express bajo contrato no se verán afectados y deben cancelarse por separado antes de eliminar esta cuenta de empresa.
     button_back_to_form = Volver al formulario
 }
 
 [siteLanguage("locale") == "de_DE.UTF-8"]
-    plugin.tx_srfeuserregister_pi1.create.defaultValues.language = DE
-    plugin.tx_srfeuserregister_pi1.create.defaultValues.static_info_country = DEU
+    plugin.tx_srfeuserregister_pi1.create.defaultValues {
+        language = DE
+        static_info_country = DEU
+    }
     plugin.tx_srfeuserregister_pi1.autoLoginRedirect_url = /de/sign-up/createcustomeronbwandgetcustomerid
 [global]
 
 [siteLanguage("locale") == "nl_NL.UTF-8"]
-    plugin.tx_srfeuserregister_pi1.create.defaultValues.language = NL
-    plugin.tx_srfeuserregister_pi1.create.defaultValues.static_info_country = NLD
+    plugin.tx_srfeuserregister_pi1.create.defaultValues {
+        language = NL
+        static_info_country = NLD
+    }
     plugin.tx_srfeuserregister_pi1.autoLoginRedirect_url = /nl/sign-up/createcustomeronbwandgetcustomerid
 [global]
 
 [siteLanguage("locale") == "en_US.UTF-8"]
-    plugin.tx_srfeuserregister_pi1.create.defaultValues.language = EN_GB
-    plugin.tx_srfeuserregister_pi1.create.defaultValues.static_info_country = GBR
+    plugin.tx_srfeuserregister_pi1.create.defaultValues {
+        language = EN_GB
+        static_info_country = GBR
+    }
     plugin.tx_srfeuserregister_pi1.autoLoginRedirect_url = /en-us/sign-up/createcustomeronbwandgetcustomerid
 [global]
 
 [siteLanguage("locale") == "en_GB.UTF-8"]
-    plugin.tx_srfeuserregister_pi1.create.defaultValues.language = EN_GB
-    plugin.tx_srfeuserregister_pi1.create.defaultValues.static_info_country = GBR
+    plugin.tx_srfeuserregister_pi1.create.defaultValues {
+        language = EN_GB
+        static_info_country = GBR
+    }
     plugin.tx_srfeuserregister_pi1.autoLoginRedirect_url = /en-gb/sign-up/createcustomeronbwandgetcustomerid
 [global]
 
 [siteLanguage("locale") == "de_CH.UTF-8"]
-    plugin.tx_srfeuserregister_pi1.create.defaultValues.language = DE
-    plugin.tx_srfeuserregister_pi1.create.defaultValues.static_info_country = CHE
+    plugin.tx_srfeuserregister_pi1.create.defaultValues {
+        language = DE
+        static_info_country = CHE
+    }
     plugin.tx_srfeuserregister_pi1.autoLoginRedirect_url = /de-ch/sign-up/createcustomeronbwandgetcustomerid
 [global]
 
 [siteLanguage("locale") == "fr_FR.UTF-8"]
-    plugin.tx_srfeuserregister_pi1.create.defaultValues.language = FR
-    plugin.tx_srfeuserregister_pi1.create.defaultValues.static_info_country = FRA
+    plugin.tx_srfeuserregister_pi1.create.defaultValues {
+        language = FR
+        static_info_country = FRA
+    }
     plugin.tx_srfeuserregister_pi1.autoLoginRedirect_url = /fr/sign-up/createcustomeronbwandgetcustomerid
 [global]
 
 [siteLanguage("locale") == "es_ES.UTF-8"]
-    plugin.tx_srfeuserregister_pi1.create.defaultValues.language = ES
-    plugin.tx_srfeuserregister_pi1.create.defaultValues.static_info_country = ESP
+    plugin.tx_srfeuserregister_pi1.create.defaultValues {
+        language = ES
+        static_info_country = ESP
+    }
     plugin.tx_srfeuserregister_pi1.autoLoginRedirect_url = /es/sign-up/createcustomeronbwandgetcustomerid
 [global]
 
 [siteLanguage("locale") == "it_IT.UTF-8"]
-    plugin.tx_srfeuserregister_pi1.create.defaultValues.language = IT
-    plugin.tx_srfeuserregister_pi1.create.defaultValues.static_info_country = ITA
+    plugin.tx_srfeuserregister_pi1.create.defaultValues {
+        language = IT
+        static_info_country = ITA
+    }
     plugin.tx_srfeuserregister_pi1.autoLoginRedirect_url = /it/sign-up/createcustomeronbwandgetcustomerid
 [global]
 
 [siteLanguage("locale") == "fi_FI.UTF-8"]
-    plugin.tx_srfeuserregister_pi1.create.defaultValues.language = FI
-    plugin.tx_srfeuserregister_pi1.create.defaultValues.static_info_country = FIN
+    plugin.tx_srfeuserregister_pi1.create.defaultValues {
+        language = FI
+        static_info_country = FIN
+    }
     plugin.tx_srfeuserregister_pi1.autoLoginRedirect_url = /fi/sign-up/createcustomeronbwandgetcustomerid
 [global]
 
 [siteLanguage("locale") == "nl_BE.UTF-8"]
-    plugin.tx_srfeuserregister_pi1.create.defaultValues.language = NL
-    plugin.tx_srfeuserregister_pi1.create.defaultValues.static_info_country = BEL
+    plugin.tx_srfeuserregister_pi1.create.defaultValues {
+        language = NL
+        static_info_country = BEL
+    }
     plugin.tx_srfeuserregister_pi1.autoLoginRedirect_url = /nl-be/sign-up/createcustomeronbwandgetcustomerid
 [global]
 
 [siteLanguage("locale") == "ga_GA.UTF-8"]
-    plugin.tx_srfeuserregister_pi1.create.defaultValues.language = EN_GB
-    plugin.tx_srfeuserregister_pi1.create.defaultValues.static_info_country = IRL
+    plugin.tx_srfeuserregister_pi1.create.defaultValues {
+        language = EN_GB
+        static_info_country = IRL
+    }
     plugin.tx_srfeuserregister_pi1.autoLoginRedirect_url = /ga/sign-up/createcustomeronbwandgetcustomerid
 [global]
 
 [siteLanguage("locale") == "pt_PT.UTF-8"]
-    plugin.tx_srfeuserregister_pi1.create.defaultValues.language = EN_GB
-    plugin.tx_srfeuserregister_pi1.create.defaultValues.static_info_country = PRT
+    plugin.tx_srfeuserregister_pi1.create.defaultValues {
+        language = EN_GB
+        static_info_country = PRT
+    }
     plugin.tx_srfeuserregister_pi1.autoLoginRedirect_url = /pt/sign-up/createcustomeronbwandgetcustomerid
 [global]
 
 [siteLanguage("locale") == "de_AT.UTF-8"]
-    plugin.tx_srfeuserregister_pi1.create.defaultValues.language = DE
-    plugin.tx_srfeuserregister_pi1.create.defaultValues.static_info_country = AUT
+    plugin.tx_srfeuserregister_pi1.create.defaultValues {
+        language = DE
+        static_info_country = AUT
+    }
     plugin.tx_srfeuserregister_pi1.autoLoginRedirect_url = /de-at/sign-up/createcustomeronbwandgetcustomerid
 [global]
 
 [siteLanguage("locale") == "el_EL.UTF-8"]
-    plugin.tx_srfeuserregister_pi1.create.defaultValues.language = EN_GB
-    plugin.tx_srfeuserregister_pi1.create.defaultValues.static_info_country = GRC
+    plugin.tx_srfeuserregister_pi1.create.defaultValues {
+        language = EN_GB
+        static_info_country = GRC
+    }
     plugin.tx_srfeuserregister_pi1.autoLoginRedirect_url = /el/sign-up/createcustomeronbwandgetcustomerid
 [global]
 
 [siteLanguage("locale") == "lb_LB.UTF-8"]
-    plugin.tx_srfeuserregister_pi1.create.defaultValues.language = DE
-    plugin.tx_srfeuserregister_pi1.create.defaultValues.static_info_country = LUX
+    plugin.tx_srfeuserregister_pi1.create.defaultValues {
+        language = DE
+        static_info_country = LUX
+    }
     plugin.tx_srfeuserregister_pi1.autoLoginRedirect_url = /lb/sign-up/createcustomeronbwandgetcustomerid
 [global]
