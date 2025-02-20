@@ -3,8 +3,8 @@ lib.GPVAR {
     stdWrap.htmlSpecialChars = 1
     10 = TEXT
     10 {
-        dataWrap = GP:{current}
-        insertData = 1
-        wrap3 = {|}
+        data = GP:{current}  # Holt GET/POST-Parameter basierend auf der aktuellen Variablen
+        insertData = 1       # Ersetzt Platzhalter mit realen Werten
+        wrap = {|}           # Korrektur: wrap3 existiert nicht, daher umgestellt auf wrap
     }
 }
