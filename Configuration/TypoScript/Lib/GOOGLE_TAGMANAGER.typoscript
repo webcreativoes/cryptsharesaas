@@ -1,9 +1,12 @@
 lib.GOOGLE_TAGMANAGER = TEXT
 lib.GOOGLE_TAGMANAGER {
-   #value = <!-- Google Tag Manager (noscript) --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NC42V3L" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!-- End Google #Tag Manager (noscript) -->
+    # Die eigentliche Google Tag Manager NoScript-Implementierung bleibt auskommentiert,
+    # falls sie wieder aktiviert werden muss.
+    # value = <!-- Google Tag Manager (noscript) --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NC42V3L" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!-- End Google Tag Manager (noscript) -->
 }
 
-[getTSFE().beUserLogin]
+[frontend.user.isLoggedIn]
    lib.GOOGLE_TAGMANAGER.value = <!-- Google Tag Manager removed because beUserLogin > 0 ;) -->
 [global]
+
 lib.GOOGLE_TAGMANAGER.value =
