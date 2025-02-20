@@ -3,36 +3,43 @@ lib.CONTENTCOL_1 {
     table = tt_content
     select {
         orderBy = sorting
-        where = colPos = 0
+        where.field = colPos
+        where.int = 0
         languageField = sys_language_uid
     }
 }
 
 lib.CONTENTCOL_2 = CONTENT
-lib.CONTENTCOL_2.table = tt_content
-lib.CONTENTCOL_2.select {
-    orderBy = sorting
-    where = colPos = 1
-    #where = {#colPos}=20
-    languageField = sys_language_uid
+lib.CONTENTCOL_2 {
+    table = tt_content
+    select {
+        orderBy = sorting
+        where.field = colPos
+        where.int = 1
+        languageField = sys_language_uid
+    }
 }
 
 lib.CONTENTCOL_3 = CONTENT
-lib.CONTENTCOL_3.table = tt_content
-lib.CONTENTCOL_3.select {
-    orderBy = sorting
-    where = colPos = 2
-    #where = {#colPos}=30
-    languageField = sys_language_uid
+lib.CONTENTCOL_3 {
+    table = tt_content
+    select {
+        orderBy = sorting
+        where.field = colPos
+        where.int = 2
+        languageField = sys_language_uid
+    }
 }
 
 lib.CONTENTCOL_4 = CONTENT
-lib.CONTENTCOL_4.table = tt_content
-lib.CONTENTCOL_4.select {
-    orderBy = sorting
-    where = colPos = 3
-    #where = {#colPos}=40
-    languageField = sys_language_uid
+lib.CONTENTCOL_4 {
+    table = tt_content
+    select {
+        orderBy = sorting
+        where.field = colPos
+        where.int = 3
+        languageField = sys_language_uid
+    }
 }
 
 lib.CONTENTCOL_HINT = CONTENT
@@ -40,7 +47,8 @@ lib.CONTENTCOL_HINT {
     table = tt_content
     select {
         orderBy = sorting
-        where = colPos = 77
+        where.field = colPos
+        where.int = 77
         pidInList = 1837
         languageField = sys_language_uid
     }
@@ -51,7 +59,8 @@ lib.CONTENTCOL_HINT_ACTION {
     table = tt_content
     select {
         orderBy = sorting
-        where = colPos = 77
+        where.field = colPos
+        where.int = 77
         pidInList = 1855
         languageField = sys_language_uid
     }
