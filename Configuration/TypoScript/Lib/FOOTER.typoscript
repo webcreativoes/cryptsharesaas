@@ -5,9 +5,9 @@ lib.FOOTER {
         table = tt_content
         select {
             orderBy = sorting
-            where = colPos = 0
+            where = colPos=0
             languageField = sys_language_uid
-            pidInList = {$PID_FooterRow}
+            pidInList.data = levelfield:-1, PID_FooterRow, slide
         }
     }
 }
