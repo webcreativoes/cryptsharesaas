@@ -10,6 +10,6 @@ lib.NAVIGATION {
         ACT {
             allWrap = <li class="list-group-item active">|</li>
         }
-        wrap = <div class="list-group panel" id="sidebar"><ul class="nav flex-column">|
+        wrap = <div class="list-group panel" id="sidebar"><ul class="nav flex-column">|</ul></div>
     }
 }
