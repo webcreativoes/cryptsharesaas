@@ -12,45 +12,26 @@ base: 'https://cryptshare.express-11.ddev.site'
 #  -
 #    base: 'https://cs-x-dev.equinoxe.de'
 #    condition: 'applicationContext == "Development/V10"'
+
 errorHandling:
-  -
-    errorCode: '404'
+  - errorCode: '404'
     errorHandler: Fluid
     errorFluidTemplate: 'EXT:cryptsharesaas/Resources/Private/Templates/404.html'
-    errorFluidTemplatesRootPath: ''
-    errorFluidLayoutsRootPath: ''
-    errorFluidPartialsRootPath: ''
-  -
-    errorCode: '403'
+  - errorCode: '403'
     errorHandler: Fluid
     errorFluidTemplate: 'EXT:cryptsharesaas/Resources/Private/Templates/403.html'
-    errorFluidTemplatesRootPath: ''
-    errorFluidLayoutsRootPath: ''
-    errorFluidPartialsRootPath: ''
-  -
-    errorCode: '500'
+  - errorCode: '500'
     errorHandler: Fluid
     errorFluidTemplate: 'EXT:cryptsharesaas/Resources/Private/Templates/500.html'
-    errorFluidTemplatesRootPath: ''
-    errorFluidLayoutsRootPath: ''
-    errorFluidPartialsRootPath: ''
-  -
-    errorCode: '503'
+  - errorCode: '503'
     errorHandler: Fluid
     errorFluidTemplate: 'EXT:cryptsharesaas/Resources/Private/Templates/503.html'
-    errorFluidTemplatesRootPath: ''
-    errorFluidLayoutsRootPath: ''
-    errorFluidPartialsRootPath: ''
-  -
-    errorCode: '401'
+  - errorCode: '401'
     errorHandler: Fluid
     errorFluidTemplate: 'EXT:cryptsharesaas/Resources/Private/Templates/401.html'
-    errorFluidTemplatesRootPath: ''
-    errorFluidLayoutsRootPath: ''
-    errorFluidPartialsRootPath: ''
+
 languages:
-  -
-    title: English
+  - title: English
     enabled: true
     languageId: '0'
     base: /en/
@@ -61,8 +42,8 @@ languages:
     hreflang: en
     direction: ltr
     flag: gb
-  -
-    title: Deutsch
+
+  - title: Deutsch
     enabled: true
     languageId: '1'
     base: /de/
@@ -74,8 +55,9 @@ languages:
     direction: ltr
     fallbackType: strict
     flag: de
-  -
-    title: Dutch
+
+  # Other language entries...
+  - title: Dutch
     enabled: true
     languageId: '2'
     base: /nl/
@@ -88,8 +70,8 @@ languages:
     fallbackType: fallback
     fallbacks: '0'
     flag: nl
-  -
-    title: 'English US'
+	
+  - title: 'English US'
     enabled: true
     languageId: '3'
     base: /en-us/
@@ -102,8 +84,8 @@ languages:
     fallbackType: fallback
     fallbacks: '0'
     flag: us
-  -
-    title: French
+	
+  - title: French
     enabled: true
     languageId: '4'
     base: /fr/
@@ -116,8 +98,8 @@ languages:
     fallbackType: fallback
     fallbacks: '0'
     flag: fr
-  -
-    title: 'English GB'
+	
+  - title: 'English GB'
     enabled: true
     languageId: '5'
     base: /en-gb/
@@ -130,8 +112,8 @@ languages:
     fallbackType: fallback
     fallbacks: '0'
     flag: gb
-  -
-    title: Spanish
+	
+  - title: Spanish
     enabled: true
     languageId: '6'
     base: /es/
@@ -144,8 +126,8 @@ languages:
     fallbackType: fallback
     fallbacks: '0'
     flag: es
-  -
-    title: 'Deutsch CH'
+	
+  - title: 'Deutsch CH'
     enabled: true
     languageId: '7'
     base: /de-ch/
@@ -158,8 +140,8 @@ languages:
     fallbackType: fallback
     fallbacks: '1'
     flag: ch
-  -
-    title: Italienisch
+	
+  - title: Italienisch
     enabled: true
     languageId: '8'
     base: /it/
@@ -172,8 +154,8 @@ languages:
     fallbackType: fallback
     fallbacks: '0'
     flag: it
-  -
-    title: Finnisch
+	
+  - title: Finnisch
     enabled: true
     languageId: '9'
     base: /fi/
@@ -186,8 +168,8 @@ languages:
     fallbackType: fallback
     fallbacks: '0'
     flag: fi
-  -
-    title: 'Dutch BE'
+	
+  - title: 'Dutch BE'
     enabled: true
     languageId: '10'
     base: /nl-be/
@@ -200,8 +182,8 @@ languages:
     fallbackType: fallback
     fallbacks: '2'
     flag: be
-  -
-    title: Irisch
+	
+  - title: Irisch
     enabled: true
     languageId: '11'
     base: /ga/
@@ -214,8 +196,8 @@ languages:
     fallbackType: fallback
     fallbacks: '0'
     flag: ie
-  -
-    title: Portugiesisch
+	
+  - title: Portugiesisch
     enabled: true
     languageId: '12'
     base: /pt/
@@ -228,8 +210,8 @@ languages:
     fallbackType: fallback
     fallbacks: '0'
     flag: pt
-  -
-    title: 'Deutsch AT'
+	
+  - title: 'Deutsch AT'
     enabled: true
     languageId: '13'
     base: /de-at/
@@ -242,8 +224,8 @@ languages:
     fallbackType: fallback
     fallbacks: '1'
     flag: at
-  -
-    title: Griechisch
+	
+  - title: Griechisch
     enabled: true
     languageId: '14'
     base: /el/
@@ -256,8 +238,8 @@ languages:
     fallbackType: fallback
     fallbacks: '0'
     flag: gr
-  -
-    title: Luxemburgisch
+	
+  - title: Luxemburgisch
     enabled: true
     languageId: '15'
     base: /lb/
@@ -270,8 +252,8 @@ languages:
     fallbackType: fallback
     fallbacks: '1'
     flag: lb
-  -
-    title: Litauisch
+	
+  - title: Litauisch
     enabled: true
     base: /lt/
     typo3Language: default
@@ -284,7 +266,9 @@ languages:
     fallbacks: '0'
     flag: lt
     languageId: '16'
+
 rootPageId: 1
+
 routeEnhancers:
   PageTypeSuffix:
     type: PageType
@@ -296,8 +280,6 @@ routeEnhancers:
     namespace: 'tx_felogin_pi1'
     routePath: '/forgot/password/{forgot}'
     defaults:
-      forgot: '1'
-    requirements:
       forgot: '1'
   ResetPassword:
     type: Plugin
@@ -318,4 +300,4 @@ routeEnhancers:
       tag: '[a-zA-Z0-9].*'
     _arguments:
       trial_state: 'trial'
-routes: {  }
+routes: { }
