@@ -1,19 +1,19 @@
 [usergroup("*")]
     lib.BRAND_LINK = TEXT
     lib.BRAND_LINK {
+        value = <img id="sidebarlogo" src="/typo3conf/ext/cryptsharesaas/Resources/Public/Images/Cryptshare-Express-Logo_lok_negativ.svg">
         typolink {
             parameter = 1403
             ATagParams = class="navbar-brand list-group-item"
         }
-        value = <img id="sidebarlogo" src="/typo3conf/ext/cryptsharesaas/Resources/Public/Images/Cryptshare-Express-Logo_lok_negativ.svg" >
     }
 [else]
     lib.BRAND_LINK = TEXT
     lib.BRAND_LINK {
+        value = <img id="sidebarlogo" src="/typo3conf/ext/cryptsharesaas/Resources/Public/Images/Cryptshare-Express-Logo_lok_negativ.svg">
         typolink {
             parameter = 1
             ATagParams = class="navbar-brand list-group-item"
         }
-        value = <img id="sidebarlogo" src="/typo3conf/ext/cryptsharesaas/Resources/Public/Images/Cryptshare-Express-Logo_lok_negativ.svg" >
     }
 [global]
