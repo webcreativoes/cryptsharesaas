@@ -8,10 +8,10 @@
             typolink {
                 parameter = 1115
                 additionalParams = &logintype=logout
-                ATagParams = id="btn-logout"
+                ATagParams = id="btn-logout" class="list-group-item"
             }
-            wrap = <li class="list-group-item">|</li></ul></div>
-            innerWrap = <i class="fa fa-sign-out"></i><span>|</span>
+            wrap = <li>|</li>
+            innerWrap = <i class="fa fa-sign-out"></i><span> | </span>
         }
     }
 [else]
