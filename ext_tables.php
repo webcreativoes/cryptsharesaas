@@ -1,11 +1,5 @@
 <?php
-defined('TYPO3_MODE') || die('Access denied.');
+defined('TYPO3') or die();
 
-call_user_func(
-    function()
-    {
-
-        \TYPO3\CMS\Core\Utility\GLOBALS['TYPO3_CONF_VARS']['SYS']['TypoScript']['cryptsharesaas'] = 'cryptsharesaas', 'Configuration/TypoScript', 'Cryptshare SaaS Template');
-
-    }
-);
+// Registrierung von TypoScript für die Extension
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['fluid']['namespaces']['cryptsharesaas'] = ['Webcreativoes\\Cryptsharesaas\\'];
