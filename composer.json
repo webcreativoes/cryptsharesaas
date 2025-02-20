@@ -1,11 +1,11 @@
 {
-    "name": "befinesolutionsag/cryptsharesaas",
+    "name": "webcreativoes/cryptsharesaas",
     "type": "typo3-cms-extension",
     "description": "Cryptshare SaaS Template",
     "license": "GPL-2.0-or-later",
     "authors": [
         {
-            "name": "Marcel Filipp",
+            "name": "Webcreativoes",
             "role": "Developer"
         }
     ],
@@ -15,16 +15,12 @@
     },
     "autoload": {
         "psr-4": {
-            "BefineSolutionsAG\\Cryptsharesaas\\": "Classes/"
+            "Webcreativoes\\Cryptsharesaas\\": "Classes/"
         }
     },
     "extra": {
         "typo3/cms": {
             "extension-key": "cryptsharesaas"
         }
-    },
-    "replace": {
-        "cryptsharesaas": "self.version",
-        "typo3-ter/cryptsharesaas": "self.version"
     }
 }
