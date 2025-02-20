@@ -4,9 +4,10 @@ lib.BWENVIRONMENT {
     10 {
         variables {
             bw_environment = TEXT
-            bw_environment.value =  {$bw_environment}
+            bw_environment.value = {$bw_environment}
+            
             bw_publicApiKey = TEXT
-            bw_publicApiKey.value =  {$bw_publicApiKey}
+            bw_publicApiKey.value = {$bw_publicApiKey}
         }
     }
 }
