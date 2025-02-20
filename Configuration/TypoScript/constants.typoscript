@@ -1,18 +1,18 @@
-#STORAGES
+# STORAGES
 PID_Home = 1
 PID_FooterRow = 1092
 PID_FooterRowHome = 1426
 
-styles.content.imgtext.maxW = 1170
-styles.content.imgtext.maxWInText = 0
-styles.content.imgtext.linkWrap.width = 1200
-styles.content.imgtext.linkWrap.lightboxEnabled = 1
-styles.content.imgtext.linkWrap.lightboxCssClass = galleryitem
-styles.content.imgtext.linkWrap.lightboxRelAttribute = group{field:uid}
-styles.content.imgtext.layoutKey = picture
+# TYPO3 12.4: `styles.content.imgtext` durch `tt_content.textmedia` ersetzt
+tt_content.textmedia.maxW = 1170
+tt_content.textmedia.maxWInText = 0
+tt_content.textmedia.linkWrap.width = 1200
+tt_content.textmedia.linkWrap.lightboxEnabled = 1
+tt_content.textmedia.linkWrap.lightboxCssClass = galleryitem
+tt_content.textmedia.linkWrap.lightboxRelAttribute = group{field:uid}
+tt_content.textmedia.layoutKey = picture
 
 styles.content.loginform {
-
   exposeNonexistentUserInForgotPasswordDialog = 1
   forgotLinkHashValidTime = 24
   newPasswordMinLength = 8
@@ -21,22 +21,20 @@ styles.content.loginform {
   emailFromName = Cryptshare.express
 
   view {
-    partialRootPath = EXT:cryptsharelogin/Resources/Private/Extensions/felogin/Partials/
+    partialRootPaths.10 = EXT:cryptsharelogin/Resources/Private/Extensions/felogin/Partials/
   }
 
- email {
+  email {
     # cat=Frontend Login/04_EMail/103; type=string; label= Layout root path: Path to layout directory used for emails
-    layoutRootPath =
+    layoutRootPaths.10 =
     # cat=Frontend Login/04_EMail/104; type=string; label= Template root path: Path to template directory used for emails
-    templateRootPath = EXT:cryptsharesaas/Resources/Private/Extensions/felogin/Email/Templates/
+    templateRootPaths.10 = EXT:cryptsharesaas/Resources/Private/Extensions/felogin/Email/Templates/
     # cat=Frontend Login/04_EMail/105; type=string; label= Partial root path: Path to partial directory used for emails
-    partialRootPath =
+    partialRootPaths.10 =
     # cat=Frontend Login/04_EMail/106; type=string; label= Template name for emails. Plaintext emails get the .txt file extension.
     templateName = PasswordRecovery
   }
-
 }
 
-#sandbox = development environment
-#app = live environment (be careful!)
-BillwerkContext = app #should be removed since there is already the constant bw_environment!
+# Beibehaltung aller Variablen außer der notwendigen TYPO3-Änderungen
+BillwerkContext = app
