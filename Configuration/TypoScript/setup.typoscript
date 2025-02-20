@@ -3,9 +3,6 @@ config {
     contentObjectExceptionHandler = 0
     admPanel = 0
     sendCacheHeaders = 1
-    no_cache = 1
-    stat = 0
-    stat_mysql = 0
     meaningfulTempFilePrefix = 50
     concatenateJs = 1
     concatenateCss = 1
@@ -13,7 +10,6 @@ config {
     compressCss = 1
     disablePrefixComment = 1
     inlineStyle2TempFile = 1
-    simulateStaticDocuments = 0
     prefixLocalAnchors = all
     absRefPrefix = auto
     noScaleUp = 1
@@ -24,20 +20,27 @@ config {
     )
 }
 
-
 page {
     stdWrap.parseFunc.short {
-        CustomersNumber = 1.400
-        SatisfiedUsersNumberShort = 3.0
-        CustomersInCountriesNumber = 30
+        CustomersNumber = TEXT
+        CustomersNumber.value = 1.400
+
+        SatisfiedUsersNumberShort = TEXT
+        SatisfiedUsersNumberShort.value = 3.0
+
+        CustomersInCountriesNumber = TEXT
+        CustomersInCountriesNumber.value = 30
     }
 }
 
 [siteLanguage("languageId") == 1]
     page {
         stdWrap.parseFunc.short {
-            SatisfiedUsersNumber = 3.000.000
-            SatisfiedUsersNumberShort = 3,0
+            SatisfiedUsersNumber = TEXT
+            SatisfiedUsersNumber.value = 3.000.000
+
+            SatisfiedUsersNumberShort = TEXT
+            SatisfiedUsersNumberShort.value = 3,0
         }
     }
 [global]
