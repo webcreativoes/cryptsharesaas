@@ -1,7 +1,7 @@
 lib.CHECKOUTSTEPINDICATOR = COA_INT
 lib.CHECKOUTSTEPINDICATOR {
-    10 = text
+    10 = TEXT
     10 {
-        
+        value =
     }
 }
