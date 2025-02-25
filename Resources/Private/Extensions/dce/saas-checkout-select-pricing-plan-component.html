@@ -1,67 +1,89 @@
 {namespace dce=ArminVieweg\Dce\ViewHelpers}
 
-<f:spaceless>
-	<div class="{TSFE.fe_user.user.static_info_country} card-deck mb-3 text-center component" {f:render(section:'countryEnvironment',arguments:'{TSFE: TSFE, field: field}')}>
-		<div class="card mb-6 shadow-sm {f:if(condition: '{field.checked}', then: 'active')}">
-			<div class="card-header">
-				<h4 class="my-0 ComponentTitle">{field.title}</h4>
-			</div>
-			<div class="card-body">
-			<h1 class="card-title pricing-card-title"><span class="ComponentPrice"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></span> EUR <small class="text-muted">/ <span class="ComponentIntervall"><f:translate key="LLL:fileadmin/primary/Private/language/locallang.xlf:loading" /></span></small></h1>
-			<p><small><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:checkout_exclvat" /></small></p>
-			<f:if condition="{field.showDescription}=='1'">
-				<f:then>
-					<ul class="list-unstyled mt-3 mb-4 ComponentDescription">
-						<li class="loading"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></li>
-					</ul>
-				</f:then>
-			</f:if>
-			<f:if condition="{field.showAnnualPrice}=='1'">
-				<f:then>
-					<p><span class="ComponentAnnualPrice"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></span> EUR <span class="ComponentAnnualDescription"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Language/locallang.xlf:loading" /></span></p>
-				</f:then>
-			</f:if>
-		</div>
-		<div class="card-footer">
-			<div class="custom-control custom-checkbox">
-				<f:if condition="{TSFE.fe_user.user.static_info_country} == NLD">
-					<f:then>
-						<input type="checkbox" class="custom-control-input" id="componentid-{f:if(condition: '{f:cObject(typoscriptObjectPath: 'lib.BWENVIRONMENT.10.variables.bw_environment')}==\'app\'', then: '{field.nLbwComponentId}', else: '{field.nLbwComponentIdSandbox}')}" name="component" value="{f:if(condition: '{f:cObject(typoscriptObjectPath: 'lib.BWENVIRONMENT.10.variables.bw_environment')}==\'app\'', then: '{field.nLbwComponentId}', else: '{field.nLbwComponentIdSandbox}')}"{f:if(condition: '{field.checked}', then: ' checked="checked" disabled="disabled" ')}/>
-						<label for="componentid-{f:if(condition: '{f:cObject(typoscriptObjectPath: 'lib.BWENVIRONMENT.10.variables.bw_environment')}==\'app\'', then: '{field.nLbwComponentId}', else: '{field.nLbwComponentIdSandbox}')}" class="custom-control-label"></label>
-					</f:then>
-					<f:else if ="{TSFE.fe_user.user.static_info_country} == GBD">
-						<input type="checkbox" class="custom-control-input" id="componentid-{f:if(condition: '{f:cObject(typoscriptObjectPath: 'lib.BWENVIRONMENT.10.variables.bw_environment')}==\'app\'', then: '{field.gBbwComponentId}', else: '{field.gBbwComponentIdSandbox}')}" name="component" value="{f:if(condition: '{f:cObject(typoscriptObjectPath: 'lib.BWENVIRONMENT.10.variables.bw_environment')}==\'app\'', then: '{field.gBbwComponentId}', else: '{field.gBbwComponentIdSandbox}')}"{f:if(condition: '{field.checked}', then: ' checked="checked" disabled="disabled" ')}/>
-						<label for="componentid-{f:if(condition: '{f:cObject(typoscriptObjectPath: 'lib.BWENVIRONMENT.10.variables.bw_environment')}==\'app\'', then: '{field.gBbwComponentId}', else: '{field.gBbwComponentIdSandbox}')}" class="custom-control-label"></label>
-					</f:else>
-					<f:else>
-						<input type="checkbox" class="custom-control-input" id="componentid-{f:if(condition: '{f:cObject(typoscriptObjectPath: 'lib.BWENVIRONMENT.10.variables.bw_environment')}==\'app\'', then: '{field.bwComponentId}', else: '{field.bwComponentIdSandbox}')}" name="component" value="{f:if(condition: '{f:cObject(typoscriptObjectPath: 'lib.BWENVIRONMENT.10.variables.bw_environment')}==\'app\'', then: '{field.bwComponentId}', else: '{field.bwComponentIdSandbox}')}"{f:if(condition: '{field.checked}', then: ' checked="checked" disabled="disabled" ')}/>
-						<label for="componentid-{f:if(condition: '{f:cObject(typoscriptObjectPath: 'lib.BWENVIRONMENT.10.variables.bw_environment')}==\'app\'', then: '{field.bwComponentId}', else: '{field.bwComponentIdSandbox}')}" class="custom-control-label"></label>
-					</f:else>
-				</f:if>
-			</div>
-		</div>
-	</div>
-</f:spaceless>
+<f:section name="main">
+    <div class="{TSFE.fe_user.user.static_info_country} card-deck mb-3 text-center component" 
+         {f:render(section:'countryEnvironment', arguments:'{TSFE: TSFE, field: field}')}>
+        <div class="card mb-6 shadow-sm {f:if(condition: field.checked, then: 'active')}">
+            <div class="card-header">
+                <h4 class="my-0 ComponentTitle">{field.title}</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">
+                    <span class="ComponentPrice">
+                        <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" />
+                    </span> EUR 
+                    <small class="text-muted">/ 
+                        <span class="ComponentIntervall">
+                            <f:translate key="LLL:fileadmin/primary/Private/language/locallang.xlf:loading" />
+                        </span>
+                    </small>
+                </h1>
+                <p><small>
+                    <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:checkout_exclvat" />
+                </small></p>
+
+                <f:if condition="{field.showDescription} == '1'">
+                    <ul class="list-unstyled mt-3 mb-4 ComponentDescription">
+                        <li class="loading">
+                            <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" />
+                        </li>
+                    </ul>
+                </f:if>
+
+                <f:if condition="{field.showAnnualPrice} == '1'">
+                    <p>
+                        <span class="ComponentAnnualPrice">
+                            <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" />
+                        </span> EUR 
+                        <span class="ComponentAnnualDescription">
+                            <f:translate key="LLL:EXT:cryptsharesaas/Resources/Language/locallang.xlf:loading" />
+                        </span>
+                    </p>
+                </f:if>
+            </div>
+
+            <div class="card-footer">
+                <div class="custom-control custom-checkbox">
+                    <f:if condition="{TSFE.fe_user.user.static_info_country} == 'NLD'">
+                        <f:then>
+                            <input type="checkbox" class="custom-control-input" 
+                                   id="componentid-{field.nLbwComponentId}" 
+                                   name="component" 
+                                   value="{field.nLbwComponentId}" 
+                                   {f:if(condition: field.checked, then: 'checked="checked" disabled="disabled"')} />
+                            <label for="componentid-{field.nLbwComponentId}" class="custom-control-label"></label>
+                        </f:then>
+                        <f:else if="{TSFE.fe_user.user.static_info_country} == 'GBD'">
+                            <input type="checkbox" class="custom-control-input" 
+                                   id="componentid-{field.gBbwComponentId}" 
+                                   name="component" 
+                                   value="{field.gBbwComponentId}" 
+                                   {f:if(condition: field.checked, then: 'checked="checked" disabled="disabled"')} />
+                            <label for="componentid-{field.gBbwComponentId}" class="custom-control-label"></label>
+                        </f:else>
+                        <f:else>
+                            <input type="checkbox" class="custom-control-input" 
+                                   id="componentid-{field.bwComponentId}" 
+                                   name="component" 
+                                   value="{field.bwComponentId}" 
+                                   {f:if(condition: field.checked, then: 'checked="checked" disabled="disabled"')} />
+                            <label for="componentid-{field.bwComponentId}" class="custom-control-label"></label>
+                        </f:else>
+                    </f:if>
+                </div>
+            </div>
+        </div>
+    </div>
+</f:section>
+
 <f:section name="countryEnvironment">
-	<f:spaceless>
-		<f:if condition="{TSFE.fe_user.user.static_info_country} == 'NLD'">
-			<f:then>
-				<f:if condition="{f:cObject(typoscriptObjectPath: 'lib.BWENVIRONMENT.10.variables.bw_environment')}=='app'">
-					<f:then>data-component-id="{field.nLbwComponentId}"</f:then>
-					<f:else>data-component-id="{field.nLbwComponentIdSandbox}"</f:else></f:if>
-			</f:then>
-			<f:else if  ="{TSFE.fe_user.user.static_info_country} == 'GBD'">
-				<f:if condition="{f:cObject(typoscriptObjectPath: 'lib.BWENVIRONMENT.10.variables.bw_environment')}=='app'">
-					<f:then>data-component-id="{field.gBbwComponentId}"</f:then>
-					<f:else>data-component-id="{field.gBbwComponentIdSandbox}"</f:else>
-				</f:if>
-			</f:else>
-			<f:else>
-				<f:if condition="{f:cObject(typoscriptObjectPath: 'lib.BWENVIRONMENT.10.variables.bw_environment')}=='app'">
-					<f:then>data-component-id="{field.bwComponentId}"</f:then>
-					<f:else>data-component-id="{field.bwComponentIdSandbox}"</f:else>
-				</f:if>
-			</f:else>
-		</f:if>
-	</f:spaceless>
+    <f:if condition="{TSFE.fe_user.user.static_info_country} == 'NLD'">
+        <f:then>data-component-id="{field.nLbwComponentId}"</f:then>
+    </f:if>
+    <f:if condition="{TSFE.fe_user.user.static_info_country} == 'GBD'">
+        <f:then>data-component-id="{field.gBbwComponentId}"</f:then>
+    </f:if>
+    <f:if condition="{TSFE.fe_user.user.static_info_country} != 'NLD' && TSFE.fe_user.user.static_info_country} != 'GBD'">
+        <f:then>data-component-id="{field.bwComponentId}"</f:then>
+    </f:if>
 </f:section>
