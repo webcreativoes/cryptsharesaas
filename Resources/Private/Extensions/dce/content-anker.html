@@ -1,7 +1,7 @@
-
-
 <f:spaceless>
-	<div class="dce">
-		<a id="{field.title}"></a>
-	</div>
+    <div class="dce">
+        <f:if condition="{field.title}">
+            <a id="{field.title -> f:format.htmlspecialchars() -> f:format.case(mode: 'lower')}" name="{field.title -> f:format.htmlspecialchars() -> f:format.case(mode: 'lower')}"></a>
+        </f:if>
+    </div>
 </f:spaceless>
