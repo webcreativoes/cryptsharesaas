@@ -1,164 +1,142 @@
+<div class="alert alert-success d-none" role="alert" id="editComponentSuccess">
+    <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:edit_component" />
+</div>
 
+<div class="alert alert-success d-none" role="alert" id="cancelComponentSuccess">
+    <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:cancel_component" />
+</div>
 
-<f:spaceless>
-    <div class="alert alert-success d-none" role="alert" id="editComponentSuccess">
-        <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:edit_component" />
+<div class="card status" style="display:none">
+    <div class="card-body">
+        <label>
+            <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:checkout_currentstatus" />
+        </label>
+        <br>
+        <div class="custom-control custom-radio pull-left">
+            <input required type="radio" class="custom-control-input" value="0" checked>
+            <label for="status" class="custom-control-label">
+                <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" />
+            </label>
+        </div>
     </div>
-    <div class="alert alert-success d-none" role="alert" id="cancelComponentSuccess">
-        <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:cancel_component" />
+    <div class="card-footer">
+        <a href="#" class="btn btn-sm btn-default pull-right" id="PreviewWelcomeMail"
+           title="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:checkout_welcomeemailpreview')}">
+            <i class="fa fa-eye" aria-hidden="true"></i>
+        </a>
+        <a href="#" class="btn btn-sm btn-primary pull-right" id="SendWelcomeMail">
+            <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:checkout_sendwelcomeemail" />
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+        </a>
+        <div class="loader pull-right"></div>
     </div>
-    <div class="card status" style="display:none">
-        <div class="card-body">
-            <label><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:checkout_currentstatus" /></label>
-            <br>
-            <div class="custom-control custom-radio pull-left">
-                <input required="" type="radio" class="custom-control-input" name="" value="0" checked="checked">
-                <label for="status" class="custom-control-label" data-localize="label-user-data-status"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></label>
+</div>
+
+<div class="card enter-user-data selfservice w-100">
+    <div class="card-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section" id="componentCard">
+                        <div class="section-header">
+                            <div class="person-header">
+                                <h4 class="ng-binding">
+                                    <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:your_component" />
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="section-content">
+                            <div id="changealert" class="alert alert-warning" role="alert">
+                                <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:change_alert" />
+                            </div>
+                            <form class="form-horizontal ng-pristine ng-valid">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 control-label ng-scope">
+                                        <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:component_name" />
+                                    </label>
+                                    <div class="col-sm-9">
+                                        <p class="form-control-static ng-binding" id="componentName"></p>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-sm-3 control-label ng-scope">
+                                        <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:component_email" />
+                                    </label>
+                                    <div class="col-sm-9">
+                                        <p class="form-control-static ng-binding" id="componentEmail"></p>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-sm-3 control-label ng-scope">
+                                        <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:component_start" />
+                                    </label>
+                                    <div class="col-sm-9">
+                                        <p class="form-control-static ng-binding" id="componentStart"></p>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row d-none" id="componentEndLabel">
+                                    <label class="col-sm-3 control-label ng-scope">
+                                        <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:component_end" />
+                                    </label>
+                                    <div class="col-sm-9">
+                                        <p class="form-control-static ng-binding" id="componentEnd"></p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-6"></div>
+                                    <div class="col-sm-3">
+                                        <button type="button" id="editButton" class="btn simple-button pull-right"
+                                                data-toggle="modal" data-target="#editModal">
+                                            <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:component_edit" />
+                                        </button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button type="button" id="cancelButton" class="btn btn-danger pull-right"
+                                                data-toggle="modal" data-target="#cancelModal">
+                                            <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:component_cancel" />
+                                        </button>
+                                        <input type="hidden" id="contractId">
+                                        <input type="hidden" id="componentId">
+                                        <input type="hidden" id="nextBillingDate">
+                                        <input type="hidden" id="componentEndDate">
+                                        <input type="hidden" id="alreadyChanged">
+                                        <input type="hidden" id="currentEmail">
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div class="section d-none" id="loading">
+                        <div class="section-header">
+                            <div class="person-header">
+                                <h4 class="ng-binding">
+                                    <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:component_loading" />
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="section-content">
+                            <div class="d-flex align-items-center">
+                                <strong>
+                                    <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:component_loading" />...
+                                </strong>
+                                <div class="spinner-border ml-auto" role="status" aria-hidden="true"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="card-footer">
-            <a href="#" class="btn btn-sm btn-default  pull-right" id="PreviewWelcomeMail" title="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:checkout_welcomeemailpreview')}"> <i class="fa fa-eye" aria-hidden="true"></i></a>
-            <a href="#" class="btn btn-sm btn-primary pull-right" id="SendWelcomeMail"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:checkout_sendwelcomeemail" /> <i class="fa fa-envelope" aria-hidden="true"></i></a>
-            <div class="loader pull-right"></div>
-        </div>
     </div>
-    <div class="card enter-user-data selfservice w-100">
-        <div class="card-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="section" id="componentCard">
-                            <div class="section-header">
-                                <div class="person-header">
-                                    <h4 class="ng-binding"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:your_component" /></h4>
-                                </div>
-                            </div>
-                            <div class="section-content">
-                                <div id="changealert" class="alert alert-warning" role="alert">
-                                    <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:change_alert" />
-                                </div>
-                                <form class="form-horizontal ng-pristine ng-valid">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 control-label ng-scope"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:component_name" /></label>
-                                        <div class="col-sm-9">
-                                            <p class="form-control-static ng-binding" id="componentName"></p>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 control-label ng-scope"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:component_email" /></label>
-                                        <div class="col-sm-9">
-                                            <p class="form-control-static ng-binding" id="componentEmail"></p>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 control-label ng-scope"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:component_start" /></label>
-                                        <div class="col-sm-9">
-                                            <p class="form-control-static ng-binding" id="componentStart"></p>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row d-none" id="componentEndLabel">
-                                        <label class="col-sm-3 control-label ng-scope"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:component_end" /></label>
-                                        <div class="col-sm-9">
-                                            <p class="form-control-static ng-binding" id="componentEnd"></p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-6"></div>
-                                        <div class="col-sm-3">
-                                            <button type="button" id="editButton" class="btn simple-button pull-right" data-toggle="modal" data-target="#editModal">
-                                                <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:component_edit" />
-                                            </button>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <button type="button" id="cancelButton" class="btn btn-danger pull-right" data-toggle="modal" data-target="#cancelModal">
-                                                <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:component_cancel" />
-                                            </button>
-                                            <input type="hidden" id="contractId" value="" />
-                                            <input type="hidden" id="componentId" value="" />
-                                            <input type="hidden" id="nextBillingDate" value="" />
-                                            <input type="hidden" id="componentEndDate" value="" />
-                                            <input type="hidden" id="alreadyChanged" value="" />
-                                            <input type="hidden" id="currentEmail" value="" />
-                                        </div>
-                                    </div>
-                                </form>
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-                        <div class="section d-none" id="loading">
-                            <div class="section-header">
-                                <div class="person-header">
-                                    <h4 class="ng-binding"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:component_loading" /></h4>
-                                </div>
-                            </div>
-                            <div class="section-content">
-                                <div class="d-flex align-items-center">
-                                    <strong><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:component_loading" />...</strong>
-                                    <div class="spinner-border ml-auto" role="status" aria-hidden="true"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card-footer">
-            <f:link.typolink parameter="1400" class="btn btn-sm pull-left">
-                <i class="fa fa-chevron-left" aria-hidden="true"></i>&nbsp;<f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:back" />
-            </f:link.typolink>
-        </div>
+
+    <div class="card-footer">
+        <f:link.typolink parameter="1400" class="btn btn-sm pull-left">
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>&nbsp;
+            <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:back" />
+        </f:link.typolink>
     </div>
-    <div class="modal fade" id="cancelModal" tabindex="-1" aria-labelledby="cancelModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="cancelModalLabel"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:component_cancel" /></h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:component_cancel_text" />
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:component_cancel_no" /></button>
-                    <button type="button" class="btn btn-primary" data-dismiss="modal" id="cancelComponent"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:component_cancel_yes" /></button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <form id="formEditEmail" method="post">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="editModalLabel"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:component_edit" /></h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <p class="form-control-static ng-binding"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:component_edit_email_text_1" /></p>
-                        <p class="form-control-static ng-binding"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:component_edit_email_text_2" /></p>
-                        <div class="form-group row">
-                            <label class="col-sm-3 control-label ng-scope"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:component_name" /></label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" name="componentNameInput" id="componentNameInput" aria-describedby="nameHelp" placeholder="" required />
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-sm-3 control-label ng-scope"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:component_email" /></label>
-                            <div class="col-sm-9">
-                                <input type="email" class="form-control" name="componentEmailInput" id="componentEmailInput" aria-describedby="emailHelp" placeholder="" required />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:component_edit_email_cancel" /></button>
-                        <button type="submit" class="btn btn-primary" id="editComponent"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:component_edit_email_save" /></button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-</f:spaceless>
+</div>
