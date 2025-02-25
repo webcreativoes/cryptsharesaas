@@ -1,18 +1,24 @@
-
 <f:layout name="None" />
 
 <f:section name="main">
-	<f:spaceless>
-		<f:if condition="{field.size}">
-			<f:then>
-				<{field.size} class="title text-{field.align}">{field.header}</{field.size}>
-			</f:then>
-			<f:else>
-				<h2 class="title text-{field.align}">{field.header}</h2>
-			</f:else>
-		</f:if>
-		<f:if condition="{field.slogan}">
-			<p class="tagline"><f:format.nl2br>{field.slogan}</f:format.nl2br></p>
-		</f:if>
-	</f:spaceless>
+    <f:if condition="{field.size}">
+        <f:then>
+            <f:if condition="{field.header}">
+                <{field.size} class="title text-{field.align}">
+                    <f:format.htmlspecialchars>{field.header}</f:format.htmlspecialchars>
+                </{field.size}>
+            </f:if>
+        </f:then>
+        <f:else>
+            <f:if condition="{field.header}">
+                <h2 class="title text-{field.align}">
+                    <f:format.htmlspecialchars>{field.header}</f:format.htmlspecialchars>
+                </h2>
+            </f:if>
+        </f:else>
+    </f:if>
+
+    <f:if condition="{field.slogan}">
+        <p class="tagline"><f:format.nl2br><f:format.htmlspecialchars>{field.slogan}</f:format.htmlspecialchars></f:format.nl2br></p>
+    </f:if>
 </f:section>
