@@ -1,32 +1,35 @@
-
 <f:layout name="None" />
 
 <f:section name="main">
-	<f:spaceless>
-		<div class="modal " id="csModal" tabindex="-1" role="dialog" aria-labelledby="csModalLabel" aria-hidden="false">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title"><f:format.html>{field.modaltitle}</f:format.html></h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">×</span>
-						</button>
-					</div>
-					<div class="modal-body" id="modalContent">
-						<div>
-
-							<f:for each="{field.image}" as="fileReference">
-								<f:image src="{fileReference.uid}" alt="{field.alttext}" treatIdAsReference="1" class="img-fluid" />
-							</f:for>
-
-						</div>
-						<div>
-							<br>
-							<p><f:format.html>{field.text}</f:format.html></p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</f:spaceless>
+    <f:spaceless>
+        <div class="modal" id="csModal" tabindex="-1" role="dialog" aria-labelledby="csModalLabel" aria-hidden="false">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">
+                            <f:format.raw>{field.modaltitle}</f:format.raw>
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" id="modalContent">
+                        <div>
+                            <f:if condition="{field.image}">
+                                <f:for each="{field.image}" as="fileReference">
+                                    <f:image src="{fileReference.uid}" alt="{fileReference.alternative}" treatIdAsReference="true" class="img-fluid" />
+                                </f:for>
+                            </f:if>
+                        </div>
+                        <div>
+                            <br>
+                            <p>
+                                <f:format.raw>{field.text}</f:format.raw>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </f:spaceless>
 </f:section>

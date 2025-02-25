@@ -1,43 +1,22 @@
-
 <f:layout name="None" />
 
 <f:section name="main">
-	<f:spaceless>
-		<div class="text-{field.align}">
-			<f:if condition="{field.targetblank}!=0">
-				<f:then>
-					<f:if condition="{field.addtrialparam}">
-						<f:then>
-							<f:link.typolink parameter="{field.link}" additionalParams="&trial=1" target="_blank" class="btn btn-{field.color} btn-{field.size} {field.extraclass}">
-								<i class="fa fa-{field.icon}" aria-hidden="true"></i> <f:format.nl2br>{field.buttontext}</f:format.nl2br>
-								<f:if condition="{field.buttontext2}"><f:then><span>{field.buttontext2}</span></f:then></f:if>
-							</f:link.typolink>
-						</f:then>
-						<f:else>
-							<f:link.typolink parameter="{field.link}" target="_blank" class="btn btn-{field.color} btn-{field.size} {field.extraclass}">
-								<i class="fa fa-{field.icon}" aria-hidden="true"></i> <f:format.nl2br>{field.buttontext}</f:format.nl2br>
-								<f:if condition="{field.buttontext2}"><f:then><span>{field.buttontext2}</span></f:then></f:if>
-							</f:link.typolink>
-						</f:else>
-					</f:if>
-				</f:then>
-				<f:else>
-					<f:if condition="{field.addtrialparam}">
-						<f:then>
-							<f:link.typolink parameter="{field.link}" additionalParams="&trial=1" class="btn btn-{field.color} btn-{field.size} {field.extraclass}">
-								<i class="fa fa-{field.icon}" aria-hidden="true"></i> <f:format.nl2br>{field.buttontext}</f:format.nl2br>
-								<f:if condition="{field.buttontext2}"><f:then><span>{field.buttontext2}</span></f:then></f:if>
-							</f:link.typolink>
-						</f:then>
-						<f:else>
-							<f:link.typolink parameter="{field.link}" class="btn btn-{field.color} btn-{field.size} {field.extraclass}">
-								<i class="fa fa-{field.icon}" aria-hidden="true"></i> <f:format.nl2br>{field.buttontext}</f:format.nl2br>
-								<f:if condition="{field.buttontext2}"><f:then><span>{field.buttontext2}</span></f:then></f:if>
-							</f:link.typolink>
-						</f:else>
-					</f:if>
-				</f:else>
-			</f:if>
-		</div>
-	</f:spaceless>
+    <div class="text-{field.align}">
+        <f:variable name="linkParams" value="{field.link}" />
+        <f:if condition="{field.addtrialparam}">
+            <f:variable name="linkParams" value="{field.link}&trial=1" />
+        </f:if>
+
+        <f:link.typolink parameter="{linkParams}" 
+                         target="{f:if(condition: field.targetblank, then: '_blank', else: '_self')}" 
+                         class="btn btn-{field.color} btn-{field.size} {field.extraclass}">
+            <f:if condition="{field.icon}">
+                <i class="fa fa-{field.icon}" aria-hidden="true"></i>
+            </f:if>
+            <f:format.raw>{field.buttontext}</f:format.raw>
+            <f:if condition="{field.buttontext2}">
+                <span>{field.buttontext2}</span>
+            </f:if>
+        </f:link.typolink>
+    </div>
 </f:section>

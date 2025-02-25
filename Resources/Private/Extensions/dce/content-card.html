@@ -1,25 +1,39 @@
+<f:layout name="None" />
 
-
-<f:spaceless>
+<f:section name="main">
     <div class="card {field.width}">
         <f:if condition="{field.cardheader}">
-            <f:then>
-                <div class="card-header"><h4>{field.cardheader}</h4></div>
-            </f:then>
+            <div class="card-header">
+                <h4>{field.cardheader}</h4>
+            </div>
         </f:if>
+
         <div class="card-body">
-            <f:link.typolink parameter="{field.link}" class=""><i class="fa fa-{field.icon} fa-4x pull-right" aria-hidden="true"></i></f:link.typolink>
+            <f:if condition="{field.icon}">
+                <f:link.typolink parameter="{field.link}" class="">
+                    <i class="fa fa-{field.icon} fa-4x pull-right" aria-hidden="true"></i>
+                </f:link.typolink>
+            </f:if>
+
             <h5 class="card-title">
-                <f:link.typolink parameter="{field.link}" class=""><span>{field.title}</span></f:link.typolink>
+                <f:if condition="{field.title}">
+                    <f:link.typolink parameter="{field.link}" class="">
+                        <span>{field.title}</span>
+                    </f:link.typolink>
+                </f:if>
             </h5>
-            <f:format.html>{field.text}</f:format.html>
+
+            <f:if condition="{field.text}">
+                <f:format.html>{field.text}</f:format.html>
+            </f:if>
         </div>
+
         <f:if condition="{field.link}">
-            <f:then>
-                <div class="card-footer">
-                    <f:link.typolink parameter="{field.link}" class="btn btn-sm pull-right"><i class="fa fa-{field.icon}" aria-hidden="true"></i> {field.linktext}</f:link.typolink>
-                </div>
-            </f:then>
+            <div class="card-footer">
+                <f:link.typolink parameter="{field.link}" class="btn btn-sm pull-right">
+                    <i class="fa fa-{field.icon}" aria-hidden="true"></i> {field.linktext}
+                </f:link.typolink>
+            </div>
         </f:if>
     </div>
-</f:spaceless>
+</f:section>
