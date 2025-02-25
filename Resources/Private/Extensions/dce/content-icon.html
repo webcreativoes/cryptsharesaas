@@ -1,18 +1,14 @@
-
-
-<f:spaceless>
-	<f:if condition="{field.link}">
-		<f:then>
-			<div class="text-{field.align}">
-				<f:link.typolink parameter="{field.link}" class="icon">
-					<i class="fa fa-{field.icon} fa-{field.size}" aria-hidden="true"></i>
-				</f:link.typolink>
-			</div>
-		</f:then>
-		<f:else>
-			<div class="text-{field.align} dashboard-icon">
-				<i class="fa fa-{field.icon} fa-{field.size}" aria-hidden="true"></i>
-			</div>
-		</f:else>
-	</f:if>
-</f:spaceless>
+<f:if condition="{field.link}">
+    <f:then>
+        <div class="text-{f:format.htmlspecialchars(field.align)}">
+            <f:link.typolink parameter="{field.link}" class="icon">
+                <i class="fa fa-{f:format.htmlspecialchars(field.icon)} fa-{f:format.htmlspecialchars(field.size)}" aria-hidden="true"></i>
+            </f:link.typolink>
+        </div>
+    </f:then>
+    <f:else>
+        <div class="text-{f:format.htmlspecialchars(field.align)} dashboard-icon">
+            <i class="fa fa-{f:format.htmlspecialchars(field.icon)} fa-{f:format.htmlspecialchars(field.size)}" aria-hidden="true"></i>
+        </div>
+    </f:else>
+</f:if>
