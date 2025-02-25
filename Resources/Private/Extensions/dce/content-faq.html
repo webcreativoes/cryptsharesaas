@@ -1,18 +1,33 @@
+<f:layout name="None" />
 
-
-<f:spaceless>
-    <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" id="c{contentObject.uid}" data-anker="{field.ankername}">
+<f:section name="main">
+    <div 
+        itemscope 
+        itemprop="mainEntity" 
+        itemtype="https://schema.org/Question" 
+        id="c{contentObject.uid}" 
+        <f:if condition="{field.ankername}">data-anker="{field.ankername}"</f:if>
+    >
         <h3 itemprop="name">{field.question}</h3>
+
         <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" class="card faq w-100">
             <div itemprop="text" class="card-body">
                 <f:format.html>{field.answer}</f:format.html>
+
                 <f:if condition="{field.images}">
                     <div class="row text-center text-lg-left">
                         <f:for each="{field.images}" as="fileReference">
                             <div class="col-lg-3 col-md-4 col-6">
-                                <f:link.typolink parameter="{fileReference.link}" class="d-block mb-4 h-100 galleryitem" title="{field.titletext}">
-                                    <f:image src="{fileReference.uid}" alt="" treatIdAsReference="1" class="img-fluid img-thumbnail" />
-                                </f:link.typolink>
+                                <f:if condition="{fileReference.link}">
+                                    <f:then>
+                                        <f:link.typolink parameter="{fileReference.link}" class="d-block mb-4 h-100 galleryitem" title="{field.titletext}">
+                                            <f:image src="{fileReference.uid}" alt="{fileReference.alternative}" treatIdAsReference="1" class="img-fluid img-thumbnail" />
+                                        </f:link.typolink>
+                                    </f:then>
+                                    <f:else>
+                                        <f:image src="{fileReference.uid}" alt="{fileReference.alternative}" treatIdAsReference="1" class="img-fluid img-thumbnail" />
+                                    </f:else>
+                                </f:if>
                             </div>
                         </f:for>
                     </div>
@@ -20,4 +35,4 @@
             </div>
         </div>
     </div>
-</f:spaceless>
+</f:section>
