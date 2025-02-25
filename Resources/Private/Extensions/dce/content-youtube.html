@@ -2,32 +2,50 @@
 <f:layout name="None" />
 
 <f:section name="main">
-	<f:spaceless>
-		<div class="card w-100 text-center YouTube">
-			<div class="card-header">
-				<h4 class="my-0">{field.title}</h4>
-			</div>
-			<div class="card-body">
-				<f:format.html>{field.subtitle}</f:format.html>
-				<div class="YouTubeWrap">
-					<div class="YTContainer Centered" style="background: url(/fileadmin/primary/Public/Videos/PreviewImages/{field.youtubeid}.jpg); background-position: -16% center;background-size: contain;background-repeat: no-repeat;">
-						<div class="play-button Trigger_LoadYT youtube_{contentObject.uid} cookieconsent-optout-marketing" title="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:dce_load_from_youtube')}" class="Trigger_LoadYT" target-data="youtube_{contentObject.uid}" ytstart-data="{field.start}" ytid-data="{field.youtubeid}">
-							<i class="fa fa-play" aria-hidden="true"></i>
-						</div>
-						<iframe data-src="https://www.youtube.com/embed/{field.youtubeid}?start=&amp;controls=1&amp;vq=hd1080&amp;rel=0&amp;hd=1&amp;modestbranding=1&amp;loop=1&amp;showinfo=0&amp;autohide=1&amp;disablekb=1&amp;&cc_load_policy=1&amp;cc_lang_pref={field.cclangpref}" data-cookieconsent="marketing" frameborder="0" allowfullscreen class="YT_GDPRContainer"></iframe>
-					</div>
-					<div class="cookieconsent-optout-marketing text-center">
-						<p><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:dce_load_from_youtube_acceptconsent_1" /> <a href="javascript:Cookiebot.renew()"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:dce_load_from_youtube_acceptconsent_2" /></a> <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:dce_load_from_youtube_acceptconsent_3" /> <a href="https://www.youtube.com/watch?v={field.youtubeid}" target="_blank"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:dce_load_from_youtube_acceptconsent_4" /></a></p>
-					</div>
-				</div>
-			</div>
-			<f:if condition="{field.footer}">
-				<f:then>
-					<div class="card-footer">
-						{field.footer}
-					</div>
-				</f:then>
-			</f:if>
-		</div>
-	</f:spaceless>
+    <div class="card w-100 text-center YouTube">
+        <div class="card-header">
+            <h4 class="my-0">{field.title}</h4>
+        </div>
+        <div class="card-body">
+            <f:format.html>{field.subtitle}</f:format.html>
+            <div class="YouTubeWrap">
+                <div class="YTContainer Centered"
+                     style="background: url(/fileadmin/primary/Public/Videos/PreviewImages/{field.youtubeid}.jpg); 
+                            background-position: -16% center; background-size: contain; background-repeat: no-repeat;">
+                    <div class="play-button Trigger_LoadYT youtube_{contentObject.uid} cookieconsent-optout-marketing"
+                         title="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:dce_load_from_youtube')}"
+                         target-data="youtube_{contentObject.uid}"
+                         ytstart-data="{field.start}"
+                         ytid-data="{field.youtubeid}">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                    </div>
+                    <iframe data-src="https://www.youtube.com/embed/{field.youtubeid}?start={field.start}&amp;controls=1&amp;vq=hd1080&amp;rel=0&amp;hd=1&amp;modestbranding=1&amp;loop=1&amp;showinfo=0&amp;autohide=1&amp;disablekb=1&amp;&cc_load_policy=1&amp;cc_lang_pref={field.cclangpref}"
+                            data-cookieconsent="marketing"
+                            frameborder="0"
+                            allowfullscreen
+                            class="YT_GDPRContainer">
+                    </iframe>
+                </div>
+                <div class="cookieconsent-optout-marketing text-center">
+                    <p>
+                        <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:dce_load_from_youtube_acceptconsent_1" />
+                        <a href="javascript:Cookiebot.renew()">
+                            <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:dce_load_from_youtube_acceptconsent_2" />
+                        </a>
+                        <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:dce_load_from_youtube_acceptconsent_3" />
+                        <a href="https://www.youtube.com/watch?v={field.youtubeid}" target="_blank">
+                            <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:dce_load_from_youtube_acceptconsent_4" />
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <f:if condition="{field.footer}">
+            <f:then>
+                <div class="card-footer">
+                    {field.footer}
+                </div>
+            </f:then>
+        </f:if>
+    </div>
 </f:section>
