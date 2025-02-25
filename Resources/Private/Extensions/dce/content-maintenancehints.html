@@ -1,29 +1,30 @@
-
 <f:layout name="None" />
 
 <f:section name="main">
-	<f:spaceless>
-		<f:switch expression="{field.type}">
-			<f:case value="0"><div id="hint" data-hint="<f:format.raw><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:hint_maintenance" /></f:format.raw>"></div></f:case>
-			<f:case value="1"><div id="hint" data-hint="<f:format.raw><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:hint_backuprestore" /></f:format.raw>"></div></f:case>
-			<f:case value="2"><div id="hint" data-hint="<f:format.nl2br>{field.customtext}</f:format.nl2br>"></div></f:case>
-			<f:case value="3">
-
-				<f:if condition="{TSFE.fe_user.user.business_partner_change_accepted} == 0">
-					<f:then>
-						<div id="GlobalHint" class="alert alert-info" data-alert="alert" role="alert">
-							<i class="fa fa-2x pull-left fa-info-circle"></i>
-							<button type="button" class="close" data-dismiss="alert" aria-label="Close" title=""><span aria-hidden="true">×</span></button>
-							<p class="text">
-								<f:format.raw>
-									{field.customtext}
-								</f:format.raw>
-							</p>
-						</div>
-					</f:then>
-				</f:if>
-
-			</f:case>
-		</f:switch>
-	</f:spaceless>
+    <f:switch expression="{field.type}">
+        <f:case value="0">
+            <div id="hint" data-hint="<f:format.raw><f:translate key='LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:hint_maintenance' /></f:format.raw>"></div>
+        </f:case>
+        <f:case value="1">
+            <div id="hint" data-hint="<f:format.raw><f:translate key='LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:hint_backuprestore' /></f:format.raw>"></div>
+        </f:case>
+        <f:case value="2">
+            <div id="hint" data-hint="<f:format.nl2br>{field.customtext}</f:format.nl2br>"></div>
+        </f:case>
+        <f:case value="3">
+            <f:if condition="{f:cObject(typoscriptObjectPath: 'lib.checkFeUserAccepted')} == 0">
+                <f:then>
+                    <div id="GlobalHint" class="alert alert-info" data-alert="alert" role="alert">
+                        <i class="fa fa-2x pull-left fa-info-circle"></i>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <p class="text">
+                            <f:format.nl2br>{field.customtext}</f:format.nl2br>
+                        </p>
+                    </div>
+                </f:then>
+            </f:if>
+        </f:case>
+    </f:switch>
 </f:section>
