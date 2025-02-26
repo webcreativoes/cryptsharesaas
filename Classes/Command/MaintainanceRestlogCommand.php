@@ -1,81 +1,83 @@
 <?php
+declare(strict_types=1);
+
 namespace BefineSolutionsAG\Cryptsharesaas\Command;
 
+use DateTime;
+use DateInterval;
+use TYPO3\CMS\Core\Core\Environment;
 use Symfony\Component\Console\Command\Command;
-use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Symfony\Component\Console\Style\SymfonyStyle;
 
 class MaintainanceRestlogCommand extends Command
 {
-    /**
-     * Configure the command by defining the name, options and arguments
-     */
-    protected function configure()
+    protected function configure(): void
     {
-        $this->setHelp('Prints a list of recent sys_log entries.' . LF . 'If you want to get more detailed information, use the --verbose option.');
+        $this->setName('cryptsharesaas:maintainance-restlog')
+            ->setDescription('Deletes old rest log files and logs the process.')
+            ->setHelp('This command removes restLog files older than 2 weeks from the logging directory.');
     }
 
-    /**
-     * Executes the command for showing sys_log entries
-     *
-     * @param InputInterface $input
-     * @param OutputInterface $output
-     * @return int error code
-     */
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        switch (\TYPO3\CMS\Core\Core\Environment::getContext()) {
-            case 'Production':
-                $envPath = "/is/htdocs/wp13251579_RIVEMTPQCA/www/logging/";
-                break;
-            case 'Development/Local':
-                $envPath = "";
-                break;
-            case 'Development':
-            default:
-                $envPath = "/is/htdocs/wp13303627_IADXHPXADX/www/logging/";
-        }
-        $this->deleteLogs($envPath.'restLog/','restLog',$envPath);
-        $this->deleteLogs($envPath.'restLog-Error/','restLogError',$envPath);
-        $this->deleteLogs($envPath.'webHooks/','webHooks',$envPath);
+        $envPath = match (true) {
+            Environment::getContext()->isProduction() => "/is/htdocs/wp13251579_RIVEMTPQCA/www/logging/",
+            Environment::getContext()->isDevelopment() => "/is/htdocs/wp13303627_IADXHPXADX/www/logging/",
+            Environment::getContext()->isTesting() => "",
+            default => "/is/htdocs/wp13303627_IADXHPXADX/www/logging/"
+        };
+
+        $this->deleteLogs($envPath . 'restLog' . DIRECTORY_SEPARATOR, 'restLog', $envPath);
+        $this->deleteLogs($envPath . 'restLog-Error' . DIRECTORY_SEPARATOR, 'restLogError', $envPath);
+        $this->deleteLogs($envPath . 'webHooks' . DIRECTORY_SEPARATOR, 'webHooks', $envPath);
+
         return Command::SUCCESS;
     }
 
-    public function deleteLogs($folder,$type,$envPath) {
-        $path = $folder;
-        $files = $this->getAllFilesFromFolder($path);
-        if ($files) {
-            $dt = new \DateTime('now');
+    private function deleteLogs(string $folder, string $type, string $envPath): void
+    {
+        $files = $this->getAllFilesFromFolder($folder);
+
+        if (!empty($files)) {
+            $dt = new DateTime('now');
             $date = $dt->format('Y-m-d');
-            $LogEntry = $date;
-            $dt->getTimestamp();
-            date_sub($dt, date_interval_create_from_date_string('2 weeks'));
-            $oldTimestamp =$dt->getTimestamp();
-            $fileNamePost = $envPath."Maintainance/'$type'-".$date.".txt";
+            $logEntry = $date;
+
+            // 2 Wochen subtrahieren
+            $dt->sub(new DateInterval('P14D'));
+            $oldTimestamp = $dt->getTimestamp();
+
+            $fileNamePost = $envPath . "Maintainance" . DIRECTORY_SEPARATOR . $type . "-" . $date . ".txt";
             $maintenanceLog = fopen($fileNamePost, 'w');
-            foreach ($files as $value) {
-                $filepath = $path.$value;
-                $fileTime = date("F d Y H:i:s.", filectime($filepath));
-                if (filectime($filepath) <= $oldTimestamp){
-                    $LogEntry .= filectime($filepath)."--".$fileTime.":"."-".$filepath."\r\n";
 
-                    unlink($filepath);
-                }
-
+            if ($maintenanceLog === false) {
+                return;
             }
-            fwrite($maintenanceLog, $LogEntry);
+
+            foreach ($files as $value) {
+                $filepath = $folder . $value;
+                $fileTime = date("F d Y H:i:s.", @filectime($filepath));
+
+                if (@filectime($filepath) <= $oldTimestamp) {
+                    $logEntry .= @filectime($filepath) . "--" . $fileTime . ":" . "-" . $filepath . PHP_EOL;
+                    if (file_exists($filepath)) {
+                        unlink($filepath);
+                    }
+                }
+            }
+
+            fwrite($maintenanceLog, $logEntry);
             fclose($maintenanceLog);
-            return true;
         }
     }
 
-    public function getAllFilesFromFolder($folder) {
+    private function getAllFilesFromFolder(string $folder): array
+    {
         $files = [];
-        if ( is_dir ( $folder ) && $handle = opendir($folder) ) {
+        if (is_dir($folder) && ($handle = opendir($folder))) {
             while (($file = readdir($handle)) !== false) {
-                if($file != '.' && $file != '..'){
+                if ($file !== '.' && $file !== '..') {
                     $files[] = $file;
                 }
             }
