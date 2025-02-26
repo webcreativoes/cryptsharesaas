@@ -1,16 +1,16 @@
 services:
   # Maintenance Contract Data Command
-  BefineSolutionsAG\Cryptsharesaas\Command\MaintainanceContractDataCommand:
+  BefineSolutionsAG\Cryptsharesaas\Command\MaintenanceContractDataCommand:
     tags:
       - name: 'console.command'
-        command: 'cryptsharesaas:maintainancecontractdata'
+        command: 'cryptsharesaas:maintenancecontractdata'
         description: 'An example description for a command'
         hidden: false
 
   # Maintenance Rest Log Command
-  BefineSolutionsAG\Cryptsharesaas\Command\MaintainanceRestLogCommand:
+  BefineSolutionsAG\Cryptsharesaas\Command\MaintenanceRestLogCommand:
     tags:
       - name: 'console.command'
-        command: 'cryptsharesaas:maintainancerestlog'
+        command: 'cryptsharesaas:maintenancerestlog'
         description: 'An example description for a command'
         hidden: false

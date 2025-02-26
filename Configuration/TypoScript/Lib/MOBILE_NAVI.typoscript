@@ -3,12 +3,14 @@ lib.MOBILE_NAVI {
     0 = TEXT
     0 {
         value (
-            <!--nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <!-- Temporär deaktivierte Navigation
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
                <a class="navbar-brand" href="#"></a>
-               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footer" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#footer" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                </button>
-            </nav-->
+            </nav>
+            -->
         )
     }
 
@@ -18,13 +20,13 @@ lib.MOBILE_NAVI {
     10 = TEXT
     10.value (
         <a class="navbar-brand" href="/">
-            <img id="mobilesidebarlogo" src="/typo3conf/ext/cryptsharesaas/Resources/Public/Images/Cryptshare-Express-Logo_lok.svg">
+            <img id="mobilesidebarlogo" src="/typo3conf/ext/cryptsharesaas/Resources/Public/Images/Cryptshare-Express-Logo_lok.svg" alt="Cryptshare Express">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarsExample03">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav ms-auto">
     )
 
     20 = HMENU
@@ -38,7 +40,7 @@ lib.MOBILE_NAVI {
             }
             ACT = 1
             ACT {
-                ATagParams = class="nav-link"
+                ATagParams = class="nav-link active"
                 wrapItemAndSub = <li class="nav-item active"> | </li>
             }
         }
@@ -64,13 +66,19 @@ lib.MOBILE_NAVI {
                 additionalParams = &logintype=logout
                 ATagParams = class="nav-link" id="btn-logout"
             }
-            wrap = <li class="nav-item active"> | </li>
-            innerWrap = <i class="fa fa-sign-out"></i><span>|</span>
+            wrap = <li class="nav-item"> | </li>
+            innerWrap = <i class="fa fa-sign-out"></i> <span>|</span>
         }
     }
 [global]
 
-# Deutsche Übersetzung für den Logout-Button
+# Mehrsprachige Logout-Übersetzung
 [siteLanguage("locale") == "de_DE.UTF-8" && usergroup('*')]
     lib.MOBILE_NAVI.30.10.value = Abmelden
+[siteLanguage("locale") == "fr_FR.UTF-8" && usergroup('*')]
+    lib.MOBILE_NAVI.30.10.value = Déconnexion
+[siteLanguage("locale") == "es_ES.UTF-8" && usergroup('*')]
+    lib.MOBILE_NAVI.30.10.value = Cerrar sesión
+[siteLanguage("locale") == "it_IT.UTF-8" && usergroup('*')]
+    lib.MOBILE_NAVI.30.10.value = Disconnettersi
 [global]

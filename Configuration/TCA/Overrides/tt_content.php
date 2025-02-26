@@ -38,15 +38,17 @@ foreach ($containerConfigurations as [$identifier, $label, $colspan, $cols]) {
         $colPosArray[] = ['name' => "{$label}", 'colPos' => $col];
     }
 
-    $containerRegistry->configureContainer(
-        new \B13\Container\Tca\ContainerConfiguration(
-            $identifier,
-            $label,
-            '',
-            [
-                [['name' => $label, 'colPos' => 5, 'colspan' => $colspan]],
-                $colPosArray
-            ]
-        )->setIcon("EXT:cryptsharecom/Resources/Public/Icons/container/{$identifier}.svg")
+    $containerConfig = new \B13\Container\Tca\ContainerConfiguration(
+        $identifier,
+        $label,
+        '',
+        [
+            [['name' => $label, 'colPos' => 5, 'colspan' => $colspan]],
+            $colPosArray
+        ]
     );
+
+    $containerConfig->setIcon("EXT:cryptsharecom/Resources/Public/Icons/container/{$identifier}.svg");
+
+    $containerRegistry->configureContainer($containerConfig);
 }

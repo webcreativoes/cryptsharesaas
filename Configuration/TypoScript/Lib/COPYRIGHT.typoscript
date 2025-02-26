@@ -1,9 +1,9 @@
-lib.COPYRIGHT = COA
+lib.COPYRIGHT = COA_INT
 lib.COPYRIGHT {
     10 = TEXT
     10 {
         data = date:U
         strftime = %Y
-        wrap = <p class="text-center">© | Equinoxe GmbH</p>
+        wrap = <p class="text-center">©&nbsp;|&nbsp;Equinoxe GmbH</p>
     }
 }

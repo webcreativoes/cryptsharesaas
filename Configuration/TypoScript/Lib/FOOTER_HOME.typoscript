@@ -6,8 +6,8 @@ lib.FOOTER_HOME {
         select {
             orderBy = sorting
             where = colPos = 0
-            languageField = sys_language_uid
-            pidInList = {$PID_FooterRowHome}
+            pidInList.data = page:uid
+            pidInList.override = {$PID_FooterRowHome}
         }
         wrap = <footer class="home-navbar d-none d-sm-block" id="footer">|</footer>
     }

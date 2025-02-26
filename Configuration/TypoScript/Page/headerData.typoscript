@@ -64,7 +64,7 @@ page {
    }
 }
 
-[getTSFE().id == 1427]
+[page["uid"] == 1427]
    page {
       includeJS {
          20 = https://{$bw_environment}.billwerk.com/selfservice/billwerkjs?v=1
@@ -72,7 +72,6 @@ page {
             forceOnTop = 0
             excludeFromConcatenation = 1
             disableCompression = 1
-            external = 1
          }
       }
    }

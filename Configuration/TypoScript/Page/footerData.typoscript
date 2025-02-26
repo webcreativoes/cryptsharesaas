@@ -1,36 +1,32 @@
 page {
-    includeJSFooter {
+    includeJSFooterlibs {
         10 = EXT:cryptsharesaas/Resources/Public/JavaScript/popper.min.js
         10 {
             forceOnTop = 1
             disableCompression = 1
             excludeFromConcatenation = 1
         }
-        
+
         20 = EXT:cryptsharesaas/Resources/Public/JavaScript/frameworks.min.js
         20 {
-            forceOnTop = 0
             disableCompression = 1
             excludeFromConcatenation = 1
         }
 
         30 = EXT:cryptsharesaas/Resources/Public/JavaScript/localize.js
         30 {
-            forceOnTop = 0
             disableCompression = 1
             excludeFromConcatenation = 1
         }
 
         40 = EXT:cryptsharesaas/Resources/Public/JavaScript/public.js
         40 {
-            forceOnTop = 0
             disableCompression = 1
             excludeFromConcatenation = 1
         }
 
         50 = EXT:cryptsharesaas/Resources/Public/JavaScript/jsvat.js
         50 {
-            forceOnTop = 0
             disableCompression = 1
             excludeFromConcatenation = 1
         }
@@ -39,10 +35,9 @@ page {
 
 [frontend.user.isLoggedIn]
     page {
-        includeJSFooter {
+        includeJSFooterlibs {
             60 = EXT:cryptsharesaas/Resources/Public/JavaScript/internal.js
             60 {
-                forceOnTop = 0
                 disableCompression = 1
                 excludeFromConcatenation = 1
             }

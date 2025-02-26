@@ -1,10 +1,12 @@
 lib.GPVAR = COA
 lib.GPVAR {
-    stdWrap.htmlSpecialChars = 1
     10 = TEXT
     10 {
-        data = GP:{current}  # Holt GET/POST-Parameter basierend auf der aktuellen Variablen
-        insertData = 1       # Ersetzt Platzhalter mit realen Werten
-        wrap = {|}           # Korrektur: wrap3 existiert nicht, daher umgestellt auf wrap
+        data = GP:{current}   # Holt GET/POST-Parameter basierend auf der aktuellen Variablen
+        insertData = 1        # Ersetzt Platzhalter mit realen Werten
+        stdWrap {
+            htmlSpecialChars = 1  # Schutz vor XSS
+            wrap = {|}            # Korrektur: wrap3 ersetzt durch normales wrap
+        }
     }
 }

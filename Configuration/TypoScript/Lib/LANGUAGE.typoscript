@@ -7,14 +7,17 @@ lib.LANGUAGE {
           <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fa fa-globe"></i>
     )
+
+    # Standardwert für nicht erkannte Sprachen
     2 = TEXT
     2.value = Select country
+
     3 = TEXT
     3.value (
           </a>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" aria-label="Language selection">
     )
-    
+
     20 = TEXT
     20 {
         value = Deutschland
@@ -224,7 +227,8 @@ lib.LANGUAGE {
     1000 = TEXT
     1000.value (
           </div>
-        </div><br></nav>
+        </div>
+        </nav>
     )
 }
 

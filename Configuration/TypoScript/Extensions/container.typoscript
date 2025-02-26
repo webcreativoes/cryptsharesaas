@@ -169,8 +169,8 @@ tt_content.container-ContentGrid2ColsForNesting-33-66 {
     }
 }
 
-container-ContentGrid2ColsForNesting-50-50 = FLUIDTEMPLATE
-container-ContentGrid2ColsForNesting-50-50 {
+tt_content.container-ContentGrid2ColsForNesting-50-50 = FLUIDTEMPLATE
+tt_content.container-ContentGrid2ColsForNesting-50-50 {
     templateName = ContentGrid2ColsForNesting-50-50
     templateRootPaths.10 = EXT:cryptsharesaas/Resources/Private/Templates/Container
     dataProcessing {

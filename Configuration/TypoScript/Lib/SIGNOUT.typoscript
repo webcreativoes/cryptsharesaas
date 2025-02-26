@@ -3,7 +3,6 @@
     lib.SIGNOUT {
         10 = TEXT
         10 {
-            value = Sign out
             insertData = 1
             typolink {
                 parameter = 1115
@@ -14,23 +13,19 @@
             innerWrap = <i class="fa fa-sign-out"></i><span> | </span>
         }
     }
+
+    # Sprachumschaltung für den Logout-Button
+    [siteLanguage("locale") == "de_DE.UTF-8"]
+        lib.SIGNOUT.10.value = Abmelden
+    [siteLanguage("locale") == "nl_NL.UTF-8"]
+        lib.SIGNOUT.10.value = Afmelden
+    [siteLanguage("locale") == "fr_FR.UTF-8"]
+        lib.SIGNOUT.10.value = Déconnexion
+    [siteLanguage("locale") == "es_ES.UTF-8"]
+        lib.SIGNOUT.10.value = Desconectar
+    [global]
+
 [else]
     lib.SIGNOUT = TEXT
     lib.SIGNOUT.value = &nbsp;
 [end]
-
-[siteLanguage("locale") == "de_DE.UTF-8" && usergroup("*")]
-    lib.SIGNOUT.10.value = Abmelden
-[global]
-
-[siteLanguage("locale") == "nl_NL.UTF-8" && usergroup("*")]
-    lib.SIGNOUT.10.value = Afmelden
-[global]
-
-[siteLanguage("locale") == "fr_FR.UTF-8" && usergroup("*")]
-    lib.SIGNOUT.10.value = Déconnexion
-[global]
-
-[siteLanguage("locale") == "es_ES.UTF-8" && usergroup("*")]
-    lib.SIGNOUT.10.value = Desconectar
-[global]

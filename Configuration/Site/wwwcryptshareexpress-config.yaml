@@ -70,7 +70,7 @@ languages:
     fallbackType: fallback
     fallbacks: '0'
     flag: nl
-	
+  
   - title: 'English US'
     enabled: true
     languageId: '3'
@@ -84,7 +84,7 @@ languages:
     fallbackType: fallback
     fallbacks: '0'
     flag: us
-	
+  
   - title: French
     enabled: true
     languageId: '4'
@@ -98,7 +98,7 @@ languages:
     fallbackType: fallback
     fallbacks: '0'
     flag: fr
-	
+  
   - title: 'English GB'
     enabled: true
     languageId: '5'
@@ -112,7 +112,7 @@ languages:
     fallbackType: fallback
     fallbacks: '0'
     flag: gb
-	
+  
   - title: Spanish
     enabled: true
     languageId: '6'
@@ -126,7 +126,7 @@ languages:
     fallbackType: fallback
     fallbacks: '0'
     flag: es
-	
+  
   - title: 'Deutsch CH'
     enabled: true
     languageId: '7'
@@ -140,7 +140,7 @@ languages:
     fallbackType: fallback
     fallbacks: '1'
     flag: ch
-	
+  
   - title: Italienisch
     enabled: true
     languageId: '8'
@@ -154,7 +154,7 @@ languages:
     fallbackType: fallback
     fallbacks: '0'
     flag: it
-	
+  
   - title: Finnisch
     enabled: true
     languageId: '9'
@@ -168,7 +168,7 @@ languages:
     fallbackType: fallback
     fallbacks: '0'
     flag: fi
-	
+  
   - title: 'Dutch BE'
     enabled: true
     languageId: '10'
@@ -182,7 +182,7 @@ languages:
     fallbackType: fallback
     fallbacks: '2'
     flag: be
-	
+  
   - title: Irisch
     enabled: true
     languageId: '11'
@@ -196,7 +196,7 @@ languages:
     fallbackType: fallback
     fallbacks: '0'
     flag: ie
-	
+  
   - title: Portugiesisch
     enabled: true
     languageId: '12'
@@ -210,7 +210,7 @@ languages:
     fallbackType: fallback
     fallbacks: '0'
     flag: pt
-	
+  
   - title: 'Deutsch AT'
     enabled: true
     languageId: '13'
@@ -224,7 +224,7 @@ languages:
     fallbackType: fallback
     fallbacks: '1'
     flag: at
-	
+  
   - title: Griechisch
     enabled: true
     languageId: '14'
@@ -238,7 +238,7 @@ languages:
     fallbackType: fallback
     fallbacks: '0'
     flag: gr
-	
+  
   - title: Luxemburgisch
     enabled: true
     languageId: '15'
@@ -252,7 +252,7 @@ languages:
     fallbackType: fallback
     fallbacks: '1'
     flag: lb
-	
+  
   - title: Litauisch
     enabled: true
     base: /lt/

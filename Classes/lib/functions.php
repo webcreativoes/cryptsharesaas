@@ -1,8 +1,8 @@
 <?php
-if(!isset($is_webhook) || !$is_webhook) {
-    require 'PHPMailer/src/Exception.php';
-    require 'PHPMailer/src/PHPMailer.php';
-    require 'PHPMailer/src/SMTP.php';
+if (!isset($is_webhook) || !$is_webhook) {
+    require_once 'PHPMailer/src/Exception.php';
+    require_once 'PHPMailer/src/PHPMailer.php';
+    require_once 'PHPMailer/src/SMTP.php';
 }
 
 const STYLE = 'style';
@@ -95,194 +95,213 @@ const STRING_CURL_CONTENT_TYPE = "Content-type: application/json;charset=\"utf-8
 const STRING_DEV_LOCAL_CONTEXT = 'Development/Local';
 const PRAGMA_NO_CACHE_VALUE = '';
 
-function checkRa1word($ra, $val2, $ra1word, $ra_protocol, $ra_tag, $ra_attribute) {
-    if (stripos($val2, $ra1word ) !== FALSE ) {
-        if (in_array($ra1word, $ra_protocol, TRUE)) {
-            $ra[] = array($ra1word, 'ra_protocol');
+function checkRa1word(array $ra, string $val2, string $ra1word, array $ra_protocol, array $ra_tag, array $ra_attribute): array {
+    if (stripos($val2, $ra1word) !== false) {
+        if (in_array($ra1word, $ra_protocol, true)) {
+            $ra[] = [$ra1word, 'ra_protocol'];
         }
-        if (in_array($ra1word, $ra_tag, TRUE)) {
-            $ra[] = array($ra1word, 'ra_tag');
+        if (in_array($ra1word, $ra_tag, true)) {
+            $ra[] = [$ra1word, 'ra_tag'];
         }
-        if (in_array($ra1word, $ra_attribute, TRUE)) {
-            $ra[] = array($ra1word, 'ra_attribute');
+        if (in_array($ra1word, $ra_attribute, true)) {
+            $ra[] = [$ra1word, 'ra_attribute'];
         }
     }
     return $ra;
 }
+
 /**
  * Removes potential XSS code from an input string.
  *
- * Using an external class by Travis Puderbaugh <kallahar@quickwired.com>
- *
  * @param string $val Input string
- * @param string $replaceString replaceString for inserting in keywords (which destroys the tags)
+ * @param string $replaceString Replacement string for inserting in keywords (which destroys the tags)
  * @return string Input string with potential XSS code removed
  */
-function removeXSS($val, $replaceString = '<x>') {
-    $replaceString = ($replaceString == '') ? '<x>' : $replaceString;
-    $val = preg_replace('/([\x00-\x08]|[\x0b-\x0c]|[\x0e-\x19])/', '', $val);
-    $searchHexEncodings = '/&#[xX]0{0,8}(21|22|23|24|25|26|27|28|29|2a|2b|2d|2f|30|31|32|33|34|35|36|37|38|39|3a|3b|3d|3f|40|41|42|43|44|45|46|47|48|49|4a|4b|4c|4d|4e|4f|50|51|52|53|54|55|56|57|58|59|5a|5b|5c|5d|5e|5f|60|61|62|63|64|65|66|67|68|69|6a|6b|6c|6d|6e|6f|70|71|72|73|74|75|76|77|78|79|7a|7b|7c|7d|7e);?/i';
-    $searchUnicodeEncodings = '/&#0{0,8}(33|34|35|36|37|38|39|40|41|42|43|45|47|48|49|50|51|52|53|54|55|56|57|58|59|61|63|64|65|66|67|68|69|70|71|72|73|74|75|76|77|78|79|80|81|82|83|84|85|86|87|88|89|90|91|92|93|94|95|96|97|98|99|100|101|102|103|104|105|106|107|108|109|110|111|112|113|114|115|116|117|118|119|120|121|122|123|124|125|126);?/i';
+function removeXSS(string $val, string $replaceString = '<x>'): string {
+    $replaceString = ($replaceString === '') ? '<x>' : $replaceString;
+    $val = preg_replace('/([\x00-\x08\x0b-\x0c\x0e-\x19])/', '', $val);
+
+    $searchHexEncodings = '/&#[xX]0{0,8}([0-9a-fA-F]{2});?/i';
+    $searchUnicodeEncodings = '/&#0{0,8}([0-9]{2,3});?/i';
+
     while (preg_match($searchHexEncodings, $val) || preg_match($searchUnicodeEncodings, $val)) {
         $val = preg_replace_callback(
             $searchHexEncodings,
-            function ($matches) {
+            static function (array $matches): string {
                 return chr(hexdec($matches[1]));
             },
             $val
         );
         $val = preg_replace_callback(
             $searchUnicodeEncodings,
-            function ($matches) {
-                return chr($matches[1]);
+            static function (array $matches): string {
+                return chr((int) $matches[1]);
             },
             $val
         );
     }
-    $ra1 = ['javascript', 'vbscript', 'expression', 'applet', 'meta', 'xml', 'blink', 'link', STYLE, 'script', 'embed',
+
+    $ra1 = [
+        'javascript', 'vbscript', 'expression', 'applet', 'meta', 'xml', 'blink', 'link', STYLE, 'script', 'embed',
         'object', 'iframe', 'frame', 'frameset', 'ilayer', 'layer', 'bgsound', 'title', 'base', 'video', 'audio', 'track',
-        'canvas', 'onabort', 'onactivate', 'onafterprint', 'onafterupdate', 'onbeforeactivate', 'onbeforecopy', 'onbeforecut',
-        'onbeforedeactivate', 'onbeforeeditfocus', 'onbeforepaste', 'onbeforeprint', 'onbeforeunload', 'onbeforeupdate',
-        'onblur', 'onbounce', 'oncanplay', 'oncanplaythrough', 'oncellchange', 'onchange', 'onclick', 'oncontextmenu',
-        'oncontrolselect', 'oncopy', 'oncuechange', 'oncut', 'ondataavailable', 'ondatasetchanged', 'ondatasetcomplete',
-        'ondblclick', 'ondeactivate', 'ondrag', 'ondragend', 'ondragenter', 'ondragleave', 'ondragover', 'ondragstart',
-        'ondrop', 'ondurationchange', 'onemptied', 'onended', 'onerror', 'onerrorupdate', 'onfilterchange', 'onfinish',
-        'onfocus', 'onfocusin', 'onfocusout', 'onhashchange', 'onhelp', 'oninput', 'oninvalid', 'onkeydown', 'onkeypress',
-        'onkeyup', 'onlayoutcomplete', 'onload', 'onloadeddata', 'onloadedmetadata', 'onloadstart', 'onlosecapture',
-        'onmessage', 'onmousedown', 'onmouseenter', 'onmouseleave', 'onmousemove', 'onmouseout', 'onmouseover', 'onmouseup',
-        'onmousewheel', 'onmove', 'onmoveend', 'onmovestart', 'onoffline', 'ononline', 'onpagehide', 'onpageshow', 'onpaste',
-        'onpause', 'onplay', 'onplaying', 'onpopstate', 'onprogress', 'onpropertychange', 'onratechange', 'onreadystatechange',
-        'onreset', 'onresize', 'onresizeend', 'onresizestart', 'onrowenter', 'onrowexit', 'onrowsdelete', 'onrowsinserted',
-        'onscroll', 'onseeked', 'onseeking','onselect', 'onselectionchange', 'onselectstart', 'onshow', 'onstalled', 'onstart',
-        'onstop', 'onstorage', 'onsubmit', 'onsuspend', 'ontimeupdate', 'onunload', 'onvolumechange', 'onwaiting'];
+        'canvas', 'onabort', 'onactivate', 'onafterprint', 'onafterupdate', 'onbeforeactivate', 'onbeforecopy',
+        'onbeforecut', 'onbeforedeactivate', 'onbeforeeditfocus', 'onbeforepaste', 'onbeforeprint', 'onbeforeunload',
+        'onbeforeupdate', 'onblur', 'onbounce', 'oncanplay', 'oncanplaythrough', 'oncellchange', 'onchange', 'onclick',
+        'oncontextmenu', 'oncontrolselect', 'oncopy', 'oncuechange', 'oncut', 'ondataavailable', 'ondatasetchanged',
+        'ondatasetcomplete', 'ondblclick', 'ondeactivate', 'ondrag', 'ondragend', 'ondragenter', 'ondragleave',
+        'ondragover', 'ondragstart', 'ondrop', 'ondurationchange', 'onemptied', 'onended', 'onerror', 'onerrorupdate',
+        'onfilterchange', 'onfinish', 'onfocus', 'onfocusin', 'onfocusout', 'onhashchange', 'onhelp', 'oninput',
+        'oninvalid', 'onkeydown', 'onkeypress', 'onkeyup', 'onlayoutcomplete', 'onload', 'onloadeddata',
+        'onloadedmetadata', 'onloadstart', 'onlosecapture', 'onmessage', 'onmousedown', 'onmouseenter', 'onmouseleave',
+        'onmousemove', 'onmouseout', 'onmouseover', 'onmouseup', 'onmousewheel', 'onmove', 'onmoveend', 'onmovestart',
+        'onoffline', 'ononline', 'onpagehide', 'onpageshow', 'onpaste', 'onpause', 'onplay', 'onplaying', 'onpopstate',
+        'onprogress', 'onpropertychange', 'onratechange', 'onreadystatechange', 'onreset', 'onresize', 'onresizeend',
+        'onresizestart', 'onrowenter', 'onrowexit', 'onrowsdelete', 'onrowsinserted', 'onscroll', 'onseeked', 'onseeking',
+        'onselect', 'onselectionchange', 'onselectstart', 'onshow', 'onstalled', 'onstart', 'onstop', 'onstorage',
+        'onsubmit', 'onsuspend', 'ontimeupdate', 'onunload', 'onvolumechange', 'onwaiting'
+    ];
+
     $ra_tag = ['applet', 'meta', 'xml', 'blink', 'link', STYLE, 'script', 'embed', 'object', 'iframe', 'frame',
-        'frameset', 'ilayer', 'layer', 'bgsound', 'title', 'base', 'video', 'audio', 'track', 'canvas'];
-    $ra_attribute = [STYLE, 'onabort', 'onactivate', 'onafterprint', 'onafterupdate', 'onbeforeactivate',
+        'frameset', 'ilayer', 'layer', 'bgsound', 'title', 'base', 'video', 'audio', 'track', 'canvas'
+    ];
+
+    $ra_attribute = array_merge($ra_tag, ['onabort', 'onactivate', 'onafterprint', 'onafterupdate', 'onbeforeactivate',
         'onbeforecopy', 'onbeforecut', 'onbeforedeactivate', 'onbeforeeditfocus', 'onbeforepaste', 'onbeforeprint',
-        'onbeforeunload', 'onbeforeupdate', 'onblur', 'onbounce', 'oncanplay', 'oncanplaythrough', 'oncellchange', 'onchange',
-        'onclick', 'oncontextmenu', 'oncontrolselect', 'oncopy', 'oncuechange', 'oncut', 'ondataavailable', 'ondatasetchanged',
-        'ondatasetcomplete', 'ondblclick', 'ondeactivate', 'ondrag', 'ondragend', 'ondragenter', 'ondragleave', 'ondragover',
-        'ondragstart', 'ondrop', 'ondurationchange', 'onemptied', 'onended', 'onerror', 'onerrorupdate', 'onfilterchange',
-        'onfinish', 'onfocus', 'onfocusin', 'onfocusout', 'onhashchange', 'onhelp', 'oninput', 'oninvalid,', 'onkeydown',
-        'onkeypress', 'onkeyup', 'onlayoutcomplete', 'onload', 'onloadeddata', 'onloadedmetadata', 'onloadstart',
-        'onlosecapture', 'onmessage', 'onmousedown', 'onmouseenter', 'onmouseleave', 'onmousemove', 'onmouseout',
-        'onmouseover', 'onmouseup', 'onmousewheel', 'onmove', 'onmoveend', 'onmovestart', 'onoffline', 'ononline',
-        'onpagehide', 'onpageshow', 'onpaste', 'onpause', 'onplay', 'onplaying', 'onpopstate', 'onprogress',
-        'onpropertychange', 'onratechange', 'onreadystatechange', 'onredo', 'onreset', 'onresize', 'onresizeend',
-        'onresizestart','onrowenter', 'onrowexit', 'onrowsdelete', 'onrowsinserted', 'onscroll', 'onseeked', 'onseeking',
-        'onselect', 'onselectionchange', 'onselectstart', 'onshow', 'onstalled', 'onstart', 'onstop', 'onstorage', 'onsubmit',
-        'onsuspend', 'ontimeupdate', 'onundo', 'onunload', 'onvolumechange', 'onwaiting'];
+        'onbeforeunload', 'onbeforeupdate', 'onblur', 'onbounce', 'oncanplay', 'oncanplaythrough', 'oncellchange',
+        'onchange', 'onclick', 'oncontextmenu', 'oncontrolselect', 'oncopy', 'oncuechange', 'oncut', 'ondataavailable',
+        'ondatasetchanged', 'ondatasetcomplete', 'ondblclick', 'ondeactivate', 'ondrag', 'ondragend', 'ondragenter',
+        'ondragleave', 'ondragover', 'ondragstart', 'ondrop', 'ondurationchange', 'onemptied', 'onended', 'onerror',
+        'onerrorupdate', 'onfilterchange', 'onfinish', 'onfocus', 'onfocusin', 'onfocusout', 'onhashchange', 'onhelp',
+        'oninput', 'oninvalid', 'onkeydown', 'onkeypress', 'onkeyup', 'onlayoutcomplete', 'onload', 'onloadeddata',
+        'onloadedmetadata', 'onloadstart', 'onlosecapture', 'onmessage', 'onmousedown', 'onmouseenter', 'onmouseleave',
+        'onmousemove', 'onmouseout', 'onmouseover', 'onmouseup', 'onmousewheel', 'onmove', 'onmoveend', 'onmovestart',
+        'onoffline', 'ononline', 'onpagehide', 'onpageshow', 'onpaste', 'onpause', 'onplay', 'onplaying', 'onpopstate',
+        'onprogress', 'onpropertychange', 'onratechange', 'onreadystatechange', 'onredo', 'onreset', 'onresize',
+        'onresizeend', 'onresizestart', 'onrowenter', 'onrowexit', 'onrowsdelete', 'onrowsinserted', 'onscroll',
+        'onseeked', 'onseeking', 'onselect', 'onselectionchange', 'onselectstart', 'onshow', 'onstalled', 'onstart',
+        'onstop', 'onstorage', 'onsubmit', 'onsuspend', 'ontimeupdate', 'onundo', 'onunload', 'onvolumechange',
+        'onwaiting'
+    ]);
+
     $ra_protocol = ['javascript', 'vbscript', 'expression'];
+
     $val2 = preg_replace('/(&#[xX]?0{0,8}(9|10|13|a|b);?)*\s*/i', '', $val);
+
     $ra = [];
     foreach ($ra1 as $ra1word) {
-        $ra[] = checkRa1word($ra, $val2, $ra1word, $ra_protocol, $ra_tag, $ra_attribute);
+        $ra = checkRa1word($ra, $val2, $ra1word, $ra_protocol, $ra_tag, $ra_attribute);
     }
-    if (count($ra) > 0) {
+
+    if (!empty($ra)) {
         $val = findPattern($val, $ra, $replaceString);
     }
+
     return $val;
 }
 
-function findPattern($val, $ra, $replaceString) {
-    $found = TRUE;
+function findPattern(string $val, array $ra, string $replaceString): string {
+    $found = true;
+
     while ($found) {
         $val_before = $val;
-        for ($i = 0; $i < sizeof($ra); $i++) {
+
+        for ($i = 0, $count = count($ra); $i < $count; $i++) {
             $pattern = '';
-            if(isset($ra[$i][0]) && !empty($ra[$i][0])) {
-                for ($j = 0; $j < strlen($ra[$i][0]); $j++) {
+
+            if (!empty($ra[$i][0])) {
+                for ($j = 0, $len = strlen($ra[$i][0]); $j < $len; $j++) {
                     $pattern .= ($j > 0) ? '((&#[xX]0{0,8}([9ab]);?)|(&#0{0,8}(9|10|13);?)|\s)*' : '';
                     $pattern .= $ra[$i][0][$j];
                 }
             }
-            if(isset($ra[$i][1]) && !empty($ra[$i][1])) {
+
+            if (!empty($ra[$i][1])) {
                 $pattern .= findSwitchPattern($ra[$i][1], $pattern);
             }
-            $pattern = '/' . $pattern . '/i';
-            $replacement = null;
-            if(isset($ra[$i][0]) && !empty($ra[$i][0])) {
+
+            if (!empty($pattern)) {
+                $pattern = '/' . $pattern . '/i';
                 $replacement = substr_replace($ra[$i][0], $replaceString, 2, 0);
+                $val = preg_replace($pattern, $replacement, $val);
             }
-            $val = preg_replace($pattern, $replacement, $val);
-            $found = ($val_before == $val) ? FALSE : TRUE;
         }
+
+        $found = ($val_before !== $val);
     }
+
     return $val;
 }
 
-function findSwitchPattern($switchValue, $pattern) {
-    switch ($switchValue) {
-        case 'ra_protocol':
-            $pattern .= '((&#[xX]0{0,8}([9ab]);?)|(&#0{0,8}(9|10|13);?)|\s)*(?=:)';
-            break;
-        case 'ra_tag':
-            /** These take the form of e.g. '<SCRIPT[^\da-z] ....'; */
-            $pattern = '(?<=<)' . $pattern . '((&#[xX]0{0,8}([9ab]);?)|(&#0{0,8}(9|10|13);?)|\s)*(?=[^\da-z])';
-            break;
-        case 'ra_attribute':
-            $pattern .= '[\s\!\#\$\%\&\(\)\*\~\+\-\_\.\,\:\;\?\@\[\/\|\\\\\]\^\`]*(?==)';
-            break;
-        default:
-            $pattern .= '';
-    }
-    return $pattern;
+
+function findSwitchPattern(string $switchValue, string $pattern): string {
+    return match ($switchValue) {
+        'ra_protocol'  => $pattern . '((&#[xX]0{0,8}([9ab]);?)|(&#0{0,8}(9|10|13);?)|\s)*(?=:)',
+        'ra_tag'       => '(?<=<)' . $pattern . '((&#[xX]0{0,8}([9ab]);?)|(&#0{0,8}(9|10|13);?)|\s)*(?=[^\da-z])',
+        'ra_attribute' => $pattern . '[\s\!\#\$\%\&\(\)\*\~\+\-\_\.\,\:\;\?\@\[\/\|\\\\\]\^\`]*(?==)',
+        default        => $pattern,
+    };
 }
 
 function calcHash($input) {
     return md5($input['email_address'] . $input['first_name'] . $input['last_name']);
 }
 
-/**
- * This function was introduced with TYPO3 9.5.23 because of this breaking change:
- * https://github.com/TYPO3/TYPO3.CMS/commit/dc26a4ac1a
- */
-function calcSessionHash($config,$sessionId) {
-    $key = sha1($config['typo3_encryptionkey'] . 'core-session-backend');
+function calcSessionHash(array $config, string $sessionId): string {
+    $key = sha1(($config['typo3_encryptionkey'] ?? '') . 'core-session-backend');
     return hash_hmac('sha256', $sessionId, $key);
 }
 
-function arrayCastRecursive($array) {
-    if (is_array($array)) {
-        foreach ($array as $key => $value) {
-            if (is_array($value)) {
-                $array[$key] = arrayCastRecursive($value);
-            }
-            if ($value instanceof stdClass) {
-                $array[$key] = arrayCastRecursive((array)$value);
-            }
+function arrayCastRecursive(array|stdClass $array): array {
+    if ($array instanceof stdClass) {
+        $array = (array) $array;
+    }
+
+    foreach ($array as $key => $value) {
+        if (is_array($value) || $value instanceof stdClass) {
+            $array[$key] = arrayCastRecursive($value);
         }
     }
-    if ($array instanceof stdClass) {
-        return arrayCastRecursive((array)$array);
-    }
+
     return $array;
 }
 
 /**
  * Get Hostname with protocol
  */
-function getCurrentHostname() {
-    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? HTTPS : 'http://';
-    $domainName = $_SERVER['HTTP_HOST'].'/';
-    return $protocol.$domainName;
+function getCurrentHostname(): string {
+    $httpsCheck = $_SERVER['HTTPS'] ?? 'off';
+    $serverPort = $_SERVER['SERVER_PORT'] ?? 80;
+
+    $protocol = (!empty($httpsCheck) && strtolower($httpsCheck) !== 'off') || $serverPort == 443
+        ? HTTPS
+        : 'http://';
+
+    $domainName = $_SERVER['HTTP_HOST'] ?? 'localhost';
+    return $protocol . $domainName . '/';
 }
 
-function checkIfEmailAddressIsCollectiveMailbox($email){
+function checkIfEmailAddressIsCollectiveMailbox(string $email): bool {
     $email_normalized = strtolower(trim($email));
-    $user = strstr( $email_normalized, '@', true);
+    $user = explode('@', $email_normalized)[0] ?? ''; // Sicherstellen, dass wir einen String bekommen
+
     $filename = '../Resources/Private/Extensions/cryptsharesaas/collectivemailbox.csv';
-    if(file_exists($filename)){
-        $lines = file($filename);
-        foreach ($lines as $line) {
-            if(trim($line) == $user){
-                return 1;
-            }
-        }
-    }else{
-        return 0;
+
+    if (!file_exists($filename)) {
+        return false;
     }
-    return 0;
+
+    $lines = file($filename, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    if ($lines === false) {
+        return false; // Fehlerhafte Datei lesen -> sicherheitshalber false zurückgeben
+    }
+
+    foreach ($lines as $line) {
+        if (trim($line) === $user) {
+            return true;
+        }
+    }
+
+    return false;
 }
 
 /**
@@ -303,190 +322,894 @@ function callRestAPI($config, $data, $action, $bw_access_token, $bw_customer_id,
     $response = false;
     switch($action){
         case 'get_access_token':
-            $params = [KEY_CURLOPT_URL => HTTPS.$config[CURL_ENVIRONMENT_KEY].'.billwerk.com/oauth/token', KEY_CURLOPT_HTTPAUTH => CURLAUTH_BASIC, KEY_CURLOPT_POST => 1, KEY_CURLOPT_POSTFIELDS => $data, KEY_CURLOPT_RETURNTRANSFER => true, KEY_CURLOPT_USERPWD => "$client_id:$client_secret", KEY_CURLOPT_HTTPHEADER => ["Content-type: application/x-www-form-urlencoded"], KEY_CURLOPT_CONNECTTIMEOUT => 5, KEY_CURLOPT_VERBOSE => true, KEY_CURLOPT_STDERR => $verbose, KEY_CURLOPT_ENCODING => false, KEY_CURLOPT_CUSTOMERREQUEST => false];
+            $params = [
+                KEY_CURLOPT_URL => HTTPS . ($config[CURL_ENVIRONMENT_KEY] ?? '') . '.billwerk.com/oauth/token',
+                KEY_CURLOPT_HTTPAUTH => CURLAUTH_BASIC,
+                KEY_CURLOPT_POST => true,
+                KEY_CURLOPT_POSTFIELDS => $data,
+                KEY_CURLOPT_RETURNTRANSFER => true,
+                KEY_CURLOPT_USERPWD => "{$client_id}:{$client_secret}",
+                KEY_CURLOPT_HTTPHEADER => ["Content-type: application/x-www-form-urlencoded"],
+                KEY_CURLOPT_CONNECTTIMEOUT => 5,
+                KEY_CURLOPT_VERBOSE => true,
+                KEY_CURLOPT_STDERR => $verbose,
+                KEY_CURLOPT_ENCODING => false,
+                KEY_CURLOPT_CUSTOMERREQUEST => false
+            ];
+
             $curl = getCurlCall($curl, $params);
             $response = curl_exec($curl);
-            $result = arrayCastRecursive(json_decode($response));
+
+            if ($response === false) {
+                // Fehlerhandling für cURL
+                $result = ['error' => 'cURL request failed: ' . curl_error($curl)];
+            } else {
+                // Sicherstellen, dass JSON-Parsing korrekt läuft und Fehler abgefangen werden
+                $decodedResponse = json_decode($response, true);
+                $result = is_array($decodedResponse) ? arrayCastRecursive($decodedResponse) : ['error' => 'Invalid JSON response'];
+            }
             break;
         case 'create_customer':
-            $params = [KEY_CURLOPT_URL => HTTPS.$config[CURL_ENVIRONMENT_KEY].'.billwerk.com/api/v1/Customers', KEY_CURLOPT_HTTPAUTH => false, KEY_CURLOPT_POST => 1, KEY_CURLOPT_POSTFIELDS => json_encode($data, true), KEY_CURLOPT_RETURNTRANSFER => true, KEY_CURLOPT_USERPWD => false, KEY_CURLOPT_HTTPHEADER => [CURL_GRANT_TYPE, CURL_AUTH.$Bearer, "Content-type: text/json;charset=\"utf-8\"", CURL_ENCODING_ACCEPT_TEXT, CURL_CACHE_CONTROL, CURL_PRAGMA_NO_CACHE_VALUE], KEY_CURLOPT_CONNECTTIMEOUT => 5, KEY_CURLOPT_VERBOSE => true, KEY_CURLOPT_STDERR => $verbose, KEY_CURLOPT_ENCODING => CURL_CHARSET, KEY_CURLOPT_CUSTOMERREQUEST => false];
+            $params = [
+                KEY_CURLOPT_URL => HTTPS . ($config[CURL_ENVIRONMENT_KEY] ?? '') . '.billwerk.com/api/v1/Customers',
+                KEY_CURLOPT_HTTPAUTH => false,
+                KEY_CURLOPT_POST => true,
+                KEY_CURLOPT_POSTFIELDS => json_encode($data, JSON_THROW_ON_ERROR), // Sicheres JSON-Handling
+                KEY_CURLOPT_RETURNTRANSFER => true,
+                KEY_CURLOPT_USERPWD => false,
+                KEY_CURLOPT_HTTPHEADER => [
+                    CURL_GRANT_TYPE,
+                    CURL_AUTH . $Bearer,
+                    "Content-type: application/json;charset=\"utf-8\"",
+                    CURL_ENCODING_ACCEPT_TEXT,
+                    CURL_CACHE_CONTROL,
+                    CURL_PRAGMA_NO_CACHE_VALUE
+                ],
+                KEY_CURLOPT_CONNECTTIMEOUT => 5,
+                KEY_CURLOPT_VERBOSE => true,
+                KEY_CURLOPT_STDERR => $verbose,
+                KEY_CURLOPT_ENCODING => CURL_CHARSET,
+                KEY_CURLOPT_CUSTOMERREQUEST => false
+            ];
+
             $curl = getCurlCall($curl, $params);
             $response = curl_exec($curl);
-            $result = json_decode($response);
+
+            if ($response === false) {
+                // cURL-Fehlermeldung sicherstellen
+                $result = ['error' => 'cURL request failed: ' . curl_error($curl)];
+            } else {
+                try {
+                    $result = json_decode($response, true, 512, JSON_THROW_ON_ERROR);
+                } catch (JsonException $e) {
+                    $result = ['error' => 'Invalid JSON response: ' . $e->getMessage()];
+                }
+            }
             break;
         case 'set_customer':
         case ACTION_UPDATE_CUSTOMER:
-            $params = [KEY_CURLOPT_URL => HTTPS.$config[CURL_ENVIRONMENT_KEY].BW_URL_CUSTOMERS.$data[KEY_CUSTOMER_ID_1], KEY_CURLOPT_HTTPAUTH => false, KEY_CURLOPT_POST => 1, KEY_CURLOPT_POSTFIELDS => json_encode($data, true), KEY_CURLOPT_RETURNTRANSFER => true, KEY_CURLOPT_USERPWD => false, KEY_CURLOPT_HTTPHEADER => [CURL_GRANT_TYPE, CURL_AUTH.$Bearer, STRING_CURL_CONTENT_TYPE, CURL_ENCODING_ACCEPT_APPLICATION, CURL_CACHE_CONTROL, CURL_PRAGMA_NO_CACHE_VALUE], KEY_CURLOPT_CONNECTTIMEOUT => 5, KEY_CURLOPT_VERBOSE => true, KEY_CURLOPT_STDERR => $verbose, KEY_CURLOPT_ENCODING => CURL_CHARSET, KEY_CURLOPT_CUSTOMERREQUEST => 'PUT'];
+            $params = [
+                KEY_CURLOPT_URL => HTTPS . ($config[CURL_ENVIRONMENT_KEY] ?? '') . BW_URL_CUSTOMERS . ($data[KEY_CUSTOMER_ID_1] ?? ''),
+                KEY_CURLOPT_HTTPAUTH => false,
+                KEY_CURLOPT_POST => true,
+                KEY_CURLOPT_POSTFIELDS => json_encode($data, JSON_THROW_ON_ERROR), // Sicheres JSON-Encoding
+                KEY_CURLOPT_RETURNTRANSFER => true,
+                KEY_CURLOPT_USERPWD => false,
+                KEY_CURLOPT_HTTPHEADER => [
+                    CURL_GRANT_TYPE,
+                    CURL_AUTH . $Bearer,
+                    STRING_CURL_CONTENT_TYPE,
+                    CURL_ENCODING_ACCEPT_APPLICATION,
+                    CURL_CACHE_CONTROL,
+                    CURL_PRAGMA_NO_CACHE_VALUE
+                ],
+                KEY_CURLOPT_CONNECTTIMEOUT => 5,
+                KEY_CURLOPT_VERBOSE => true,
+                KEY_CURLOPT_STDERR => $verbose,
+                KEY_CURLOPT_ENCODING => CURL_CHARSET,
+                KEY_CURLOPT_CUSTOMERREQUEST => 'PUT' // Explizite PUT-Methode
+            ];
+
             $curl = getCurlCall($curl, $params);
             $response = curl_exec($curl);
+
+            if ($response === false) {
+                // Falls cURL fehlschlägt, Fehler zurückgeben
+                $result = ['error' => 'cURL request failed: ' . curl_error($curl)];
+            } else {
+                try {
+                    $result = json_decode($response, true, 512, JSON_THROW_ON_ERROR);
+                } catch (JsonException $e) {
+                    $result = ['error' => 'Invalid JSON response: ' . $e->getMessage()];
+                }
+            }
             break;
         case 'save_business_partner_change_decision':
-            $params = [KEY_CURLOPT_URL => HTTPS.$config[CURL_ENVIRONMENT_KEY].BW_URL_CUSTOMERS.$data[KEY_CUSTOMER_ID_1], KEY_CURLOPT_HTTPAUTH => false, KEY_CURLOPT_POST => 1, KEY_CURLOPT_POSTFIELDS => json_encode($data, true), KEY_CURLOPT_RETURNTRANSFER => true, KEY_CURLOPT_USERPWD => false, KEY_CURLOPT_HTTPHEADER => [CURL_GRANT_TYPE, CURL_AUTH.$Bearer, STRING_CURL_CONTENT_TYPE, CURL_ENCODING_ACCEPT_APPLICATION, CURL_CACHE_CONTROL, CURL_PRAGMA_NO_CACHE_VALUE], KEY_CURLOPT_CONNECTTIMEOUT => 5, KEY_CURLOPT_VERBOSE => true, KEY_CURLOPT_STDERR => $verbose, KEY_CURLOPT_ENCODING => CURL_CHARSET, KEY_CURLOPT_CUSTOMERREQUEST => 'PUT'];
+            $params = [
+                KEY_CURLOPT_URL => HTTPS . ($config[CURL_ENVIRONMENT_KEY] ?? '') . BW_URL_CUSTOMERS . ($data[KEY_CUSTOMER_ID_1] ?? ''),
+                KEY_CURLOPT_HTTPAUTH => false,
+                KEY_CURLOPT_POST => true,
+                KEY_CURLOPT_POSTFIELDS => json_encode($data, JSON_THROW_ON_ERROR), // Sicheres JSON-Encoding
+                KEY_CURLOPT_RETURNTRANSFER => true,
+                KEY_CURLOPT_USERPWD => false,
+                KEY_CURLOPT_HTTPHEADER => [
+                    CURL_GRANT_TYPE,
+                    CURL_AUTH . $Bearer,
+                    STRING_CURL_CONTENT_TYPE,
+                    CURL_ENCODING_ACCEPT_APPLICATION,
+                    CURL_CACHE_CONTROL,
+                    CURL_PRAGMA_NO_CACHE_VALUE
+                ],
+                KEY_CURLOPT_CONNECTTIMEOUT => 5,
+                KEY_CURLOPT_VERBOSE => true,
+                KEY_CURLOPT_STDERR => $verbose,
+                KEY_CURLOPT_ENCODING => CURL_CHARSET,
+                KEY_CURLOPT_CUSTOMERREQUEST => 'PUT' // Explizite PUT-Methode
+            ];
+
             $curl = getCurlCall($curl, $params);
             $response = curl_exec($curl);
+
+            if ($response === false) {
+                // Falls cURL fehlschlägt, Fehler zurückgeben
+                $result = ['error' => 'cURL request failed: ' . curl_error($curl)];
+            } else {
+                try {
+                    $result = json_decode($response, true, 512, JSON_THROW_ON_ERROR);
+                } catch (JsonException $e) {
+                    $result = ['error' => 'Invalid JSON response: ' . $e->getMessage()];
+                }
+            }
             break;
         case 'get_customer':
-            $params = [KEY_CURLOPT_URL => HTTPS.$config[CURL_ENVIRONMENT_KEY].'.billwerk.com/api/v1/customers/'.$data[KEY_CUSTOMER_ID_1], KEY_CURLOPT_HTTPAUTH => CURLAUTH_BASIC, KEY_CURLOPT_POST => false, KEY_CURLOPT_POSTFIELDS => false, KEY_CURLOPT_RETURNTRANSFER => true, KEY_CURLOPT_USERPWD => "$client_id:$client_secret", KEY_CURLOPT_HTTPHEADER => [CURL_GRANT_TYPE, CURL_AUTH.$Bearer, CURL_CONTENT_TYPE_TEXT, CURL_ENCODING_ACCEPT_TEXT, CURL_CACHE_CONTROL, CURL_PRAGMA_NO_CACHE_VALUE], KEY_CURLOPT_CONNECTTIMEOUT => 5, KEY_CURLOPT_VERBOSE => true, KEY_CURLOPT_STDERR => $verbose, KEY_CURLOPT_ENCODING => false, KEY_CURLOPT_CUSTOMERREQUEST => false];
+            $customerId = $data[KEY_CUSTOMER_ID_1] ?? null;
+            if (!$customerId) {
+                $result = ['error' => 'Customer ID is missing'];
+                break;
+            }
+
+            $params = [
+                KEY_CURLOPT_URL => HTTPS . ($config[CURL_ENVIRONMENT_KEY] ?? '') . '.billwerk.com/api/v1/customers/' . $customerId,
+                KEY_CURLOPT_HTTPAUTH => CURLAUTH_BASIC,
+                KEY_CURLOPT_POST => false,
+                KEY_CURLOPT_POSTFIELDS => false,
+                KEY_CURLOPT_RETURNTRANSFER => true,
+                KEY_CURLOPT_USERPWD => ($client_id ?? '') . ':' . ($client_secret ?? ''),
+                KEY_CURLOPT_HTTPHEADER => [
+                    CURL_GRANT_TYPE,
+                    CURL_AUTH . $Bearer,
+                    CURL_CONTENT_TYPE_TEXT,
+                    CURL_ENCODING_ACCEPT_TEXT,
+                    CURL_CACHE_CONTROL,
+                    CURL_PRAGMA_NO_CACHE_VALUE
+                ],
+                KEY_CURLOPT_CONNECTTIMEOUT => 5,
+                KEY_CURLOPT_VERBOSE => true,
+                KEY_CURLOPT_STDERR => $verbose,
+                KEY_CURLOPT_ENCODING => false,
+                KEY_CURLOPT_CUSTOMERREQUEST => false
+            ];
+
             $curl = getCurlCall($curl, $params);
             $response = curl_exec($curl);
-            if($json){
-                $customer = arrayCastRecursive(json_decode($response));
-                $result = json_encode($customer);
+
+            if ($response === false) {
+                $result = ['error' => 'cURL request failed: ' . curl_error($curl)];
+            } else {
+                try {
+                    $customer = arrayCastRecursive(json_decode($response, true, 512, JSON_THROW_ON_ERROR));
+                    $result = $json ? json_encode($customer, JSON_THROW_ON_ERROR) : $customer;
+                } catch (JsonException $e) {
+                    $result = ['error' => 'Invalid JSON response: ' . $e->getMessage()];
+                }
             }
             break;
         case 'cancel_preview':
-            $params = [KEY_CURLOPT_URL => HTTPS.$config[CURL_ENVIRONMENT_KEY].'.billwerk.com/api/v1/contracts/'.$data['ContractId'].'/cancellationPreview', KEY_CURLOPT_HTTPAUTH => CURLAUTH_BASIC, KEY_CURLOPT_POST => false, KEY_CURLOPT_POSTFIELDS => false, KEY_CURLOPT_RETURNTRANSFER => true, KEY_CURLOPT_USERPWD => "$client_id:$client_secret", KEY_CURLOPT_HTTPHEADER => [CURL_GRANT_TYPE, CURL_AUTH.$Bearer, CURL_CONTENT_TYPE_TEXT, CURL_ENCODING_ACCEPT_TEXT, CURL_CACHE_CONTROL, CURL_PRAGMA_NO_CACHE_VALUE], KEY_CURLOPT_CONNECTTIMEOUT => 5, KEY_CURLOPT_VERBOSE => true, KEY_CURLOPT_STDERR => $verbose, KEY_CURLOPT_ENCODING => false, KEY_CURLOPT_CUSTOMERREQUEST => false];
+            $contractId = $data['ContractId'] ?? null;
+            if (!$contractId) {
+                $result = ['error' => 'Contract ID is missing'];
+                break;
+            }
+
+            $params = [
+                KEY_CURLOPT_URL => HTTPS . ($config[CURL_ENVIRONMENT_KEY] ?? '') . '.billwerk.com/api/v1/contracts/' . $contractId . '/cancellationPreview',
+                KEY_CURLOPT_HTTPAUTH => CURLAUTH_BASIC,
+                KEY_CURLOPT_POST => false,
+                KEY_CURLOPT_POSTFIELDS => false,
+                KEY_CURLOPT_RETURNTRANSFER => true,
+                KEY_CURLOPT_USERPWD => ($client_id ?? '') . ':' . ($client_secret ?? ''),
+                KEY_CURLOPT_HTTPHEADER => [
+                    CURL_GRANT_TYPE,
+                    CURL_AUTH . $Bearer,
+                    CURL_CONTENT_TYPE_TEXT,
+                    CURL_ENCODING_ACCEPT_TEXT,
+                    CURL_CACHE_CONTROL,
+                    CURL_PRAGMA_NO_CACHE_VALUE
+                ],
+                KEY_CURLOPT_CONNECTTIMEOUT => 5,
+                KEY_CURLOPT_VERBOSE => true,
+                KEY_CURLOPT_STDERR => $verbose,
+                KEY_CURLOPT_ENCODING => false,
+                KEY_CURLOPT_CUSTOMERREQUEST => false
+            ];
+
             $curl = getCurlCall($curl, $params);
             $response = curl_exec($curl);
+
+            if ($response === false) {
+                $result = ['error' => 'cURL request failed: ' . curl_error($curl)];
+            }
             break;
         case 'cancel_contract':
-            $post = ['EndDate' => $data['EndDate']];
+            $contractId = $data['ContractId'] ?? null;
+            $endDate = $data['EndDate'] ?? null;
+
+            if (!$contractId || !$endDate) {
+                $result = ['error' => 'Contract ID or End Date is missing'];
+                break;
+            }
+
+            $post = ['EndDate' => $endDate];
+
             $params = [
-                KEY_CURLOPT_URL => HTTPS.$config[CURL_ENVIRONMENT_KEY].'.billwerk.com/api/v1/contracts/'.$data['ContractId'].'/end',
+                KEY_CURLOPT_URL => HTTPS . ($config[CURL_ENVIRONMENT_KEY] ?? '') . '.billwerk.com/api/v1/contracts/' . $contractId . '/end',
                 KEY_CURLOPT_HTTPAUTH => false,
                 KEY_CURLOPT_POST => 1,
-                KEY_CURLOPT_POSTFIELDS => json_encode($post, true),
+                KEY_CURLOPT_POSTFIELDS => json_encode($post, JSON_THROW_ON_ERROR),
                 KEY_CURLOPT_RETURNTRANSFER => true,
                 KEY_CURLOPT_USERPWD => false,
-                KEY_CURLOPT_HTTPHEADER => [CURL_GRANT_TYPE, CURL_AUTH.$Bearer, STRING_CURL_CONTENT_TYPE, CURL_ENCODING_ACCEPT_APPLICATION, CURL_CACHE_CONTROL, CURL_PRAGMA_NO_CACHE_VALUE],
+                KEY_CURLOPT_HTTPHEADER => [
+                    CURL_GRANT_TYPE,
+                    CURL_AUTH . $Bearer,
+                    STRING_CURL_CONTENT_TYPE,
+                    CURL_ENCODING_ACCEPT_APPLICATION,
+                    CURL_CACHE_CONTROL,
+                    CURL_PRAGMA_NO_CACHE_VALUE
+                ],
                 KEY_CURLOPT_CONNECTTIMEOUT => 5,
                 KEY_CURLOPT_VERBOSE => true,
                 KEY_CURLOPT_STDERR => $verbose,
                 KEY_CURLOPT_ENCODING => CURL_CHARSET,
                 KEY_CURLOPT_CUSTOMERREQUEST => 'POST'
             ];
+
             $curl = getCurlCall($curl, $params);
             $response = curl_exec($curl);
+
+            if ($response === false) {
+                $result = ['error' => 'cURL request failed: ' . curl_error($curl)];
+            }
             break;
         case ACTION_GET_CONTRACTS:
-            $params = [KEY_CURLOPT_URL => HTTPS.$config[CURL_ENVIRONMENT_KEY].BW_URL_CUSTOMERS.$data[KEY_CUSTOMER_ID_1].'/contracts/', KEY_CURLOPT_HTTPAUTH => CURLAUTH_BASIC, KEY_CURLOPT_POST => false, KEY_CURLOPT_POSTFIELDS => false, KEY_CURLOPT_RETURNTRANSFER => true, KEY_CURLOPT_USERPWD => "$client_id:$client_secret", KEY_CURLOPT_HTTPHEADER => [CURL_GRANT_TYPE, CURL_AUTH.$Bearer, CURL_CONTENT_TYPE_TEXT, CURL_ENCODING_ACCEPT_TEXT, CURL_CACHE_CONTROL, CURL_PRAGMA_NO_CACHE_VALUE], KEY_CURLOPT_CONNECTTIMEOUT => 5, KEY_CURLOPT_VERBOSE => true, KEY_CURLOPT_STDERR => $verbose, KEY_CURLOPT_ENCODING => false, KEY_CURLOPT_CUSTOMERREQUEST => false];
+            $customerId = $data[KEY_CUSTOMER_ID_1] ?? null;
+
+            if (!$customerId) {
+                $result = json_encode(['error' => 'Customer ID is missing']);
+                break;
+            }
+
+            $params = [
+                KEY_CURLOPT_URL => HTTPS . ($config[CURL_ENVIRONMENT_KEY] ?? '') . BW_URL_CUSTOMERS . $customerId . '/contracts/',
+                KEY_CURLOPT_HTTPAUTH => CURLAUTH_BASIC,
+                KEY_CURLOPT_POST => false,
+                KEY_CURLOPT_POSTFIELDS => false,
+                KEY_CURLOPT_RETURNTRANSFER => true,
+                KEY_CURLOPT_USERPWD => "$client_id:$client_secret",
+                KEY_CURLOPT_HTTPHEADER => [
+                    CURL_GRANT_TYPE,
+                    CURL_AUTH . $Bearer,
+                    CURL_CONTENT_TYPE_TEXT,
+                    CURL_ENCODING_ACCEPT_TEXT,
+                    CURL_CACHE_CONTROL,
+                    CURL_PRAGMA_NO_CACHE_VALUE
+                ],
+                KEY_CURLOPT_CONNECTTIMEOUT => 5,
+                KEY_CURLOPT_VERBOSE => true,
+                KEY_CURLOPT_STDERR => $verbose,
+                KEY_CURLOPT_ENCODING => false,
+                KEY_CURLOPT_CUSTOMERREQUEST => false
+            ];
+
             $curl = getCurlCall($curl, $params);
             $response = curl_exec($curl);
-            $all_contracts = arrayCastRecursive(json_decode($response));
-            foreach($all_contracts as $value){
-                if($value[KEY_CUSTOMER_ID_1]==$bw_customer_id && $value['LifecycleStatus'] != 'Annulled' && $value['LifecycleStatus'] != 'Ended'){
+
+            if ($response === false) {
+                $result = json_encode(['error' => 'cURL request failed: ' . curl_error($curl)]);
+                break;
+            }
+
+            $all_contracts = arrayCastRecursive(json_decode($response, true));
+
+            $customer_contracts = [];
+            foreach ($all_contracts as $value) {
+                if (($value[KEY_CUSTOMER_ID_1] ?? '') === $bw_customer_id &&
+                    ($value['LifecycleStatus'] ?? '') !== 'Annulled' &&
+                    ($value['LifecycleStatus'] ?? '') !== 'Ended') {
                     $customer_contracts[] = $value;
                 }
             }
-            if($json){
-                $customer_contracts = arrayCastRecursive(json_decode($response));
-                $result = json_encode($customer_contracts);
-            } else {
-                $result = json_encode($customer_contracts);
-            }
+
+            $result = json_encode($json ? arrayCastRecursive(json_decode($response, true)) : $customer_contracts);
             break;
         case ACTION_GET_CONTRACT:
-            $params = [KEY_CURLOPT_URL => HTTPS.$config[CURL_ENVIRONMENT_KEY].BW_URL_CONTRACTS.$data[KEY_CONTRACT_ID], KEY_CURLOPT_HTTPAUTH => CURLAUTH_BASIC, KEY_CURLOPT_POST => false, KEY_CURLOPT_POSTFIELDS => false, KEY_CURLOPT_RETURNTRANSFER => true, KEY_CURLOPT_USERPWD => "$client_id:$client_secret", KEY_CURLOPT_HTTPHEADER => [CURL_GRANT_TYPE, CURL_AUTH.$Bearer, CURL_CONTENT_TYPE_TEXT, CURL_ENCODING_ACCEPT_TEXT, CURL_CACHE_CONTROL, CURL_PRAGMA_NO_CACHE_VALUE], KEY_CURLOPT_CONNECTTIMEOUT => 5, KEY_CURLOPT_VERBOSE => true, KEY_CURLOPT_STDERR => $verbose, KEY_CURLOPT_ENCODING => false, KEY_CURLOPT_CUSTOMERREQUEST => false];
+            $contractId = $data[KEY_CONTRACT_ID] ?? null;
+            $customerId = $data[KEY_CUSTOMER_ID_1] ?? null;
+
+            if (!$contractId) {
+                $result = json_encode(['error' => 'Contract ID is missing']);
+                break;
+            }
+
+            $params = [
+                KEY_CURLOPT_URL => HTTPS . ($config[CURL_ENVIRONMENT_KEY] ?? '') . BW_URL_CONTRACTS . $contractId,
+                KEY_CURLOPT_HTTPAUTH => CURLAUTH_BASIC,
+                KEY_CURLOPT_POST => false,
+                KEY_CURLOPT_POSTFIELDS => false,
+                KEY_CURLOPT_RETURNTRANSFER => true,
+                KEY_CURLOPT_USERPWD => "$client_id:$client_secret",
+                KEY_CURLOPT_HTTPHEADER => [
+                    CURL_GRANT_TYPE,
+                    CURL_AUTH . $Bearer,
+                    CURL_CONTENT_TYPE_TEXT,
+                    CURL_ENCODING_ACCEPT_TEXT,
+                    CURL_CACHE_CONTROL,
+                    CURL_PRAGMA_NO_CACHE_VALUE
+                ],
+                KEY_CURLOPT_CONNECTTIMEOUT => 5,
+                KEY_CURLOPT_VERBOSE => true,
+                KEY_CURLOPT_STDERR => $verbose,
+                KEY_CURLOPT_ENCODING => false,
+                KEY_CURLOPT_CUSTOMERREQUEST => false
+            ];
+
             $curl = getCurlCall($curl, $params);
             $response = curl_exec($curl);
-            $contract = arrayCastRecursive(json_decode($response));
-            if($data[KEY_CUSTOMER_ID_1]=='webhook' || $contract[KEY_CUSTOMER_ID_1]==$bw_customer_id){
+
+            if ($response === false) {
+                $result = json_encode(['error' => 'cURL request failed: ' . curl_error($curl)]);
+                break;
+            }
+
+            $contract = arrayCastRecursive(json_decode($response, true));
+
+            if ($customerId === 'webhook' || ($contract[KEY_CUSTOMER_ID_1] ?? null) === $bw_customer_id) {
                 $result = json_encode($contract);
             } else {
-                $result = json_encode( array(KEY_MESSAGE_1 => MSG_CONTACT_ID_NOT_EXISTS), true);
+                $result = json_encode([KEY_MESSAGE_1 => MSG_CONTACT_ID_NOT_EXISTS], JSON_THROW_ON_ERROR);
                 setDieError(MSG_CONTACT_ID_NOT_EXISTS, __FILE__, __LINE__);
             }
             break;
         case ACTION_GET_COMPONENTS:
-            $params = [KEY_CURLOPT_URL => HTTPS.$config[CURL_ENVIRONMENT_KEY].BW_URL_CONTRACTS.$data[KEY_CONTRACT_ID].'/componentSubscriptions', KEY_CURLOPT_HTTPAUTH => CURLAUTH_BASIC, KEY_CURLOPT_POST => false, KEY_CURLOPT_POSTFIELDS => false, KEY_CURLOPT_RETURNTRANSFER => true, KEY_CURLOPT_USERPWD => "$client_id:$client_secret", KEY_CURLOPT_HTTPHEADER => [CURL_GRANT_TYPE, CURL_AUTH.$Bearer, CURL_CONTENT_TYPE_TEXT, CURL_ENCODING_ACCEPT_TEXT, CURL_CACHE_CONTROL, CURL_PRAGMA_NO_CACHE_VALUE], KEY_CURLOPT_CONNECTTIMEOUT => 5, KEY_CURLOPT_VERBOSE => true, KEY_CURLOPT_STDERR => $verbose, KEY_CURLOPT_ENCODING => false, KEY_CURLOPT_CUSTOMERREQUEST => false];
+            $contractId = $data[KEY_CONTRACT_ID] ?? null;
+            $customerId = $data[KEY_CUSTOMER_ID_1] ?? null;
+
+            if (!$contractId) {
+                $result = json_encode(['error' => 'Contract ID is missing']);
+                break;
+            }
+
+            $params = [
+                KEY_CURLOPT_URL => HTTPS . ($config[CURL_ENVIRONMENT_KEY] ?? '') . BW_URL_CONTRACTS . $contractId . '/componentSubscriptions',
+                KEY_CURLOPT_HTTPAUTH => CURLAUTH_BASIC,
+                KEY_CURLOPT_POST => false,
+                KEY_CURLOPT_POSTFIELDS => false,
+                KEY_CURLOPT_RETURNTRANSFER => true,
+                KEY_CURLOPT_USERPWD => "$client_id:$client_secret",
+                KEY_CURLOPT_HTTPHEADER => [
+                    CURL_GRANT_TYPE,
+                    CURL_AUTH . $Bearer,
+                    CURL_CONTENT_TYPE_TEXT,
+                    CURL_ENCODING_ACCEPT_TEXT,
+                    CURL_CACHE_CONTROL,
+                    CURL_PRAGMA_NO_CACHE_VALUE
+                ],
+                KEY_CURLOPT_CONNECTTIMEOUT => 5,
+                KEY_CURLOPT_VERBOSE => true,
+                KEY_CURLOPT_STDERR => $verbose,
+                KEY_CURLOPT_ENCODING => false,
+                KEY_CURLOPT_CUSTOMERREQUEST => false
+            ];
+
             $curl = getCurlCall($curl, $params);
             $response = curl_exec($curl);
-            $components = arrayCastRecursive(json_decode($response));
-            if($data[KEY_CUSTOMER_ID_1]=='webhook') {
+
+            if ($response === false) {
+                $result = json_encode(['error' => 'cURL request failed: ' . curl_error($curl)]);
+                break;
+            }
+
+            $components = arrayCastRecursive(json_decode($response, true));
+
+            if ($customerId === 'webhook') {
                 $result = json_encode($components);
-            } else if($components[0][KEY_CUSTOMER_ID_1]==$bw_customer_id){
+            } elseif (!empty($components) && ($components[0][KEY_CUSTOMER_ID_1] ?? null) === $bw_customer_id) {
                 echo $response;
+            } else {
+                $result = json_encode(['error' => 'No components found or unauthorized access'], JSON_THROW_ON_ERROR);
             }
             break;
         case 'get_component':
-            $params = [KEY_CURLOPT_URL => HTTPS.$config[CURL_ENVIRONMENT_KEY].BW_URL_CONTRACTS.$data[KEY_CONTRACT_ID].'/componentSubscriptions/'.$data['ComponentId'], KEY_CURLOPT_HTTPAUTH => CURLAUTH_BASIC, KEY_CURLOPT_POST => false, KEY_CURLOPT_POSTFIELDS => false, KEY_CURLOPT_RETURNTRANSFER => true, KEY_CURLOPT_USERPWD => "$client_id:$client_secret", KEY_CURLOPT_HTTPHEADER => [CURL_GRANT_TYPE, CURL_AUTH.$Bearer, CURL_CONTENT_TYPE_TEXT, CURL_ENCODING_ACCEPT_TEXT, CURL_CACHE_CONTROL, CURL_PRAGMA_NO_CACHE_VALUE], KEY_CURLOPT_CONNECTTIMEOUT => 5, KEY_CURLOPT_VERBOSE => true, KEY_CURLOPT_STDERR => $verbose, KEY_CURLOPT_ENCODING => false, KEY_CURLOPT_CUSTOMERREQUEST => false];
+            $contractId = $data[KEY_CONTRACT_ID] ?? null;
+            $componentId = $data['ComponentId'] ?? null;
+
+            if (!$contractId || !$componentId) {
+                $result = json_encode(['error' => 'Contract ID or Component ID is missing']);
+                break;
+            }
+
+            $params = [
+                KEY_CURLOPT_URL => HTTPS . ($config[CURL_ENVIRONMENT_KEY] ?? '') . BW_URL_CONTRACTS . $contractId . '/componentSubscriptions/' . $componentId,
+                KEY_CURLOPT_HTTPAUTH => CURLAUTH_BASIC,
+                KEY_CURLOPT_POST => false,
+                KEY_CURLOPT_POSTFIELDS => false,
+                KEY_CURLOPT_RETURNTRANSFER => true,
+                KEY_CURLOPT_USERPWD => "$client_id:$client_secret",
+                KEY_CURLOPT_HTTPHEADER => [
+                    CURL_GRANT_TYPE,
+                    CURL_AUTH . $Bearer,
+                    CURL_CONTENT_TYPE_TEXT,
+                    CURL_ENCODING_ACCEPT_TEXT,
+                    CURL_CACHE_CONTROL,
+                    CURL_PRAGMA_NO_CACHE_VALUE
+                ],
+                KEY_CURLOPT_CONNECTTIMEOUT => 5,
+                KEY_CURLOPT_VERBOSE => true,
+                KEY_CURLOPT_STDERR => $verbose,
+                KEY_CURLOPT_ENCODING => false,
+                KEY_CURLOPT_CUSTOMERREQUEST => false
+            ];
+
             $curl = getCurlCall($curl, $params);
             $response = curl_exec($curl);
-            $components = arrayCastRecursive(json_decode($response));
-            if($components[0][KEY_CUSTOMER_ID_1]==$bw_customer_id){
+
+            if ($response === false) {
+                $result = json_encode(['error' => 'cURL request failed: ' . curl_error($curl)]);
+                break;
+            }
+
+            $components = arrayCastRecursive(json_decode($response, true));
+
+            if (!empty($components) && ($components[0][KEY_CUSTOMER_ID_1] ?? null) === $bw_customer_id) {
                 echo $response;
             } else {
-                $result = json_encode( array(KEY_MESSAGE_1 =>  MSG_NO_COMPONENTS_FOR_CONTACT_ID), true);
+                $result = json_encode([KEY_MESSAGE_1 => MSG_NO_COMPONENTS_FOR_CONTACT_ID], JSON_THROW_ON_ERROR);
                 setDieError(MSG_NO_COMPONENTS_FOR_CONTACT_ID, __FILE__, __LINE__);
             }
             break;
         case 'edit_component':
         case 'cancel_component':
-            $params = [KEY_CURLOPT_URL => HTTPS.$config[CURL_ENVIRONMENT_KEY].'.billwerk.com/api/v1/componentSubscriptions/'.$data['ComponentId'], KEY_CURLOPT_HTTPAUTH => false, KEY_CURLOPT_POST => 1, KEY_CURLOPT_POSTFIELDS => json_encode($data, true), KEY_CURLOPT_RETURNTRANSFER => true, KEY_CURLOPT_USERPWD => false, KEY_CURLOPT_HTTPHEADER => [CURL_GRANT_TYPE, CURL_AUTH.$Bearer, STRING_CURL_CONTENT_TYPE, CURL_ENCODING_ACCEPT_APPLICATION, CURL_CACHE_CONTROL, CURL_PRAGMA_NO_CACHE_VALUE], KEY_CURLOPT_CONNECTTIMEOUT => 5, KEY_CURLOPT_VERBOSE => true, KEY_CURLOPT_STDERR => $verbose, KEY_CURLOPT_ENCODING => CURL_CHARSET, KEY_CURLOPT_CUSTOMERREQUEST => 'PUT'];
+            $componentId = $data['ComponentId'] ?? null;
+
+            if (!$componentId) {
+                $result = json_encode(['error' => 'Component ID is missing'], JSON_THROW_ON_ERROR);
+                break;
+            }
+
+            $params = [
+                KEY_CURLOPT_URL => HTTPS . ($config[CURL_ENVIRONMENT_KEY] ?? '') . '.billwerk.com/api/v1/componentSubscriptions/' . $componentId,
+                KEY_CURLOPT_HTTPAUTH => false,
+                KEY_CURLOPT_POST => 1,
+                KEY_CURLOPT_POSTFIELDS => json_encode($data, JSON_THROW_ON_ERROR),
+                KEY_CURLOPT_RETURNTRANSFER => true,
+                KEY_CURLOPT_USERPWD => false,
+                KEY_CURLOPT_HTTPHEADER => [
+                    CURL_GRANT_TYPE,
+                    CURL_AUTH . $Bearer,
+                    STRING_CURL_CONTENT_TYPE,
+                    CURL_ENCODING_ACCEPT_APPLICATION,
+                    CURL_CACHE_CONTROL,
+                    CURL_PRAGMA_NO_CACHE_VALUE
+                ],
+                KEY_CURLOPT_CONNECTTIMEOUT => 5,
+                KEY_CURLOPT_VERBOSE => true,
+                KEY_CURLOPT_STDERR => $verbose,
+                KEY_CURLOPT_ENCODING => CURL_CHARSET,
+                KEY_CURLOPT_CUSTOMERREQUEST => 'PUT'
+            ];
+
             $curl = getCurlCall($curl, $params);
             $response = curl_exec($curl);
-            $components = arrayCastRecursive(json_decode($response));
-            if($components[KEY_CUSTOMER_ID_1] == $bw_customer_id){
+
+            if ($response === false) {
+                $result = json_encode(['error' => 'cURL request failed: ' . curl_error($curl)], JSON_THROW_ON_ERROR);
+                break;
+            }
+
+            $components = arrayCastRecursive(json_decode($response, true));
+
+            if (!empty($components) && ($components[KEY_CUSTOMER_ID_1] ?? null) === $bw_customer_id) {
                 echo $response;
             } else {
-                $result = json_encode( array(KEY_MESSAGE_1 =>  MSG_NO_COMPONENTS_FOR_CONTACT_ID), true);
+                $result = json_encode([KEY_MESSAGE_1 => MSG_NO_COMPONENTS_FOR_CONTACT_ID], JSON_THROW_ON_ERROR);
                 setDieError(MSG_NO_COMPONENTS_FOR_CONTACT_ID, __FILE__, __LINE__);
             }
             break;
         case 'get_contract_returnOnly':
-            $params = [KEY_CURLOPT_URL => HTTPS.$config[CURL_ENVIRONMENT_KEY].BW_URL_CONTRACTS.$data[KEY_CONTRACT_ID], KEY_CURLOPT_HTTPAUTH => CURLAUTH_BASIC, KEY_CURLOPT_POST => false, KEY_CURLOPT_POSTFIELDS => false, KEY_CURLOPT_RETURNTRANSFER => true, KEY_CURLOPT_USERPWD => "$client_id:$client_secret", KEY_CURLOPT_HTTPHEADER => [CURL_GRANT_TYPE, CURL_AUTH.$Bearer, CURL_CONTENT_TYPE_TEXT, CURL_ENCODING_ACCEPT_TEXT, CURL_CACHE_CONTROL, CURL_PRAGMA_NO_CACHE_VALUE], KEY_CURLOPT_CONNECTTIMEOUT => 5, KEY_CURLOPT_VERBOSE => true, KEY_CURLOPT_STDERR => $verbose, KEY_CURLOPT_ENCODING => false, KEY_CURLOPT_CUSTOMERREQUEST => false];
+            $contractId = $data[KEY_CONTRACT_ID] ?? null;
+
+            if (!$contractId) {
+                $result = json_encode(['error' => 'Contract ID is missing'], JSON_THROW_ON_ERROR);
+                break;
+            }
+
+            $params = [
+                KEY_CURLOPT_URL => HTTPS . ($config[CURL_ENVIRONMENT_KEY] ?? '') . BW_URL_CONTRACTS . $contractId,
+                KEY_CURLOPT_HTTPAUTH => CURLAUTH_BASIC,
+                KEY_CURLOPT_POST => false,
+                KEY_CURLOPT_POSTFIELDS => false,
+                KEY_CURLOPT_RETURNTRANSFER => true,
+                KEY_CURLOPT_USERPWD => "$client_id:$client_secret",
+                KEY_CURLOPT_HTTPHEADER => [
+                    CURL_GRANT_TYPE,
+                    CURL_AUTH . $Bearer,
+                    CURL_CONTENT_TYPE_TEXT,
+                    CURL_ENCODING_ACCEPT_TEXT,
+                    CURL_CACHE_CONTROL,
+                    CURL_PRAGMA_NO_CACHE_VALUE
+                ],
+                KEY_CURLOPT_CONNECTTIMEOUT => 5,
+                KEY_CURLOPT_VERBOSE => true,
+                KEY_CURLOPT_STDERR => $verbose,
+                KEY_CURLOPT_ENCODING => false,
+                KEY_CURLOPT_CUSTOMERREQUEST => false
+            ];
+
             $curl = getCurlCall($curl, $params);
             $response = curl_exec($curl);
-            $contract = arrayCastRecursive(json_decode($response));
-            if($data[KEY_CUSTOMER_ID_1]=='webhook' || $contract[KEY_CUSTOMER_ID_1]==$bw_customer_id){
+
+            if ($response === false) {
+                $result = json_encode(['error' => 'cURL request failed: ' . curl_error($curl)], JSON_THROW_ON_ERROR);
+                break;
+            }
+
+            $contract = arrayCastRecursive(json_decode($response, true));
+
+            if (empty($contract)) {
+                $result = json_encode(['error' => 'No contract data received'], JSON_THROW_ON_ERROR);
+                break;
+            }
+
+            if (($data[KEY_CUSTOMER_ID_1] ?? '') === 'webhook' || ($contract[KEY_CUSTOMER_ID_1] ?? '') === $bw_customer_id) {
                 $result = $contract;
             } else {
-                json_encode( array(KEY_MESSAGE_1 => '-=contract_returnOnly=-It seems that the contract id you entered does not exists or belongs to an other business account'), true);
-                setDieError('-=contract_returnOnly=-It seems that the contract id you entered does not exists or belongs to an other business account', __FILE__, __LINE__);
+                $errorMessage = '-=contract_returnOnly=- It seems that the contract ID you entered does not exist or belongs to another business account';
+                json_encode([KEY_MESSAGE_1 => $errorMessage], JSON_THROW_ON_ERROR);
+                setDieError($errorMessage, __FILE__, __LINE__);
             }
             break;
         case ACTION_GET_SELFSERVICE_TOKEN:
-            $params = [KEY_CURLOPT_URL => HTTPS.$config[CURL_ENVIRONMENT_KEY].BW_URL_CONTRACTS.$data[KEY_CONTRACT_ID].'/selfServiceToken', KEY_CURLOPT_HTTPAUTH => CURLAUTH_BASIC, KEY_CURLOPT_POST => false, KEY_CURLOPT_POSTFIELDS => false, KEY_CURLOPT_RETURNTRANSFER => true, KEY_CURLOPT_USERPWD => "$client_id:$client_secret", KEY_CURLOPT_HTTPHEADER => [CURL_GRANT_TYPE, CURL_AUTH.$Bearer, CURL_CONTENT_TYPE_TEXT, CURL_ENCODING_ACCEPT_TEXT, CURL_CACHE_CONTROL, CURL_PRAGMA_NO_CACHE_VALUE], KEY_CURLOPT_CONNECTTIMEOUT => 5, KEY_CURLOPT_VERBOSE => true, KEY_CURLOPT_STDERR => $verbose, KEY_CURLOPT_ENCODING => false, KEY_CURLOPT_CUSTOMERREQUEST => false];
+            $contractId = $data[KEY_CONTRACT_ID] ?? null;
+
+            if (!$contractId) {
+                $result = json_encode(['error' => 'Contract ID is missing'], JSON_THROW_ON_ERROR);
+                break;
+            }
+
+            $params = [
+                KEY_CURLOPT_URL => HTTPS . ($config[CURL_ENVIRONMENT_KEY] ?? '') . BW_URL_CONTRACTS . $contractId . '/selfServiceToken',
+                KEY_CURLOPT_HTTPAUTH => CURLAUTH_BASIC,
+                KEY_CURLOPT_POST => false,
+                KEY_CURLOPT_POSTFIELDS => false,
+                KEY_CURLOPT_RETURNTRANSFER => true,
+                KEY_CURLOPT_USERPWD => "$client_id:$client_secret",
+                KEY_CURLOPT_HTTPHEADER => [
+                    CURL_GRANT_TYPE,
+                    CURL_AUTH . $Bearer,
+                    CURL_CONTENT_TYPE_TEXT,
+                    CURL_ENCODING_ACCEPT_TEXT,
+                    CURL_CACHE_CONTROL,
+                    CURL_PRAGMA_NO_CACHE_VALUE
+                ],
+                KEY_CURLOPT_CONNECTTIMEOUT => 5,
+                KEY_CURLOPT_VERBOSE => true,
+                KEY_CURLOPT_STDERR => $verbose,
+                KEY_CURLOPT_ENCODING => false,
+                KEY_CURLOPT_CUSTOMERREQUEST => false
+            ];
+
             $curl = getCurlCall($curl, $params);
             $response = curl_exec($curl);
+
+            if ($response === false) {
+                $result = json_encode(['error' => 'cURL request failed: ' . curl_error($curl)], JSON_THROW_ON_ERROR);
+            }
+
             break;
         case 'set_contract_customer':
         case 'set_contracts_customerId':
-            $params = [KEY_CURLOPT_URL => HTTPS.$config[CURL_ENVIRONMENT_KEY].BW_URL_CONTRACTS.$data[KEY_CONTRACT_ID].BW_URL_CUSTOM_FIELDS, KEY_CURLOPT_HTTPAUTH => CURLAUTH_BASIC, KEY_CURLOPT_POST => false, KEY_CURLOPT_POSTFIELDS => json_encode($data, true), KEY_CURLOPT_RETURNTRANSFER => true, KEY_CURLOPT_USERPWD => "$client_id:$client_secret", KEY_CURLOPT_HTTPHEADER => [CURL_GRANT_TYPE, CURL_AUTH.$Bearer, CURL_CONTENT_TYPE_APPLICATION, CURL_ENCODING_ACCEPT_APPLICATION, CURL_CACHE_CONTROL, CURL_PRAGMA_NO_CACHE_VALUE], KEY_CURLOPT_CONNECTTIMEOUT => 5, KEY_CURLOPT_VERBOSE => true, KEY_CURLOPT_STDERR => $verbose, KEY_CURLOPT_ENCODING => false, KEY_CURLOPT_CUSTOMERREQUEST => CURL_CUSTOMREQUEST_PATCH];
+            $contractId = $data[KEY_CONTRACT_ID] ?? null;
+
+            if (!$contractId) {
+                $result = json_encode(['error' => 'Contract ID is missing'], JSON_THROW_ON_ERROR);
+                break;
+            }
+
+            $params = [
+                KEY_CURLOPT_URL => HTTPS . ($config[CURL_ENVIRONMENT_KEY] ?? '') . BW_URL_CONTRACTS . $contractId . BW_URL_CUSTOM_FIELDS,
+                KEY_CURLOPT_HTTPAUTH => CURLAUTH_BASIC,
+                KEY_CURLOPT_POST => false,
+                KEY_CURLOPT_POSTFIELDS => json_encode($data, JSON_THROW_ON_ERROR),
+                KEY_CURLOPT_RETURNTRANSFER => true,
+                KEY_CURLOPT_USERPWD => "$client_id:$client_secret",
+                KEY_CURLOPT_HTTPHEADER => [
+                    CURL_GRANT_TYPE,
+                    CURL_AUTH . $Bearer,
+                    CURL_CONTENT_TYPE_APPLICATION,
+                    CURL_ENCODING_ACCEPT_APPLICATION,
+                    CURL_CACHE_CONTROL,
+                    CURL_PRAGMA_NO_CACHE_VALUE
+                ],
+                KEY_CURLOPT_CONNECTTIMEOUT => 5,
+                KEY_CURLOPT_VERBOSE => true,
+                KEY_CURLOPT_STDERR => $verbose,
+                KEY_CURLOPT_ENCODING => false,
+                KEY_CURLOPT_CUSTOMERREQUEST => CURL_CUSTOMREQUEST_PATCH
+            ];
+
             $curl = getCurlCall($curl, $params);
             $response = curl_exec($curl);
+
+            if ($response === false) {
+                $result = json_encode(['error' => 'cURL request failed: ' . curl_error($curl)], JSON_THROW_ON_ERROR);
+            }
+
             break;
         case ACTION_SET_CONTRACTS_CSUSERDATA:
-            $params = [KEY_CURLOPT_URL => HTTPS.$config[CURL_ENVIRONMENT_KEY].BW_URL_CONTRACTS.$data[KEY_CONTRACT_ID].BW_URL_CUSTOM_FIELDS, KEY_CURLOPT_HTTPAUTH => CURLAUTH_BASIC, KEY_CURLOPT_POST => false, KEY_CURLOPT_POSTFIELDS => json_encode($data, true), KEY_CURLOPT_RETURNTRANSFER => true, KEY_CURLOPT_USERPWD => "$client_id:$client_secret", KEY_CURLOPT_HTTPHEADER => [CURL_GRANT_TYPE, CURL_AUTH.$Bearer, CURL_CONTENT_TYPE_APPLICATION, CURL_ENCODING_ACCEPT_APPLICATION, CURL_CACHE_CONTROL, CURL_PRAGMA_NO_CACHE_VALUE], KEY_CURLOPT_CONNECTTIMEOUT => 5, KEY_CURLOPT_VERBOSE => true, KEY_CURLOPT_STDERR => $verbose, KEY_CURLOPT_ENCODING => CURL_CHARSET, KEY_CURLOPT_CUSTOMERREQUEST => CURL_CUSTOMREQUEST_PATCH];
+            $contractId = $data[KEY_CONTRACT_ID] ?? null;
+
+            if (!$contractId) {
+                $result = json_encode(['error' => 'Contract ID is missing'], JSON_THROW_ON_ERROR);
+                break;
+            }
+
+            $params = [
+                KEY_CURLOPT_URL => HTTPS . ($config[CURL_ENVIRONMENT_KEY] ?? '') . BW_URL_CONTRACTS . $contractId . BW_URL_CUSTOM_FIELDS,
+                KEY_CURLOPT_HTTPAUTH => CURLAUTH_BASIC,
+                KEY_CURLOPT_POST => false,
+                KEY_CURLOPT_POSTFIELDS => json_encode($data, JSON_THROW_ON_ERROR),
+                KEY_CURLOPT_RETURNTRANSFER => true,
+                KEY_CURLOPT_USERPWD => "$client_id:$client_secret",
+                KEY_CURLOPT_HTTPHEADER => [
+                    CURL_GRANT_TYPE,
+                    CURL_AUTH . $Bearer,
+                    CURL_CONTENT_TYPE_APPLICATION,
+                    CURL_ENCODING_ACCEPT_APPLICATION,
+                    CURL_CACHE_CONTROL,
+                    CURL_PRAGMA_NO_CACHE_VALUE
+                ],
+                KEY_CURLOPT_CONNECTTIMEOUT => 5,
+                KEY_CURLOPT_VERBOSE => true,
+                KEY_CURLOPT_STDERR => $verbose,
+                KEY_CURLOPT_ENCODING => CURL_CHARSET,
+                KEY_CURLOPT_CUSTOMERREQUEST => CURL_CUSTOMREQUEST_PATCH
+            ];
+
             $curl = getCurlCall($curl, $params);
             $response = curl_exec($curl);
+
+            if ($response === false) {
+                $result = json_encode(['error' => 'cURL request failed: ' . curl_error($curl)], JSON_THROW_ON_ERROR);
+            }
+
             break;
         case 'get_product':
-            $params = [KEY_CURLOPT_URL => HTTPS.$config[CURL_ENVIRONMENT_KEY].'.billwerk.com/api/v1/ProductInfo/'.$data, KEY_CURLOPT_HTTPAUTH => CURLAUTH_BASIC, KEY_CURLOPT_POST => false, KEY_CURLOPT_POSTFIELDS => false, KEY_CURLOPT_RETURNTRANSFER => true, KEY_CURLOPT_USERPWD => "$client_id:$client_secret", KEY_CURLOPT_HTTPHEADER => [CURL_GRANT_TYPE, CURL_AUTH.$Bearer, CURL_CONTENT_TYPE_TEXT, CURL_ENCODING_ACCEPT_TEXT, CURL_CACHE_CONTROL, CURL_PRAGMA_NO_CACHE_VALUE], KEY_CURLOPT_CONNECTTIMEOUT => 5, KEY_CURLOPT_VERBOSE => true, KEY_CURLOPT_STDERR => $verbose, KEY_CURLOPT_ENCODING => false, KEY_CURLOPT_CUSTOMERREQUEST => false];
+            $productId = $data ?? null;
+
+            if (!$productId) {
+                $result = json_encode(['error' => 'Product ID is missing'], JSON_THROW_ON_ERROR);
+                break;
+            }
+
+            $params = [
+                KEY_CURLOPT_URL => HTTPS . ($config[CURL_ENVIRONMENT_KEY] ?? '') . '.billwerk.com/api/v1/ProductInfo/' . $productId,
+                KEY_CURLOPT_HTTPAUTH => CURLAUTH_BASIC,
+                KEY_CURLOPT_POST => false,
+                KEY_CURLOPT_POSTFIELDS => false,
+                KEY_CURLOPT_RETURNTRANSFER => true,
+                KEY_CURLOPT_USERPWD => "$client_id:$client_secret",
+                KEY_CURLOPT_HTTPHEADER => [
+                    CURL_GRANT_TYPE,
+                    CURL_AUTH . $Bearer,
+                    CURL_CONTENT_TYPE_TEXT,
+                    CURL_ENCODING_ACCEPT_TEXT,
+                    CURL_CACHE_CONTROL,
+                    CURL_PRAGMA_NO_CACHE_VALUE
+                ],
+                KEY_CURLOPT_CONNECTTIMEOUT => 5,
+                KEY_CURLOPT_VERBOSE => true,
+                KEY_CURLOPT_STDERR => $verbose,
+                KEY_CURLOPT_ENCODING => false,
+                KEY_CURLOPT_CUSTOMERREQUEST => false
+            ];
+
             $curl = getCurlCall($curl, $params);
             $response = curl_exec($curl);
-            $result =$response;
+
+            if ($response === false) {
+                $result = json_encode(['error' => 'cURL request failed: ' . curl_error($curl)], JSON_THROW_ON_ERROR);
+            } else {
+                $result = $response;
+            }
+
             break;
         case 'get_plan':
-            if(!is_array($data)) {
-                $params = [KEY_CURLOPT_URL => HTTPS.$config[CURL_ENVIRONMENT_KEY].'.billwerk.com/api/v1/Plans/'.$data, KEY_CURLOPT_HTTPAUTH => CURLAUTH_BASIC, KEY_CURLOPT_POST => false, KEY_CURLOPT_POSTFIELDS => false, KEY_CURLOPT_RETURNTRANSFER => true, KEY_CURLOPT_USERPWD => "$client_id:$client_secret", KEY_CURLOPT_HTTPHEADER => [CURL_GRANT_TYPE, CURL_AUTH.$Bearer, CURL_CONTENT_TYPE_TEXT, CURL_ENCODING_ACCEPT_TEXT, CURL_CACHE_CONTROL, CURL_PRAGMA_NO_CACHE_VALUE], KEY_CURLOPT_CONNECTTIMEOUT => 5, KEY_CURLOPT_VERBOSE => true, KEY_CURLOPT_STDERR => $verbose, KEY_CURLOPT_ENCODING => false, KEY_CURLOPT_CUSTOMERREQUEST => false];
-            } else {
-                $params = [KEY_CURLOPT_URL => HTTPS.$config[CURL_ENVIRONMENT_KEY].'.billwerk.com/api/v1/Plans/'.$data['planId'], KEY_CURLOPT_HTTPAUTH => CURLAUTH_BASIC, KEY_CURLOPT_POST => false, KEY_CURLOPT_POSTFIELDS => false, KEY_CURLOPT_RETURNTRANSFER => true, KEY_CURLOPT_USERPWD => "$client_id:$client_secret", KEY_CURLOPT_HTTPHEADER => [CURL_GRANT_TYPE, CURL_AUTH.$Bearer, CURL_CONTENT_TYPE_TEXT, CURL_ENCODING_ACCEPT_TEXT, CURL_CACHE_CONTROL, CURL_PRAGMA_NO_CACHE_VALUE], KEY_CURLOPT_CONNECTTIMEOUT => 5, KEY_CURLOPT_VERBOSE => true, KEY_CURLOPT_STDERR => $verbose, KEY_CURLOPT_ENCODING => false, KEY_CURLOPT_CUSTOMERREQUEST => false];
+            $planId = is_array($data) ? ($data['planId'] ?? null) : $data;
+
+            if (!$planId) {
+                $result = json_encode(['error' => 'Plan ID is missing'], JSON_THROW_ON_ERROR);
+                break;
             }
+
+            $baseUrl = HTTPS . ($config[CURL_ENVIRONMENT_KEY] ?? '') . '.billwerk.com/api/v1/Plans/' . $planId;
+
+            $params = [
+                KEY_CURLOPT_URL => $baseUrl,
+                KEY_CURLOPT_HTTPAUTH => CURLAUTH_BASIC,
+                KEY_CURLOPT_POST => false,
+                KEY_CURLOPT_POSTFIELDS => false,
+                KEY_CURLOPT_RETURNTRANSFER => true,
+                KEY_CURLOPT_USERPWD => "$client_id:$client_secret",
+                KEY_CURLOPT_HTTPHEADER => [
+                    CURL_GRANT_TYPE,
+                    CURL_AUTH . $Bearer,
+                    CURL_CONTENT_TYPE_TEXT,
+                    CURL_ENCODING_ACCEPT_TEXT,
+                    CURL_CACHE_CONTROL,
+                    CURL_PRAGMA_NO_CACHE_VALUE
+                ],
+                KEY_CURLOPT_CONNECTTIMEOUT => 5,
+                KEY_CURLOPT_VERBOSE => true,
+                KEY_CURLOPT_STDERR => $verbose,
+                KEY_CURLOPT_ENCODING => false,
+                KEY_CURLOPT_CUSTOMERREQUEST => false
+            ];
+
             $curl = getCurlCall($curl, $params);
             $response = curl_exec($curl);
-            $result = $response;
+
+            if ($response === false) {
+                $result = json_encode(['error' => 'cURL request failed: ' . curl_error($curl)], JSON_THROW_ON_ERROR);
+            } else {
+                $result = $response;
+            }
+
             break;
         case 'get_plans':
-            $params = [KEY_CURLOPT_URL => HTTPS.$config[CURL_ENVIRONMENT_KEY].'.billwerk.com/api/v1/PlanVariants?planId='.$data['bw_planId'], KEY_CURLOPT_HTTPAUTH => CURLAUTH_BASIC, KEY_CURLOPT_POST => false, KEY_CURLOPT_POSTFIELDS => false, KEY_CURLOPT_RETURNTRANSFER => false, KEY_CURLOPT_USERPWD => "$client_id:$client_secret", KEY_CURLOPT_HTTPHEADER => [CURL_GRANT_TYPE, CURL_AUTH.$Bearer, CURL_CONTENT_TYPE_TEXT, ENCODING_ACCEPT, CURL_CACHE_CONTROL, CURL_PRAGMA_NO_CACHE_VALUE], KEY_CURLOPT_CONNECTTIMEOUT => 5, KEY_CURLOPT_VERBOSE => true, KEY_CURLOPT_STDERR => $verbose, KEY_CURLOPT_ENCODING => false, KEY_CURLOPT_CUSTOMERREQUEST => false];
+            $planId = $data['bw_planId'] ?? null;
+
+            if (!$planId) {
+                $result = json_encode(['error' => 'Plan ID is missing'], JSON_THROW_ON_ERROR);
+                break;
+            }
+
+            $baseUrl = HTTPS . ($config[CURL_ENVIRONMENT_KEY] ?? '') . '.billwerk.com/api/v1/PlanVariants?planId=' . urlencode($planId);
+
+            $params = [
+                KEY_CURLOPT_URL => $baseUrl,
+                KEY_CURLOPT_HTTPAUTH => CURLAUTH_BASIC,
+                KEY_CURLOPT_POST => false,
+                KEY_CURLOPT_POSTFIELDS => false,
+                KEY_CURLOPT_RETURNTRANSFER => true, // Muss `true` sein, um die Antwort zu erhalten
+                KEY_CURLOPT_USERPWD => "$client_id:$client_secret",
+                KEY_CURLOPT_HTTPHEADER => [
+                    CURL_GRANT_TYPE,
+                    CURL_AUTH . $Bearer,
+                    CURL_CONTENT_TYPE_TEXT,
+                    ENCODING_ACCEPT,
+                    CURL_CACHE_CONTROL,
+                    CURL_PRAGMA_NO_CACHE_VALUE
+                ],
+                KEY_CURLOPT_CONNECTTIMEOUT => 5,
+                KEY_CURLOPT_VERBOSE => true,
+                KEY_CURLOPT_STDERR => $verbose,
+                KEY_CURLOPT_ENCODING => false,
+                KEY_CURLOPT_CUSTOMERREQUEST => false
+            ];
+
             $curl = getCurlCall($curl, $params);
             $response = curl_exec($curl);
+
+            if ($response === false) {
+                $result = json_encode(['error' => 'cURL request failed: ' . curl_error($curl)], JSON_THROW_ON_ERROR);
+            } else {
+                $result = $response;
+            }
+
             break;
         case ACTION_GET_PLANVARIANT:
-            $params = [KEY_CURLOPT_URL => HTTPS.$config[CURL_ENVIRONMENT_KEY].'.billwerk.com/api/v1/PlanVariants/'.$data['bw_PlanVariantId'], KEY_CURLOPT_HTTPAUTH => CURLAUTH_BASIC, KEY_CURLOPT_POST => false, KEY_CURLOPT_POSTFIELDS => false, KEY_CURLOPT_RETURNTRANSFER => true, KEY_CURLOPT_USERPWD => "$client_id:$client_secret", KEY_CURLOPT_HTTPHEADER => [CURL_GRANT_TYPE, CURL_AUTH.$Bearer, CURL_ENCODING_ACCEPT_APPLICATION, CURL_CACHE_CONTROL, CURL_PRAGMA_NO_CACHE_VALUE], KEY_CURLOPT_CONNECTTIMEOUT => 5, KEY_CURLOPT_VERBOSE => true, KEY_CURLOPT_STDERR => $verbose, KEY_CURLOPT_ENCODING => CURL_CHARSET, KEY_CURLOPT_CUSTOMERREQUEST => false];
+            $planVariantId = $data['bw_PlanVariantId'] ?? null;
+
+            if (!$planVariantId) {
+                $result = json_encode(['error' => 'Plan Variant ID is missing'], JSON_THROW_ON_ERROR);
+                break;
+            }
+
+            $baseUrl = HTTPS . ($config[CURL_ENVIRONMENT_KEY] ?? '') . '.billwerk.com/api/v1/PlanVariants/' . urlencode($planVariantId);
+
+            $params = [
+                KEY_CURLOPT_URL => $baseUrl,
+                KEY_CURLOPT_HTTPAUTH => CURLAUTH_BASIC,
+                KEY_CURLOPT_POST => false,
+                KEY_CURLOPT_POSTFIELDS => false,
+                KEY_CURLOPT_RETURNTRANSFER => true, // Muss true sein, um die Antwort zu erhalten
+                KEY_CURLOPT_USERPWD => "$client_id:$client_secret",
+                KEY_CURLOPT_HTTPHEADER => [
+                    CURL_GRANT_TYPE,
+                    CURL_AUTH . $Bearer,
+                    CURL_ENCODING_ACCEPT_APPLICATION,
+                    CURL_CACHE_CONTROL,
+                    CURL_PRAGMA_NO_CACHE_VALUE
+                ],
+                KEY_CURLOPT_CONNECTTIMEOUT => 5,
+                KEY_CURLOPT_VERBOSE => true,
+                KEY_CURLOPT_STDERR => $verbose,
+                KEY_CURLOPT_ENCODING => CURL_CHARSET,
+                KEY_CURLOPT_CUSTOMERREQUEST => false
+            ];
+
             $curl = getCurlCall($curl, $params);
             $response = curl_exec($curl);
+
+            if ($response === false) {
+                $result = json_encode(['error' => 'cURL request failed: ' . curl_error($curl)], JSON_THROW_ON_ERROR);
+            } else {
+                $result = $response;
+            }
+
             break;
         case 'add_email_on_csserver':
-            $params = [KEY_CURLOPT_URL => HTTPS.$config[CURL_ENVIRONMENT_KEY].BW_URL_CONTRACTS.$data[KEY_CONTRACT_ID].BW_URL_CUSTOM_FIELDS, KEY_CURLOPT_HTTPAUTH =>CURLAUTH_BASIC , KEY_CURLOPT_POST => false, KEY_CURLOPT_POSTFIELDS => json_encode($data, true), KEY_CURLOPT_RETURNTRANSFER => true, KEY_CURLOPT_USERPWD => "$client_id:$client_secret", KEY_CURLOPT_HTTPHEADER => [CURL_GRANT_TYPE, CURL_AUTH.$Bearer, CURL_CONTENT_TYPE_APPLICATION, CURL_ENCODING_ACCEPT_APPLICATION, CURL_CACHE_CONTROL, CURL_PRAGMA_NO_CACHE_VALUE], KEY_CURLOPT_CONNECTTIMEOUT => 5, KEY_CURLOPT_VERBOSE => true, KEY_CURLOPT_STDERR => $verbose, KEY_CURLOPT_ENCODING => false, KEY_CURLOPT_CUSTOMERREQUEST => CURL_CUSTOMREQUEST_PATCH];
+            $contractId = $data[KEY_CONTRACT_ID] ?? null;
+
+            if (!$contractId) {
+                $result = json_encode(['error' => 'Contract ID is missing'], JSON_THROW_ON_ERROR);
+                break;
+            }
+
+            $url = HTTPS . ($config[CURL_ENVIRONMENT_KEY] ?? '') . BW_URL_CONTRACTS . urlencode($contractId) . BW_URL_CUSTOM_FIELDS;
+
+            $params = [
+                KEY_CURLOPT_URL => $url,
+                KEY_CURLOPT_HTTPAUTH => CURLAUTH_BASIC,
+                KEY_CURLOPT_POST => false,
+                KEY_CURLOPT_POSTFIELDS => json_encode($data, JSON_THROW_ON_ERROR),
+                KEY_CURLOPT_RETURNTRANSFER => true,
+                KEY_CURLOPT_USERPWD => "$client_id:$client_secret",
+                KEY_CURLOPT_HTTPHEADER => [
+                    CURL_GRANT_TYPE,
+                    CURL_AUTH . $Bearer,
+                    CURL_CONTENT_TYPE_APPLICATION,
+                    CURL_ENCODING_ACCEPT_APPLICATION,
+                    CURL_CACHE_CONTROL,
+                    CURL_PRAGMA_NO_CACHE_VALUE
+                ],
+                KEY_CURLOPT_CONNECTTIMEOUT => 5,
+                KEY_CURLOPT_VERBOSE => true,
+                KEY_CURLOPT_STDERR => $verbose,
+                KEY_CURLOPT_ENCODING => false,
+                KEY_CURLOPT_CUSTOMERREQUEST => CURL_CUSTOMREQUEST_PATCH
+            ];
+
             $curl = getCurlCall($curl, $params);
             $response = curl_exec($curl);
-            $result = arrayCastRecursive(json_decode($response));
-            if($result[KEY_CUSTOMER_ID_1]!=$bw_customer_id){
-                json_encode( array(KEY_MESSAGE_1 => MSG_CONTACT_ID_NOT_EXISTS), true);
-                setDieError(MSG_CONTACT_ID_NOT_EXISTS, __FILE__, __LINE__);
+
+            if ($response === false) {
+                $result = json_encode(['error' => 'cURL request failed: ' . curl_error($curl)], JSON_THROW_ON_ERROR);
+                break;
             }
+
+            $result = json_decode($response, true, 512, JSON_THROW_ON_ERROR);
+
+            if (!isset($result[KEY_CUSTOMER_ID_1]) || $result[KEY_CUSTOMER_ID_1] !== $bw_customer_id) {
+                $errorMessage = json_encode([KEY_MESSAGE_1 => MSG_CONTACT_ID_NOT_EXISTS], JSON_THROW_ON_ERROR);
+                setDieError(MSG_CONTACT_ID_NOT_EXISTS, __FILE__, __LINE__);
+                break;
+            }
+
             break;
+
+/***********************/
+/* Hier geht es weiter */
+/***********************/
         case ACTION_GET_ORDER_PREVIEW:
             $params = [KEY_CURLOPT_URL => HTTPS.$config[CURL_ENVIRONMENT_KEY].'.billwerk.com/api/v1/Orders/preview', KEY_CURLOPT_HTTPAUTH => CURLAUTH_BASIC, KEY_CURLOPT_POST => 1, KEY_CURLOPT_POSTFIELDS => json_encode($data, true), KEY_CURLOPT_RETURNTRANSFER => true, KEY_CURLOPT_USERPWD => "$client_id:$client_secret", KEY_CURLOPT_HTTPHEADER => [CURL_GRANT_TYPE, CURL_AUTH.$Bearer, CURL_CONTENT_TYPE_APPLICATION, CURL_ENCODING_ACCEPT_APPLICATION, CURL_PRAGMA_NO_CACHE_VALUE], KEY_CURLOPT_CONNECTTIMEOUT => 5, KEY_CURLOPT_VERBOSE => true, KEY_CURLOPT_STDERR => $verbose, KEY_CURLOPT_ENCODING => false, KEY_CURLOPT_CUSTOMERREQUEST => false];
             $curl = getCurlCall($curl, $params);
