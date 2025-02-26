@@ -1,43 +1,60 @@
 <?php
+declare(strict_types=1);
 
 namespace BefineSolutionsAG\Cryptsharesaas\Task;
 
-use \Datetime;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
+use DateTime;
+use DateInterval;
+use TYPO3\CMS\Scheduler\Task\AbstractTask;
 
-class MaintainanceContractData extends \TYPO3\CMS\Scheduler\Task\AbstractTask {
-    public function execute()
+class MaintainanceContractData extends AbstractTask
+{
+    public function execute(): bool
     {
         $path = "/is/htdocs/wp13251579_RIVEMTPQCA/www/logging/contractData/";
         $files = $this->getAllFilesFromFolder($path);
-        if ($files) {
+
+        if (!empty($files)) {
             $dt = new DateTime('now');
             $date = $dt->format('Y-m-d');
-            $LogEntry = $date;
-            $dt->getTimestamp();
-            date_sub($dt, date_interval_create_from_date_string('2 days'));
+            $logEntry = $date;
+
+            // 2 Tage subtrahieren
+            $dt->sub(new DateInterval('P2D'));
             $oldTimeStamp = $dt->getTimestamp();
-            $fileNamePost = "/is/htdocs/wp13251579_RIVEMTPQCA/www/logging/Maintainance/contractData-".$date.".txt";
+
+            $fileNamePost = "/is/htdocs/wp13251579_RIVEMTPQCA/www/logging/Maintainance/contractData-" . $date . ".txt";
             $maintenanceLog = fopen($fileNamePost, 'w');
+
+            if ($maintenanceLog === false) {
+                return false;
+            }
+
             foreach ($files as $value) {
-                $filepath = $path.$value;
-                $fileTime = date("F d Y H:i:s.", filectime($filepath));
-                if (filectime($filepath) <= $oldTimeStamp){
-                    $LogEntry .= filectime($filepath)."--".$fileTime.":"."-".$filepath."\r\n";
-                    unlink($filepath);
+                $filepath = $path . $value;
+                $fileTime = date("F d Y H:i:s.", @filectime($filepath));
+
+                if (@filectime($filepath) <= $oldTimeStamp) {
+                    $logEntry .= @filectime($filepath) . "--" . $fileTime . ":" . "-" . $filepath . PHP_EOL;
+                    if (file_exists($filepath)) {
+                        unlink($filepath);
+                    }
                 }
             }
-            fwrite($maintenanceLog, $LogEntry);
+
+            fwrite($maintenanceLog, $logEntry);
             fclose($maintenanceLog);
-            return true;
         }
+
+        return true;
     }
 
-    public function getAllFilesFromFolder($folder) {
+    private function getAllFilesFromFolder(string $folder): array
+    {
         $files = [];
-        if ( is_dir ( $folder ) && $handle = opendir($folder) ){
+        if (is_dir($folder) && ($handle = opendir($folder))) {
             while (($file = readdir($handle)) !== false) {
-                if($file != '.' && $file != '..'){
+                if ($file !== '.' && $file !== '..') {
                     $files[] = $file;
                 }
             }
@@ -48,47 +65,59 @@ class MaintainanceContractData extends \TYPO3\CMS\Scheduler\Task\AbstractTask {
     }
 }
 
-class MaintainanceRestlog extends \TYPO3\CMS\Scheduler\Task\AbstractTask {
-    public function execute(){
-        $this->deleteLogs('/is/htdocs/wp13251579_RIVEMTPQCA/www/logging/restLog/','restLog');
-        $this->deleteLogs('/is/htdocs/wp13251579_RIVEMTPQCA/www/logging/restLog-Error/','restLogError');
-        $this->deleteLogs('/is/htdocs/wp13251579_RIVEMTPQCA/www/logging/webHooks/','webHooks');
+class MaintainanceRestlog extends AbstractTask
+{
+    public function execute(): bool
+    {
+        $this->deleteLogs('/is/htdocs/wp13251579_RIVEMTPQCA/www/logging/restLog/', 'restLog');
+        $this->deleteLogs('/is/htdocs/wp13251579_RIVEMTPQCA/www/logging/restLog-Error/', 'restLogError');
+        $this->deleteLogs('/is/htdocs/wp13251579_RIVEMTPQCA/www/logging/webHooks/', 'webHooks');
         return true;
     }
 
-    public function deleteLogs($folder,$type) {
-        $path = $folder;
-        $files = $this->getAllFilesFromFolder($path);
-        if ($files) {
+    private function deleteLogs(string $folder, string $type): void
+    {
+        $files = $this->getAllFilesFromFolder($folder);
+
+        if (!empty($files)) {
             $dt = new DateTime('now');
             $date = $dt->format('Y-m-d');
-            $LogEntry = $date;
-            $dt->getTimestamp();
-            date_sub($dt, date_interval_create_from_date_string('2 weeks'));
-            $oldTimestamp =$dt->getTimestamp();
-            $fileNamePost = "/is/htdocs/wp13251579_RIVEMTPQCA/www/logging/Maintainance/'$type'-".$date.".txt";
+            $logEntry = $date;
+
+            // 2 Wochen subtrahieren
+            $dt->sub(new DateInterval('P14D'));
+            $oldTimestamp = $dt->getTimestamp();
+
+            $fileNamePost = "/is/htdocs/wp13251579_RIVEMTPQCA/www/logging/Maintainance/" . $type . "-" . $date . ".txt";
             $maintenanceLog = fopen($fileNamePost, 'w');
-            foreach ($files as $value) {
-                $filepath = $path.$value;
-                $fileTime = date("F d Y H:i:s.", filectime($filepath));
-                if (filectime($filepath) <= $oldTimestamp){
-                    $LogEntry .= filectime($filepath)."--".$fileTime.":"."-".$filepath."\r\n";
 
-                    unlink($filepath);
-                }
-
+            if ($maintenanceLog === false) {
+                return;
             }
-            fwrite($maintenanceLog, $LogEntry);
+
+            foreach ($files as $value) {
+                $filepath = $folder . $value;
+                $fileTime = date("F d Y H:i:s.", @filectime($filepath));
+
+                if (@filectime($filepath) <= $oldTimestamp) {
+                    $logEntry .= @filectime($filepath) . "--" . $fileTime . ":" . "-" . $filepath . PHP_EOL;
+                    if (file_exists($filepath)) {
+                        unlink($filepath);
+                    }
+                }
+            }
+
+            fwrite($maintenanceLog, $logEntry);
             fclose($maintenanceLog);
-            return true;
         }
     }
 
-    public function getAllFilesFromFolder($folder) {
+    private function getAllFilesFromFolder(string $folder): array
+    {
         $files = [];
-        if ( is_dir ( $folder ) && $handle = opendir($folder) ) {
+        if (is_dir($folder) && ($handle = opendir($folder))) {
             while (($file = readdir($handle)) !== false) {
-                if($file != '.' && $file != '..'){
+                if ($file !== '.' && $file !== '..') {
                     $files[] = $file;
                 }
             }
