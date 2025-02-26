@@ -1,47 +1,63 @@
 <?php
+declare(strict_types=1);
+
 require_once 'config.php';
-require 'PHPMailer/PHPMailerAutoload.php';
+require_once 'PHPMailer/PHPMailerAutoload.php';
 
-$mail = sendMail('test','testen');
+$mailResult = sendMail('test', 'testen');
 
-echo mail;
+echo $mailResult;
 
-function sendMail($input,$MailContent) {
+function sendMail(string $input, string $MailContent): string {
     global $config;
 
     $config['DebugMailSubject'] = "Test";
 
-    /**
-    * Create e-mail and fill it with the content and attach file
-    */
-    $mail = new PHPMailer();
-    $mail->IsSMTP();
-    $mail->SMTPAuth = true;
-    $mail->SMTPSecure = tls;
-    $mail->SMTPAutoTLS = false;
-    $mail->Password = $config['SMTPPassword'];
-    $mail->Username = $config['SMTPUsername'];
-    $mail->SMTPDebug  = 1;
-    $mail->Port = $config['SMTPPort'];
-    $mail->Host = $config['SMTPHost'];
-    $mail->CharSet = 'utf-8';
-    $mail->IsHTML(true);
-    $mail->SetFrom($config['MAILFrom']);
-    $mail->Subject  = $config['DebugMailSubject'].$input;
-    $mail->Body     = $MailContent;
+    try {
+        /**
+         * Create e-mail and fill it with the content
+         */
+        $mail = new PHPMailer();
+        $mail->isSMTP();
+        $mail->SMTPAuth = true;
+        $mail->SMTPSecure = 'tls'; // Fix: Muss ein String sein, keine undefinierte Konstante
+        $mail->SMTPAutoTLS = false;
 
-    if(isset($config['forceRecipientAddress'])){
-        $mail->AddAddress($config['forceRecipientAddress']);
-    }else{
-        $mail->AddAddress($config['MAILTo']);
-    }
-    $mail->AddBCC('support@cryptshare.express');
-    if(isset($config['forceCCRecipientAddress'])){
-        $mail->AddCC($config['forceCCRecipientAddress']);
-    }
-    if(!$mail->send()) {
-        return 'Mailer error: ' . $mail->ErrorInfo.'HOST :' .$config['SMTPHost'].":".$mail->Port = $config['SMTPPort'];
-    } else {
-        return 'Message has been sent.';
+        // Sicherstellen, dass alle Konfigurationswerte existieren, um Fehler zu vermeiden
+        $mail->Password = $config['SMTPPassword'] ?? '';
+        $mail->Username = $config['SMTPUsername'] ?? '';
+        $mail->SMTPDebug  = 1;
+        $mail->Port = $config['SMTPPort'] ?? 587; // Standardport als Fallback
+        $mail->Host = $config['SMTPHost'] ?? '';
+        $mail->CharSet = 'utf-8';
+        $mail->isHTML(true);
+
+        $mail->setFrom($config['MAILFrom'] ?? 'noreply@example.com');
+        $mail->Subject  = ($config['DebugMailSubject'] ?? 'Debug') . ' ' . $input;
+        $mail->Body     = $MailContent;
+
+        // Empfänger setzen (Hauptempfänger oder Fallback-Adresse)
+        if (!empty($config['forceRecipientAddress'])) {
+            $mail->addAddress($config['forceRecipientAddress']);
+        } elseif (!empty($config['MAILTo'])) {
+            $mail->addAddress($config['MAILTo']);
+        } else {
+            return 'Fehler: Keine Empfängeradresse konfiguriert.';
+        }
+
+        // BCC & CC-Empfänger setzen
+        $mail->addBCC('support@cryptshare.express');
+        if (!empty($config['forceCCRecipientAddress'])) {
+            $mail->addCC($config['forceCCRecipientAddress']);
+        }
+
+        // E-Mail versenden
+        if (!$mail->send()) {
+            return 'Mailer error: ' . $mail->ErrorInfo . ' | HOST: ' . $mail->Host . ':' . $mail->Port;
+        } else {
+            return 'Message has been sent.';
+        }
+    } catch (Exception $e) {
+        return 'Fehler beim Senden der E-Mail: ' . $e->getMessage();
     }
 }
