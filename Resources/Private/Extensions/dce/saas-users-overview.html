@@ -1,104 +1,106 @@
+<f:if condition="{TSFE.fe_user.user.is_partner}">
+	<f:then>
+		<input type="hidden" id="addurl" value="{f:uri.typolink(parameter: field.addurl)}">
+		<input type="hidden" id="editurl" value="{f:uri.typolink(parameter: field.editurl)}">
+		<input type="hidden" id="editurlcomponent" value="{f:uri.typolink(parameter: field.editurlcomponent)}">
+		<input type="hidden" id="welcomeemailurl" value="{f:uri.typolink(parameter: field.welcomeemailurl)}">
+		<input type="hidden" id="addcontracturl" value="{f:uri.typolink(parameter: field.addcontracturl)}">
+		<input type="hidden" id="addpartnerurl" value="{f:uri.typolink(parameter: field.addpartnerurl)}">
 
-
-<f:spaceless>
-	<f:if condition="{TSFE.fe_user.user.is_partner}">
-		<f:then>
-			<input type="hidden" id="addurl" value="{f:uri.typolink(parameter:'{field.addurl}')}">
-			<input type="hidden" id="editurl" value="{f:uri.typolink(parameter:'{field.editurl}')}">
-			<input type="hidden" id="editurlcomponent" value="{f:uri.typolink(parameter:'{field.editurlcomponent}')}">
-			<input type="hidden" id="welcomeemailurl" value="{f:uri.typolink(parameter:'{field.welcomeemailurl}')}">
-			<input type="hidden" id="addcontracturl" value="{f:uri.typolink(parameter:'{field.addcontracturl}')}">
-			<input type="hidden" id="addpartnerurl" value="{f:uri.typolink(parameter:'{field.addpartnerurl}')}">
-			<div class="row">
-				<div class="col-md-6">
-					<f:link.typolink parameter="{field.addcontracturl}" class="card add-contract text-white w-100">
-						<div class="card-body text-center">
-							<small><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:overview_newcontract_clickhere" /></small>
-							<h5 class="card-title"><i class="fa fa-plus" aria-hidden="true"></i> <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:overview_newcontract" /></h5>
-							<small><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:overview_newcontract_learnmore" /></small>
-						</div>
-					</f:link.typolink>
-				</div>
-				<div class="col-md-6" id="user-overview-upsell-btn">
-					<f:link.typolink parameter="{field.upsellurl}" class="card upsell text-white w-100">
-						<div class="card-body text-center">
-							<small><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:overview_upsell_clickhere" /></small>
-							<h5 class="card-title"><i class="fa fa-bell" aria-hidden="true"></i> <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:overview_upsell" /></h5>
-							<small><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:overview_upsell_learnmore" /></small>
-						</div>
-					</f:link.typolink>
-				</div>
-			</div>
-			<div class="row" id="user-overview-sort-search">
-				<div class="col-md-4">
-					<select class="form-control sort-filter" id="sort-user">
-						<optgroup label="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:overview_sort_label')}">
-							<option value="date-desc"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:overview_sort_date_desc" /></option>
-							<option value="date-asc"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:overview_sort_date_asc" /></option>
-							<option value="custom-desc"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:overview_sort_customer_desc" /></option>
-							<option value="custom-asc"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:overview_sort_customer_asc" /></option>
-						</optgroup>
-					</select>
-				</div>
-				<div class="col-md-4">
-					<div class="input-group sort-filter">
-						<input class="form-control border-right-0 border" type="search" value="" id="fulltextsearch" placeholder="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:overview_search_placeholder')}">
-						<span class="input-group-append">
-							<div class="input-group-text bg-transparent"><i class="fa fa-search"></i></div>
-						</span>
+		<div class="row">
+			<div class="col-md-6">
+				<f:link.typolink parameter="{field.addcontracturl}" class="card add-contract text-white w-100">
+					<div class="card-body text-center">
+						<small>{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:overview_newcontract_clickhere')}</small>
+						<h5 class="card-title"><i class="fa fa-plus" aria-hidden="true"></i> {f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:overview_newcontract')}</h5>
+						<small>{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:overview_newcontract_learnmore')}</small>
 					</div>
-				</div>
-				<div class="col-md-4">
-					<a href="" class="btn btn-dark btn-block d-none sort-filter" id="partnerlink">
-						<f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:overview_buttontext_edit_partnerdata" />
-					</a>
+				</f:link.typolink>
+			</div>
+			<div class="col-md-6" id="user-overview-upsell-btn">
+				<f:link.typolink parameter="{field.upsellurl}" class="card upsell text-white w-100">
+					<div class="card-body text-center">
+						<small>{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:overview_upsell_clickhere')}</small>
+						<h5 class="card-title"><i class="fa fa-bell" aria-hidden="true"></i> {f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:overview_upsell')}</h5>
+						<small>{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:overview_upsell_learnmore')}</small>
+					</div>
+				</f:link.typolink>
+			</div>
+		</div>
+
+		<div class="row" id="user-overview-sort-search">
+			<div class="col-md-4">
+				<select class="form-control sort-filter" id="sort-user">
+					<optgroup label="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:overview_sort_label')}">
+						<option value="date-desc">{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:overview_sort_date_desc')}</option>
+						<option value="date-asc">{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:overview_sort_date_asc')}</option>
+						<option value="custom-desc">{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:overview_sort_customer_desc')}</option>
+						<option value="custom-asc">{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:overview_sort_customer_asc')}</option>
+					</optgroup>
+				</select>
+			</div>
+			<div class="col-md-4">
+				<div class="input-group sort-filter">
+					<input class="form-control border-right-0 border" type="search" value="" id="fulltextsearch" placeholder="{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:overview_search_placeholder')}">
+					<span class="input-group-append">
+						<div class="input-group-text bg-transparent"><i class="fa fa-search"></i></div>
+					</span>
 				</div>
 			</div>
-			<div class="row">
-				<div id="UserCards" class="col-md-12"></div>
-				<div id="idDynModal" class="col-md-12"></div>
+			<div class="col-md-4">
+				<a href="" class="btn btn-dark btn-block d-none sort-filter" id="partnerlink">
+					{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:overview_buttontext_edit_partnerdata')}
+				</a>
 			</div>
-		</f:then>
-		<f:else>
-			<input type="hidden" id="addurl" value="{f:uri.typolink(parameter:'{field.addurl}')}">
-			<input type="hidden" id="editurl" value="{f:uri.typolink(parameter:'{field.editurl}')}">
-			<input type="hidden" id="editurlcomponent" value="{f:uri.typolink(parameter:'{field.editurlcomponent}')}">
-			<input type="hidden" id="welcomeemailurl" value="{f:uri.typolink(parameter:'{field.welcomeemailurl}')}">
+		</div>
 
-			<div class="row">
-				<div class="col-md-6">
-					<f:link.typolink parameter="{field.addurl}" class="card add-account w-100">
-						<div class="card-body text-center">
-							<small><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:overview_addbutton_clickhere" /></small>
-							<h5 class="card-title"><i class="fa fa-plus" aria-hidden="true"></i> <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:overview_addbutton_addnewaccount" /></h5>
-							<small><span id="hint-available-email-users"><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading" /></span>&nbsp;<f:format.htmlentitiesDecode><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:dashboard_users_p2" /></f:format.htmlentitiesDecode></small>
-						</div>
-					</f:link.typolink>
-				</div>
+		<div class="row">
+			<div id="UserCards" class="col-md-12"></div>
+			<div id="idDynModal" class="col-md-12"></div>
+		</div>
+	</f:then>
 
-				<div class="col-md-6">
-					<f:link.typolink parameter="{field.upsellurl}" class="card upsell text-white w-100">
-						<div class="card-body text-center">
-							<small><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:overview_upsell_clickhere" /></small>
-							<h5 class="card-title"><i class="fa fa-bell" aria-hidden="true"></i> <f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:overview_upsell" /></h5>
-							<small><f:translate key="LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:overview_upsell_learnmore" /></small>
-						</div>
-					</f:link.typolink>
-				</div>
+	<f:else>
+		<input type="hidden" id="addurl" value="{f:uri.typolink(parameter: field.addurl)}">
+		<input type="hidden" id="editurl" value="{f:uri.typolink(parameter: field.editurl)}">
+		<input type="hidden" id="editurlcomponent" value="{f:uri.typolink(parameter: field.editurlcomponent)}">
+		<input type="hidden" id="welcomeemailurl" value="{f:uri.typolink(parameter: field.welcomeemailurl)}">
 
+		<div class="row">
+			<div class="col-md-6">
+				<f:link.typolink parameter="{field.addurl}" class="card add-account w-100">
+					<div class="card-body text-center">
+						<small>{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:overview_addbutton_clickhere')}</small>
+						<h5 class="card-title"><i class="fa fa-plus" aria-hidden="true"></i> {f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:overview_addbutton_addnewaccount')}</h5>
+						<small><span id="hint-available-email-users">{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:loading')}</span>&nbsp;{f:format.htmlentitiesDecode()} {f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:dashboard_users_p2')}</small>
+					</div>
+				</f:link.typolink>
 			</div>
-			<div id="UserCards" class=""></div>
-			<div id="idDynModal"></div>
-		</f:else>
-	</f:if>
-	<input id="loaders" type="hidden" value="1">
-	<div id="loader" class="lds-dual-ring overlay"></div>
-	<f:asset.css identifier="userOverview">
-		.sort-filter {
+
+			<div class="col-md-6">
+				<f:link.typolink parameter="{field.upsellurl}" class="card upsell text-white w-100">
+					<div class="card-body text-center">
+						<small>{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:overview_upsell_clickhere')}</small>
+						<h5 class="card-title"><i class="fa fa-bell" aria-hidden="true"></i> {f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:overview_upsell')}</h5>
+						<small>{f:translate(key: 'LLL:EXT:cryptsharesaas/Resources/Private/Language/locallang.xlf:overview_upsell_learnmore')}</small>
+					</div>
+				</f:link.typolink>
+			</div>
+		</div>
+
+		<div id="UserCards" class=""></div>
+		<div id="idDynModal"></div>
+	</f:else>
+</f:if>
+
+<input id="loaders" type="hidden" value="1">
+<div id="loader" class="lds-dual-ring overlay"></div>
+
+<f:asset.css identifier="userOverview">
+	.sort-filter {
 		margin-bottom: 1em;
-		}
-		.btn{
+	}
+	.btn {
 		margin-right:1%;
-		}
-	</f:asset.css>
-</f:spaceless>
+	}
+</f:asset.css>
